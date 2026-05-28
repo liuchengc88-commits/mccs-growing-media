@@ -1,17 +1,19 @@
-# MCCS Growing Media Website
+# MCCS Private Label Growing Media Website
 
-This is a static landing page for MCCS plant growing medium blocks.
+This deployable version removes public third-party brand positioning and uses a neutral/private-label export identity.
 
-## Files
+## Public positioning
+- MCCS Growing Media
+- Private Label Substrate Plugs
+- Export support by Guangzhou Chengfeng Trading Co., Ltd.
+
+## Files to upload to GitHub root
 - index.html
 - styles.css
-- assets/favicon.svg
+- assets/
 
-## How to publish quickly
-1. Upload the whole folder to Netlify, Vercel, Cloudflare Pages, or your web hosting file manager.
-2. Set the publish directory to the project root.
-3. After deployment, connect your domain name in the hosting dashboard.
-4. Replace the email address in index.html if needed.
-
-Current inquiry email:
-liuchengc88@gmail.com
+## Vercel
+Root Directory: leave blank
+Framework Preset: Other
+Build Command: leave blank
+Output Directory: leave blank
