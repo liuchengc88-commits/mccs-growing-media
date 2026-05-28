@@ -1,19 +1,21 @@
-# MCCS Private Label Growing Media Website
+# MCCS Conversion Optimized Website
 
-This deployable version removes public third-party brand positioning and uses a neutral/private-label export identity.
+This version improves conversion for overseas B2B buyers:
+- Technical parameter table
+- MCCS vs loose coir / rockwool comparison
+- Application scenarios
+- Supply chain and FBA/export support
+- Clearance document readiness
+- SGS / authorization trust section
+- Hydration demo placeholder area
 
-## Public positioning
-- MCCS Growing Media
-- Private Label Substrate Plugs
-- Export support by Guangzhou Chengfeng Trading Co., Ltd.
-
-## Files to upload to GitHub root
+## Upload to GitHub root
 - index.html
 - styles.css
 - assets/
 
-## Vercel
-Root Directory: leave blank
+## Vercel settings
+Root Directory: blank
 Framework Preset: Other
-Build Command: leave blank
-Output Directory: leave blank
+Build Command: blank
+Output Directory: blank
