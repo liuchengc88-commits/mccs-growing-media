@@ -10,3 +10,7 @@ The form also fires a Google Analytics event named `submit_quote_form` if GA/gta
 - Google Analytics Measurement ID: G-JGR2SQBQHW
 - Formspree endpoint: https://formspree.io/f/mredrnea
 - GA conversion event: submit_quote_form
+
+
+## B2B tapered plug update
+SEO, hero, Why MCCS, comparison table, applications, trust, visual proof, and Formspree fields updated.
