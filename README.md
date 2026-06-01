@@ -1,16 +1,27 @@
-SEO & UX optimized MCCS site. Upload files/folders to GitHub root. Vercel root directory blank. Includes SEO title/meta, WebP, product page, footer, FAQ, sitemap, robots, schema, search and optimized B2B contact form.
+# MCCS Growing Media Website
 
-## Formspree integration
-The contact form now uses Formspree AJAX with endpoint https://formspree.io/f/mredrnea.
-Form submissions will be sent to the Formspree inbox and email notification configured in Formspree.
-The form also fires a Google Analytics event named `submit_quote_form` if GA/gtag is installed.
+A B2B lead-generation website for MCCS tall tapered molded substrate plugs.
 
+## Main Pages
+- Home
+- Products
+- Sample & Shipping
+- Private Label
+- Insights
+- About
+- Contact
 
-## Integrated tracking and form
-- Google Analytics Measurement ID: G-JGR2SQBQHW
-- Formspree endpoint: https://formspree.io/f/mredrnea
-- GA conversion event: submit_quote_form
+## Product Upload Portal
+Open: https://www.mccsgrowingmedia.com/admin.html
 
+Workflow:
+1. Upload product images to `/assets/`.
+2. Add specifications in `/admin.html`.
+3. Download `products.json`.
+4. Upload it to `/data/products.json`.
+5. Commit changes. Vercel updates automatically.
 
-## B2B tapered plug update
-SEO, hero, Why MCCS, comparison table, applications, trust, visual proof, and Formspree fields updated.
+## Integrations
+- Google Analytics: G-JGR2SQBQHW
+- Formspree: https://formspree.io/f/mredrnea
+- Conversion event: submit_quote_form

@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "mccs-20-57-tapered-plug",
+    "name": "MCCS 20/57 Tapered Plug",
+    "category": "Core Plug",
+    "image": "assets/bulk-carton-plugs.webp",
+    "drySize": "Top Ø20 mm × height 57 mm × bottom Ø9 mm",
+    "hydratedSize": "Top Ø22 mm × height 65 mm × bottom Ø11 mm",
+    "bestFor": "Seed starting, cuttings, retail kits",
+    "packaging": "Bulk carton / refill pack / private-label box",
+    "moq": "Negotiable by packaging and destination",
+    "features": [
+      "Tall tapered root zone",
+      "Net-free molded structure",
+      "Compact dry volume",
+      "Batch testing support"
+    ],
+    "description": "Main MCCS tall tapered molded substrate plug for private-label seed starter kits, commercial propagation and export buyers."
+  },
+  {
+    "slug": "mccs-105-cell-tray-fit-option",
+    "name": "MCCS 105-Cell Tray Fit Option",
+    "category": "Tray Fit",
+    "image": "assets/dimension-expansion.webp",
+    "drySize": "Custom plug size based on tray dimensions",
+    "hydratedSize": "Confirmed after sample testing",
+    "bestFor": "Nursery trays and refill pack programs",
+    "packaging": "Bulk carton / tray refill kit",
+    "moq": "Custom project quotation",
+    "features": [
+      "105-cell tray fit discussion",
+      "Private-label refill pack",
+      "Sample testing before bulk",
+      "Carton label support"
+    ],
+    "description": "A tray-fit option for buyers who need MCCS plugs adapted to 105-cell nursery tray programs."
+  },
+  {
+    "slug": "mccs-128-cell-tray-fit-option",
+    "name": "MCCS 128-Cell Tray Fit Option",
+    "category": "Tray Fit",
+    "image": "assets/dimension-expansion.webp",
+    "drySize": "Custom plug size based on 128-cell tray",
+    "hydratedSize": "Confirmed after sample testing",
+    "bestFor": "Seedling trays, hydroponic nursery and bulk propagation",
+    "packaging": "Bulk carton / refill pack",
+    "moq": "Custom project quotation",
+    "features": [
+      "128-cell compatibility discussion",
+      "Hydroponic nursery starting",
+      "Batch pH / EC check",
+      "Export carton packing"
+    ],
+    "description": "For buyers developing seedling tray or hydroponic nursery refill programs with compact molded plugs."
+  },
+  {
+    "slug": "mccs-retail-box-sample-kit",
+    "name": "MCCS Retail Box Sample Kit",
+    "category": "Sample Kit",
+    "image": "assets/retail-box-real.webp",
+    "drySize": "20–50 pcs sample pack or customized",
+    "hydratedSize": "Reference sample for buyer testing",
+    "bestFor": "Amazon, Shopify, garden centers and private-label brands",
+    "packaging": "Retail box / instruction card / label mockup",
+    "moq": "Sample order available",
+    "features": [
+      "Private-label packaging review",
+      "Barcode / instruction card support",
+      "Amazon listing proof",
+      "Buyer sample approval"
+    ],
+    "description": "Sample kit format for overseas buyers to test plug size, hydration behavior and retail packaging direction."
+  },
+  {
+    "slug": "mccs-bulk-carton-pack",
+    "name": "MCCS Bulk Carton Pack",
+    "category": "Bulk Pack",
+    "image": "assets/bulk-carton-plugs.webp",
+    "drySize": "Carton packed dry plugs",
+    "hydratedSize": "SKU-based after hydration",
+    "bestFor": "Distributors, nurseries and wholesale buyers",
+    "packaging": "Export carton / private carton mark / FBA label",
+    "moq": "Bulk quotation by carton volume",
+    "features": [
+      "FOB / CIF / DDP discussion",
+      "FBA carton label support",
+      "Compact storage",
+      "Distributor-ready supply"
+    ],
+    "description": "Bulk carton program for recurring wholesale, nursery and distributor orders."
+  }
+]
