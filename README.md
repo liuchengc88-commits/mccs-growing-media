@@ -1,14 +1,10 @@
 # MCCS Growing Media Website
 
-Cleaned production-ready static site package for GitHub / Vercel.
+GitHub / Vercel-ready static website package for MCCS Growing Media.
 
-## Key updates
-- Removed internal development notes and non-production wording.
-- Added a production contact page at `/contact/`.
-- Removed Chinese product names from public product cards and comparison tables.
-- Added reference carton quantity and MOQ notes with a clear packing-dependent disclaimer.
-- Added sample policy, courier freight responsibility, lead-time estimates and replacement handling.
-- Added five buyer-focused Insights articles with author and published date metadata.
-- Standardized CTAs and cleaned brand subtitle.
+## Included
+- CF Series product catalog with buyer-facing model data.
+- Sample & Shipping, Private Label, About, Contact and Sourcing Guides pages.
+- Product data in `/data/products.json` and downloadable spec sheet in `/docs/`.
 
-Upload all files to the GitHub repository root and deploy through Vercel.
+Upload all files to the GitHub repository root and deploy with Vercel.

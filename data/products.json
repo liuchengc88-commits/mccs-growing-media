@@ -1,730 +1,579 @@
 [
   {
-    "slug": "cf-001",
-    "name": "CF-001 Tapered Hydroponic Plug",
     "model": "CF-001",
-    "name_en": "Tapered Hydroponic Plug",
+    "name_en": "Tapered Hydroponic Plug 6.5 cm",
     "category": "Hydroponic Plug",
-    "category_en": "Hydroponic Plug",
-    "image": "assets/products/CF-001.jpg",
-    "trayFit": "Home hydroponic planter holes, 5 cm nursery cup / non-standard tray",
-    "bestFor": "Seed starting and seedling propagation for home hydroponic systems",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Tapered Hydroponic Plug is designed for compact hydroponic planters, starter systems and nursery programs that require easy handling.",
-    "features": [
-      "Hydroponic Plug",
-      "Container fit: Home hydroponic planter holes, 5 cm nursery cup / non-standard tray",
-      "Size: Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm"
-    ],
     "size": "Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm",
+    "trayFit": "Home hydroponic planter holes, 5 cm nursery cups or non-standard propagation holders",
+    "bestFor": "Hydroponic seed starting, compact growing systems and small nursery programs",
+    "desc": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important.",
+    "slug": "cf-001",
+    "name": "CF-001 Tapered Hydroponic Plug 6.5 cm",
+    "image": "assets/products/CF-001.jpg",
     "applicationTags": [
       "Hydroponic",
       "Seedling"
     ],
-    "status": "Best Seller",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-001.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "900–1200 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-001.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "Best Seller"
   },
   {
-    "slug": "cf-004",
-    "name": "CF-004 Succulent Plug 1.4-Class",
     "model": "CF-004",
-    "name_en": "Succulent Plug 1.4-Class",
+    "name_en": "Succulent Plug 3.7 cm",
     "category": "Succulent Plug",
-    "category_en": "Succulent Plug",
-    "image": "assets/products/CF-004.jpg",
-    "trayFit": "Succulent tray, 12-cell / 24-cell nursery box, opening ≥ 3.3 cm",
-    "bestFor": "Succulent growing and home gardening",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Succulent Plug 1.4-Class provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Succulent Plug",
-      "Container fit: Succulent tray, 12-cell / 24-cell nursery box, opening ≥ 3.3 cm",
-      "Size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm"
-    ],
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
+    "trayFit": "Succulent trays, 12-cell or 24-cell nursery boxes with opening ≥ 3.3 cm",
+    "bestFor": "Succulent propagation, small decorative planters and retail-ready planting sets",
+    "desc": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
+    "slug": "cf-004",
+    "name": "CF-004 Succulent Plug 3.7 cm",
+    "image": "assets/products/CF-004.jpg",
     "applicationTags": [
       "Succulent"
     ],
-    "status": "Best Seller",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-004.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "300–500 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": "Compact succulent-focused model for decorative planting and retail succulent programs. The final selection depends on packaging and plant category, not size alone."
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-004.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-017",
-    "name": "CF-017 Orchid Plug 5.3 cm",
     "model": "CF-017",
     "name_en": "Orchid Plug 5.3 cm",
     "category": "Orchid Plug",
-    "category_en": "Orchid Plug",
-    "image": "assets/products/CF-017.jpg",
-    "trayFit": "50-cell orchid / tissue culture tray",
-    "bestFor": "Young orchid seedling production and tissue-culture rooting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Orchid Plug 5.3 cm supports orchid propagation or transplanting programs that need a stable molded-media structure and predictable container fit.",
-    "features": [
-      "Orchid Plug",
-      "Container fit: 50-cell orchid / tissue culture tray",
-      "Size: Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm"
-    ],
     "size": "Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm",
+    "trayFit": "50-cell orchid or tissue-culture transition tray",
+    "bestFor": "Young orchid plants, tissue-culture transition and early transplanting",
+    "desc": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling.",
+    "slug": "cf-017",
+    "name": "CF-017 Orchid Plug 5.3 cm",
+    "image": "assets/products/CF-017.jpg",
     "applicationTags": [
       "Orchid",
       "Tissue Culture"
     ],
-    "status": "Best Seller",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-017.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "200–300 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-017.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "Best Seller"
   },
   {
-    "slug": "cf-025",
-    "name": "CF-025 Orchid Planting Cup 6.5 cm",
     "model": "CF-025",
     "name_en": "Orchid Planting Cup 6.5 cm",
     "category": "Orchid Planting Cup",
-    "category_en": "Orchid Planting Cup",
-    "image": "assets/products/CF-025.jpg",
-    "trayFit": "Orchid pot or 15–21-cell large planting tray",
-    "bestFor": "Phalaenopsis mid-stage growth and transplanting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Orchid Planting Cup 6.5 cm supports orchid propagation or transplanting programs that need a stable molded-media structure and predictable container fit.",
-    "features": [
-      "Orchid Planting Cup",
-      "Container fit: 2.5 cm orchid pot, 15–21-cell large planting tray",
-      "Size: Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm"
-    ],
     "size": "Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm",
+    "trayFit": "Orchid pots or 15–21-cell large planting trays",
+    "bestFor": "Mid-stage orchid growth and transplanting into larger containers",
+    "desc": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats.",
+    "slug": "cf-025",
+    "name": "CF-025 Orchid Planting Cup 6.5 cm",
+    "image": "assets/products/CF-025.jpg",
     "applicationTags": [
       "Orchid"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-025.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "120–180 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": "Designed for orchid mid-stage growth where a larger planting cup is preferred."
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-025.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-028",
-    "name": "CF-028 Tall Orchid Cup 8.3 cm",
     "model": "CF-028",
     "name_en": "Tall Orchid Cup 8.3 cm",
     "category": "Orchid Planting Cup",
-    "category_en": "Orchid Planting Cup",
-    "image": "assets/products/CF-028.jpg",
-    "trayFit": "Orchid pot or 12–15-cell planting tray",
-    "bestFor": "Tall-cup orchid cultivation and transplanting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Tall Orchid Cup 8.3 cm supports orchid propagation or transplanting programs that need a stable molded-media structure and predictable container fit.",
-    "features": [
-      "Orchid Planting Cup",
-      "Container fit: 2.8 cm orchid pot, 12–15-cell planting tray",
-      "Size: Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm"
-    ],
     "size": "Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm",
+    "trayFit": "Orchid pots or 12–15-cell planting trays",
+    "bestFor": "Tall orchid cultivation, specialty transplanting and larger plant stages",
+    "desc": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility.",
+    "slug": "cf-028",
+    "name": "CF-028 Tall Orchid Cup 8.3 cm",
+    "image": "assets/products/CF-028.jpg",
     "applicationTags": [
       "Orchid"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-028.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "100–140 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-028.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "New"
   },
   {
-    "slug": "cf-035",
-    "name": "CF-035 Tall Orchid Cup 10.5 cm",
     "model": "CF-035",
     "name_en": "Tall Orchid Cup 10.5 cm",
     "category": "Orchid Planting Cup",
-    "category_en": "Orchid Planting Cup",
-    "image": "assets/products/CF-035.jpg",
-    "trayFit": "Orchid pot or 6–12-cell planting tray",
-    "bestFor": "Large orchid growth stage and transplanting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Tall Orchid Cup 10.5 cm supports orchid propagation or transplanting programs that need a stable molded-media structure and predictable container fit.",
-    "features": [
-      "Orchid Planting Cup",
-      "Container fit: 3.5 cm orchid pot, 6–12-cell planting tray",
-      "Size: Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm"
-    ],
     "size": "Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm",
+    "trayFit": "Orchid pots or 6–12-cell planting trays",
+    "bestFor": "Large orchid plants and premium transplanting formats",
+    "desc": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing.",
+    "slug": "cf-035",
+    "name": "CF-035 Tall Orchid Cup 10.5 cm",
+    "image": "assets/products/CF-035.jpg",
     "applicationTags": [
       "Orchid"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-035.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "80–120 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-035.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "New"
   },
   {
-    "slug": "cf-128",
-    "name": "CF-128 Tissue Culture Plug 128-Cell",
     "model": "CF-128",
-    "name_en": "Tissue Culture Plug 128-Cell",
+    "name_en": "Tissue Culture Plug 3.7 cm",
     "category": "Tissue Culture Plug",
-    "category_en": "Tissue Culture Plug",
-    "image": "assets/products/CF-128.png",
-    "trayFit": "105-cell tray, 128-cell tray",
-    "bestFor": "Tissue culture rooting and seedling propagation",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "A compact tapered plug for tissue-culture rooting and high-uniformity young plant production.",
-    "features": [
-      "Tissue Culture Plug",
-      "Container fit: 105-cell tray, 128-cell tray",
-      "Size: Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm"
-    ],
     "size": "Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm",
+    "trayFit": "105-cell or 128-cell propagation trays",
+    "bestFor": "Tissue-culture rooting, uniform young plants and compact nursery trays",
+    "desc": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays.",
+    "slug": "cf-128",
+    "name": "CF-128 Tissue Culture Plug 3.7 cm",
+    "image": "assets/products/CF-128.png",
     "applicationTags": [
       "Tissue Culture",
       "Seedling"
     ],
-    "status": "Best Seller",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-128.png",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "128 plugs / sheet × 20 sheets / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-128.png",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "Best Seller"
   },
   {
-    "slug": "cf-072",
-    "name": "CF-072 Seedling Plug 72-Cell",
     "model": "CF-072",
-    "name_en": "Seedling Plug 72-Cell",
+    "name_en": "Seedling Plug 4.0 cm",
     "category": "Seedling Plug",
-    "category_en": "Seedling Plug",
-    "image": "assets/products/CF-072.jpg",
-    "trayFit": "72-cell tray",
-    "bestFor": "Rooting, vegetable seedlings and flower propagation",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Seedling Plug 72-Cell provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Seedling Plug",
-      "Container fit: 72-cell tray",
-      "Size: Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm"
-    ],
     "size": "Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm",
+    "trayFit": "72-cell propagation trays",
+    "bestFor": "Vegetable seedlings, flower seedlings and commercial nursery propagation",
+    "desc": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency.",
+    "slug": "cf-072",
+    "name": "CF-072 Seedling Plug 4.0 cm",
+    "image": "assets/products/CF-072.jpg",
     "applicationTags": [
       "Seedling",
       "Tissue Culture"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-072.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "72 plugs / tray × 24 trays / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-072.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-200",
-    "name": "CF-200 High-Density Seedling Plug",
     "model": "CF-200",
-    "name_en": "High-Density Seedling Plug",
+    "name_en": "High-Density Plug 2.8 cm",
     "category": "High-Density Plug",
-    "category_en": "High-Density Plug",
-    "image": "assets/products/CF-200.jpg",
-    "trayFit": "200-cell tray / 2.0 × 2.8 cm plant-factory opening",
-    "bestFor": "Plant factory propagation, alternative to 20×28 mm rockwool cubes",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "High-Density Seedling Plug provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "High-Density Plug",
-      "Container fit: 200-cell tray / 2.0 × 2.8 cm plant-factory opening",
-      "Size: Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm"
-    ],
     "size": "Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm",
+    "trayFit": "200-cell tray or 2.0 × 2.8 cm plant-factory opening",
+    "bestFor": "High-density seedling production, plant-factory systems and compact trays",
+    "desc": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility.",
+    "slug": "cf-200",
+    "name": "CF-200 High-Density Plug 2.8 cm",
+    "image": "assets/products/CF-200.jpg",
     "applicationTags": [
       "Seedling",
       "Hydroponic"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-200.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "200 plugs / tray × 10 trays / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-200.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-005",
-    "name": "CF-005 Square Hydroponic Bar",
     "model": "CF-005",
-    "name_en": "Square Hydroponic Bar",
+    "name_en": "Square Hydroponic Plug 5.0 cm",
     "category": "Hydroponic Plug",
-    "category_en": "Hydroponic Plug",
-    "image": "assets/products/CF-005.jpg",
-    "trayFit": "Home seedling box, home hydroponic planter, around 26 mm square holder",
-    "bestFor": "Home grow systems and small seedling boxes",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Square Hydroponic Bar is designed for compact hydroponic planters, starter systems and nursery programs that require easy handling.",
-    "features": [
-      "Hydroponic Plug",
-      "Container fit: Home seedling box, home hydroponic planter, around 26 mm square holder",
-      "Size: Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm"
-    ],
     "size": "Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm",
+    "trayFit": "Home seedling boxes, compact hydroponic planters or approximately 26 mm square holders",
+    "bestFor": "Home hydroponic systems, retail starter kits and square-holder applications",
+    "desc": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile.",
+    "slug": "cf-005",
+    "name": "CF-005 Square Hydroponic Plug 5.0 cm",
+    "image": "assets/products/CF-005.jpg",
     "applicationTags": [
       "Hydroponic",
       "Seedling"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-005.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "600–900 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-005.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-003",
-    "name": "CF-003 Home Starter Plug 1.4-Class",
     "model": "CF-003",
-    "name_en": "Home Starter Plug 1.4-Class",
+    "name_en": "Home Starter Plug 3.7 cm",
     "category": "Home Starter Plug",
-    "category_en": "Home Starter Plug",
-    "image": "assets/products/CF-003.jpg",
-    "trayFit": "12-cell home nursery box",
-    "bestFor": "Home seed starting and propagation",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Home Starter Plug 1.4-Class provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Home Starter Plug",
-      "Container fit: 12-cell home nursery box",
-      "Size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm"
-    ],
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
+    "trayFit": "12-cell home nursery boxes and small seed-starting trays",
+    "bestFor": "Home seed starting, refill packs and beginner-friendly retail programs",
+    "desc": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
+    "slug": "cf-003",
+    "name": "CF-003 Home Starter Plug 3.7 cm",
+    "image": "assets/products/CF-003.jpg",
     "applicationTags": [
       "Seedling"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-003.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "1500–2000 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": "Compact starter-kit model for home propagation and retail seed-starting packs."
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-003.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-006",
-    "name": "CF-006 Square Plug 3.2 cm",
     "model": "CF-006",
-    "name_en": "Square Plug 3.2 cm",
+    "name_en": "Square Plug 3.2 × 3.2 cm",
     "category": "Square Plug",
-    "category_en": "Square Plug",
-    "image": "assets/products/CF-006.jpg",
-    "trayFit": "72-cell square tray, home seedling box",
-    "bestFor": "Cuttings in 72-cell trays and home seed starting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Square Plug 3.2 cm provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Square Plug",
-      "Container fit: 72-cell square tray, home seedling box",
-      "Size: Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm"
-    ],
     "size": "Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm",
+    "trayFit": "72-cell square trays and home seedling boxes",
+    "bestFor": "Square-tray propagation, cuttings and compact nursery programs",
+    "desc": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape.",
+    "slug": "cf-006",
+    "name": "CF-006 Square Plug 3.2 × 3.2 cm",
+    "image": "assets/products/CF-006.jpg",
     "applicationTags": [
       "Seedling"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-006.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "700–1000 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-006.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-901",
-    "name": "CF-901 Succulent Mounting Ball 20 cm",
     "model": "CF-901",
     "name_en": "Succulent Mounting Ball 20 cm",
     "category": "Succulent Mounting Ball",
-    "category_en": "Succulent Mounting Ball",
-    "image": "assets/products/CF-901.png",
-    "trayFit": "Decorative display tray, hanging basket or open succulent container",
-    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (20 cm)",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Succulent Mounting Ball 20 cm is a decorative molded growing-media format for succulent displays, kokedama-style planting and specialty garden products.",
-    "features": [
-      "Succulent Mounting Ball",
-      "Container fit: Decorative display tray, hanging basket or open succulent container",
-      "Size: Diameter 20 cm / Height 10 cm / Center hole 9.5 cm"
-    ],
     "size": "Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
+    "trayFit": "Display trays, hanging baskets or open succulent containers",
+    "bestFor": "Succulent displays, kokedama-style products and decorative planting programs",
+    "desc": "A large decorative molded-media ball for succulent display products and specialty planting concepts where visual presentation matters.",
+    "slug": "cf-901",
+    "name": "CF-901 Succulent Mounting Ball 20 cm",
+    "image": "assets/products/CF-901.png",
     "applicationTags": [
       "Succulent"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-901.png",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "20–40 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-901.png",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-902",
-    "name": "CF-902 Succulent Mounting Ball 16 cm",
     "model": "CF-902",
     "name_en": "Succulent Mounting Ball 16 cm",
     "category": "Succulent Mounting Ball",
-    "category_en": "Succulent Mounting Ball",
-    "image": "assets/products/CF-902.jpg",
-    "trayFit": "Decorative display tray, hanging basket or open succulent container",
-    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (16 cm)",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Succulent Mounting Ball 16 cm is a decorative molded growing-media format for succulent displays, kokedama-style planting and specialty garden products.",
-    "features": [
-      "Succulent Mounting Ball",
-      "Container fit: Decorative display tray, hanging basket or open succulent container",
-      "Size: Diameter 16 cm / Height 8 cm / Center hole 8.2 cm"
-    ],
     "size": "Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
+    "trayFit": "Display trays, hanging baskets or open succulent containers",
+    "bestFor": "Medium-size succulent displays and specialty retail planting items",
+    "desc": "A medium decorative mounting ball for retail succulent programs, balancing display size with more practical carton volume than the 20 cm version.",
+    "slug": "cf-902",
+    "name": "CF-902 Succulent Mounting Ball 16 cm",
+    "image": "assets/products/CF-902.jpg",
     "applicationTags": [
       "Succulent"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-902.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "30–60 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-902.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-903",
-    "name": "CF-903 Succulent Mounting Ball 11 cm",
     "model": "CF-903",
     "name_en": "Succulent Mounting Ball 11 cm",
     "category": "Succulent Mounting Ball",
-    "category_en": "Succulent Mounting Ball",
-    "image": "assets/products/CF-903.jpg",
-    "trayFit": "Decorative display tray, hanging basket or open succulent container",
-    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (11 cm)",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Succulent Mounting Ball 11 cm is a decorative molded growing-media format for succulent displays, kokedama-style planting and specialty garden products.",
-    "features": [
-      "Succulent Mounting Ball",
-      "Container fit: Decorative display tray, hanging basket or open succulent container",
-      "Size: Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm"
-    ],
     "size": "Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
+    "trayFit": "Small display trays, hanging baskets or open succulent containers",
+    "bestFor": "Compact succulent displays, gift sets and small specialty planters",
+    "desc": "A compact decorative mounting ball for smaller succulent products, gift sets and entry-level specialty planter assortments.",
+    "slug": "cf-903",
+    "name": "CF-903 Succulent Mounting Ball 11 cm",
+    "image": "assets/products/CF-903.jpg",
     "applicationTags": [
       "Succulent"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-903.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "60–100 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-903.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-128-1",
-    "name": "CF-128-1 Cylindrical Plug 2.6 cm",
-    "model": "CF-128-1",
-    "name_en": "Cylindrical Plug 2.6 cm",
+    "model": "CF-129",
+    "variantNote": "Variant developed from the CF-128 cylindrical plug family",
+    "name_en": "Cylindrical Plug 3.1 cm",
     "category": "Cylindrical Plug",
-    "category_en": "Cylindrical Plug",
-    "image": "assets/products/CF-128-1.png",
-    "trayFit": "105-cell tray, 128-cell tray",
-    "bestFor": "Cuttings and seed starting",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Cylindrical Plug 2.6 cm provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Cylindrical Plug",
-      "Container fit: 105-cell tray, 128-cell tray",
-      "Size: Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm"
-    ],
     "size": "Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
+    "trayFit": "105-cell or 128-cell propagation trays",
+    "bestFor": "Cuttings, seed starting and cylindrical cavity applications",
+    "desc": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug.",
+    "slug": "cf-129",
+    "name": "CF-129 Cylindrical Plug 3.1 cm",
+    "image": "assets/products/CF-129.png",
     "applicationTags": [
       "Seedling"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-128-1.png",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "800–1200 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-129.png",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "New"
   },
   {
-    "slug": "cf-067",
-    "name": "CF-067 Succulent Growing Cup 6.7 cm",
     "model": "CF-067",
     "name_en": "Succulent Growing Cup 6.7 cm",
     "category": "Succulent Growing Cup",
-    "category_en": "Succulent Growing Cup",
-    "image": "assets/products/CF-067.jpg",
-    "trayFit": "67 mm pot holder, succulent cup display tray or decorative planter",
-    "bestFor": "Succulent planting, decorative cup planting and home gardening",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "A molded growing cup for succulent planting, decorative retail sets and compact specialty planters.",
-    "features": [
-      "Succulent Growing Cup",
-      "Container fit: 67 mm pot holder, succulent cup display tray or decorative planter",
-      "Size: Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm"
-    ],
     "size": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
+    "trayFit": "6.7 cm pot holders, succulent cup display trays or decorative planters",
+    "bestFor": "Succulent planting, decorative cup planting and home-garden retail sets",
+    "desc": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
+    "slug": "cf-067",
+    "name": "CF-067 Succulent Growing Cup 6.7 cm",
+    "image": "assets/products/CF-067.jpg",
     "applicationTags": [
       "Succulent"
     ],
-    "status": "New",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-067.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "120–200 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": "Moved to the succulent group for decorative cup planting and small specialty-planter programs."
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-067.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "Best Seller"
   },
   {
-    "slug": "cf-010",
-    "name": "CF-010 Universal Seedling Plug",
     "model": "CF-010",
-    "name_en": "Universal Seedling Plug",
+    "name_en": "Universal Seedling Plug 4.1 cm",
     "category": "Seedling Plug",
-    "category_en": "Seedling Plug",
-    "image": "assets/products/CF-010.jpg",
-    "trayFit": "50–72-cell general seedling tray, opening around 3.2 cm",
-    "bestFor": "General seed starting and propagation",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Universal Seedling Plug provides a clean molded-media format for propagation, tray-based handling and retail-ready plant-starting projects.",
-    "features": [
-      "Seedling Plug",
-      "Container fit: 50–72-cell general seedling tray, opening around 3.2 cm",
-      "Size: Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm"
-    ],
     "size": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
+    "trayFit": "50–72-cell general seedling trays with approximately 3.2 cm openings",
+    "bestFor": "General seed starting, cuttings and trial propagation programs",
+    "desc": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
+    "slug": "cf-010",
+    "name": "CF-010 Universal Seedling Plug 4.1 cm",
+    "image": "assets/products/CF-010.jpg",
     "applicationTags": [
       "Seedling"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-010.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "1000–1500 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-010.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   },
   {
-    "slug": "cf-015",
-    "name": "CF-015 Orchid Plug 60-Cell",
     "model": "CF-015",
-    "name_en": "Orchid Plug 60-Cell",
+    "name_en": "Orchid Plug 4.5 cm",
     "category": "Orchid Plug",
-    "category_en": "Orchid Plug",
-    "image": "assets/products/CF-015.jpg",
-    "trayFit": "60-cell orchid tray",
-    "bestFor": "Dedicated Phalaenopsis seedling production",
-    "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Trial orders are available. Reference MOQ is normally discussed by carton count, packaging format and destination market.",
-    "description": "Orchid Plug 60-Cell supports orchid propagation or transplanting programs that need a stable molded-media structure and predictable container fit.",
-    "features": [
-      "Orchid Plug",
-      "Container fit: 60-cell orchid tray",
-      "Size: Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm"
-    ],
     "size": "Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
+    "trayFit": "60-cell orchid trays",
+    "bestFor": "Orchid seedling production and stage-based transplant planning",
+    "desc": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility.",
+    "slug": "cf-015",
+    "name": "CF-015 Orchid Plug 4.5 cm",
+    "image": "assets/products/CF-015.jpg",
     "applicationTags": [
       "Orchid"
     ],
-    "status": "",
-    "material": "Coco coir, peat moss and plant-fiber molded blend; formula and blend ratio can be discussed for application-specific programs.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
     "certifications": [
-      "SGS testing available",
-      "Phytosanitary document support",
-      "Fumigation document support"
-    ],
-    "gallery": [
-      "assets/products/CF-015.jpg",
-      "assets/package-option-box.webp",
-      "assets/package-option-display.webp"
+      "SGS test report available",
+      "Invoice and packing list",
+      "Route-based document support"
     ],
     "cartonQty": "300–500 pcs / carton",
-    "cartonNote": "Reference carton quantity is not fixed. Final count depends on outer carton size, retail packaging, private-label inserts and shipping method.",
-    "variantNote": ""
+    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "gallery": [
+      "assets/products/CF-015.jpg",
+      "assets/private-label-hero.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": ""
   }
 ]
