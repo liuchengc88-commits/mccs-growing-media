@@ -1,27 +1,40 @@
 # MCCS Growing Media Website
 
-A B2B lead-generation website for MCCS tall tapered molded substrate plugs.
+This is the GitHub / Vercel ready version for the MCCS independent website.
 
-## Main Pages
-- Home
-- Products
-- Sample & Shipping
-- Private Label
-- Insights
-- About
-- Contact
+## Current Product System
 
-## Product Upload Portal
-Open: https://www.mccsgrowingmedia.com/admin.html
+All product models have been updated to the CF series.
 
-Workflow:
-1. Upload product images to `/assets/`.
-2. Add specifications in `/admin.html`.
-3. Download `products.json`.
-4. Upload it to `/data/products.json`.
-5. Commit changes. Vercel updates automatically.
+Examples:
+- ZY-001 → CF-001
+- ZY-128 → CF-128
+- ZY-128-1 → CF-128-1
+- 67 Growing Cup → CF-067
+
+## Where product files are stored
+
+- Product data: `/data/products.json`
+- Product CSV: `/data/products-cf.csv`
+- Product images: `/assets/products/`
+- Product page: `/products/`
+- Product manager: `/admin.html`
+
+## How to add or update products
+
+1. Upload the product image to `/assets/products/`.
+2. Open `/admin.html` on the website.
+3. Add or edit the product information.
+4. Download `products.json`.
+5. Upload and overwrite `/data/products.json` in GitHub.
+6. Commit changes. Vercel will deploy automatically.
 
 ## Integrations
-- Google Analytics: G-JGR2SQBQHW
-- Formspree: https://formspree.io/f/mredrnea
+
+- Google Analytics Measurement ID: G-JGR2SQBQHW
+- Formspree endpoint: https://formspree.io/f/mredrnea
 - Conversion event: submit_quote_form
+
+## Deployment
+
+Upload this package to the GitHub repository root. Any commit to the main branch will trigger a new Vercel deployment.
