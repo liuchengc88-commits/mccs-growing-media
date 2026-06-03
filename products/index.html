@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CF Series Products | MCCS Molded Substrate Plugs</title>
-  <meta name="description" content="CF series MCCS molded substrate plugs, orchid plugs, tray-fit growing media and mounting balls with recommended tray and container fit for B2B buyers." />
+  <title>CF Series Substrate Plugs | MCCS B2B Catalog</title>
+  <meta name="description" content="Explore 19 CF Series MCCS molded substrate plugs for hydroponics, orchid cultivation, tissue culture, succulents and seedling propagation. Includes sizes, tray fit, material notes and B2B export support." />
   <link rel="canonical" href="https://www.mccsgrowingmedia.com/products/" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
@@ -32,25 +32,78 @@
   </div>
 </header>
 <main>
-  <section class="page-hero">
+  <section class="page-hero products-hero">
     <div class="container breadcrumbs"><a href="/">Home</a><span>/</span><span>Products</span></div>
-    <div class="container">
-      <span class="section-label">CF Series Product Matrix</span>
-      <h1>MCCS CF Series Product Catalog</h1>
-      <p class="lead">A website-ready product matrix with updated CF model numbers, refreshed website product images and recommended tray / container fit for B2B buyers.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-large" href="/#contact">Request Quote & Sample</a>
-        <a class="btn btn-outline btn-large" href="/data/products-cf.csv" download>Download CSV</a>
+    <div class="container product-hero-layout">
+      <div>
+        <span class="section-label">CF Series Product Matrix</span>
+        <h1>MCCS CF Series Product Catalog</h1>
+        <p class="lead">CF Series offers 19 precision-engineered substrate plugs for hydroponics, orchid cultivation, tissue culture, succulent planting and seedling propagation.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="/#contact">Request Quote & Sample</a>
+          <a class="btn btn-outline btn-large" href="/data/products-cf.csv" download>Download CSV</a>
+        </div>
+      </div>
+      <div class="b2b-info-card">
+        <h2>B2B Supply Notes</h2>
+        <p><b>Material:</b> Coco coir / peat moss / plant-fiber molded blend. Blend ratio can be adjusted after sample testing and application requirements.</p>
+        <p><b>Export support:</b> OEM packaging, carton mark, FBA label, sample testing and document support.</p>
+        <div class="cert-badges">
+          <span>SGS Testing Available</span>
+          <span>Phytosanitary Docs</span>
+          <span>Fumigation Docs</span>
+          <span>OEM / Private Label</span>
+        </div>
       </div>
     </div>
   </section>
-  <section class="section">
+
+  <section class="section product-catalog-section">
     <div class="container">
-      <div class="portal-toolbar">
+      <div class="portal-toolbar enhanced-toolbar">
         <input id="productFilter" type="search" placeholder="Search model, product, tray fit, application..." />
         <select id="categoryFilter"><option value="">All Categories</option></select>
       </div>
-      <div id="productMatrix" class="matrix-grid cf-matrix"></div>
+      <div class="app-filter-bar" aria-label="Application filters">
+        <button type="button" class="app-filter active" data-app="">All Products</button>
+        <button type="button" class="app-filter" data-app="Seedling">🌱 Seedling</button>
+        <button type="button" class="app-filter" data-app="Orchid">🌺 Orchid</button>
+        <button type="button" class="app-filter" data-app="Tissue Culture">🧪 Tissue Culture</button>
+        <button type="button" class="app-filter" data-app="Hydroponic">🏠 Hydroponic</button>
+        <button type="button" class="app-filter" data-app="Succulent">🌿 Succulent</button>
+      </div>
+      <div id="productMatrix" class="matrix-grid cf-matrix enhanced-product-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="comparison-table">
+    <div class="container">
+      <div class="section-head">
+        <span>Comparison Table</span>
+        <h2>Compare CF Series Models by Size, Tray Fit and Application</h2>
+        <p>Use this table to quickly shortlist products for sample testing or private-label development.</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="spec-table compare-table product-compare-table">
+          <thead><tr><th>Model</th><th>Product</th><th>Size</th><th>Tray / Container Fit</th><th>Application</th></tr></thead>
+          <tbody id="productCompareBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="buyer-feedback">
+    <div class="container">
+      <div class="section-head">
+        <span>Buyer Feedback</span>
+        <h2>What B2B Buyers Usually Care About</h2>
+        <p>These sample buyer notes summarize common evaluation points during sample testing, private-label packaging and recurring supply discussions.</p>
+      </div>
+      <div class="testimonial-grid">
+        <article><b>Garden Kit Brand</b><p>“Compact dry volume and clear retail packaging options help us plan small starter kits for online channels.”</p></article>
+        <article><b>Orchid Nursery Buyer</b><p>“The CF orchid plug range makes it easier to match different seedling stages with tray or pot size.”</p></article>
+        <article><b>Hydroponic Distributor</b><p>“Tray fit, sample testing and export document support are the key items we check before bulk orders.”</p></article>
+      </div>
     </div>
   </section>
 </main><footer class="site-footer">
@@ -58,7 +111,7 @@
     <div><strong>MCCS Growing Media</strong><p>Flexible China-based private-label molded substrate plug supplier for overseas distributors, nurseries and retail growing kit brands.</p></div>
     <div><b>Products</b><a href="/products/">Product Matrix</a><a href="/sample-shipping/">Sample & Shipping</a><a href="/private-label/">Private Label</a></div>
     <div><b>Resources</b><a href="/insights/">Insights</a><a href="/about/">About</a><a href="/#contact">Contact</a></div>
-    <div><b>Admin</b><a href="/admin.html">Product Manager</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div>
+    <div><b>Trust</b><a href="/#contact">Request Sample</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div>
   </div>
   <div class="container footer-bottom">© 2026 Guangzhou Chengfeng Trading Co., Ltd. All rights reserved.</div>
 </footer>

@@ -44,3 +44,12 @@ Upload this package to the GitHub repository root. Any commit to the main branch
 
 - Product images use the original embedded images from the uploaded product spreadsheet.
 - Dry size fields removed. Wet size is now displayed as Size.
+
+
+## 2026-06 Product Page Enhancements
+- Added CF Series value proposition.
+- Added B2B material, certification and export support area.
+- Added application filters: Seedling, Orchid, Tissue Culture, Hydroponic and Succulent.
+- Added Best Seller / New tags and Quick View details.
+- Removed repeated private-label feature lines from product cards.
+- Added product comparison table, buyer feedback and Product structured data.
