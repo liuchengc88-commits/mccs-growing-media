@@ -1,4 +1,3 @@
-
 async function loadProducts() {
   const grid = document.getElementById('productMatrix');
   const categoryFilter = document.getElementById('categoryFilter');
@@ -40,7 +39,9 @@ async function loadProducts() {
       additionalProperty: [
         { '@type': 'PropertyValue', name: 'Size', value: p.size || '' },
         { '@type': 'PropertyValue', name: 'Tray Fit', value: p.trayFit || p.trayFitCn || '' },
-        { '@type': 'PropertyValue', name: 'Material', value: p.material || '' }
+        { '@type': 'PropertyValue', name: 'Material', value: p.material || '' },
+        { '@type': 'PropertyValue', name: 'Reference Carton Qty', value: p.cartonQty || '' },
+        { '@type': 'PropertyValue', name: 'MOQ', value: p.moq || '' }
       ]
     };
     return `
@@ -60,13 +61,16 @@ async function loadProducts() {
             <dt>Size</dt><dd>${p.size || '-'}</dd>
             <dt>Tray Fit</dt><dd>${p.trayFit || p.trayFitCn || '-'}</dd>
             <dt>Best For</dt><dd>${p.bestFor || '-'}</dd>
+            <dt>Carton Qty</dt><dd>${p.cartonQty || '-'}</dd>
+            <dt>MOQ</dt><dd>${p.moq || '-'}</dd>
           </dl>
           <button class="quick-view" type="button" aria-expanded="false">Quick View</button>
           <div class="quick-view-panel" hidden>
             <b>More details</b>
-            <ul>
+            <ul class="quick-list">
               <li><strong>Material:</strong> ${p.material || 'Coco coir / peat moss / plant-fiber molded blend'}</li>
               <li><strong>Packaging:</strong> ${p.packaging || 'Bulk carton / retail box / private-label pack'}</li>
+              <li><strong>Reference carton quantity:</strong> ${p.cartonQty || 'To be confirmed'}</li>
               <li><strong>MOQ:</strong> ${p.moq || 'Sample order available; bulk MOQ by project'}</li>
               <li><strong>Document support:</strong> ${(p.certifications || []).join(' / ')}</li>
             </ul>
@@ -74,8 +78,8 @@ async function loadProducts() {
               ${(p.gallery || [p.image]).slice(0,3).map((img,i)=>`<img src="/${img}" alt="${p.model || ''} ${p.name_en || p.name} ${i===0?'product image':i===1?'application or package reference':'packaging reference'}" loading="lazy">`).join('')}
             </div>
           </div>
-          <a class="btn btn-primary" href="/#contact">Request Quote & Sample</a>
-          <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
+          <a class="btn btn-primary" href="/contact/">Request Quote & Sample</a>
+          <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\u003c')}</script>
         </div>
       </article>
     `;
@@ -132,8 +136,8 @@ async function loadProducts() {
     });
   });
 
-  productFilter.addEventListener('input', render);
-  categoryFilter.addEventListener('change', render);
+  productFilter?.addEventListener('input', render);
+  categoryFilter?.addEventListener('change', render);
   render();
 }
 loadProducts();

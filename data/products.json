@@ -14,7 +14,7 @@
     "bestFor": "Seed starting and seedling propagation for home hydroponic systems",
     "useCn": "家用水培机播种/育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "Long Tapered Plug for seed starting and seedling propagation for home hydroponic systems. Recommended fit: Home hydroponic planter holes, 5 cm nursery cup / non-standard tray.",
     "features": [
       "Tapered Long Plug",
@@ -37,7 +37,8 @@
       "assets/products/CF-001.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "900–1200 pcs / carton"
   },
   {
     "slug": "cf-004",
@@ -54,7 +55,7 @@
     "bestFor": "Succulent growing and home gardening",
     "useCn": "多肉种植、家庭园艺",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "Succulent Growing Plug for succulent growing and home gardening. Recommended fit: Succulent tray, 12-cell / 24-cell nursery box, opening ≥ 3.3 cm.",
     "features": [
       "Succulent Plug",
@@ -76,7 +77,8 @@
       "assets/products/CF-004.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "300–500 pcs / carton"
   },
   {
     "slug": "cf-017",
@@ -93,7 +95,7 @@
     "bestFor": "Phalaenopsis 1.5–1.7 inch seedling production and tissue culture rooting",
     "useCn": "蝴蝶兰1.5寸/1.7寸育苗、组培苗生根",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "1.7 inch Orchid Plug for phalaenopsis 1.5–1.7 inch seedling production and tissue culture rooting. Recommended fit: 50-cell orchid / tissue culture tray.",
     "features": [
       "Phalaenopsis Orchid Plug",
@@ -116,7 +118,8 @@
       "assets/products/CF-017.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "200–300 pcs / carton"
   },
   {
     "slug": "cf-025",
@@ -133,7 +136,7 @@
     "bestFor": "Phalaenopsis mid-stage growth and transplanting",
     "useCn": "蝴蝶兰中苗/定植",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "2.5 inch Orchid Plug for phalaenopsis mid-stage growth and transplanting. Recommended fit: 2.5 inch orchid pot, 15–21 cell large planting tray.",
     "features": [
       "Orchid Planting Cup",
@@ -155,7 +158,8 @@
       "assets/products/CF-025.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "120–180 pcs / carton"
   },
   {
     "slug": "cf-028",
@@ -172,7 +176,7 @@
     "bestFor": "Tall-cup orchid cultivation and transplanting",
     "useCn": "蝴蝶兰加高培育/定植",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "2.8 inch Tall Orchid Cup for tall-cup orchid cultivation and transplanting. Recommended fit: 2.8 inch orchid pot, 12–15 cell planting tray.",
     "features": [
       "Tall Orchid Cup",
@@ -183,7 +187,7 @@
     "applicationTags": [
       "Orchid"
     ],
-    "status": "",
+    "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
     "certifications": [
       "SGS testing available",
@@ -194,7 +198,8 @@
       "assets/products/CF-028.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "100–140 pcs / carton"
   },
   {
     "slug": "cf-035",
@@ -211,7 +216,7 @@
     "bestFor": "Large orchid growth stage and transplanting",
     "useCn": "蝴蝶兰大苗/定植",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "3.5 inch Tall Orchid Cup for large orchid growth stage and transplanting. Recommended fit: 3.5 inch orchid pot, 6–12 cell planting tray.",
     "features": [
       "Tall Orchid Cup",
@@ -222,7 +227,7 @@
     "applicationTags": [
       "Orchid"
     ],
-    "status": "",
+    "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
     "certifications": [
       "SGS testing available",
@@ -233,7 +238,8 @@
       "assets/products/CF-035.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "80–120 pcs / carton"
   },
   {
     "slug": "cf-128",
@@ -250,7 +256,7 @@
     "bestFor": "Tissue culture rooting and seedling propagation",
     "useCn": "组培苗生根、育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "128-Cell Tissue Culture Plug for tissue culture rooting and seedling propagation. Recommended fit: 105-cell tray, 128-cell tray.",
     "features": [
       "Tapered Tissue Culture Plug",
@@ -273,7 +279,8 @@
       "assets/products/CF-128.png",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "128 plugs / sheet × 20 sheets / carton"
   },
   {
     "slug": "cf-072",
@@ -290,7 +297,7 @@
     "bestFor": "Rooting, vegetable seedlings and flower propagation",
     "useCn": "组培苗生根、蔬菜/花卉育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "72-Cell Seedling Plug for rooting, vegetable seedlings and flower propagation. Recommended fit: 72-cell tray.",
     "features": [
       "Tapered Seedling Plug",
@@ -313,7 +320,8 @@
       "assets/products/CF-072.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "72 plugs / tray × 24 trays / carton"
   },
   {
     "slug": "cf-200",
@@ -330,7 +338,7 @@
     "bestFor": "Plant factory propagation, alternative to 20×28 mm rockwool cubes",
     "useCn": "植物工厂，对标20×28mm岩棉块",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "200-Cell Plug for plant factory propagation, alternative to 20×28 mm rockwool cubes. Recommended fit: 200-cell tray / plant factory 20×28 mm standard opening.",
     "features": [
       "Cylindrical Plug",
@@ -353,7 +361,8 @@
       "assets/products/CF-200.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "200 plugs / tray × 10 trays / carton"
   },
   {
     "slug": "cf-005",
@@ -370,7 +379,7 @@
     "bestFor": "Home grow systems and small seedling boxes",
     "useCn": "家庭种植机、家用育苗盒",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "Square Growing Bar for home grow systems and small seedling boxes. Recommended fit: Home seedling box, home hydroponic planter, approx. 26 mm square holder.",
     "features": [
       "Square Long Plug",
@@ -393,7 +402,8 @@
       "assets/products/CF-005.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "600–900 pcs / carton"
   },
   {
     "slug": "cf-003",
@@ -410,7 +420,7 @@
     "bestFor": "Home seed starting and propagation",
     "useCn": "家庭播种、育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "1.4 inch Growing Plug for home seed starting and propagation. Recommended fit: 12-cell home nursery box.",
     "features": [
       "Small Seedling Plug",
@@ -432,7 +442,8 @@
       "assets/products/CF-003.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "1500–2000 pcs / carton"
   },
   {
     "slug": "cf-006",
@@ -449,7 +460,7 @@
     "bestFor": "Cuttings in 72-cell trays and home seed starting",
     "useCn": "72孔穴盘扦插、家用播种",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "32×32 Plug for cuttings in 72-cell trays and home seed starting. Recommended fit: 72-cell square tray, home seedling box.",
     "features": [
       "Square Plug",
@@ -471,7 +482,8 @@
       "assets/products/CF-006.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "700–1000 pcs / carton"
   },
   {
     "slug": "cf-901",
@@ -479,25 +491,25 @@
     "model": "CF-901",
     "name_cn": "上板球系列20CM",
     "name_en": "Mounting Ball 20 cm",
-    "category": "Mounting Ball",
-    "category_cn": "上板球/挂板球",
-    "category_en": "Mounting Ball",
+    "category": "Succulent Mounting Ball",
+    "category_cn": "多肉上板球",
+    "category_en": "Succulent Mounting Ball",
     "image": "assets/products/CF-901.png",
-    "trayFit": "Not a tray product; compatible with wall mount or board support",
-    "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
-    "bestFor": "Wall mounting for staghorn fern, orchids and decorative plants",
+    "trayFit": "Decorative display tray, hanging basket or open succulent container",
+    "trayFitCn": "展示托盘、吊挂盆或开放式多肉容器",
+    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (20 cm)",
     "useCn": "鹿角蕨、蝴蝶兰等挂墙绿植",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
-    "description": "Mounting Ball 20 cm for wall mounting for staghorn fern, orchids and decorative plants. Recommended fit: Not a tray product; compatible with wall mount or board support.",
+    "moq": "Trial order available; reference MOQ starts from 2 cartons for bulk packing.",
+    "description": "Mounting Ball 20 cm for succulent display, kokedama-style planting and decorative garden applications. Recommended fit: Decorative display tray, hanging basket or open succulent container.",
     "features": [
-      "Mounting Ball",
-      "Tray / container fit: Not a tray product; compatible with wall mount or board support",
+      "Succulent Mounting Ball",
+      "Tray / container fit: Decorative display tray, hanging basket or open succulent container",
       "Size: Diameter 20 cm / Height 10 cm / Center hole 9.5 cm"
     ],
     "size": "Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
     "applicationTags": [
-      "Orchid"
+      "Succulent"
     ],
     "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
@@ -510,7 +522,8 @@
       "assets/products/CF-901.png",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "20–40 pcs / carton"
   },
   {
     "slug": "cf-902",
@@ -518,25 +531,25 @@
     "model": "CF-902",
     "name_cn": "上板球系列16CM",
     "name_en": "Mounting Ball 16 cm",
-    "category": "Mounting Ball",
-    "category_cn": "上板球/挂板球",
-    "category_en": "Mounting Ball",
+    "category": "Succulent Mounting Ball",
+    "category_cn": "多肉上板球",
+    "category_en": "Succulent Mounting Ball",
     "image": "assets/products/CF-902.jpg",
-    "trayFit": "Not a tray product; compatible with wall mount or board support",
-    "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
-    "bestFor": "Wall mounting for staghorn fern, orchids and decorative plants",
+    "trayFit": "Decorative display tray, hanging basket or open succulent container",
+    "trayFitCn": "展示托盘、吊挂盆或开放式多肉容器",
+    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (16 cm)",
     "useCn": "鹿角蕨、蝴蝶兰等挂墙绿植",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
-    "description": "Mounting Ball 16 cm for wall mounting for staghorn fern, orchids and decorative plants. Recommended fit: Not a tray product; compatible with wall mount or board support.",
+    "moq": "Trial order available; reference MOQ starts from 2 cartons for bulk packing.",
+    "description": "Mounting Ball 16 cm for succulent display, kokedama-style planting and decorative garden applications. Recommended fit: Decorative display tray, hanging basket or open succulent container.",
     "features": [
-      "Mounting Ball",
-      "Tray / container fit: Not a tray product; compatible with wall mount or board support",
+      "Succulent Mounting Ball",
+      "Tray / container fit: Decorative display tray, hanging basket or open succulent container",
       "Size: Diameter 16 cm / Height 8 cm / Center hole 8.2 cm"
     ],
     "size": "Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
     "applicationTags": [
-      "Orchid"
+      "Succulent"
     ],
     "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
@@ -549,7 +562,8 @@
       "assets/products/CF-902.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "30–60 pcs / carton"
   },
   {
     "slug": "cf-903",
@@ -557,25 +571,25 @@
     "model": "CF-903",
     "name_cn": "上板球系列11CM",
     "name_en": "Mounting Ball 11 cm",
-    "category": "Mounting Ball",
-    "category_cn": "上板球/挂板球",
-    "category_en": "Mounting Ball",
+    "category": "Succulent Mounting Ball",
+    "category_cn": "多肉上板球",
+    "category_en": "Succulent Mounting Ball",
     "image": "assets/products/CF-903.jpg",
-    "trayFit": "Not a tray product; compatible with wall mount or board support",
-    "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
-    "bestFor": "Small wall-mount greenery and compact staghorn fern display",
+    "trayFit": "Decorative display tray, hanging basket or open succulent container",
+    "trayFitCn": "展示托盘、吊挂盆或开放式多肉容器",
+    "bestFor": "Succulent display, kokedama-style planting and decorative garden applications (11 cm)",
     "useCn": "挂墙绿植、小型鹿角蕨",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
-    "description": "Mounting Ball 11 cm for small wall-mount greenery and compact staghorn fern display. Recommended fit: Not a tray product; compatible with wall mount or board support.",
+    "moq": "Trial order available; reference MOQ starts from 2 cartons for bulk packing.",
+    "description": "Mounting Ball 11 cm for succulent display, kokedama-style planting and decorative garden applications. Recommended fit: Decorative display tray, hanging basket or open succulent container.",
     "features": [
-      "Mounting Ball",
-      "Tray / container fit: Not a tray product; compatible with wall mount or board support",
+      "Succulent Mounting Ball",
+      "Tray / container fit: Decorative display tray, hanging basket or open succulent container",
       "Size: Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm"
     ],
     "size": "Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
     "applicationTags": [
-      "Orchid"
+      "Succulent"
     ],
     "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
@@ -588,7 +602,8 @@
       "assets/products/CF-903.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "60–100 pcs / carton"
   },
   {
     "slug": "cf-128-1",
@@ -605,7 +620,7 @@
     "bestFor": "Cuttings and seed starting",
     "useCn": "扦插、播种",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "Ø26 Cylindrical Plug for cuttings and seed starting. Recommended fit: 105-cell tray, 128-cell tray.",
     "features": [
       "Cylindrical Plug",
@@ -616,7 +631,7 @@
     "applicationTags": [
       "Seedling"
     ],
-    "status": "",
+    "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
     "certifications": [
       "SGS testing available",
@@ -627,7 +642,8 @@
       "assets/products/CF-128-1.png",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "800–1200 pcs / carton"
   },
   {
     "slug": "cf-067",
@@ -635,25 +651,25 @@
     "model": "CF-067",
     "name_cn": "67种植杯",
     "name_en": "67 mm Growing Cup",
-    "category": "Growing Cup",
-    "category_cn": "种植杯",
-    "category_en": "Growing Cup",
+    "category": "Succulent Growing Cup",
+    "category_cn": "多肉种植杯",
+    "category_en": "Succulent Growing Cup",
     "image": "assets/products/CF-067.jpg",
-    "trayFit": "6.5–7 cm support holder / vertical greening module",
-    "trayFitCn": "6.5–7cm种植杯托架 / 垂直绿化模块",
-    "bestFor": "Vertical greening and low-maintenance growing cup",
+    "trayFit": "67 mm pot holder, succulent cup display tray or decorative planter",
+    "trayFitCn": "67毫米杯托、多肉展示托或装饰花盆",
+    "bestFor": "Succulent planting, decorative cup planting and home gardening",
     "useCn": "垂直绿化种植、懒人种植盆",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
-    "description": "67 mm Growing Cup for vertical greening and low-maintenance growing cup. Recommended fit: 6.5–7 cm support holder / vertical greening module.",
+    "moq": "Trial order available; reference MOQ starts from 3 cartons for bulk packing.",
+    "description": "67 mm Growing Cup for succulent planting, decorative cup planting and home gardening. Recommended fit: 67 mm pot holder, succulent cup display tray or decorative planter.",
     "features": [
-      "Growing Cup",
-      "Tray / container fit: 6.5–7 cm support holder / vertical greening module",
+      "Succulent Growing Cup",
+      "Tray / container fit: 67 mm pot holder, succulent cup display tray or decorative planter",
       "Size: Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm"
     ],
     "size": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
     "applicationTags": [
-      "Hydroponic"
+      "Succulent"
     ],
     "status": "New",
     "material": "Coco coir / peat moss / plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
@@ -666,7 +682,8 @@
       "assets/products/CF-067.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "120–200 pcs / carton"
   },
   {
     "slug": "cf-010",
@@ -683,7 +700,7 @@
     "bestFor": "General seed starting and propagation",
     "useCn": "通用播种、扦插育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "Universal Seedling Plug for general seed starting and propagation. Recommended fit: 50–72 cell general seedling tray (opening about 3.2 cm).",
     "features": [
       "Small Seedling Plug",
@@ -705,7 +722,8 @@
       "assets/products/CF-010.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "1000–1500 pcs / carton"
   },
   {
     "slug": "cf-015",
@@ -722,7 +740,7 @@
     "bestFor": "Dedicated Phalaenopsis seedling production",
     "useCn": "蝴蝶兰专用育苗",
     "packaging": "Bulk carton / retail box / private-label pack",
-    "moq": "Sample order available; bulk MOQ by packaging and destination",
+    "moq": "Trial order available; reference MOQ starts from 5 cartons, subject to final packaging.",
     "description": "60-Cell Orchid Plug for dedicated phalaenopsis seedling production. Recommended fit: 60-cell orchid tray.",
     "features": [
       "Orchid Plug",
@@ -744,6 +762,7 @@
       "assets/products/CF-015.jpg",
       "assets/retail-box-real.webp",
       "assets/retail-box-display.webp"
-    ]
+    ],
+    "cartonQty": "300–500 pcs / carton"
   }
 ]
