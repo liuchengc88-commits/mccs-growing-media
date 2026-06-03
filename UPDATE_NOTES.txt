@@ -1,0 +1,5 @@
+Updated package based on uploaded 产品规格1(2).xls
+- Product images are copied from the original spreadsheet embedded image files without visual modification.
+- All dry-size fields have been removed from product data and display.
+- Wet-size fields are unified under the label Size / 尺寸.
+- CF model numbers are retained.

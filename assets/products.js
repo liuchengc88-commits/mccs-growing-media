@@ -38,8 +38,7 @@ async function loadProducts() {
           <p>${p.description || ''}</p>
           <dl>
             <dt>Category</dt><dd>${p.category || '-'}</dd>
-            <dt>Wet Size</dt><dd>${p.hydratedSize || '-'}</dd>
-            <dt>Dry Size</dt><dd>${p.drySize || '-'}</dd>
+            <dt>Size</dt><dd>${p.size || '-'}</dd>
             <dt>Tray Fit</dt><dd>${p.trayFit || p.trayFitCn || '-'}</dd>
             <dt>Best For</dt><dd>${p.bestFor || '-'}</dd>
           </dl>

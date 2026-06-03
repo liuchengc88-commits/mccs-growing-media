@@ -38,3 +38,9 @@ Examples:
 ## Deployment
 
 Upload this package to the GitHub repository root. Any commit to the main branch will trigger a new Vercel deployment.
+
+
+## Latest update
+
+- Product images use the original embedded images from the uploaded product spreadsheet.
+- Dry size fields removed. Wet size is now displayed as Size.

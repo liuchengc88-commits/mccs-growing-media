@@ -9,8 +9,6 @@
     "category_cn": "锥形长条种植块",
     "category_en": "Tapered Long Plug",
     "image": "assets/products/CF-001.jpg",
-    "drySize": "Top Ø 2.0 cm / Bottom Ø 0.8 cm / Height 6.2 cm",
-    "hydratedSize": "Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm",
     "trayFit": "Home hydroponic planter holes, 5 cm nursery cup / non-standard tray",
     "trayFitCn": "家用水培机孔位、5cm育苗盒（非标准穴盘）",
     "bestFor": "Seed starting and seedling propagation for home hydroponic systems",
@@ -21,9 +19,10 @@
     "features": [
       "Tapered Long Plug",
       "Tray / container fit: Home hydroponic planter holes, 5 cm nursery cup / non-standard tray",
-      "Wet size: Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm",
+      "Size: Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm"
   },
   {
     "slug": "cf-004",
@@ -35,8 +34,6 @@
     "category_cn": "多肉育苗块",
     "category_en": "Succulent Plug",
     "image": "assets/products/CF-004.jpg",
-    "drySize": "Top 3.0 cm / Bottom 2.5 cm / Height 3.4 cm",
-    "hydratedSize": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "Succulent tray, 12-cell / 24-cell nursery box, opening ≥ 3.3 cm",
     "trayFitCn": "多肉育苗盘、12孔/24孔育苗盒、孔口≥3.3cm",
     "bestFor": "Succulent growing and home gardening",
@@ -47,9 +44,10 @@
     "features": [
       "Succulent Plug",
       "Tray / container fit: Succulent tray, 12-cell / 24-cell nursery box, opening ≥ 3.3 cm",
-      "Wet size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
+      "Size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm"
   },
   {
     "slug": "cf-017",
@@ -61,8 +59,6 @@
     "category_cn": "蝴蝶兰育苗块",
     "category_en": "Phalaenopsis Orchid Plug",
     "image": "assets/products/CF-017.jpg",
-    "drySize": "Top 4.8 cm / Bottom 3.0 cm / Height 4.3 cm",
-    "hydratedSize": "Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm",
     "trayFit": "50-cell orchid / tissue culture tray",
     "trayFitCn": "50穴蝴蝶兰/组培专用穴盘",
     "bestFor": "Phalaenopsis 1.5–1.7 inch seedling production and tissue culture rooting",
@@ -73,9 +69,10 @@
     "features": [
       "Phalaenopsis Orchid Plug",
       "Tray / container fit: 50-cell orchid / tissue culture tray",
-      "Wet size: Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm",
+      "Size: Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm"
   },
   {
     "slug": "cf-025",
@@ -87,8 +84,6 @@
     "category_cn": "蝴蝶兰定植杯",
     "category_en": "Orchid Planting Cup",
     "image": "assets/products/CF-025.jpg",
-    "drySize": "—",
-    "hydratedSize": "Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm",
     "trayFit": "2.5 inch orchid pot, 15–21 cell large planting tray",
     "trayFitCn": "2.5寸兰花盆、15–21孔大规格定植托盘",
     "bestFor": "Phalaenopsis mid-stage growth and transplanting",
@@ -99,9 +94,10 @@
     "features": [
       "Orchid Planting Cup",
       "Tray / container fit: 2.5 inch orchid pot, 15–21 cell large planting tray",
-      "Wet size: Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm",
+      "Size: Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm"
   },
   {
     "slug": "cf-028",
@@ -113,8 +109,6 @@
     "category_cn": "蝴蝶兰加高杯",
     "category_en": "Tall Orchid Cup",
     "image": "assets/products/CF-028.jpg",
-    "drySize": "Top 8.0 cm / Bottom 5.0 cm / Height 7.7 cm",
-    "hydratedSize": "Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm",
     "trayFit": "2.8 inch orchid pot, 12–15 cell planting tray",
     "trayFitCn": "2.8寸兰花盆、12–15孔定植托盘",
     "bestFor": "Tall-cup orchid cultivation and transplanting",
@@ -125,9 +119,10 @@
     "features": [
       "Tall Orchid Cup",
       "Tray / container fit: 2.8 inch orchid pot, 12–15 cell planting tray",
-      "Wet size: Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm",
+      "Size: Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm"
   },
   {
     "slug": "cf-035",
@@ -139,8 +134,6 @@
     "category_cn": "蝴蝶兰加高杯",
     "category_en": "Tall Orchid Cup",
     "image": "assets/products/CF-035.jpg",
-    "drySize": "Top 9.7 cm / Bottom 6.8 cm / Height 9.5 cm",
-    "hydratedSize": "Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm",
     "trayFit": "3.5 inch orchid pot, 6–12 cell planting tray",
     "trayFitCn": "3.5寸兰花盆、6–12孔定植托盘",
     "bestFor": "Large orchid growth stage and transplanting",
@@ -151,9 +144,10 @@
     "features": [
       "Tall Orchid Cup",
       "Tray / container fit: 3.5 inch orchid pot, 6–12 cell planting tray",
-      "Wet size: Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm",
+      "Size: Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm"
   },
   {
     "slug": "cf-128",
@@ -164,9 +158,7 @@
     "category": "Tapered Tissue Culture Plug",
     "category_cn": "锥形组培苗块",
     "category_en": "Tapered Tissue Culture Plug",
-    "image": "assets/products/CF-128.jpg",
-    "drySize": "Top 2.6 cm / Bottom 1.2 cm / Height 3.4 cm",
-    "hydratedSize": "Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm",
+    "image": "assets/products/CF-128.png",
     "trayFit": "105-cell tray, 128-cell tray",
     "trayFitCn": "105穴盘、128穴盘",
     "bestFor": "Tissue culture rooting and seedling propagation",
@@ -177,9 +169,10 @@
     "features": [
       "Tapered Tissue Culture Plug",
       "Tray / container fit: 105-cell tray, 128-cell tray",
-      "Wet size: Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm",
+      "Size: Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm"
   },
   {
     "slug": "cf-072",
@@ -191,8 +184,6 @@
     "category_cn": "锥形育苗块",
     "category_en": "Tapered Seedling Plug",
     "image": "assets/products/CF-072.jpg",
-    "drySize": "Top 3.2 cm / Bottom 1.6 cm / Height 3.5 cm",
-    "hydratedSize": "Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm",
     "trayFit": "72-cell tray",
     "trayFitCn": "72穴盘",
     "bestFor": "Rooting, vegetable seedlings and flower propagation",
@@ -203,9 +194,10 @@
     "features": [
       "Tapered Seedling Plug",
       "Tray / container fit: 72-cell tray",
-      "Wet size: Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm",
+      "Size: Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm"
   },
   {
     "slug": "cf-200",
@@ -217,8 +209,6 @@
     "category_cn": "圆柱育苗块",
     "category_en": "Cylindrical Plug",
     "image": "assets/products/CF-200.jpg",
-    "drySize": "Top 1.6 cm / Bottom 1.5 cm / Height 2.2 cm",
-    "hydratedSize": "Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm",
     "trayFit": "200-cell tray / plant factory 20×28 mm standard opening",
     "trayFitCn": "200穴盘 / 植物工厂20×28mm标准孔位",
     "bestFor": "Plant factory propagation, alternative to 20×28 mm rockwool cubes",
@@ -229,9 +219,10 @@
     "features": [
       "Cylindrical Plug",
       "Tray / container fit: 200-cell tray / plant factory 20×28 mm standard opening",
-      "Wet size: Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm",
+      "Size: Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm"
   },
   {
     "slug": "cf-005",
@@ -243,8 +234,6 @@
     "category_cn": "方形长条种植块",
     "category_en": "Square Long Plug",
     "image": "assets/products/CF-005.jpg",
-    "drySize": "Top 2.2 cm / Bottom 1.4 cm / Height 4.5 cm",
-    "hydratedSize": "Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm",
     "trayFit": "Home seedling box, home hydroponic planter, approx. 26 mm square holder",
     "trayFitCn": "家用育苗盒、家用水培机、孔口约26mm方孔托架",
     "bestFor": "Home grow systems and small seedling boxes",
@@ -255,9 +244,10 @@
     "features": [
       "Square Long Plug",
       "Tray / container fit: Home seedling box, home hydroponic planter, approx. 26 mm square holder",
-      "Wet size: Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm",
+      "Size: Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm"
   },
   {
     "slug": "cf-003",
@@ -269,8 +259,6 @@
     "category_cn": "小型育苗块",
     "category_en": "Small Seedling Plug",
     "image": "assets/products/CF-003.jpg",
-    "drySize": "Top 3.0 cm / Bottom 2.5 cm / Height 3.4 cm",
-    "hydratedSize": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "12-cell home nursery box",
     "trayFitCn": "12孔家用育苗盒",
     "bestFor": "Home seed starting and propagation",
@@ -281,9 +269,10 @@
     "features": [
       "Small Seedling Plug",
       "Tray / container fit: 12-cell home nursery box",
-      "Wet size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
+      "Size: Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm"
   },
   {
     "slug": "cf-006",
@@ -295,8 +284,6 @@
     "category_cn": "方形育苗块",
     "category_en": "Square Plug",
     "image": "assets/products/CF-006.jpg",
-    "drySize": "Top 2.9 cm / Bottom 2.2 cm / Height 3.5 cm",
-    "hydratedSize": "Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm",
     "trayFit": "72-cell square tray, home seedling box",
     "trayFitCn": "72孔方穴盘、家用育苗盒",
     "bestFor": "Cuttings in 72-cell trays and home seed starting",
@@ -307,9 +294,10 @@
     "features": [
       "Square Plug",
       "Tray / container fit: 72-cell square tray, home seedling box",
-      "Wet size: Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm",
+      "Size: Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm"
   },
   {
     "slug": "cf-901",
@@ -320,9 +308,7 @@
     "category": "Mounting Ball",
     "category_cn": "上板球/挂板球",
     "category_en": "Mounting Ball",
-    "image": "assets/products/CF-901.jpg",
-    "drySize": "—",
-    "hydratedSize": "Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
+    "image": "assets/products/CF-901.png",
     "trayFit": "Not a tray product; compatible with wall mount or board support",
     "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
     "bestFor": "Wall mounting for staghorn fern, orchids and decorative plants",
@@ -333,9 +319,10 @@
     "features": [
       "Mounting Ball",
       "Tray / container fit: Not a tray product; compatible with wall mount or board support",
-      "Wet size: Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
+      "Size: Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Diameter 20 cm / Height 10 cm / Center hole 9.5 cm"
   },
   {
     "slug": "cf-902",
@@ -347,8 +334,6 @@
     "category_cn": "上板球/挂板球",
     "category_en": "Mounting Ball",
     "image": "assets/products/CF-902.jpg",
-    "drySize": "—",
-    "hydratedSize": "Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
     "trayFit": "Not a tray product; compatible with wall mount or board support",
     "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
     "bestFor": "Wall mounting for staghorn fern, orchids and decorative plants",
@@ -359,9 +344,10 @@
     "features": [
       "Mounting Ball",
       "Tray / container fit: Not a tray product; compatible with wall mount or board support",
-      "Wet size: Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
+      "Size: Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Diameter 16 cm / Height 8 cm / Center hole 8.2 cm"
   },
   {
     "slug": "cf-903",
@@ -373,8 +359,6 @@
     "category_cn": "上板球/挂板球",
     "category_en": "Mounting Ball",
     "image": "assets/products/CF-903.jpg",
-    "drySize": "—",
-    "hydratedSize": "Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
     "trayFit": "Not a tray product; compatible with wall mount or board support",
     "trayFitCn": "非穴盘产品；适配挂板支架/壁挂装置",
     "bestFor": "Small wall-mount greenery and compact staghorn fern display",
@@ -385,9 +369,10 @@
     "features": [
       "Mounting Ball",
       "Tray / container fit: Not a tray product; compatible with wall mount or board support",
-      "Wet size: Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
+      "Size: Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm"
   },
   {
     "slug": "cf-128-1",
@@ -398,9 +383,7 @@
     "category": "Cylindrical Plug",
     "category_cn": "圆柱扦插/播种块",
     "category_en": "Cylindrical Plug",
-    "image": "assets/products/CF-128-1.jpg",
-    "drySize": "—",
-    "hydratedSize": "Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
+    "image": "assets/products/CF-128-1.png",
     "trayFit": "105-cell tray, 128-cell tray",
     "trayFitCn": "105穴盘、128穴盘",
     "bestFor": "Cuttings and seed starting",
@@ -411,9 +394,10 @@
     "features": [
       "Cylindrical Plug",
       "Tray / container fit: 105-cell tray, 128-cell tray",
-      "Wet size: Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
+      "Size: Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm"
   },
   {
     "slug": "cf-067",
@@ -425,8 +409,6 @@
     "category_cn": "种植杯",
     "category_en": "Growing Cup",
     "image": "assets/products/CF-067.jpg",
-    "drySize": "—",
-    "hydratedSize": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
     "trayFit": "6.5–7 cm support holder / vertical greening module",
     "trayFitCn": "6.5–7cm种植杯托架 / 垂直绿化模块",
     "bestFor": "Vertical greening and low-maintenance growing cup",
@@ -437,9 +419,10 @@
     "features": [
       "Growing Cup",
       "Tray / container fit: 6.5–7 cm support holder / vertical greening module",
-      "Wet size: Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
+      "Size: Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm"
   },
   {
     "slug": "cf-010",
@@ -451,8 +434,6 @@
     "category_cn": "小型育苗块",
     "category_en": "Small Seedling Plug",
     "image": "assets/products/CF-010.jpg",
-    "drySize": "—",
-    "hydratedSize": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
     "trayFit": "50–72 cell general seedling tray (opening about 3.2 cm)",
     "trayFitCn": "50–72穴通用育苗盘（孔口约3.2cm）",
     "bestFor": "General seed starting and propagation",
@@ -463,9 +444,10 @@
     "features": [
       "Small Seedling Plug",
       "Tray / container fit: 50–72 cell general seedling tray (opening about 3.2 cm)",
-      "Wet size: Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
+      "Size: Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm"
   },
   {
     "slug": "cf-015",
@@ -477,8 +459,6 @@
     "category_cn": "蝴蝶兰育苗块",
     "category_en": "Orchid Plug",
     "image": "assets/products/CF-015.jpg",
-    "drySize": "—",
-    "hydratedSize": "Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
     "trayFit": "60-cell orchid tray",
     "trayFitCn": "60孔蝴蝶兰专用穴盘",
     "bestFor": "Dedicated Phalaenopsis seedling production",
@@ -489,8 +469,9 @@
     "features": [
       "Orchid Plug",
       "Tray / container fit: 60-cell orchid tray",
-      "Wet size: Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
+      "Size: Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
       "Private-label and export packaging available"
-    ]
+    ],
+    "size": "Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm"
   }
 ]
