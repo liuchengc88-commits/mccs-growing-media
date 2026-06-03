@@ -56,3 +56,5 @@
 .quick-list{display:block!important;padding-left:18px}.quick-list li{margin-bottom:8px}
 @media(max-width:1100px){.feature-grid,.post-grid,.case-grid,.testimonial-grid-5{grid-template-columns:1fr 1fr}.callout-card,.split-hero,.split-section,.article-layout,.about-gallery{grid-template-columns:1fr}}
 @media(max-width:700px){.feature-grid,.post-grid,.case-grid,.testimonial-grid-5{grid-template-columns:1fr}.callout-actions{justify-content:flex-start}.play-badge{position:static;display:inline-block;margin:14px}}
+
+.variant-note{background:#f7f5ec;border:1px solid #e7e2d3;border-radius:14px;padding:10px 12px;color:#566451;font-size:14px;line-height:1.55}.article-meta{color:#687565;font-weight:700}.article-meta time{color:#17452b}.contact-info p{line-height:1.7}.quick-view-panel .mini-gallery img{object-fit:cover}
