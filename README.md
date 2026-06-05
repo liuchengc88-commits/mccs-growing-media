@@ -21,3 +21,9 @@ Deployable static website package for GitHub + Vercel.
 
 ## Deployment
 Upload all extracted files to the GitHub repository root and commit. Vercel will redeploy automatically.
+
+
+## Background integration update
+- Added page-specific greenhouse, propagation, shipping, private-label, about, insights and contact background images under `/assets/backgrounds/`.
+- Added responsive CSS overlays and mobile layout adjustments.
+- Product data and product specifications were not changed in this update.
