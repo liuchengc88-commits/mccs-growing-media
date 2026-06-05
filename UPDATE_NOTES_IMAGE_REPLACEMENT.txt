@@ -1,0 +1,1 @@
+Replaced /assets/package-option-box.webp with the approved MCCS packaging image for the Commercial Hydroponics card. Existing page references were kept unchanged for safe deployment.
