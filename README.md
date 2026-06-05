@@ -27,3 +27,12 @@ Upload all extracted files to the GitHub repository root and commit. Vercel will
 - Added page-specific greenhouse, propagation, shipping, private-label, about, insights and contact background images under `/assets/backgrounds/`.
 - Added responsive CSS overlays and mobile layout adjustments.
 - Product data and product specifications were not changed in this update.
+
+
+## Mobile UX checklist update
+- Added hamburger navigation for mobile.
+- Converted product comparison table into mobile card view.
+- Improved cookie banner height/close behavior and WhatsApp spacing.
+- Increased language-switch touch targets to 44x44px.
+- Reordered contact form on mobile so first fields appear earlier.
+- Improved product filters, CTA hierarchy, and mobile spacing.
