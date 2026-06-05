@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://www.mccsgrowingmedia.com/sitemap.xml

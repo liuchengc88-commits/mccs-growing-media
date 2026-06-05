@@ -14,8 +14,8 @@
       "Hydroponic",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -28,7 +28,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "Best Seller"
+    "status": "Best Seller",
+    "description": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important."
   },
   {
     "model": "CF-004",
@@ -44,8 +45,8 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -58,7 +59,9 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
+    "variantNote": "Same external size class as CF-003, but positioned for succulent trays and decorative retail use."
   },
   {
     "model": "CF-017",
@@ -75,8 +78,8 @@
       "Orchid",
       "Tissue Culture"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -89,7 +92,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "Best Seller"
+    "status": "Best Seller",
+    "description": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling."
   },
   {
     "model": "CF-025",
@@ -105,8 +109,8 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -119,7 +123,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats."
   },
   {
     "model": "CF-028",
@@ -135,8 +140,8 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -149,7 +154,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "New"
+    "status": "New",
+    "description": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility."
   },
   {
     "model": "CF-035",
@@ -165,8 +171,8 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -179,7 +185,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "New"
+    "status": "New",
+    "description": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing."
   },
   {
     "model": "CF-128",
@@ -196,8 +203,8 @@
       "Tissue Culture",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -210,7 +217,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "Best Seller"
+    "status": "Best Seller",
+    "description": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays."
   },
   {
     "model": "CF-072",
@@ -227,8 +235,8 @@
       "Seedling",
       "Tissue Culture"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -241,7 +249,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency."
   },
   {
     "model": "CF-200",
@@ -258,8 +267,8 @@
       "Seedling",
       "Hydroponic"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -272,7 +281,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility."
   },
   {
     "model": "CF-005",
@@ -289,8 +299,8 @@
       "Hydroponic",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -303,7 +313,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile."
   },
   {
     "model": "CF-003",
@@ -319,8 +330,8 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -333,7 +344,9 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
+    "variantNote": "Same external size class as CF-004, but positioned for seed-starting kits and refill packs."
   },
   {
     "model": "CF-006",
@@ -349,8 +362,8 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -363,7 +376,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape."
   },
   {
     "model": "CF-901",
@@ -379,8 +393,8 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -393,7 +407,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A large decorative molded-media ball for succulent display products and specialty planting concepts where visual presentation matters."
   },
   {
     "model": "CF-902",
@@ -409,8 +424,8 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -423,7 +438,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A medium decorative mounting ball for retail succulent programs, balancing display size with more practical carton volume than the 20 cm version."
   },
   {
     "model": "CF-903",
@@ -439,8 +455,8 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -453,7 +469,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A compact decorative mounting ball for smaller succulent products, gift sets and entry-level specialty planter assortments."
   },
   {
     "model": "CF-129",
@@ -470,8 +487,8 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -484,7 +501,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "New"
+    "status": "New",
+    "description": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug."
   },
   {
     "model": "CF-067",
@@ -500,8 +518,8 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -514,7 +532,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": "Best Seller"
+    "status": "Best Seller",
+    "description": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation."
   },
   {
     "model": "CF-010",
@@ -530,8 +549,8 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -544,7 +563,8 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model."
   },
   {
     "model": "CF-015",
@@ -560,8 +580,8 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after buyer testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options are available after sample approval.",
+    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
+    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
     "certifications": [
       "SGS test report available",
       "Invoice and packing list",
@@ -574,6 +594,7 @@
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
-    "status": ""
+    "status": "",
+    "description": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility."
   }
 ]
