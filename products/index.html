@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCCS Product Catalog | Molded Substrate Plugs for B2B Buyers</title>
+  <meta name="description" content="Browse MCCS molded substrate plug models by application, size, tray fit, carton quantity and packaging route. Request samples, MOQ details and private-label quotations." />
+  <link rel="canonical" href="https://www.mccsgrowingmedia.com/products/" />
+  <meta property="og:title" content="MCCS Product Catalog | Molded Substrate Plugs" />
+  <meta property="og:description" content="Compare molded substrate plug models for nursery, hydroponic, orchid, tissue-culture and retail growing kit programs." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGR2SQBQHW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JGR2SQBQHW');</script>
+  <style>
+    .fallback-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .fallback-product-card{background:#fff;border-radius:26px;padding:22px;box-shadow:0 10px 30px rgba(48,68,38,.08);border:1px solid #ece6d5}
+    .fallback-product-card img{width:100%;height:210px;object-fit:contain;background:#f7f5ec;border-radius:18px;margin-bottom:14px}
+    .fallback-product-card h3{margin:8px 0;color:#17452b;font-size:22px}
+    .fallback-product-card p{color:#566451;line-height:1.65}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+    .tag-row span{display:inline-flex;border-radius:999px;background:#eef8ef;color:#12783e;font-weight:800;font-size:12px;padding:7px 10px}
+    .catalog-toolbar{display:grid;grid-template-columns:1fr 260px;gap:14px;margin-bottom:24px}
+    .catalog-empty{background:#fff;border-radius:24px;padding:24px;color:#566451}
+    @media(max-width:1000px){.fallback-product-grid,.catalog-toolbar{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-mark">M</span><span><strong>MCCS Growing Media</strong><small>Private Label Substrate Plugs</small></span></a>
+    <nav class="menu">
+      <a href="/">Home</a>
+      <a href="/products/">Products</a>
+      <a href="/sample-shipping/">Sample & Shipping</a>
+      <a href="/private-label/">Private Label</a>
+      <a href="/insights/">Guides</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="/contact/">Request Quote & Sample</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero products-hero">
+    <div class="container breadcrumbs"><a href="/">Home</a><span>/</span><span>Products</span></div>
+    <div class="container product-hero-layout">
+      <div>
+        <span class="section-label">Product Catalog</span>
+        <h1>MCCS Molded Substrate Plug Product Catalog</h1>
+        <p class="lead">Compare application-based molded substrate plug models for seed starting, cuttings, hydroponic nurseries, orchid programs, tissue-culture transition and private-label growing kits.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="/contact/">Request Quote & Sample</a>
+          <a class="btn btn-outline btn-large" href="/data/products-cf.csv" download>Download CSV</a>
+        </div>
+      </div>
+      <div class="b2b-info-card">
+        <h2>For B2B Selection</h2>
+        <p><b>Model selection:</b> confirm application, tray opening, plug height, top diameter, bottom diameter and packaging format before sampling.</p>
+        <p><b>Private label:</b> retail box, refill pack, carton mark, barcode, instruction card and FBA label support can be discussed after sample approval.</p>
+        <p><b>Documents:</b> invoice, packing list, test report and route-specific document support are handled according to the final shipping plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section product-catalog-section">
+    <div class="container">
+      <div class="catalog-toolbar">
+        <input id="productSearch" type="search" placeholder="Search model, size, tray fit or application..." />
+        <select id="applicationFilter">
+          <option value="">All Applications</option>
+          <option value="Seedling">Seedling</option>
+          <option value="Hydroponic">Hydroponic</option>
+          <option value="Orchid">Orchid</option>
+          <option value="Tissue Culture">Tissue Culture</option>
+          <option value="Succulent">Succulent</option>
+        </select>
+      </div>
+      <div id="productGrid" class="fallback-product-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="comparison-table">
+    <div class="container">
+      <div class="section-head">
+        <span>Comparison Table</span>
+        <h2>Compare Models by Size, Tray Fit and Application</h2>
+        <p>Use this table to shortlist models for sample testing, packaging development or recurring purchase planning.</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="spec-table compare-table product-compare-table">
+          <thead><tr><th>Model</th><th>Product</th><th>Size</th><th>Tray / Container Fit</th><th>Application</th></tr></thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+      <div class="center-actions"><a class="btn btn-primary btn-large" href="/contact/">Request Model Recommendation</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>MCCS Growing Media</strong><p>Private-label ready molded substrate plugs for seed starting, hydroponic nurseries, garden retail and export buyers.</p><img src="/assets/sgs-badge.svg" alt="SGS test report available for MCCS substrate plugs" class="footer-badge"></div>
+    <div><b>Products</b><a href="/products/">Product Catalog</a><a href="/sample-shipping/">Sample & Shipping</a><a href="/private-label/">Private Label</a><a href="/products/#comparison-table">Compare Models</a></div>
+    <div><b>Resources</b><a href="/insights/">Sourcing Guides</a><a href="/about/">About MCCS</a><a href="/contact/">Contact</a><a href="/docs/MCCS_CF_Spec_Sheet_Dimensions.xlsx">Download Spec Sheet</a></div>
+    <div><b>Contact</b><a href="mailto:sales@mccsgrowingmedia.com">sales@mccsgrowingmedia.com</a><a href="tel:+8618922290417">+86 189 2229 0417</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div>
+  </div>
+  <div class="container footer-bottom">© 2026 Guangzhou Chengfeng Trading Co., Ltd. All rights reserved.</div>
+</footer>
+
+<script>
+  let allProducts = [];
+  const esc = v => String(v || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+  const tags = p => Array.isArray(p.applicationTags) ? p.applicationTags : [];
+  const imgPath = p => p.image ? (p.image.startsWith('/') ? p.image : '/' + p.image) : '/assets/cf-series-hero.webp';
+
+  function render(products) {
+    const grid = document.getElementById('productGrid');
+    const tbody = document.getElementById('productTableBody');
+    if (!products.length) {
+      grid.innerHTML = '<div class="catalog-empty">No matching product found. Please adjust the search term or contact us for model recommendation.</div>';
+      tbody.innerHTML = '';
+      return;
+    }
+    grid.innerHTML = products.map(p => `
+      <article class="fallback-product-card">
+        <img src="${esc(imgPath(p))}" alt="${esc(p.name_en || p.name || p.model)}" loading="lazy">
+        <div class="tag-row">${tags(p).map(t => `<span>${esc(t)}</span>`).join('')}</div>
+        <h3>${esc(p.model)} · ${esc(p.name_en || p.name || '')}</h3>
+        <p><b>Size:</b> ${esc(p.size || 'Confirmed by SKU')}</p>
+        <p><b>Fit:</b> ${esc(p.trayFit || 'Confirmed by tray or container')}</p>
+        <p>${esc(p.bestFor || p.desc || '')}</p>
+        <p><b>Carton qty:</b> ${esc(p.cartonQty || 'Confirmed by packing plan')}</p>
+        <a class="btn btn-outline" href="/contact/">Ask for Quote</a>
+      </article>`).join('');
+    tbody.innerHTML = products.map(p => `
+      <tr>
+        <td>${esc(p.model)}</td>
+        <td>${esc(p.name_en || p.name || '')}</td>
+        <td>${esc(p.size || '')}</td>
+        <td>${esc(p.trayFit || '')}</td>
+        <td>${esc(tags(p).join(', '))}</td>
+      </tr>`).join('');
+  }
+
+  function applyFilters() {
+    const q = document.getElementById('productSearch').value.toLowerCase().trim();
+    const app = document.getElementById('applicationFilter').value;
+    render(allProducts.filter(p => {
+      const text = [p.model,p.name_en,p.name,p.category,p.size,p.trayFit,p.bestFor,p.desc,...tags(p)].join(' ').toLowerCase();
+      return (!q || text.includes(q)) && (!app || tags(p).includes(app));
+    }));
+  }
+
+  fetch('/data/products.json')
+    .then(r => r.json())
+    .then(products => {
+      allProducts = Array.isArray(products) ? products : [];
+      render(allProducts);
+      document.getElementById('productSearch').addEventListener('input', applyFilters);
+      document.getElementById('applicationFilter').addEventListener('change', applyFilters);
+    })
+    .catch(() => {
+      document.getElementById('productGrid').innerHTML = '<div class="catalog-empty">Product data could not be loaded. Please contact us for the latest catalog and sample list.</div>';
+    });
+</script>
+</body>
+</html>
