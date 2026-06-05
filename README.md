@@ -1,11 +1,13 @@
-# MCCS Growing Media Website
+# MCCS Growing Media Multilingual Website
 
-GitHub / Vercel-ready static website package.
+This package is ready for GitHub / Vercel deployment.
 
-## This version fixes
-- Insights navigation consistency and article URL matching.
-- Products page title, B2B information card, application filters, Quick View and model recommendation CTA.
-- Home page hero CTA hierarchy, FAQ, trust badges and buyer-evaluation sections.
-- Contact form B2B fields, required company name, WhatsApp button, map and cookie notice.
-- About, Sample & Shipping and Private Label content depth, image captions and workflow details.
-- Article schema, Organization schema and ContactPage schema.
+## Main updates
+- English, Spanish and Arabic pages with language switcher and hreflang tags.
+- Homepage repositioned around MCCS factory direct, molded coconut coir and peat substrate, 20,000 units daily capacity, washed grade and custom mold design.
+- Contact form upgraded to a professional B2B sample request and OEM inquiry form.
+- Products page includes custom formulation, expert tips, carton quantity, MOQ and Product schema.
+- About, Private Label, Sample & Shipping and Insights pages rebuilt with trust-focused B2B copy.
+- WhatsApp floating button, Cookie consent banner, Organization / Product / Article / FAQ schema and sitemap included.
+
+Upload all extracted files to the GitHub repository root and commit. Vercel will deploy automatically.

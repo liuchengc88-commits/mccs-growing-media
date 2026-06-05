@@ -14,26 +14,27 @@
       "Hydroponic",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "900–1200 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-001.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "Best Seller",
-    "description": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important."
+    "description": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important.",
+    "features": []
   },
   {
     "model": "CF-004",
-    "name_en": "Succulent Plug 3.7 cm",
+    "name_en": "Succulent Starter Plug 3.7 cm",
     "category": "Succulent Plug",
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "Succulent trays, 12-cell or 24-cell nursery boxes with opening ≥ 3.3 cm",
@@ -45,15 +46,15 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "300–500 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-004.jpg",
       "assets/private-label-hero.webp",
@@ -61,7 +62,9 @@
     ],
     "status": "",
     "description": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
-    "variantNote": "Same external size class as CF-003, but positioned for succulent trays and decorative retail use."
+    "variantNote": "Same external size class as CF-003, but positioned for succulent trays and decorative retail use.",
+    "positioningNote": "Same size as CF-003, but positioned for succulent starter packs and decorative planting sets.",
+    "features": []
   },
   {
     "model": "CF-017",
@@ -78,22 +81,23 @@
       "Orchid",
       "Tissue Culture"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "200–300 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-017.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "Best Seller",
-    "description": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling."
+    "description": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling.",
+    "features": []
   },
   {
     "model": "CF-025",
@@ -109,22 +113,23 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "120–180 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-025.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats."
+    "description": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats.",
+    "features": []
   },
   {
     "model": "CF-028",
@@ -140,22 +145,23 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "100–140 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-028.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "New",
-    "description": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility."
+    "description": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility.",
+    "features": []
   },
   {
     "model": "CF-035",
@@ -171,22 +177,23 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "80–120 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-035.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "New",
-    "description": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing."
+    "description": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing.",
+    "features": []
   },
   {
     "model": "CF-128",
@@ -203,22 +210,23 @@
       "Tissue Culture",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "128 plugs / sheet × 20 sheets / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-128.png",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "Best Seller",
-    "description": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays."
+    "description": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays.",
+    "features": []
   },
   {
     "model": "CF-072",
@@ -235,22 +243,23 @@
       "Seedling",
       "Tissue Culture"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "72 plugs / tray × 24 trays / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-072.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency."
+    "description": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency.",
+    "features": []
   },
   {
     "model": "CF-200",
@@ -267,22 +276,23 @@
       "Seedling",
       "Hydroponic"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "200 plugs / tray × 10 trays / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-200.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility."
+    "description": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility.",
+    "features": []
   },
   {
     "model": "CF-005",
@@ -299,27 +309,28 @@
       "Hydroponic",
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "600–900 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-005.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile."
+    "description": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile.",
+    "features": []
   },
   {
     "model": "CF-003",
     "name_en": "Home Starter Plug 3.7 cm",
-    "category": "Home Starter Plug",
+    "category": "Seedling Plug",
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "12-cell home nursery boxes and small seed-starting trays",
     "bestFor": "Home seed starting, refill packs and beginner-friendly retail programs",
@@ -330,15 +341,15 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "1500–2000 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-003.jpg",
       "assets/private-label-hero.webp",
@@ -346,7 +357,10 @@
     ],
     "status": "",
     "description": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
-    "variantNote": "Same external size class as CF-004, but positioned for seed-starting kits and refill packs."
+    "variantNote": "Same external size class as CF-004, but positioned for seed-starting kits and refill packs.",
+    "positioningNote": "Same size as CF-004, but positioned for home seed-starting and standard seedling packs.",
+    "category_en": "Seedling Plug",
+    "features": []
   },
   {
     "model": "CF-006",
@@ -362,22 +376,23 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "700–1000 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-006.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape."
+    "description": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape.",
+    "features": []
   },
   {
     "model": "CF-901",
@@ -393,22 +408,24 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "20–40 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-901.png",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A large decorative molded-media ball for succulent display products and specialty planting concepts where visual presentation matters."
+    "description": "A large decorative molded-media ball for succulent display products and specialty planting concepts where visual presentation matters.",
+    "category_en": "Succulent Mounting Ball",
+    "features": []
   },
   {
     "model": "CF-902",
@@ -424,22 +441,24 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "30–60 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-902.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A medium decorative mounting ball for retail succulent programs, balancing display size with more practical carton volume than the 20 cm version."
+    "description": "A medium decorative mounting ball for retail succulent programs, balancing display size with more practical carton volume than the 20 cm version.",
+    "category_en": "Succulent Mounting Ball",
+    "features": []
   },
   {
     "model": "CF-903",
@@ -455,22 +474,24 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "60–100 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-903.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A compact decorative mounting ball for smaller succulent products, gift sets and entry-level specialty planter assortments."
+    "description": "A compact decorative mounting ball for smaller succulent products, gift sets and entry-level specialty planter assortments.",
+    "category_en": "Succulent Mounting Ball",
+    "features": []
   },
   {
     "model": "CF-129",
@@ -487,22 +508,23 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "800–1200 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-129.png",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "New",
-    "description": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug."
+    "description": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug.",
+    "features": []
   },
   {
     "model": "CF-067",
@@ -518,22 +540,24 @@
     "applicationTags": [
       "Succulent"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "120–200 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-067.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "Best Seller",
-    "description": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation."
+    "description": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
+    "category_en": "Succulent Growing Cup",
+    "features": []
   },
   {
     "model": "CF-010",
@@ -549,22 +573,23 @@
     "applicationTags": [
       "Seedling"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "1000–1500 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-010.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model."
+    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
+    "features": []
   },
   {
     "model": "CF-015",
@@ -580,21 +605,22 @@
     "applicationTags": [
       "Orchid"
     ],
-    "material": "Coco coir, peat moss and plant-fiber molded blend; blend ratio can be adjusted after sample testing.",
-    "packaging": "Bulk carton, retail box, refill pouch and private-label carton options can be confirmed after sample approval.",
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or private-label carton after sample approval.",
     "certifications": [
       "SGS test report available",
-      "Invoice and packing list",
-      "Route-based document support"
+      "Batch testing by project",
+      "Export document support"
     ],
     "cartonQty": "300–500 pcs / carton",
-    "moq": "Trial orders are available. Bulk MOQ is confirmed by carton size, retail packaging, private-label requirements and shipping method.",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
       "assets/products/CF-015.jpg",
       "assets/private-label-hero.webp",
       "assets/package-option-box.webp"
     ],
     "status": "",
-    "description": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility."
+    "description": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility.",
+    "features": []
   }
 ]
