@@ -1,0 +1,17 @@
+MCCS website technical validation checklist
+
+Completed in this package:
+- sitemap.xml regenerated and includes EN/ES/AR pages and insight articles.
+- Contact forms now include placeholders for name, work email, company name and WhatsApp/phone.
+- Application field separates Orchid and Tissue Culture.
+- Preferred shipping method is optional.
+- Product galleries now use model-specific packaging reference images under /assets/packaging/.
+- Product quick view includes carton quantity variation note.
+- Article dates are staggered across multiple weeks.
+- Form UX CSS updated so the form title spans the full width and placeholder text is visible.
+
+Manual external checks still recommended after deployment:
+- Google Rich Results Test
+- Google Search Console sitemap submission
+- PageSpeed Insights mobile score
+- Live Formspree submission test
