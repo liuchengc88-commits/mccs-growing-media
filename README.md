@@ -43,3 +43,10 @@ Upload all extracted files to the GitHub repository root and commit. Vercel will
 - Header CTA shortened to `Request Sample` / localized equivalents.
 - Desktop navigation spacing refined.
 - Mobile header spacing and touch targets refined.
+
+
+## 2026-06 header logo update
+
+- Replaced the header letter icon with a seedling logo mark.
+- Refined MCCS Plug brand spacing and desktop/mobile navigation alignment.
+- Added SVG favicon at `assets/favicon.svg`.

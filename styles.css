@@ -456,3 +456,75 @@
     font-size:17px;
   }
 }
+
+
+/* 2026-06 seedling logo + final header spacing refinement */
+.site-header .brand-mark{
+  color:#fbf6df;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.site-header .brand-mark .brand-seedling{
+  width:25px;
+  height:25px;
+  display:block;
+  fill:currentColor;
+}
+.site-header .brand{
+  gap:12px;
+}
+.site-header .brand strong{
+  letter-spacing:0;
+  word-spacing:2px;
+  font-kerning:normal;
+  text-rendering:optimizeLegibility;
+}
+.site-header .brand small{
+  letter-spacing:0;
+}
+@media(min-width:1001px){
+  .site-header .brand{
+    min-width:170px;
+    max-width:205px;
+  }
+  .site-header .brand-mark{
+    width:44px;
+    height:44px;
+    border-radius:14px;
+  }
+  .site-header .menu{
+    gap:24px;
+  }
+}
+@media(min-width:1180px){
+  .site-header .menu{
+    gap:28px;
+  }
+}
+@media(max-width:1160px) and (min-width:1001px){
+  .site-header .menu{
+    gap:16px;
+  }
+  .site-header .brand{
+    min-width:165px;
+  }
+}
+@media(max-width:760px){
+  .site-header .brand{
+    gap:10px;
+  }
+  .site-header .brand-mark{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+  }
+  .site-header .brand-mark .brand-seedling{
+    width:24px;
+    height:24px;
+  }
+  .site-header .brand strong{
+    font-size:18px;
+    letter-spacing:0;
+    word-spacing:1px;
+  }
+}
