@@ -291,3 +291,168 @@
   body{padding-bottom:0}.nav{align-items:center}.brand{width:auto;max-width:calc(100% - 60px)}.brand small{font-size:12px}.brand strong{font-size:15px}.mobile-menu-toggle{margin-left:0}.language-switcher{width:100%;justify-content:flex-start;gap:10px;margin-top:6px}.language-switcher a{min-width:44px;height:44px}.site-header .btn{width:100%;min-height:46px}.site-header.nav-open .menu{top:74px;left:4%;right:4%}.page-contact .page-hero{padding:12px 0 18px;min-height:auto}.page-contact .page-hero h1{font-size:30px;margin:10px 0}.page-contact .page-hero .lead{display:none}.page-contact .contact-section{padding-top:18px}.page-contact .contact-grid{display:flex!important;flex-direction:column;gap:18px}.page-contact .contact-form{order:1}.page-contact .contact-grid>div{order:2}.page-contact .contact-form{padding:18px;border-radius:22px;grid-template-columns:1fr}.page-contact .contact-form h2{font-size:24px;margin-bottom:2px}.page-contact .contact-form input,.page-contact .contact-form select,.page-contact .contact-form textarea{min-height:50px;border-radius:14px;font-size:16px}.page-contact .contact-form textarea{min-height:112px}.page-contact .map-card iframe{height:220px}.portal-toolbar{grid-template-columns:1fr;gap:10px}.enhanced-toolbar input,.enhanced-toolbar select{min-height:50px}.app-filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.app-filter{flex:1 1 calc(50% - 8px);font-size:14px;padding:10px 12px}.compare-table-wrap{display:none}.mobile-compare-cards{display:grid;gap:12px}.product-compare-table{display:none}.matrix-card{grid-template-columns:1fr}.matrix-card img{height:210px;min-height:210px}.matrix-body{padding:18px}.matrix-body dl{grid-template-columns:98px 1fr}.quick-view{min-height:44px}.quick-view-panel{padding-top:10px}.cookie-banner{display:grid;grid-template-columns:1fr auto auto;align-items:center;padding:9px 10px 9px 12px}.cookie-banner p{font-size:12px;line-height:1.35}.cookie-banner #cookieAccept{padding:8px 12px;font-size:13px}.cookie-banner.is-compact p{max-width:48vw}.whatsapp-float{padding:11px 14px;font-size:14px}.page-products .center-actions .btn{width:100%}
 }
 @media(max-width:420px){.app-filter{flex-basis:100%}.mobile-compare-card>div{display:block}.mobile-compare-card span{text-align:left;display:block;margin-top:4px}.mobile-compare-card dl{grid-template-columns:84px 1fr}.cookie-banner{left:8px;right:8px;max-width:none;transform:none}.cookie-banner.is-hidden{transform:translateY(12px)}}
+
+
+/* Brand and navigation refinement: MCCS Plug header + cleaner spacing */
+.site-header .nav{
+  gap:18px;
+  justify-content:flex-start;
+}
+.site-header .brand{
+  flex:0 0 auto;
+  min-width:178px;
+  max-width:210px;
+  gap:10px;
+}
+.site-header .brand-mark{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+}
+.site-header .brand strong{
+  font-size:17px;
+  line-height:1.05;
+  letter-spacing:.01em;
+  white-space:nowrap;
+}
+.site-header .brand small{
+  font-size:13px;
+  line-height:1.18;
+  max-width:155px;
+}
+.site-header .menu{
+  flex:1 1 auto;
+  justify-content:center;
+  gap:26px;
+  white-space:nowrap;
+}
+.site-header .menu a{
+  display:inline-flex;
+  align-items:center;
+  min-height:42px;
+}
+.site-header .language-switcher{
+  flex:0 0 auto;
+  margin-left:4px;
+}
+.site-header .nav > .btn-primary{
+  flex:0 0 auto;
+  white-space:nowrap;
+  padding:13px 28px;
+  min-width:auto;
+}
+
+@media(min-width:1180px){
+  .site-header .container.nav{
+    width:min(1280px,94%);
+  }
+  .site-header .menu{
+    gap:30px;
+  }
+}
+@media(max-width:1160px) and (min-width:1001px){
+  .site-header .container.nav{
+    width:min(1240px,96%);
+  }
+  .site-header .menu{
+    gap:18px;
+    font-size:13px;
+  }
+  .site-header .brand{
+    min-width:160px;
+  }
+  .site-header .brand strong{
+    font-size:16px;
+  }
+  .site-header .brand small{
+    font-size:12px;
+    max-width:135px;
+  }
+  .site-header .nav > .btn-primary{
+    padding:12px 20px;
+  }
+  .language-switcher a{
+    min-width:40px;
+    height:40px;
+  }
+}
+
+/* Mobile header refinement: compact brand, clean menu, easier touch targets */
+@media(max-width:1000px){
+  .site-header .nav{
+    justify-content:space-between;
+    gap:10px;
+  }
+  .site-header .brand{
+    min-width:0;
+    max-width:calc(100% - 62px);
+  }
+  .site-header .brand strong{
+    font-size:18px;
+  }
+  .site-header .brand small{
+    font-size:12px;
+    max-width:190px;
+  }
+  .mobile-menu-toggle{
+    margin-left:auto;
+  }
+  .site-header.nav-open .menu{
+    gap:8px;
+  }
+  .site-header.nav-open .menu a{
+    font-size:15px;
+    font-weight:900;
+  }
+}
+@media(max-width:760px){
+  .site-header .nav{
+    padding-top:9px;
+    padding-bottom:10px;
+  }
+  .site-header .brand{
+    max-width:calc(100% - 58px);
+  }
+  .site-header .brand-mark{
+    width:42px;
+    height:42px;
+  }
+  .site-header .brand strong{
+    font-size:18px;
+    line-height:1;
+  }
+  .site-header .brand small{
+    font-size:12px;
+    line-height:1.12;
+    max-width:190px;
+  }
+  .site-header .language-switcher{
+    order:3;
+    width:100%;
+    justify-content:flex-start;
+    gap:10px;
+    margin-top:4px;
+  }
+  .site-header .language-switcher a{
+    min-width:46px;
+    height:42px;
+  }
+  .site-header .nav > .btn-primary{
+    order:4;
+    width:100%;
+    min-height:46px;
+    padding:12px 16px;
+    font-size:15px;
+  }
+  .site-header.nav-open .menu{
+    top:72px;
+  }
+}
+@media(max-width:420px){
+  .site-header .brand small{
+    max-width:155px;
+  }
+  .site-header .brand strong{
+    font-size:17px;
+  }
+}

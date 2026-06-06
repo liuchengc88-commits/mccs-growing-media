@@ -36,3 +36,10 @@ Upload all extracted files to the GitHub repository root and commit. Vercel will
 - Increased language-switch touch targets to 44x44px.
 - Reordered contact form on mobile so first fields appear earlier.
 - Improved product filters, CTA hierarchy, and mobile spacing.
+
+
+## 2026-06-06 Header update
+- Header brand changed to `MCCS Plug`.
+- Header CTA shortened to `Request Sample` / localized equivalents.
+- Desktop navigation spacing refined.
+- Mobile header spacing and touch targets refined.
