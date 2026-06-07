@@ -145,12 +145,12 @@ function isFrontendHtml(filename) {
   return filename.endsWith('.html') && !filename.startsWith('reports/');
 }
 
-function validatePrMetadata(pr, failures, warnings) {
+function validatePrMetadata(pr, issue, failures) {
   if (!titlePattern.test(pr.title || '')) {
     failures.push('PR title must include Competitor audit, safe site optimization or SEO optimization.');
   }
 
-  const labels = (pr.labels || []).map(label => label.name.toLowerCase());
+  const labels = (issue.labels || []).map(label => label.name.toLowerCase());
   if (!labels.includes('automation') || !labels.includes('seo')) {
     failures.push('PR labels must include both automation and seo.');
   }
@@ -175,17 +175,17 @@ function validatePrMetadata(pr, failures, warnings) {
   const body = pr.body || '';
   const bodyLower = body.toLowerCase();
   const bodyChecks = [
-    ['competitor', 'PR body should describe which competitors were analyzed.'],
-    ['page', 'PR body should describe which pages were optimized.'],
-    ['keyword', 'PR body should describe target keywords or buyer intent.'],
-    ['natural traffic', 'PR body should explain why the change helps natural traffic.'],
-    ['safe', 'PR body should state whether safety checks passed.']
+    ['competitor', 'PR body must describe which competitors were analyzed.'],
+    ['page', 'PR body must describe which pages were optimized.'],
+    ['keyword', 'PR body must describe target keywords or buyer intent.'],
+    ['natural traffic', 'PR body must explain why the change helps natural traffic.'],
+    ['safe', 'PR body must state whether safety checks passed.']
   ];
   for (const [needle, message] of bodyChecks) {
-    if (!bodyLower.includes(needle)) warnings.push(message);
+    if (!bodyLower.includes(needle)) failures.push(message);
   }
   if (!/product data[^\n\r]{0,80}\bno\b/i.test(body) && !/\bno\b[^\n\r]{0,80}product data/i.test(body)) {
-    warnings.push('PR body should explicitly state product data: No.');
+    failures.push('PR body must explicitly state product data: No.');
   }
 }
 
@@ -264,13 +264,7 @@ function buildSummary(result) {
     for (const failure of result.failures) lines.push(`- ${failure}`);
     lines.push('');
   }
-  if (result.warnings.length) {
-    lines.push('### PR Description Warnings');
-    lines.push('');
-    for (const warning of result.warnings) lines.push(`- ${warning}`);
-    lines.push('');
-  }
-  lines.push(result.ok ? 'This PR is eligible for squash merge by the safe SEO automation.' : 'This PR was not merged. Please revise the PR or merge manually after review.');
+  lines.push(result.ok ? 'This PR is eligible for squash merge by the safe SEO automation.' : 'This PR was not merged. Please revise the PR or keep it for manual review.');
   return `${lines.join('\n')}\n`;
 }
 
@@ -278,11 +272,11 @@ async function main() {
   await fs.mkdir(REPORT_DIR, { recursive: true });
 
   const pr = await github(`/repos/${owner}/${repo}/pulls/${prNumber}`);
+  const issue = await github(`/repos/${owner}/${repo}/issues/${prNumber}`);
   const files = await listFiles();
   const failures = [];
-  const warnings = [];
 
-  validatePrMetadata(pr, failures, warnings);
+  validatePrMetadata(pr, issue, failures);
   const totals = validateFileList(files, failures);
   validatePatchContent(files, failures);
 
@@ -298,8 +292,7 @@ async function main() {
     deletions: totals.deletions,
     protectedValuesChanged,
     files: files.map(file => file.filename),
-    failures,
-    warnings
+    failures
   };
 
   await fs.writeFile(SUMMARY_JSON, `${JSON.stringify(result, null, 2)}\n`);
@@ -321,8 +314,7 @@ main().catch(async error => {
     deletions: 0,
     protectedValuesChanged: false,
     files: [],
-    failures: [error.message],
-    warnings: []
+    failures: [error.message]
   };
   await fs.writeFile(SUMMARY_JSON, `${JSON.stringify(result, null, 2)}\n`);
   await fs.writeFile(SUMMARY_MD, buildSummary(result));
