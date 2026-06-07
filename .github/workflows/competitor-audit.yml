@@ -1,0 +1,59 @@
+name: Competitor Audit and Site Optimization
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+    inputs:
+      apply_changes:
+        description: 'Create safe site optimization changes when opportunities are found'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: competitor-audit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  competitor-audit:
+    name: Audit competitors and prepare optimization PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run competitor audit
+        run: node scripts/competitor-audit.mjs
+
+      - name: Run conservative site optimizer
+        if: ${{ github.event_name == 'schedule' || inputs.apply_changes == true }}
+        env:
+          APPLY_CHANGES: 'true'
+        run: node scripts/site-optimizer.mjs
+
+      - name: Upload audit report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitor-audit-report
+          path: reports/competitor-audit/
+          if-no-files-found: warn
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/competitor-audit-updates
+          delete-branch: false
+          commit-message: 'chore: run competitor audit and safe site optimization'
+          title: 'Competitor audit and safe site optimization'
+          body-path: reports/competitor-audit/latest-pr-body.md
+          labels: automation, seo

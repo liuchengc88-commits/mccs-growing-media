@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "MCCS Growing Media",
+    "baseUrl": "https://www.mccsgrowingmedia.com",
+    "protectedFiles": [
+      "data/products.json",
+      "vercel.json"
+    ],
+    "protectedPatterns": [
+      "formspree.io",
+      "G-JGR2SQBQHW",
+      "gtag/js?id=",
+      "data/products.json"
+    ]
+  },
+  "auditSettings": {
+    "requestTimeoutMs": 20000,
+    "maxPagesPerCompetitor": 8,
+    "userAgent": "MCCS-Competitor-Audit/1.0 (+https://www.mccsgrowingmedia.com)"
+  },
+  "competitors": [
+    {
+      "name": "Jiffy Group",
+      "baseUrl": "https://jiffygroup.com",
+      "enabled": true,
+      "pages": [
+        "/products/",
+        "/products/jiffy-7/"
+      ]
+    },
+    {
+      "name": "Grodan",
+      "baseUrl": "https://www.grodan.com",
+      "enabled": true,
+      "pages": [
+        "/",
+        "/product-overview/"
+      ]
+    },
+    {
+      "name": "Riococo",
+      "baseUrl": "https://www.riococo.com",
+      "enabled": true,
+      "pages": [
+        "/",
+        "/products/"
+      ]
+    },
+    {
+      "name": "CANNA",
+      "baseUrl": "https://www.canna.com",
+      "enabled": true,
+      "pages": [
+        "/",
+        "/coco"
+      ]
+    },
+    {
+      "name": "Legro",
+      "baseUrl": "https://www.legrogroup.com",
+      "enabled": true,
+      "pages": [
+        "/",
+        "/products/"
+      ]
+    }
+  ]
+}
