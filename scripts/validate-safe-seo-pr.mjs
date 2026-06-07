@@ -20,7 +20,9 @@ const allowedExactFiles = new Set([
   'private-label/index.html',
   'about/index.html',
   'contact/index.html',
-  'insights/index.html'
+  'insights/index.html',
+  'robots.txt',
+  'sitemap.xml'
 ]);
 
 const allowedPathPatterns = [
@@ -175,14 +177,14 @@ function validatePrMetadata(pr, issue, failures) {
   const body = pr.body || '';
   const bodyLower = body.toLowerCase();
   const bodyChecks = [
-    ['competitor', 'PR body must describe which competitors were analyzed.'],
-    ['page', 'PR body must describe which pages were optimized.'],
-    ['keyword', 'PR body must describe target keywords or buyer intent.'],
-    ['natural traffic', 'PR body must explain why the change helps natural traffic.'],
-    ['safe', 'PR body must state whether safety checks passed.']
+    [bodyLower.includes('competitor'), 'PR body must describe which competitors were analyzed.'],
+    [bodyLower.includes('page'), 'PR body must describe which pages were optimized.'],
+    [bodyLower.includes('keyword') || bodyLower.includes('buyer intent'), 'PR body must describe target keywords or buyer intent.'],
+    [bodyLower.includes('natural traffic'), 'PR body must explain why the change helps natural traffic.'],
+    [bodyLower.includes('safe'), 'PR body must state whether safety checks passed.']
   ];
-  for (const [needle, message] of bodyChecks) {
-    if (!bodyLower.includes(needle)) failures.push(message);
+  for (const [passed, message] of bodyChecks) {
+    if (!passed) failures.push(message);
   }
   if (!/product data[^\n\r]{0,80}\bno\b/i.test(body) && !/\bno\b[^\n\r]{0,80}product data/i.test(body)) {
     failures.push('PR body must explicitly state product data: No.');
