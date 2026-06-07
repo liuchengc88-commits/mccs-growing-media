@@ -2,6 +2,21 @@
   "site": {
     "name": "MCCS Growing Media",
     "baseUrl": "https://www.mccsgrowingmedia.com",
+    "primaryEnglishPages": [
+      "/",
+      "/products/",
+      "/sample-shipping/",
+      "/private-label/",
+      "/about/",
+      "/contact/",
+      "/insights/"
+    ],
+    "ignoredPages": [
+      {
+        "path": "/admin.html",
+        "reason": "Internal product data manager page; not a public SEO landing page."
+      }
+    ],
     "protectedFiles": [
       "data/products.json",
       "vercel.json"
@@ -24,8 +39,13 @@
       "baseUrl": "https://jiffygroup.com",
       "enabled": true,
       "pages": [
-        "/products/",
-        "/products/jiffy-7/"
+        "/products/"
+      ],
+      "ignoredPages": [
+        {
+          "path": "/products/jiffy-7/",
+          "reason": "Returned 404 in first audit."
+        }
       ]
     },
     {
@@ -40,7 +60,8 @@
     {
       "name": "Riococo",
       "baseUrl": "https://www.riococo.com",
-      "enabled": true,
+      "enabled": false,
+      "disabledReason": "Fetch failed in first audit; keep listed for manual replacement before re-enabling.",
       "pages": [
         "/",
         "/products/"
@@ -51,8 +72,13 @@
       "baseUrl": "https://www.canna.com",
       "enabled": true,
       "pages": [
-        "/",
-        "/coco"
+        "/"
+      ],
+      "ignoredPages": [
+        {
+          "path": "/coco",
+          "reason": "No useful page content was captured in first audit."
+        }
       ]
     },
     {
