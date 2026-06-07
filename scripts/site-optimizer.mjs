@@ -8,7 +8,7 @@ const OPTIMIZER_LOG = path.join(ROOT, 'reports', 'competitor-audit', 'latest-opt
 const APPLY_CHANGES = process.env.APPLY_CHANGES === 'true';
 
 const SKIP_DIRS = new Set(['.git', 'node_modules', 'reports', 'outputs', 'work']);
-const SKIP_FILES = new Set(['privacy.html']);
+const SKIP_FILES = new Set(['admin.html', 'privacy.html']);
 const PROTECTED_FILE_PATTERNS = [
   /^data\/products\.json$/,
   /^vercel\.json$/,

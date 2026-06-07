@@ -6,6 +6,23 @@ const CONFIG_PATH = path.join(ROOT, 'data', 'competitors.json');
 const REPORT_DIR = path.join(ROOT, 'reports', 'competitor-audit');
 const TODAY = new Date().toISOString().slice(0, 10);
 
+const DEFAULT_PRIMARY_ENGLISH_PAGES = [
+  '/',
+  '/products/',
+  '/sample-shipping/',
+  '/private-label/',
+  '/about/',
+  '/contact/',
+  '/insights/'
+];
+
+const GROUP_ORDER = {
+  high: 0,
+  medium: 1,
+  low: 2,
+  ignore: 3
+};
+
 const KEYWORDS = {
   cta: ['request', 'quote', 'contact', 'sample', 'buy', 'shop', 'download', 'learn', 'compare', 'talk', 'inquire'],
   trust: ['sgs', 'certified', 'certificate', 'factory', 'manufacturer', 'capacity', 'quality', 'tested', 'organic', 'sustainable', 'iso', 'global', 'export'],
@@ -156,6 +173,29 @@ function toUrl(baseUrl, pagePath) {
   return new URL(pagePath, baseUrl).toString();
 }
 
+function normalizePagePath(pagePath) {
+  if (!pagePath) return '/';
+  if (pagePath === '/') return '/';
+  if (pagePath.endsWith('/')) return pagePath;
+  return pagePath.endsWith('.html') ? pagePath : `${pagePath}/`;
+}
+
+function pageConfigPath(page) {
+  return typeof page === 'string' ? page : page.path;
+}
+
+function isPageEnabled(page) {
+  return typeof page === 'string' || page.enabled !== false;
+}
+
+function pageReason(page) {
+  return typeof page === 'string' ? '' : page.reason || '';
+}
+
+function isUsefulCompetitorPage(signals) {
+  return Boolean(signals.title || signals.metaDescription || signals.h1.length || signals.h2.length || signals.ctas.length);
+}
+
 async function walkHtml(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
   const files = [];
@@ -170,45 +210,145 @@ async function walkHtml(dir) {
 
 function relativePage(filePath) {
   const relative = path.relative(ROOT, filePath).replace(/\\/g, '/');
-  return relative === 'index.html' ? '/' : `/${relative}`;
+  if (relative === 'index.html') return '/';
+  if (relative.endsWith('/index.html')) return `/${relative.replace(/index\.html$/, '')}`;
+  return `/${relative}`;
 }
 
-function comparePages(sitePages, competitorPages) {
+function ignoredSitePages(config) {
+  return new Map((config.site?.ignoredPages || []).map(item => [normalizePagePath(item.path), item.reason || 'Ignored by configuration.']));
+}
+
+function primaryEnglishPages(config) {
+  return (config.site?.primaryEnglishPages || DEFAULT_PRIMARY_ENGLISH_PAGES).map(normalizePagePath);
+}
+
+function languageTier(pagePath) {
+  if (pagePath.startsWith('/ar/') || pagePath.startsWith('/es/')) return 'low';
+  return 'english';
+}
+
+function classifyRecommendation(pagePath, area, config) {
+  const normalized = normalizePagePath(pagePath);
+  const primaryPages = primaryEnglishPages(config);
+  if (languageTier(normalized) === 'low') return 'low';
+  if (primaryPages.includes(normalized) && ['SEO title', 'Meta description', 'H1', 'CTA', 'Trust'].includes(area)) return 'high';
+  if (normalized.startsWith('/products/') || normalized.startsWith('/insights/') || area === 'Internal links') return 'medium';
+  if (primaryPages.includes(normalized)) return 'high';
+  return 'medium';
+}
+
+function addRecommendation(recommendations, config, pagePath, area, suggestion) {
+  recommendations.push({
+    page: pagePath,
+    group: classifyRecommendation(pagePath, area, config),
+    area,
+    suggestion
+  });
+}
+
+function sortRecommendations(recommendations, config) {
+  const primaryOrder = new Map(primaryEnglishPages(config).map((page, index) => [page, index]));
+  return recommendations.sort((a, b) => {
+    const groupDelta = GROUP_ORDER[a.group] - GROUP_ORDER[b.group];
+    if (groupDelta) return groupDelta;
+    const aOrder = primaryOrder.get(normalizePagePath(a.page)) ?? 999;
+    const bOrder = primaryOrder.get(normalizePagePath(b.page)) ?? 999;
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    return a.page.localeCompare(b.page) || a.area.localeCompare(b.area);
+  });
+}
+
+function configuredCompetitorIgnores(config) {
+  const ignored = [];
+  for (const competitor of config.competitors || []) {
+    if (competitor.enabled === false) {
+      ignored.push({
+        type: 'competitor',
+        source: competitor.name,
+        url: competitor.baseUrl,
+        reason: competitor.disabledReason || 'Competitor disabled in configuration.'
+      });
+    }
+    for (const item of competitor.ignoredPages || []) {
+      ignored.push({
+        type: 'competitor-page',
+        source: competitor.name,
+        url: toUrl(competitor.baseUrl, item.path),
+        reason: item.reason || 'Ignored competitor URL.'
+      });
+    }
+    for (const page of competitor.pages || []) {
+      if (!isPageEnabled(page)) {
+        const pagePath = pageConfigPath(page);
+        ignored.push({
+          type: 'competitor-page',
+          source: competitor.name,
+          url: toUrl(competitor.baseUrl, pagePath),
+          reason: pageReason(page) || 'Disabled competitor page.'
+        });
+      }
+    }
+  }
+  return ignored;
+}
+
+function groupRecommendations(recommendations, ignoredItems) {
+  return {
+    high: recommendations.filter(item => item.group === 'high'),
+    medium: recommendations.filter(item => item.group === 'medium'),
+    low: recommendations.filter(item => item.group === 'low'),
+    ignore: ignoredItems
+  };
+}
+
+function comparePages(sitePages, competitorPages, config, ignoredItems) {
+  const validCompetitorPages = competitorPages.filter(page => !page.error && page.status !== 'ignored');
   const competitorSummary = {
-    avgCtaCount: average(competitorPages.map(page => page.signals.ctas.length)),
-    faqCoverage: ratio(competitorPages, page => page.signals.faqs.length > 0),
-    trustSignals: unique(competitorPages.flatMap(page => page.signals.trustSignals)),
-    productCategories: unique(competitorPages.flatMap(page => page.signals.productCategories)),
-    commonCtas: unique(competitorPages.flatMap(page => page.signals.ctas.map(cta => cta.text))).slice(0, 20)
+    avgCtaCount: average(validCompetitorPages.map(page => page.signals.ctas.length)),
+    faqCoverage: ratio(validCompetitorPages, page => page.signals.faqs.length > 0),
+    trustSignals: unique(validCompetitorPages.flatMap(page => page.signals.trustSignals)),
+    productCategories: unique(validCompetitorPages.flatMap(page => page.signals.productCategories)),
+    commonCtas: unique(validCompetitorPages.flatMap(page => page.signals.ctas.map(cta => cta.text))).slice(0, 20)
   };
 
   const recommendations = [];
   for (const page of sitePages) {
     const signals = page.signals;
     if (!signals.title || signals.title.length < 35 || signals.title.length > 70) {
-      recommendations.push({ page: page.path, priority: 'medium', area: 'SEO title', suggestion: 'Review title length and make the primary buyer keyword clearer.' });
+      addRecommendation(recommendations, config, page.path, 'SEO title', 'Review title length and make the primary buyer keyword clearer.');
     }
     if (!signals.metaDescription || signals.metaDescription.length < 120 || signals.metaDescription.length > 165) {
-      recommendations.push({ page: page.path, priority: 'medium', area: 'Meta description', suggestion: 'Use a 120-165 character buyer-focused description with material, application and inquiry intent.' });
+      addRecommendation(recommendations, config, page.path, 'Meta description', 'Use a 120-165 character buyer-focused description with material, application and inquiry intent.');
     }
     if (signals.h1.length !== 1) {
-      recommendations.push({ page: page.path, priority: 'high', area: 'H1', suggestion: 'Keep exactly one visible H1 so search engines and buyers understand the page topic.' });
+      addRecommendation(recommendations, config, page.path, 'H1', 'Keep exactly one visible H1 so search engines and buyers understand the page topic.');
     }
     if (signals.ctas.length < Math.max(1, Math.round(competitorSummary.avgCtaCount / 2))) {
-      recommendations.push({ page: page.path, priority: 'medium', area: 'CTA', suggestion: 'Add a clear sample, quote or contact CTA near buyer decision sections.' });
+      addRecommendation(recommendations, config, page.path, 'CTA', 'Add a clear sample, quote or contact CTA near buyer decision sections.');
     }
     if (competitorSummary.faqCoverage >= 0.4 && signals.faqs.length === 0) {
-      recommendations.push({ page: page.path, priority: 'medium', area: 'FAQ', suggestion: 'Add a short B2B FAQ section covering samples, customization, documents and export communication.' });
+      addRecommendation(recommendations, config, page.path, 'FAQ', 'Add a short B2B FAQ section covering samples, customization, documents and export communication.');
     }
     if (signals.trustSignals.length < 2) {
-      recommendations.push({ page: page.path, priority: 'low', area: 'Trust', suggestion: 'Strengthen proof points such as factory-direct supply, testing documents, production capability or export support.' });
+      addRecommendation(recommendations, config, page.path, 'Trust', 'Strengthen proof points such as factory-direct supply, testing documents, production capability or export support.');
     }
     if (signals.imageLayout.imageCount > 0 && signals.imageLayout.imagesWithAlt < signals.imageLayout.imageCount) {
-      recommendations.push({ page: page.path, priority: 'low', area: 'Images', suggestion: 'Add descriptive alt text to product and application images.' });
+      addRecommendation(recommendations, config, page.path, 'Images', 'Add descriptive alt text to product and application images.');
+    }
+    const coreLinks = ['/products/', '/sample-shipping/', '/private-label/', '/contact/'];
+    const missingCoreLinks = coreLinks.filter(link => !signals.ctas.some(cta => cta.href === link));
+    if (primaryEnglishPages(config).includes(normalizePagePath(page.path)) && missingCoreLinks.length >= 3) {
+      addRecommendation(recommendations, config, page.path, 'Internal links', 'Add clearer internal links to product, sample, private label and contact buyer paths.');
     }
   }
 
-  return { competitorSummary, recommendations };
+  const sorted = sortRecommendations(recommendations, config);
+  return {
+    competitorSummary,
+    recommendations: sorted,
+    groupedRecommendations: groupRecommendations(sorted, ignoredItems)
+  };
 }
 
 function average(values) {
@@ -220,11 +360,21 @@ function ratio(values, predicate) {
   return values.length ? values.filter(predicate).length / values.length : 0;
 }
 
+function recommendationLine(item) {
+  return `- ${item.page} - ${item.area}: ${item.suggestion}`;
+}
+
+function ignoredLine(item) {
+  const target = item.page || item.url || item.source || 'Unknown';
+  return `- ${target}: ${item.reason}`;
+}
+
 function markdownReport(report) {
   const lines = [];
+  const groups = report.comparison.groupedRecommendations;
   lines.push(`# Competitor Audit - ${report.date}`);
   lines.push('');
-  lines.push(`Audited ${report.competitors.length} competitor pages and ${report.sitePages.length} MCCS pages.`);
+  lines.push(`Audited ${report.competitors.filter(page => !page.error && page.status !== 'ignored').length} valid competitor pages and ${report.sitePages.length} MCCS public pages.`);
   lines.push('');
   lines.push('## Competitor Patterns');
   lines.push('');
@@ -233,22 +383,28 @@ function markdownReport(report) {
   lines.push(`- Trust signals: ${report.comparison.competitorSummary.trustSignals.join(', ') || 'None detected'}`);
   lines.push(`- Product/category signals: ${report.comparison.competitorSummary.productCategories.slice(0, 12).join('; ') || 'None detected'}`);
   lines.push('');
-  lines.push('## Top Recommendations');
+  lines.push('## High Priority: English Main-Site Conversion and SEO');
   lines.push('');
-  if (!report.comparison.recommendations.length) {
-    lines.push('- No major gaps detected by the rule-based audit.');
-  } else {
-    for (const item of report.comparison.recommendations.slice(0, 30)) {
-      lines.push(`- **${item.priority.toUpperCase()}** ${item.page} - ${item.area}: ${item.suggestion}`);
-    }
-  }
+  lines.push(...(groups.high.length ? groups.high.map(recommendationLine) : ['- No high-priority English main-site gaps detected.']));
+  lines.push('');
+  lines.push('## Medium Priority: Product Pages, Insights and Internal Links');
+  lines.push('');
+  lines.push(...(groups.medium.length ? groups.medium.map(recommendationLine) : ['- No medium-priority product, insights or internal-link gaps detected.']));
+  lines.push('');
+  lines.push('## Low Priority: Multilingual Page Fine-Tuning');
+  lines.push('');
+  lines.push(...(groups.low.length ? groups.low.map(recommendationLine) : ['- No low-priority multilingual gaps detected.']));
+  lines.push('');
+  lines.push('## Ignore: Admin and Invalid Competitor URLs');
+  lines.push('');
+  lines.push(...(groups.ignore.length ? groups.ignore.map(ignoredLine) : ['- No ignored pages or failed competitor URLs in this run.']));
   lines.push('');
   lines.push('## Competitor Page Details');
   lines.push('');
   for (const page of report.competitors) {
     lines.push(`### ${page.competitor}: ${page.url}`);
-    if (page.error) {
-      lines.push(`- Error: ${page.error}`);
+    if (page.error || page.status === 'ignored') {
+      lines.push(`- Ignored: ${page.error || page.reason || 'No useful page content detected.'}`);
       lines.push('');
       continue;
     }
@@ -264,7 +420,7 @@ function markdownReport(report) {
 }
 
 function prBody(report) {
-  const recommendations = report.comparison.recommendations.slice(0, 12);
+  const groups = report.comparison.groupedRecommendations;
   const lines = [];
   lines.push('## What changed');
   lines.push('');
@@ -274,7 +430,7 @@ function prBody(report) {
   lines.push('');
   lines.push('## Why');
   lines.push('');
-  lines.push('The audit compares MCCS pages against competitor page structure, SEO metadata, H1 usage, CTAs, FAQ coverage, trust signals, selling points and image layout patterns. The optimizer is intentionally limited to copy, SEO, CTA, FAQ and internal-link improvements.');
+  lines.push('The audit prioritizes English main-site conversion and SEO first, keeps product/insights/internal-link recommendations separate, and moves multilingual fine-tuning into a lower-priority review lane. Admin pages and invalid competitor URLs are ignored.');
   lines.push('');
   lines.push('## Safety checks');
   lines.push('');
@@ -283,12 +439,17 @@ function prBody(report) {
   lines.push('- Product parameters, model names, dimensions, MOQ and carton quantity data are not edited by the scripts.');
   lines.push('- Formspree endpoints, Google Analytics ID and Vercel configuration are protected.');
   lines.push('');
-  lines.push('## Current recommendations');
+  lines.push('## High Priority: English Main-Site Conversion and SEO');
   lines.push('');
-  if (!recommendations.length) {
-    lines.push('- No major recommendations were detected in this run.');
+  lines.push(...(groups.high.slice(0, 10).map(recommendationLine)) || ['- No high-priority recommendations.']);
+  if (!groups.high.length) lines.push('- No high-priority recommendations.');
+  lines.push('');
+  lines.push('## Medium Priority: Product Pages, Insights and Internal Links');
+  lines.push('');
+  if (groups.medium.length) {
+    lines.push(...groups.medium.slice(0, 10).map(recommendationLine));
   } else {
-    for (const item of recommendations) lines.push(`- ${item.page} - ${item.area}: ${item.suggestion}`);
+    lines.push('- No medium-priority recommendations.');
   }
   lines.push('');
   lines.push('Review the generated report before merging.');
@@ -299,33 +460,52 @@ async function main() {
   const config = await readJson(CONFIG_PATH);
   await ensureDir(REPORT_DIR);
 
+  const ignoredItems = configuredCompetitorIgnores(config);
   const competitorPages = [];
   for (const competitor of config.competitors.filter(item => item.enabled !== false)) {
-    const pages = (competitor.pages || ['/']).slice(0, config.auditSettings?.maxPagesPerCompetitor || 8);
-    for (const pagePath of pages) {
+    const pages = (competitor.pages || ['/']).filter(isPageEnabled).slice(0, config.auditSettings?.maxPagesPerCompetitor || 8);
+    for (const page of pages) {
+      const pagePath = pageConfigPath(page);
       const url = toUrl(competitor.baseUrl, pagePath);
       try {
         const html = await fetchHtml(url, config.auditSettings || {});
-        competitorPages.push({ competitor: competitor.name, url, signals: extractSignals(html) });
+        const signals = extractSignals(html);
+        if (!isUsefulCompetitorPage(signals)) {
+          const reason = 'No useful SEO, heading, CTA or page-structure content detected.';
+          competitorPages.push({ competitor: competitor.name, url, status: 'ignored', reason, signals });
+          ignoredItems.push({ type: 'competitor-page', source: competitor.name, url, reason });
+        } else {
+          competitorPages.push({ competitor: competitor.name, url, signals });
+        }
       } catch (error) {
         competitorPages.push({ competitor: competitor.name, url, error: error.message, signals: extractSignals('') });
+        ignoredItems.push({ type: 'competitor-page', source: competitor.name, url, reason: error.message });
       }
     }
   }
 
   const sitePages = [];
+  const ignoredSite = ignoredSitePages(config);
   for (const filePath of await walkHtml(ROOT)) {
+    const pagePath = relativePage(filePath);
+    const normalized = normalizePagePath(pagePath);
+    if (ignoredSite.has(normalized)) {
+      ignoredItems.push({ type: 'site-page', page: pagePath, reason: ignoredSite.get(normalized) });
+      continue;
+    }
     const html = await fs.readFile(filePath, 'utf8');
-    sitePages.push({ path: relativePage(filePath), file: path.relative(ROOT, filePath).replace(/\\/g, '/'), signals: extractSignals(html) });
+    sitePages.push({ path: pagePath, file: path.relative(ROOT, filePath).replace(/\\/g, '/'), signals: extractSignals(html) });
   }
 
+  const comparison = comparePages(sitePages, competitorPages, config, ignoredItems);
   const report = {
     date: TODAY,
     generatedAt: new Date().toISOString(),
     site: config.site,
     competitors: competitorPages,
+    ignoredItems,
     sitePages,
-    comparison: comparePages(sitePages, competitorPages)
+    comparison
   };
 
   const json = `${JSON.stringify(report, null, 2)}\n`;
@@ -336,7 +516,7 @@ async function main() {
   await fs.writeFile(path.join(REPORT_DIR, 'latest.md'), markdown);
   await fs.writeFile(path.join(REPORT_DIR, 'latest-pr-body.md'), prBody(report));
 
-  console.log(`Competitor audit complete: ${competitorPages.length} competitor pages, ${sitePages.length} site pages.`);
+  console.log(`Competitor audit complete: ${competitorPages.length} competitor pages, ${sitePages.length} public site pages.`);
 }
 
 main().catch(error => {
