@@ -8,7 +8,7 @@ on:
       apply_changes:
         description: 'Create safe site optimization changes when opportunities are found'
         required: true
-        default: true
+        default: false
         type: boolean
 
 permissions:
@@ -42,6 +42,7 @@ jobs:
         run: node scripts/site-optimizer.mjs
 
       - name: Upload audit report artifact
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: competitor-audit-report
@@ -49,6 +50,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Create Pull Request
+        if: ${{ github.event_name == 'schedule' || inputs.apply_changes == true }}
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automation/competitor-audit-updates
