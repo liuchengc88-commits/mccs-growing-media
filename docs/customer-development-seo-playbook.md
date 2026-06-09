@@ -55,6 +55,7 @@ MCCS Growing Media
 sales@mccsgrowingmedia.com
 WhatsApp: +86 189 2229 0417
 https://www.mccsgrowingmedia.com/products/
+https://www.mccsgrowingmedia.com/middle-east/
 ```
 
 ## Weekly rhythm
@@ -77,3 +78,4 @@ Saturday: turn inquiry questions into FAQ and article topics.
 - Bulk carton vs retail packaging for substrate plugs
 - Water-saving substrate planning for arid greenhouse projects
 - Saudi Arabia hydroponic greenhouse substrate sample testing checklist
+- Saudi and Middle East hydroponic greenhouse substrate landing page: https://www.mccsgrowingmedia.com/middle-east/
