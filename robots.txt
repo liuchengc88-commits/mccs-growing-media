@@ -4,5 +4,5 @@ Disallow: /admin.html
 
 Sitemap: https://www.mccsgrowingmedia.com/sitemap.xml
 
-# AI search summary
+# Machine-readable site summary
 Allow: /llms.txt
