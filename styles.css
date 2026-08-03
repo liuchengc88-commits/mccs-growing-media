@@ -545,3 +545,71 @@
   .page-hero .lead,.article-hero .lead{font-size:16px;line-height:1.65}
   .cookie-banner{max-width:calc(100% - 24px)}
 }
+
+/* Product technical data, evidence and procurement FAQ */
+.page-technical-product .section-head{max-width:900px}
+.technical-product-hero{padding-bottom:72px}
+.technical-hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);gap:48px;align-items:center;padding-top:34px}
+.technical-hero-media{margin:0;background:#fff;border:1px solid #dfe4dc;border-radius:8px;overflow:hidden}
+.technical-hero-media img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.technical-hero-media figcaption{padding:14px 16px;color:#556354;font-size:14px;line-height:1.55}
+.technical-hero-media figcaption a{color:#0e6c38;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.disclosure-key{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 20px}
+.disclosure-key span{flex:1 1 240px;padding:12px 14px;border-left:4px solid #0e6c38;background:#f3f7f1;color:#425141;font-size:14px;line-height:1.45}
+.disclosure-key b{display:block;color:#173a25}
+.technical-table-wrap{width:100%;overflow-x:auto;border:1px solid #d8ded6;border-radius:8px;background:#fff}
+.technical-table{width:100%;min-width:860px;border-collapse:collapse;font-size:15px;line-height:1.55}
+.technical-table caption{padding:13px 16px;text-align:left;background:#173a25;color:#fff;font-weight:800}
+.technical-table th,.technical-table td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid #e1e6df}
+.technical-table thead th{background:#eaf2e8;color:#173a25;font-size:13px;text-transform:uppercase}
+.technical-table tbody th{width:19%;color:#173a25;background:#fafbf8;font-weight:850}
+.technical-table tbody tr:last-child th,.technical-table tbody tr:last-child td{border-bottom:0}
+.data-status{display:inline-block;margin-bottom:5px;padding:3px 8px;border-radius:4px;font-size:11px;line-height:1.4;font-weight:900;text-transform:uppercase}
+.status-published{background:#d9efdd;color:#165b2e}
+.status-report{background:#e7edf6;color:#274f78}
+.status-trial{background:#f5ead2;color:#765618}
+.technical-download-bar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:20px;padding:22px 24px;background:#173a25;color:#fff;border-radius:8px}
+.technical-download-bar h3{margin:0 0 6px;font-size:22px}
+.technical-download-bar p{margin:0;color:#dbe7dc;line-height:1.55}
+.technical-download-bar .btn{flex:0 0 auto;background:#fff;color:#0e6c38;box-shadow:none}
+.technical-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.technical-feature-grid article{padding:24px;border:1px solid #dbe2d9;border-top:4px solid #0e6c38;border-radius:8px;background:#fff}
+.technical-feature-grid h3,.machine-checklist h3,.evidence-grid h3{margin:0 0 10px;color:#173a25;font-size:21px}
+.technical-feature-grid p,.machine-checklist li,.evidence-grid p{color:#556354;line-height:1.65}
+.machine-checklist{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(320px,1.2fr) auto;gap:24px;align-items:center;margin-top:24px;padding:24px;border:1px solid #d8ded6;border-radius:8px;background:#f6f3e8}
+.machine-checklist ul{columns:2;margin:0;padding-left:20px}
+.machine-checklist li{padding:4px 12px 4px 0;break-inside:avoid}
+.evidence-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.evidence-grid article{padding:22px;border:1px solid #dbe2d9;border-radius:8px;background:#fff}
+.evidence-grid img{display:block;width:100%;max-width:200px;height:60px;object-fit:contain;object-position:left center;margin-bottom:16px}
+.evidence-grid a{display:inline-block;color:#0e6c38;font-weight:850;text-decoration:underline;text-underline-offset:3px}
+.evidence-mark{display:grid;place-items:center;width:60px;height:60px;margin-bottom:16px;border:2px solid #0e6c38;border-radius:8px;color:#0e6c38;font-size:19px;font-weight:950}
+.format-comparison-table tbody th{width:18%}
+.technical-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.technical-faq details{border:1px solid #d8ded6;border-radius:8px;background:#fff;overflow:hidden}
+.technical-faq summary{position:relative;display:block;cursor:pointer;padding:18px 52px 18px 20px;list-style:none}
+.technical-faq summary::-webkit-details-marker{display:none}
+.technical-faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#0e6c38;font-size:26px;font-weight:700}
+.technical-faq details[open] summary::after{content:'-'}
+.technical-faq h3{margin:0;color:#173a25;font-size:18px;line-height:1.4}
+.technical-faq details p{margin:0;padding:0 20px 20px;color:#556354;line-height:1.7}
+
+@media(max-width:1000px){
+  .technical-hero-grid{grid-template-columns:1fr;gap:28px}
+  .technical-feature-grid,.evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .machine-checklist{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .technical-product-hero{padding-bottom:48px}
+  .technical-hero-grid{padding-top:20px}
+  .technical-hero-media{width:100%}
+  .technical-download-bar{align-items:stretch;flex-direction:column;padding:18px}
+  .technical-download-bar .btn{width:100%;white-space:normal;text-align:center}
+  .technical-feature-grid,.evidence-grid,.technical-faq{grid-template-columns:1fr}
+  .machine-checklist ul{columns:1}
+  .technical-table{min-width:760px}
+  .technical-table th,.technical-table td{padding:13px}
+  .technical-faq summary{padding:16px 46px 16px 16px}
+  .technical-faq h3{font-size:17px}
+  .technical-faq details p{padding:0 16px 18px}
+}
