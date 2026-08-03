@@ -42,7 +42,7 @@
           close.type = 'button';
           close.className = 'cookie-close';
           close.setAttribute('aria-label', 'Close cookie notice');
-          close.textContent = '×';
+          close.textContent = '\u00d7';
           cookie.appendChild(close);
           close.addEventListener('click', hideCookie);
         }
@@ -61,6 +61,90 @@
     document.querySelectorAll('a[href$="/contact/"], a[href$="/es/contact/"], a[href$="/ar/contact/"]').forEach(function(a){
       if(!a.closest('.menu') && !a.closest('.footer-grid') && !a.classList.contains('brand')){
         a.href = a.getAttribute('href') + '#quoteForm';
+      }
+    });
+
+    var quoteForm = document.getElementById('quoteForm');
+    if(quoteForm && window.fetch && window.FormData){
+      var lang = (document.documentElement.lang || 'en').split('-')[0];
+      var messages = {
+        en: {
+          sending: 'Sending your request...',
+          success: 'Thank you. Your request was sent successfully. MCCS sales will review it and reply by email.',
+          error: 'Your request could not be sent. Please try again or email sales@mccsgrowingmedia.com.'
+        },
+        es: {
+          sending: 'Enviando su solicitud...',
+          success: 'Gracias. Su solicitud se envio correctamente. El equipo de ventas de MCCS respondera por correo electronico.',
+          error: 'No se pudo enviar la solicitud. Intente de nuevo o escriba a sales@mccsgrowingmedia.com.'
+        },
+        ar: {
+          sending: '\u062c\u0627\u0631\u064a \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643...',
+          success: '\u0634\u0643\u0631\u0627\u064b. \u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643 \u0628\u0646\u062c\u0627\u062d. \u0633\u064a\u0631\u0627\u062c\u0639\u0647 \u0641\u0631\u064a\u0642 \u0645\u0628\u064a\u0639\u0627\u062a MCCS \u0648\u064a\u0631\u062f \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a.',
+          error: '\u062a\u0639\u0630\u0631 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0637\u0644\u0628. \u062d\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0623\u0648 \u0631\u0627\u0633\u0644 sales@mccsgrowingmedia.com.'
+        }
+      };
+      var copy = messages[lang] || messages.en;
+      var status = document.createElement('div');
+      status.className = 'form-status';
+      status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite');
+      var heading = quoteForm.querySelector('h2');
+      if(heading) heading.insertAdjacentElement('afterend', status);
+      else quoteForm.insertBefore(status, quoteForm.firstChild);
+
+      var requestedDocument = new URLSearchParams(window.location.search).get('document');
+      var messageField = quoteForm.querySelector('textarea[name="message"]');
+      if(requestedDocument === 'sgs-report' && messageField && !messageField.value){
+        messageField.value = 'Please confirm which SGS report applies to the proposed product model and project.';
+      }
+
+      quoteForm.addEventListener('submit', function(event){
+        event.preventDefault();
+        var submit = quoteForm.querySelector('button[type="submit"]');
+        var originalText = submit ? submit.textContent : '';
+        if(submit){ submit.disabled = true; submit.textContent = copy.sending; }
+        status.className = 'form-status';
+        status.textContent = copy.sending;
+
+        fetch(quoteForm.action, {
+          method: 'POST',
+          body: new FormData(quoteForm),
+          headers: {Accept: 'application/json'}
+        }).then(function(response){
+          if(!response.ok) throw new Error('Form submission failed');
+          status.className = 'form-status form-success';
+          status.textContent = copy.success;
+          quoteForm.reset();
+          if(typeof window.gtag === 'function'){
+            window.gtag('event', 'generate_lead', {
+              form_id: 'quoteForm',
+              form_name: 'MCCS Sample Request',
+              language: lang
+            });
+          }
+        }).catch(function(){
+          status.className = 'form-status form-error';
+          status.textContent = copy.error;
+        }).finally(function(){
+          if(submit){ submit.disabled = false; submit.textContent = originalText; }
+        });
+      });
+    }
+
+    document.addEventListener('click', function(event){
+      var link = event.target.closest && event.target.closest('a[href]');
+      if(!link) return;
+      var href = link.getAttribute('href') || '';
+      if(!/\.(pdf|xlsx)(?:$|[?#])/i.test(href)) return;
+      if(typeof window.gtag === 'function'){
+        var cleanHref = href.split(/[?#]/)[0];
+        var fileName = cleanHref.split('/').pop() || cleanHref;
+        window.gtag('event', 'resource_download', {
+          file_name: fileName,
+          file_extension: (fileName.split('.').pop() || '').toLowerCase(),
+          link_url: link.href
+        });
       }
     });
   });

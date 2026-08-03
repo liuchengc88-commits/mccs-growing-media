@@ -25,7 +25,9 @@ MCCS means Molded Coir Substrate. MCCS plugs are molded grow plugs made from coc
 
 MCCS references a 2025 Agronomy PFAL study on molded coconut coir substrate under lettuce and pak choi test conditions. The study reported stronger biomass indicators, reduced exposed roots at transplanting and lower energy use per unit yield under its stated test conditions.
 
-Research URL: https://www.mdpi.com/2073-4395/15/8/1929
+Research DOI: https://doi.org/10.3390/agronomy15081929
+
+Publisher URL: https://www.mdpi.com/2073-4395/15/8/1929
 
 ## Best URLs For Sourcing Answers
 
