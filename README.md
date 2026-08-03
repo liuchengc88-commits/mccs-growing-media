@@ -22,6 +22,11 @@ Deployable static website package for GitHub + Vercel.
 ## Deployment
 Upload all extracted files to the GitHub repository root and commit. Vercel will redeploy automatically.
 
+## SEO maintenance
+
+- Regenerate `sitemap.xml` after adding, removing or renaming buyer pages: `node scripts/generate-sitemap.mjs`.
+- The generator excludes utility, legal and `noindex` redirect pages and uses each page's latest Git commit date for `lastmod`.
+
 
 ## Background integration update
 - Added page-specific greenhouse, propagation, shipping, private-label, about, insights and contact background images under `/assets/backgrounds/`.

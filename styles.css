@@ -613,3 +613,20 @@
   .technical-faq h3{font-size:17px}
   .technical-faq details p{padding:0 16px 18px}
 }
+
+/* Collapse the full desktop navigation before it can push the sales CTA off screen. */
+@media(max-width:1360px) and (min-width:1001px){
+  .site-header .container.nav{position:relative;display:flex;justify-content:flex-start;gap:14px}
+  .site-header .mobile-menu-toggle{display:inline-flex;order:2;margin-left:auto}
+  .site-header .nav .menu{display:none}
+  .site-header .language-switcher{order:3;margin-left:0}
+  .site-header .nav>.btn-primary{order:4}
+  .site-header.nav-open{z-index:120}
+  .site-header.nav-open .menu{display:flex;position:absolute;left:0;right:0;top:100%;padding:12px;background:rgba(255,255,255,.98);border:1px solid #e7e2d3;border-radius:0 0 8px 8px;box-shadow:0 22px 42px rgba(31,55,35,.16);flex-direction:column;gap:6px}
+  .site-header.nav-open .menu a{min-height:44px;display:flex;align-items:center;padding:10px 14px;border-radius:6px;background:#f7f5ec;color:#17452b}
+  .site-header.nav-open::after{content:"";position:fixed;left:0;right:0;top:76px;bottom:0;background:rgba(13,23,16,.08);z-index:-1}
+}
+
+.form-status:not(:empty){display:block;grid-column:1/-1}
+.evidence-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.evidence-link{color:#0e6c38;font-weight:850;text-decoration:underline;text-underline-offset:3px}

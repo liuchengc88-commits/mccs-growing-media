@@ -2,7 +2,18 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://www.mccsgrowingmedia.com/sitemap.xml
+# AI search and answer-engine crawlers are explicitly allowed.
+User-agent: OAI-SearchBot
+Allow: /
 
-# Machine-readable site summary
-Allow: /llms.txt
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Machine-readable summary: https://www.mccsgrowingmedia.com/llms.txt
+Sitemap: https://www.mccsgrowingmedia.com/sitemap.xml
