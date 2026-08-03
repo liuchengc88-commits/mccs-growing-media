@@ -630,3 +630,17 @@
 .form-status:not(:empty){display:block;grid-column:1/-1}
 .evidence-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
 .evidence-link{color:#0e6c38;font-weight:850;text-decoration:underline;text-underline-offset:3px}
+
+/* SEO authority application pages and reproducible buyer protocols */
+.authority-hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:42px;align-items:center;padding-top:28px}
+.authority-hero-media{margin:0;background:#fff;border:1px solid #dbe2d9;border-radius:8px;overflow:hidden}
+.authority-hero-media img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.authority-hero-media figcaption{padding:13px 16px;color:#556354;font-size:13px;line-height:1.55}
+.authority-page .article-layout{align-items:start}
+.authority-page .article-body,.authority-page .instruction-card{min-width:0;border-radius:8px}
+.authority-page .compare-table-wrap{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.protocol-table{min-width:680px}
+.protocol-table th{background:#173a25;color:#fff;text-align:left}
+.protocol-table td{vertical-align:top;line-height:1.55}
+.application-route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.authority-hero-grid,.application-route-grid{grid-template-columns:1fr}.authority-hero-media{max-width:640px}.protocol-table{min-width:620px}}
