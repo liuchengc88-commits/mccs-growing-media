@@ -34,6 +34,8 @@ main{overflow:hidden}
 .formula{margin:0 0 12px;color:var(--brown);font-size:22px;font-weight:700}
 .formula span{color:var(--green);padding:0 6px}
 .hero-intro{max-width:570px;margin:0;color:var(--muted);font-size:16px;line-height:1.8}
+.quick-tip{max-width:620px;margin:16px 0 0;padding:9px 0 9px 12px;border-left:3px solid var(--green);color:var(--muted);font-size:13px;line-height:1.65}
+.quick-tip strong{color:var(--forest)}
 .botanical-mark{width:100%;aspect-ratio:1;display:grid;place-items:center;background:var(--green-soft);border-radius:50%;position:relative}
 .botanical-mark::after{content:"";position:absolute;width:76%;height:76%;border:1px solid rgba(57,113,44,.25);border-radius:50%}
 .botanical-mark svg{width:82%;height:82%;position:relative;z-index:1}
@@ -114,6 +116,7 @@ main{overflow:hidden}
   .hero-label{margin:19px 0 20px;padding:7px 13px;font-size:12px}
   .formula{font-size:18px}
   .hero-intro{font-size:14px;line-height:1.75}
+  .quick-tip{margin-top:13px;padding:7px 0 7px 10px;font-size:12px;line-height:1.55}
   .botanical-mark{align-self:start;margin-top:28px}
   .guide-section{padding:54px 16px}
   .section-heading{margin-bottom:25px}
