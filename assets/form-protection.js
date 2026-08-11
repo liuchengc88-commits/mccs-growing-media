@@ -10,21 +10,33 @@
       whatsapp: 'Enter a valid WhatsApp or phone number with 7 to 15 digits.',
       company: 'Enter your full company or organization name.',
       message: 'Please describe your product requirements, application and target market in at least 20 characters.',
-      gibberish: 'Please enter a clear project message without random or repeated text.'
+      gibberish: 'Please enter a clear project message without random or repeated text.',
+      sending: 'Sending request...',
+      success: 'Thank you. Your request was received and our sales team will review it.',
+      submitError: 'Your request could not be sent. Please wait a moment and try again.',
+      rateLimit: 'Too many requests were sent. Please wait a few minutes and try again.'
     },
     es: {
       honeypot: 'No se pudo enviar la solicitud. Actualice la página e inténtelo de nuevo.',
       whatsapp: 'Introduzca un número válido de WhatsApp o teléfono de 7 a 15 dígitos.',
       company: 'Introduzca el nombre completo de su empresa u organización.',
       message: 'Describa los requisitos, la aplicación y el mercado objetivo en al menos 20 caracteres.',
-      gibberish: 'Escriba un mensaje claro sobre el proyecto, sin texto aleatorio o repetido.'
+      gibberish: 'Escriba un mensaje claro sobre el proyecto, sin texto aleatorio o repetido.',
+      sending: 'Enviando solicitud...',
+      success: 'Gracias. Recibimos su solicitud y nuestro equipo comercial la revisará.',
+      submitError: 'No se pudo enviar la solicitud. Espere un momento e inténtelo de nuevo.',
+      rateLimit: 'Se enviaron demasiadas solicitudes. Espere unos minutos e inténtelo de nuevo.'
     },
     ar: {
       honeypot: 'تعذر إرسال الطلب. يرجى تحديث الصفحة والمحاولة مرة أخرى.',
       whatsapp: 'أدخل رقم واتساب أو هاتف صالحاً يتكون من 7 إلى 15 رقماً.',
       company: 'أدخل الاسم الكامل للشركة أو المؤسسة.',
       message: 'يرجى وصف متطلبات المنتج والاستخدام والسوق المستهدف في 20 حرفاً على الأقل.',
-      gibberish: 'يرجى كتابة رسالة واضحة عن المشروع دون نص عشوائي أو متكرر.'
+      gibberish: 'يرجى كتابة رسالة واضحة عن المشروع دون نص عشوائي أو متكرر.',
+      sending: 'جارٍ إرسال الطلب...',
+      success: 'شكراً لك. تم استلام طلبك وسيقوم فريق المبيعات بمراجعته.',
+      submitError: 'تعذر إرسال الطلب. يرجى الانتظار قليلاً والمحاولة مرة أخرى.',
+      rateLimit: 'تم إرسال عدد كبير من الطلبات. يرجى الانتظار بضع دقائق والمحاولة مرة أخرى.'
     }
   };
   const copy = messages[language] || messages.en;
@@ -38,14 +50,19 @@
     'abc', 'asdf', 'company', 'google', 'na', 'none', 'qwerty', 'test', 'testing'
   ]);
   const status = document.createElement('div');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitButtonLabel = submitButton?.textContent || '';
+  let submitting = false;
 
-  status.className = 'form-error';
+  status.className = 'form-status form-error';
   status.setAttribute('role', 'alert');
   status.setAttribute('aria-live', 'polite');
+  status.tabIndex = -1;
   status.hidden = true;
   form.querySelector('h2')?.insertAdjacentElement('afterend', status);
 
   const showError = (field, message) => {
+    status.className = 'form-status form-error';
     status.textContent = message;
     status.hidden = false;
     field?.setAttribute('aria-invalid', 'true');
@@ -57,6 +74,32 @@
     status.textContent = '';
     status.hidden = true;
     Object.values(fields).forEach((field) => field?.removeAttribute('aria-invalid'));
+  };
+
+  const setSubmitting = (active) => {
+    submitting = active;
+    if (!submitButton) return;
+    submitButton.disabled = active;
+    submitButton.setAttribute('aria-busy', String(active));
+    submitButton.textContent = active ? copy.sending : submitButtonLabel;
+  };
+
+  const showSuccess = () => {
+    status.className = 'form-status form-success';
+    status.textContent = copy.success;
+    status.hidden = false;
+    status.focus({ preventScroll: true });
+    status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  const trackSuccessfulLead = () => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'generate_lead', {
+      form_id: 'quoteForm',
+      form_language: language,
+      lead_type: 'sample_request',
+      transport_type: 'beacon'
+    });
   };
 
   const normalizedCompany = (value) => value
@@ -85,7 +128,7 @@
 
   Object.values(fields).forEach((field) => field?.addEventListener('input', clearErrors));
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     clearErrors();
 
     if (fields.honeypot?.value.trim()) {
@@ -118,6 +161,32 @@
     if (looksLikeGibberish(message)) {
       event.preventDefault();
       showError(fields.message, copy.gibberish);
+      return;
+    }
+
+    event.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) {
+        showError(null, response.status === 429 ? copy.rateLimit : copy.submitError);
+        return;
+      }
+
+      trackSuccessfulLead();
+      form.reset();
+      showSuccess();
+    } catch {
+      showError(null, copy.submitError);
+    } finally {
+      setSubmitting(false);
     }
   });
 })();
