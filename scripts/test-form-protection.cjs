@@ -54,7 +54,7 @@ function createHarness({
     }
   };
   const form = {
-    action: 'https://formspree.io/f/protected',
+    action: 'https://example.invalid/form',
     method: 'POST',
     resetCount: 0,
     elements: {
