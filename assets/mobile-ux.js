@@ -59,13 +59,13 @@
 
     // Make contact CTAs land on the form directly.
     document.querySelectorAll('a[href$="/contact/"], a[href$="/es/contact/"], a[href$="/ar/contact/"]').forEach(function(a){
-      if(!a.closest('.menu') && !a.closest('.footer-grid') && !a.classList.contains('brand')){
+      if(!a.closest('.menu') && !a.closest('.footer-grid') && !a.closest('.language-switcher') && !a.classList.contains('brand')){
         a.href = a.getAttribute('href') + '#quoteForm';
       }
     });
 
     var quoteForm = document.getElementById('quoteForm');
-    if(quoteForm && window.fetch && window.FormData){
+    if(quoteForm && window.fetch && window.FormData && !document.querySelector('script[src^="/assets/form-protection.js"]')){
       var lang = (document.documentElement.lang || 'en').split('-')[0];
       var messages = {
         en: {
@@ -82,6 +82,11 @@
           sending: '\u062c\u0627\u0631\u064a \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643...',
           success: '\u0634\u0643\u0631\u0627\u064b. \u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628\u0643 \u0628\u0646\u062c\u0627\u062d. \u0633\u064a\u0631\u0627\u062c\u0639\u0647 \u0641\u0631\u064a\u0642 \u0645\u0628\u064a\u0639\u0627\u062a MCCS \u0648\u064a\u0631\u062f \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a.',
           error: '\u062a\u0639\u0630\u0631 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0637\u0644\u0628. \u062d\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0623\u0648 \u0631\u0627\u0633\u0644 sales@mccsgrowingmedia.com.'
+        },
+        zh: {
+          sending: '\u6b63\u5728\u63d0\u4ea4\u60a8\u7684\u7533\u8bf7...',
+          success: '\u611f\u8c22\u60a8\u7684\u8be2\u76d8\u3002\u7533\u8bf7\u5df2\u6210\u529f\u63d0\u4ea4\uff0cMCCS \u9500\u552e\u56e2\u961f\u5c06\u901a\u8fc7\u90ae\u4ef6\u56de\u590d\u3002',
+          error: '\u7533\u8bf7\u6682\u65f6\u65e0\u6cd5\u63d0\u4ea4\u3002\u8bf7\u91cd\u8bd5\uff0c\u6216\u53d1\u9001\u90ae\u4ef6\u81f3 sales@mccsgrowingmedia.com\u3002'
         }
       };
       var copy = messages[lang] || messages.en;
