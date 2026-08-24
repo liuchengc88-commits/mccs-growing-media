@@ -715,40 +715,6 @@
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
   },
   {
-    "model": "ZY-090",
-    "name_en": "Low-Profile Growing Cup 6.8 cm",
-    "category": "Growing Cup",
-    "size": "Top 6.8 cm / Bottom 6.8 cm / Height 5.0 cm",
-    "trayFit": "Low-profile pots, nursery holders or display containers matched to a 6.8 cm body",
-    "bestFor": "Container planting, transplanting and specialty nursery programs",
-    "desc": "A low-profile molded growing cup with a documented 6.8 cm body and 5.0 cm height for container-fit sampling.",
-    "slug": "zy-090",
-    "name": "ZY-090 Low-Profile Growing Cup 6.8 cm",
-    "image": "assets/products/X-090.webp",
-    "applicationTags": [
-      "Seedling",
-      "Succulent"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/X-090.webp",
-      "assets/package-option-display.webp",
-      "assets/factory-packaging.webp"
-    ],
-    "status": "New",
-    "description": "A low-profile 6.8 cm molded growing cup for container-fit, hydration and transplant trials.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
-  },
-  {
     "model": "ZY-104",
     "name_en": "Nursery Plug 4.0 cm",
     "category": "Seedling Plug",

@@ -2,7 +2,8 @@ import fs from "node:fs";
 
 const productFile = "data/products.json";
 const csvFile = "data/products-cf.csv";
-const products = JSON.parse(fs.readFileSync(productFile, "utf8"));
+let products = JSON.parse(fs.readFileSync(productFile, "utf8"));
+products = products.filter((product) => !["X-090", "ZY-090"].includes(product.model));
 const mountingCopy = {
   "ZY-901": {
     name: "Staghorn Fern Mounting Ball 20 cm",
@@ -88,7 +89,10 @@ for (const file of buyerPages) {
   const html = fs.readFileSync(file, "utf8")
     .replaceAll("CF Series", "ZY Series")
     .replaceAll("CF models", "ZY models")
-    .replaceAll("CF model", "ZY model");
+    .replaceAll("CF model", "ZY model")
+    .replace(/Browse \d+ molded coconut coir and peat substrate models/, `Browse ${products.length} molded coconut coir and peat substrate models`)
+    .replaceAll("Succulent mounting forms", "Staghorn fern mounting forms")
+    .replaceAll("Succulents and decorative planting concepts.", "Staghorn ferns and epiphyte mounting concepts.");
   fs.writeFileSync(file, html, "utf8");
 }
 
