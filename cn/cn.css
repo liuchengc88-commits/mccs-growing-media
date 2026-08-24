@@ -1,0 +1,47 @@
+.cn-site {
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+}
+
+.cn-site h1,
+.cn-site h2,
+.cn-site h3,
+.cn-site p,
+.cn-site li,
+.cn-site summary,
+.cn-site label,
+.cn-site input,
+.cn-site select,
+.cn-site textarea,
+.cn-site button {
+  letter-spacing: 0;
+}
+
+.cn-site .lead,
+.cn-site .section-head p,
+.cn-site .article-body p,
+.cn-site .article-body li {
+  line-height: 1.8;
+}
+
+.cn-site .language-switcher a[aria-current="page"] {
+  background: #174f35;
+  color: #fff;
+}
+
+.cn-site .cn-note {
+  border-left: 4px solid #7c5a3a;
+  padding: 1rem 1.15rem;
+  background: #fbf8f1;
+}
+
+@media (max-width: 520px) {
+  .cn-site h1,
+  .cn-site h2,
+  .cn-site h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .cn-site .page-hero .lead {
+    font-size: 1rem;
+  }
+}
