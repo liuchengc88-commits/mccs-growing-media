@@ -8,7 +8,11 @@ const assetVersion = "20260824-cn";
 function writePage(target, content) {
   const versioned = content
     .replace('/assets/mobile-ux.js"', `/assets/mobile-ux.js?v=${assetVersion}"`)
-    .replace('/assets/form-protection.js"', `/assets/form-protection.js?v=${assetVersion}"`);
+    .replace('/assets/form-protection.js"', `/assets/form-protection.js?v=${assetVersion}"`)
+    .replace(
+      '<button type="button" class="app-filter" data-app="Succulent">多肉</button></div><div id="productMatrix"',
+      '<button type="button" class="app-filter" data-app="Succulent">多肉</button><button type="button" class="app-filter" data-app="Staghorn Fern">鹿角蕨</button></div><div id="productMatrix"'
+    );
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, versioned);
 }

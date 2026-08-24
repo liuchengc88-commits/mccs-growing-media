@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import path from "node:path";
 
 const productFile = "data/products.json";
 const csvFile = "data/products-cf.csv";
@@ -78,13 +79,19 @@ const rows = products.map((product) => [
 ].map(escapeCsv).join(","));
 fs.writeFileSync(csvFile, `${columns.join(",")}\n${rows.join("\n")}\n`, "utf8");
 
-const buyerPages = [
-  "index.html",
-  "products/index.html",
-  "products/conical-plugs/index.html",
-  "es/products/index.html",
-  "ar/products/index.html"
-];
+const buyerPages = [];
+const skippedDirectories = new Set([".git", ".github", "ar", "assets", "cn", "data", "docs", "es", "node_modules", "output", "reports", "scripts", "tmp"]);
+function findEnglishBuyerPages(directory) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory() && skippedDirectories.has(entry.name)) continue;
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) findEnglishBuyerPages(target);
+    if (entry.isFile() && entry.name === "index.html") buyerPages.push(target);
+  }
+}
+findEnglishBuyerPages(".");
+buyerPages.push("es/products/index.html", "ar/products/index.html");
+
 for (const file of buyerPages) {
   const html = fs.readFileSync(file, "utf8")
     .replaceAll("CF Series", "ZY Series")
