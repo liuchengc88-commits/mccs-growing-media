@@ -1,0 +1,5 @@
+/.lighthouseci/
+/outputs/
+/tmp/
+*.inspect.ndjson
+

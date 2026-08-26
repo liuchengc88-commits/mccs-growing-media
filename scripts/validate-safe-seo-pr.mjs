@@ -167,11 +167,11 @@ function validatePrMetadata(pr, issue, failures) {
   }
 
   if (pr.draft) {
-    failures.push('Draft PRs are not eligible for auto-merge.');
+    failures.push('Draft PRs are not eligible for the safe SEO review gate.');
   }
 
   if (pr.head?.repo?.full_name !== pr.base?.repo?.full_name) {
-    failures.push('Cross-repository PRs are not eligible for auto-merge.');
+    failures.push('Cross-repository PRs are not eligible for the safe SEO review gate.');
   }
 
   const body = pr.body || '';
@@ -204,9 +204,9 @@ function validateFileList(files, failures) {
 
   for (const file of files) {
     if (isForbiddenPath(file.filename)) failures.push(`Forbidden file changed: ${file.filename}`);
-    if (!isAllowedPath(file.filename)) failures.push(`File is outside the auto-merge allowlist: ${file.filename}`);
-    if (!file.patch && file.status !== 'removed') failures.push(`Patch is unavailable for ${file.filename}; refusing auto-merge.`);
-    if (file.status === 'removed') failures.push(`Deleted file is not eligible for auto-merge: ${file.filename}`);
+    if (!isAllowedPath(file.filename)) failures.push(`File is outside the safe SEO allowlist: ${file.filename}`);
+    if (!file.patch && file.status !== 'removed') failures.push(`Patch is unavailable for ${file.filename}; manual review is required.`);
+    if (file.status === 'removed') failures.push(`Deleted file requires manual review: ${file.filename}`);
   }
 
   return { additions, deletions };
@@ -244,7 +244,7 @@ function validatePatchContent(files, failures) {
 
 function buildSummary(result) {
   const lines = [];
-  lines.push(result.ok ? '## Safe SEO Auto-Merge Check: Passed' : '## Safe SEO Auto-Merge Check: Failed');
+  lines.push(result.ok ? '## Safe SEO PR Check: Passed' : '## Safe SEO PR Check: Failed');
   lines.push('');
   lines.push(`- PR: #${result.prNumber}`);
   lines.push(`- Title: ${result.title}`);
