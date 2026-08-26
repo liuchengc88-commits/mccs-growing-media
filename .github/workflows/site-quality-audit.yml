@@ -1,0 +1,50 @@
+name: Site Quality Audit
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '30 2 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  static-site-audit:
+    name: Static HTML, links and schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit public pages
+        run: python scripts/audit-site.py
+      - name: Audit JSON-LD inventory
+        run: node scripts/audit-json-ld.mjs
+      - name: Test form protection and lead tracking
+        run: node scripts/test-form-protection.cjs
+
+  production-lighthouse:
+    name: Production Lighthouse baseline
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Lighthouse CI
+        run: npm install --global @lhci/cli@0.15.x
+      - name: Audit production priority pages
+        run: lhci autorun
+      - name: Upload Lighthouse reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-production-report
+          path: .lighthouseci/
+          if-no-files-found: warn
+

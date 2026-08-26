@@ -5,6 +5,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const published = '2026-08-04';
 
 const organization = {
+  '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': 'https://www.mccsgrowingmedia.com/#organization',
   name: 'MCCS Growing Media',
@@ -41,11 +42,11 @@ const pages = [
   {
     kind: 'landing',
     path: 'applications/automated-transplanter-grow-plugs',
-    title: 'Grow Plugs for Automated Transplanter Evaluation | MCCS',
-    description: 'A B2B line-trial framework for evaluating molded grow plug dimensions, moisture condition, gripper handling and automated transplant compatibility.',
+    title: 'Transplanting Plugs for Automated Transplanters | MCCS',
+    description: 'Evaluate molded coir and peat transplanting plugs by tray fit, moisture condition, gripper handling and staged automated transplanter line trials.',
     label: 'Automation compatibility',
-    h1: 'Grow Plugs for Automated Transplanter Evaluation',
-    lead: 'A practical qualification workflow for growers and equipment teams testing molded substrate plugs with grippers, tray movement and automated transplant lines.',
+    h1: 'Transplanting Plugs for Automated Transplanter Trials',
+    lead: 'A practical qualification workflow for growers and equipment teams comparing molded transplanting plugs across grippers, tray movement and automated transplant lines.',
     image: '/assets/micro-cellular.jpg',
     imageAlt: 'Molded substrate plug structure prepared for automated transplanter compatibility evaluation',
     takeaway: 'Automation compatibility is a measured line-trial result, not a universal product claim. Record plug dimensions, moisture condition, gripper settings and failure modes together.',

@@ -1,4 +1,4 @@
-name: Auto Merge Safe SEO
+name: Safe SEO PR Check
 
 on:
   pull_request_target:
@@ -12,18 +12,21 @@ on:
       - unlabeled
 
 permissions:
-  contents: write
+  contents: read
   issues: write
-  pull-requests: write
+  pull-requests: read
 
 concurrency:
-  group: auto-merge-safe-seo-${{ github.event.pull_request.number }}
+  group: safe-seo-check-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
 jobs:
-  validate-and-merge:
-    name: Validate and auto-merge safe SEO PR
-    if: ${{ github.event.pull_request.base.ref == 'main' }}
+  validate:
+    name: Validate safe SEO PR
+    if: >-
+      ${{ github.event.pull_request.base.ref == 'main' &&
+          contains(github.event.pull_request.labels.*.name, 'automation') &&
+          contains(github.event.pull_request.labels.*.name, 'seo') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch validator
@@ -54,7 +57,7 @@ jobs:
             const summaryPath = 'reports/safe-seo-validation/summary.md';
             const body = fs.existsSync(summaryPath)
               ? fs.readFileSync(summaryPath, 'utf8')
-              : '## Safe SEO Auto-Merge Check: Failed\n\nValidation summary was not generated.';
+              : '## Safe SEO PR Check: Failed\n\nValidation summary was not generated.';
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -65,30 +68,3 @@ jobs:
       - name: Stop when safe SEO validation fails
         if: ${{ steps.validate.outcome != 'success' }}
         run: exit 1
-
-      - name: Squash merge safe SEO PR and delete branch
-        if: ${{ steps.validate.outcome == 'success' }}
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const pr = context.payload.pull_request;
-            const merge = await github.rest.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr.number,
-              merge_method: 'squash',
-              commit_title: pr.title,
-              commit_message: 'Auto-merged after safe SEO validation passed.'
-            });
-
-            if (!merge.data.merged) {
-              throw new Error(`Merge did not complete: ${merge.data.message}`);
-            }
-
-            if (pr.head.repo.full_name === pr.base.repo.full_name) {
-              await github.rest.git.deleteRef({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: `heads/${pr.head.ref}`
-              });
-            }

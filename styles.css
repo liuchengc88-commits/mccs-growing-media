@@ -615,7 +615,7 @@
 }
 
 /* Collapse the full desktop navigation before it can push the sales CTA off screen. */
-@media(max-width:1360px) and (min-width:1001px){
+@media(max-width:1500px) and (min-width:1001px){
   .site-header .container.nav{position:relative;display:flex;justify-content:flex-start;gap:14px}
   .site-header .mobile-menu-toggle{display:inline-flex;order:2;margin-left:auto}
   .site-header .nav .menu{display:none}
