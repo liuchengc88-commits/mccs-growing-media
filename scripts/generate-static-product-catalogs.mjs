@@ -1,0 +1,123 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = process.cwd();
+const products = JSON.parse(fs.readFileSync(path.join(root, 'data/products.json'), 'utf8'));
+const chineseSource = fs.readFileSync(path.join(root, 'assets/products-cn.js'), 'utf8');
+const chineseMatch = chineseSource.match(/const productCn = (\{[\s\S]*?\n\});/);
+const chineseNames = chineseMatch ? JSON.parse(chineseMatch[1]) : {};
+
+const pages = [
+  { file: 'products/index.html', language: 'en', originPath: '/products/' },
+  { file: 'cn/products/index.html', language: 'zh-CN', originPath: '/cn/products/' },
+  { file: 'es/products/index.html', language: 'es', originPath: '/es/products/' },
+  { file: 'ar/products/index.html', language: 'ar', originPath: '/ar/products/' }
+];
+
+const translations = {
+  en: { unavailable: 'Confirm by sample and current project documents' },
+  'zh-CN': { unavailable: '以样品和当前项目资料为准' },
+  es: { unavailable: 'Confirmar con muestra y documentos actuales del proyecto' },
+  ar: { unavailable: 'يُؤكد بالعينة ووثائق المشروع الحالية' }
+};
+
+function escapeHtml(value = '') {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+
+function productName(product, language) {
+  if (language === 'zh-CN') return chineseNames[product.model]?.[0] || product.name_en;
+  return product.name_en;
+}
+
+function applications(product, language) {
+  const labels = {
+    'zh-CN': {
+      Seedling: '育苗', Orchid: '兰花', 'Tissue Culture': '组培', Hydroponic: '水培',
+      Succulent: '多肉', 'Staghorn Fern': '鹿角蕨', Epiphyte: '附生植物'
+    },
+    es: {
+      Seedling: 'Plántulas', Orchid: 'Orquídeas', 'Tissue Culture': 'Cultivo de tejidos',
+      Hydroponic: 'Hidroponía', Succulent: 'Suculentas', 'Staghorn Fern': 'Helecho cuerno de alce',
+      Epiphyte: 'Epífitas'
+    },
+    ar: {
+      Seedling: 'الشتلات', Orchid: 'الأوركيد', 'Tissue Culture': 'زراعة الأنسجة',
+      Hydroponic: 'الزراعة المائية', Succulent: 'العصاريات', 'Staghorn Fern': 'سرخس قرن الأيل',
+      Epiphyte: 'النباتات الهوائية'
+    }
+  };
+  return (product.applicationTags || [])
+    .map((tag) => labels[language]?.[tag] || tag)
+    .join(' / ');
+}
+
+function rows(language) {
+  return products.map((product) => {
+    const cells = [
+      `<strong>${escapeHtml(product.model)}</strong>`,
+      escapeHtml(productName(product, language)),
+      escapeHtml(product.size || '-'),
+      escapeHtml(product.trayFit || translations[language].unavailable),
+      escapeHtml(applications(product, language) || '-')
+    ];
+    if (language === 'en') {
+      cells.push('Batch/project specific; request current evidence.');
+      cells.push(`${escapeHtml(product.cartonQty || '-')}<br><small>${escapeHtml(product.moq || '-')}</small>`);
+    }
+    return `<tr>${cells.map((cell) => `<td>${cell}</td>`).join('')}</tr>`;
+  }).join('');
+}
+
+function itemList(language, originPath) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `https://www.mccsgrowingmedia.com${originPath}#model-list`,
+    name: language === 'zh-CN' ? 'MCCS ZY 系列产品型号目录' : 'MCCS ZY Series model catalog',
+    numberOfItems: products.length,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `${product.model} ${productName(product, language)}`,
+      description: `${product.size}. ${applications(product, language)}.`,
+      url: `https://www.mccsgrowingmedia.com${originPath}#${product.slug}`
+    }))
+  };
+}
+
+for (const page of pages) {
+  const filePath = path.join(root, page.file);
+  let html = fs.readFileSync(filePath, 'utf8');
+  const schema = JSON.stringify(itemList(page.language, page.originPath));
+  const schemaStart = '<!-- GENERATED PRODUCT ITEMLIST START -->';
+  const schemaEnd = '<!-- GENERATED PRODUCT ITEMLIST END -->';
+  const schemaBlock = `${schemaStart}<script type="application/ld+json">${schema}</script>${schemaEnd}`;
+  const schemaPattern = new RegExp(`${schemaStart}[\\s\\S]*?${schemaEnd}`);
+  html = schemaPattern.test(html)
+    ? html.replace(schemaPattern, schemaBlock)
+    : html.replace('</head>', `${schemaBlock}</head>`);
+
+  const rowStart = '<!-- GENERATED PRODUCT ROWS START -->';
+  const rowEnd = '<!-- GENERATED PRODUCT ROWS END -->';
+  const rowBlock = `${rowStart}${rows(page.language)}${rowEnd}`;
+  const rowPattern = new RegExp(`${rowStart}[\\s\\S]*?${rowEnd}`);
+  html = rowPattern.test(html)
+    ? html.replace(rowPattern, rowBlock)
+    : html.replace(
+      '<tbody id="productCompareBody"></tbody>',
+      `<tbody id="productCompareBody">${rowBlock}</tbody>`
+    );
+
+  if (!html.includes(schemaBlock) || !html.includes(rowBlock)) {
+    throw new Error(`Could not generate catalog markup in ${page.file}`);
+  }
+  fs.writeFileSync(filePath, html, 'utf8');
+}
+
+console.log(`Generated static catalog rows and ItemList schema for ${pages.length} pages (${products.length} models).`);

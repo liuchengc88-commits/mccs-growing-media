@@ -25,6 +25,12 @@ PRIORITY_PAGES = {
     "insights/index.html",
     "about/index.html",
 }
+PRODUCT_CATALOG_PAGES = {
+    "products/index.html",
+    "cn/products/index.html",
+    "es/products/index.html",
+    "ar/products/index.html",
+}
 
 
 class PageParser(HTMLParser):
@@ -109,15 +115,34 @@ def main() -> int:
     titles: dict[str, list[str]] = defaultdict(list)
     canonicals: dict[str, list[str]] = defaultdict(list)
     product_entities = 0
+    products = json.loads((ROOT / "data" / "products.json").read_text(encoding="utf-8"))
+    expected_models = {str(product["model"]) for product in products}
 
     for path in pages:
         relative = path.relative_to(ROOT).as_posix()
         parser = PageParser()
         try:
-            parser.feed(path.read_text(encoding="utf-8"))
+            html = path.read_text(encoding="utf-8")
+            parser.feed(html)
         except Exception as exc:
             add_issue(issues, "ERROR", relative, f"HTML parse failed: {exc}")
             continue
+
+        if relative in PRODUCT_CATALOG_PAGES:
+            row_start = "<!-- GENERATED PRODUCT ROWS START -->"
+            row_end = "<!-- GENERATED PRODUCT ROWS END -->"
+            if row_start not in html or row_end not in html:
+                add_issue(issues, "ERROR", relative, "Missing generated static product rows")
+            else:
+                static_rows = html.split(row_start, 1)[1].split(row_end, 1)[0]
+                missing_models = sorted(model for model in expected_models if model not in static_rows)
+                if missing_models:
+                    add_issue(
+                        issues,
+                        "ERROR",
+                        relative,
+                        f"Static product rows missing models: {', '.join(missing_models)}",
+                    )
 
         title = "".join(parser.title_parts).strip()
         descriptions = [
@@ -163,6 +188,7 @@ def main() -> int:
             if target is not None and not target.exists():
                 add_issue(issues, "ERROR", relative, f"Broken internal link: {href}")
 
+        catalog_item_list_found = False
         for raw_json in parser.json_ld:
             try:
                 entity = json.loads(raw_json)
@@ -177,6 +203,18 @@ def main() -> int:
                     add_issue(issues, "ERROR", relative, f"JSON-LD {root.get('@type')} missing @context")
                 if root.get("@type") == "Product":
                     product_entities += 1
+                if relative in PRODUCT_CATALOG_PAGES and root.get("@type") == "ItemList":
+                    catalog_item_list_found = True
+                    elements = root.get("itemListElement", [])
+                    if root.get("numberOfItems") != len(products) or len(elements) != len(products):
+                        add_issue(
+                            issues,
+                            "ERROR",
+                            relative,
+                            "Product ItemList count does not match data/products.json",
+                        )
+        if relative in PRODUCT_CATALOG_PAGES and not catalog_item_list_found:
+            add_issue(issues, "ERROR", relative, "Missing product ItemList JSON-LD")
 
     for title, matches in titles.items():
         if len(matches) > 1:
