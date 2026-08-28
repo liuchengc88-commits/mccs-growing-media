@@ -71,7 +71,7 @@ When scoped to the user's request, these changes are normally safe:
 - Contact, Sample & Shipping and Private Label conversion copy
 - Image alt text improvements
 - Mobile UX improvements
-- Buyer trust copy using approved language: factory-direct supply, SGS report available, 20,000-unit daily reference capacity and export coordination
+- Buyer trust copy using approved language: authorized factory supply, SGS/MSDS support available for qualified project review, up to 100,000 individual units per day under full-line operation, and export coordination
 
 Safe changes must still preserve all product data and integrations.
 
