@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from collections import Counter, defaultdict
+from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -31,6 +32,35 @@ PRODUCT_CATALOG_PAGES = {
     "cn/products/index.html",
     "es/products/index.html",
     "ar/products/index.html",
+}
+CATALOG_PAGE_CONFIG = {
+    "products/index.html": ("en", "/products/"),
+    "cn/products/index.html": ("zh-CN", "/cn/products/"),
+    "es/products/index.html": ("es", "/es/products/"),
+    "ar/products/index.html": ("ar", "/ar/products/"),
+}
+APPLICATION_LABELS = {
+    "zh-CN": {
+        "Seedling": "育苗", "Orchid": "兰花", "Tissue Culture": "组培",
+        "Hydroponic": "水培", "Succulent": "多肉", "Staghorn Fern": "鹿角蕨",
+        "Epiphyte": "附生植物",
+    },
+    "es": {
+        "Seedling": "Plántulas", "Orchid": "Orquídeas", "Tissue Culture": "Cultivo de tejidos",
+        "Hydroponic": "Hidroponía", "Succulent": "Suculentas",
+        "Staghorn Fern": "Helecho cuerno de alce", "Epiphyte": "Epífitas",
+    },
+    "ar": {
+        "Seedling": "الشتلات", "Orchid": "الأوركيد", "Tissue Culture": "زراعة الأنسجة",
+        "Hydroponic": "الزراعة المائية", "Succulent": "العصاريات",
+        "Staghorn Fern": "سرخس قرن الأيل", "Epiphyte": "النباتات الهوائية",
+    },
+}
+UNAVAILABLE_LABELS = {
+    "en": "Confirm by sample and current project documents",
+    "zh-CN": "以样品和当前项目资料为准",
+    "es": "Confirmar con muestra y documentos actuales del proyecto",
+    "ar": "يُؤكد بالعينة ووثائق المشروع الحالية",
 }
 INVALID_ORGANIZATION_ADDRESS = re.compile(r'"streetAddress"\s*:\s*"Huadu District"')
 APPROVED_ORGANIZATION_DESCRIPTION = (
@@ -115,6 +145,50 @@ def add_issue(issues, level: str, page: str, message: str) -> None:
     issues.append((level, page, message))
 
 
+def localized_product_name(product: dict, language: str, chinese_names: dict) -> str:
+    if language == "zh-CN":
+        return str(chinese_names.get(product["model"], [product["name_en"]])[0])
+    return str(product["name_en"])
+
+
+def localized_applications(product: dict, language: str) -> str:
+    labels = APPLICATION_LABELS.get(language, {})
+    return " / ".join(labels.get(tag, tag) for tag in product.get("applicationTags", []))
+
+
+def expected_catalog_rows(products: list[dict], language: str, chinese_names: dict) -> str:
+    rows = []
+    for product in products:
+        cells = [
+            f"<strong>{escape(str(product['model']))}</strong>",
+            escape(localized_product_name(product, language, chinese_names)),
+            escape(str(product.get("size") or "-")),
+            escape(str(product.get("trayFit") or UNAVAILABLE_LABELS[language])),
+            escape(localized_applications(product, language) or "-"),
+        ]
+        if language == "en":
+            cells.extend([
+                "Batch/project specific; request current evidence.",
+                f"{escape(str(product.get('cartonQty') or '-'))}<br><small>"
+                f"{escape(str(product.get('moq') or '-'))}</small>",
+            ])
+        rows.append("<tr>" + "".join(f"<td>{cell}</td>" for cell in cells) + "</tr>")
+    return "".join(rows)
+
+
+def expected_item_list(products: list[dict], language: str, origin_path: str, chinese_names: dict) -> list[dict]:
+    return [
+        {
+            "@type": "ListItem",
+            "position": index,
+            "name": f"{product['model']} {localized_product_name(product, language, chinese_names)}",
+            "description": f"{product['size']}. {localized_applications(product, language)}.",
+            "url": f"{CANONICAL_ORIGIN}{origin_path}#{product['slug']}",
+        }
+        for index, product in enumerate(products, start=1)
+    ]
+
+
 def main() -> int:
     pages = sorted(path for path in ROOT.rglob("*.html") if not is_skipped(path))
     issues: list[tuple[str, str, str]] = []
@@ -122,7 +196,9 @@ def main() -> int:
     canonicals: dict[str, list[str]] = defaultdict(list)
     product_entities = 0
     products = json.loads((ROOT / "data" / "products.json").read_text(encoding="utf-8"))
-    expected_models = {str(product["model"]) for product in products}
+    chinese_source = (ROOT / "assets" / "products-cn.js").read_text(encoding="utf-8")
+    chinese_match = re.search(r"const productCn = (\{[\s\S]*?\n\});", chinese_source)
+    chinese_names = json.loads(chinese_match.group(1)) if chinese_match else {}
 
     for path in pages:
         relative = path.relative_to(ROOT).as_posix()
@@ -141,13 +217,14 @@ def main() -> int:
                 add_issue(issues, "ERROR", relative, "Missing generated static product rows")
             else:
                 static_rows = html.split(row_start, 1)[1].split(row_end, 1)[0]
-                missing_models = sorted(model for model in expected_models if model not in static_rows)
-                if missing_models:
+                language, _ = CATALOG_PAGE_CONFIG[relative]
+                expected_rows = expected_catalog_rows(products, language, chinese_names)
+                if static_rows != expected_rows:
                     add_issue(
                         issues,
                         "ERROR",
                         relative,
-                        f"Static product rows missing models: {', '.join(missing_models)}",
+                        "Static product rows do not exactly match data/products.json",
                     )
 
         if INVALID_ORGANIZATION_ADDRESS.search(html):
@@ -228,12 +305,14 @@ def main() -> int:
                 if relative in PRODUCT_CATALOG_PAGES and root.get("@type") == "ItemList":
                     catalog_item_list_found = True
                     elements = root.get("itemListElement", [])
-                    if root.get("numberOfItems") != len(products) or len(elements) != len(products):
+                    language, origin_path = CATALOG_PAGE_CONFIG[relative]
+                    expected_elements = expected_item_list(products, language, origin_path, chinese_names)
+                    if root.get("numberOfItems") != len(products) or elements != expected_elements:
                         add_issue(
                             issues,
                             "ERROR",
                             relative,
-                            "Product ItemList count does not match data/products.json",
+                            "Product ItemList fields do not exactly match data/products.json",
                         )
         if relative in PRODUCT_CATALOG_PAGES and not catalog_item_list_found:
             add_issue(issues, "ERROR", relative, "Missing product ItemList JSON-LD")
