@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from html.parser import HTMLParser
@@ -31,6 +32,11 @@ PRODUCT_CATALOG_PAGES = {
     "es/products/index.html",
     "ar/products/index.html",
 }
+INVALID_ORGANIZATION_ADDRESS = re.compile(r'"streetAddress"\s*:\s*"Huadu District"')
+APPROVED_ORGANIZATION_DESCRIPTION = (
+    "MCCS Growing Media is an export-facing B2B brand operated by "
+    "Guangzhou Chengfeng Trading Co., Ltd."
+)
 
 
 class PageParser(HTMLParser):
@@ -143,6 +149,22 @@ def main() -> int:
                         relative,
                         f"Static product rows missing models: {', '.join(missing_models)}",
                     )
+
+        if INVALID_ORGANIZATION_ADDRESS.search(html):
+            add_issue(
+                issues,
+                "ERROR",
+                relative,
+                "Huadu District must not be used as a schema streetAddress",
+            )
+        if '"@type":"Organization"' in html and relative not in {"cn/use-guide/index.html"}:
+            if APPROVED_ORGANIZATION_DESCRIPTION not in html:
+                add_issue(
+                    issues,
+                    "ERROR",
+                    relative,
+                    "Organization schema is missing the approved operator relationship",
+                )
 
         title = "".join(parser.title_parts).strip()
         descriptions = [

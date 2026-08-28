@@ -124,7 +124,7 @@ def build_pdf():
         [P("Product family", "TableCellStrong"), P("MCCS ZY Series molded coir and peat substrate plugs", "TableCell")],
         [P("Supply model", "TableCellStrong"), P("Factory-direct B2B supply with export coordination", "TableCell")],
         [P("Technical evidence", "TableCellStrong"), P("SGS report information available for eligible project review; confirm scope and applicability with sales", "TableCell")],
-        [P("Capacity reference", "TableCellStrong"), P("20,000-unit daily reference capacity; actual schedule depends on model, packaging and order requirements", "TableCell")],
+        [P("Capacity reference", "TableCellStrong"), P("Up to 100,000 individual molded substrate units per day under full-line operation; actual output depends on model, packaging and production schedule", "TableCell")],
         [P("Document status", "TableCellStrong"), P("Property values labeled as published, batch/project report or sample-trial dependent", "TableCell")],
         [P("Issue date", "TableCellStrong"), P("August 2026", "TableCell")],
     ], colWidths=[38 * mm, 112 * mm])
@@ -245,7 +245,7 @@ def build_pdf():
         P("Available buyer-facing evidence", "SectionTitle"),
         P("<b>SGS report support:</b> Available SGS report information can be shared during eligible buyer and project review. Confirm report scope and applicability with sales."),
         P("<b>Factory-direct supply:</b> Guangzhou-based production and export coordination for qualified B2B projects."),
-        P("<b>Capacity planning:</b> 20,000-unit daily reference capacity. Actual schedule depends on model, formulation, packaging and order requirements."),
+        P("<b>Capacity planning:</b> Up to 100,000 individual molded substrate units per day under full-line operation. Actual output depends on model, formulation, packaging and production schedule."),
         P("<b>Research context:</b> A 2025 Agronomy PFAL study on molded coconut coir substrate under stated lettuce and pak choi test conditions: https://www.mdpi.com/2073-4395/15/8/1929"),
         Spacer(1, 7 * mm),
     ])
