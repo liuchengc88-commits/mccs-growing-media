@@ -23,7 +23,7 @@ jobs:
       - name: Audit public pages
         run: python scripts/audit-site.py
       - name: Audit JSON-LD inventory
-        run: node scripts/audit-json-ld.mjs
+        run: node scripts/audit-json-ld.mjs --strict
       - name: Test form protection and lead tracking
         run: node scripts/test-form-protection.cjs
 

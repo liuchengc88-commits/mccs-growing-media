@@ -221,7 +221,11 @@ function render(page) {
 for (const page of pages) {
   const directory = path.join(root, page.path);
   await mkdir(directory, {recursive: true});
-  await writeFile(path.join(directory, 'index.html'), render(page), 'utf8');
+  const html = render(page).replace(
+    '</body>',
+    '<script src="/assets/ai-referral-tracking.js" defer></script></body>'
+  );
+  await writeFile(path.join(directory, 'index.html'), html, 'utf8');
 }
 
 console.log(`Generated ${pages.length} SEO authority pages.`);
