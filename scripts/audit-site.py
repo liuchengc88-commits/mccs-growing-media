@@ -16,6 +16,7 @@ from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
 CANONICAL_ORIGIN = "https://www.mccsgrowingmedia.com"
+INDEXNOW_KEY = "9876baf78823107e0a1099d058acb1d1"
 SKIP_DIRS = {".git", ".lighthouseci", "node_modules", "outputs", "tmp"}
 SKIP_PAGES = {"admin.html", "privacy.html", "terms.html"}
 PRIORITY_PAGES = {
@@ -62,6 +63,29 @@ UNAVAILABLE_LABELS = {
     "es": "Confirmar con muestra y documentos actuales del proyecto",
     "ar": "يُؤكد بالعينة ووثائق المشروع الحالية",
 }
+EVIDENCE_ANCHORS = [
+    {
+        "@type": "ScholarlyArticle",
+        "name": "From Coconut Waste to Circular Plant Factories with Artificial Light",
+        "identifier": "https://doi.org/10.3390/agronomy15081929",
+        "url": "https://doi.org/10.3390/agronomy15081929",
+        "description": "MCCS material-system research under the stated lettuce and pak choi PFAL test conditions; not a model-by-model performance guarantee.",
+    },
+    {
+        "@type": "ScholarlyArticle",
+        "name": "Physico-chemical and chemical properties of coconut coir dusts for use as a peat substitute",
+        "identifier": "https://doi.org/10.1016/S0960-8524(01)00189-4",
+        "url": "https://doi.org/10.1016/S0960-8524(01)00189-4",
+        "description": "External research documenting variability in coir physical and chemical properties and the need for source- and batch-specific verification.",
+    },
+    {
+        "@type": "ScholarlyArticle",
+        "name": "Achieving environmentally sustainable growing media for soilless plant cultivation systems",
+        "identifier": "https://doi.org/10.1016/j.scienta.2016.09.030",
+        "url": "https://doi.org/10.1016/j.scienta.2016.09.030",
+        "description": "External review covering growing-media selection, characterization and practical validation for soilless cultivation.",
+    },
+]
 INVALID_ORGANIZATION_ADDRESS = re.compile(r'"streetAddress"\s*:\s*"Huadu District"')
 APPROVED_ORGANIZATION_DESCRIPTION = (
     "MCCS Growing Media is an export-facing B2B brand operated by "
@@ -76,6 +100,7 @@ class PageParser(HTMLParser):
         self.title_parts: list[str] = []
         self.in_title = False
         self.h1_count = 0
+        self.heading_levels: list[int] = []
         self.meta: list[dict[str, str | None]] = []
         self.canonicals: list[str] = []
         self.links: list[str] = []
@@ -90,8 +115,11 @@ class PageParser(HTMLParser):
             self.lang = values.get("lang", "") or ""
         elif tag == "title":
             self.in_title = True
-        elif tag == "h1":
-            self.h1_count += 1
+        elif re.fullmatch(r"h[1-6]", tag):
+            level = int(tag[1])
+            self.heading_levels.append(level)
+            if level == 1:
+                self.h1_count += 1
         elif tag == "meta":
             self.meta.append(values)
         elif tag == "link" and values.get("rel") == "canonical":
@@ -177,16 +205,50 @@ def expected_catalog_rows(products: list[dict], language: str, chinese_names: di
 
 
 def expected_item_list(products: list[dict], language: str, origin_path: str, chinese_names: dict) -> list[dict]:
-    return [
-        {
+    elements = []
+    for index, product in enumerate(products, start=1):
+        url = f"{CANONICAL_ORIGIN}{origin_path}#{product['slug']}"
+        name = f"{product['model']} {localized_product_name(product, language, chinese_names)}"
+        elements.append({
             "@type": "ListItem",
             "position": index,
-            "name": f"{product['model']} {localized_product_name(product, language, chinese_names)}",
+            "name": name,
             "description": f"{product['size']}. {localized_applications(product, language)}.",
-            "url": f"{CANONICAL_ORIGIN}{origin_path}#{product['slug']}",
-        }
-        for index, product in enumerate(products, start=1)
-    ]
+            "url": url,
+            "item": {
+                "@type": "Product",
+                "@id": f"{url}-product",
+                "name": name,
+                "sku": product["model"],
+                "mpn": product["model"],
+                "url": url,
+                "image": f"{CANONICAL_ORIGIN}/{product['image']}",
+                "description": product.get("description") or product.get("desc"),
+                "category": product["category"],
+                "material": product["material"],
+                "brand": {"@id": f"{CANONICAL_ORIGIN}/#brand"},
+                "audience": {
+                    "@type": "BusinessAudience",
+                    "audienceType": "Commercial greenhouse, nursery, hydroponic, distributor and private-label buyers",
+                },
+                "additionalProperty": [
+                    {"@type": "PropertyValue", "name": "Model", "value": product["model"]},
+                    {"@type": "PropertyValue", "name": "Dimensions", "value": product["size"]},
+                    {"@type": "PropertyValue", "name": "Tray or holder fit", "value": product["trayFit"]},
+                    {"@type": "PropertyValue", "name": "Recommended application", "value": product["bestFor"]},
+                    {"@type": "PropertyValue", "name": "Packaging options", "value": product["packaging"]},
+                    {"@type": "PropertyValue", "name": "Carton quantity status", "value": product["cartonQty"]},
+                    {"@type": "PropertyValue", "name": "MOQ status", "value": product["moq"]},
+                    {
+                        "@type": "PropertyValue",
+                        "name": "Evidence status",
+                        "value": "Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.",
+                    },
+                ],
+                "subjectOf": EVIDENCE_ANCHORS,
+            },
+        })
+    return elements
 
 
 def main() -> int:
@@ -199,6 +261,10 @@ def main() -> int:
     chinese_source = (ROOT / "assets" / "products-cn.js").read_text(encoding="utf-8")
     chinese_match = re.search(r"const productCn = (\{[\s\S]*?\n\});", chinese_source)
     chinese_names = json.loads(chinese_match.group(1)) if chinese_match else {}
+
+    key_path = ROOT / f"{INDEXNOW_KEY}.txt"
+    if not key_path.exists() or key_path.read_text(encoding="utf-8").strip() != INDEXNOW_KEY:
+        add_issue(issues, "ERROR", key_path.name, "IndexNow key file is missing or invalid")
 
     for path in pages:
         relative = path.relative_to(ROOT).as_posix()
@@ -242,6 +308,17 @@ def main() -> int:
                     relative,
                     "Organization schema is missing the approved operator relationship",
                 )
+            for required_signal in ('"contactPoint"', '"areaServed"', '"knowsAbout"', '"hasOfferCatalog"'):
+                if required_signal not in html:
+                    add_issue(
+                        issues,
+                        "ERROR",
+                        relative,
+                        f"Organization schema is missing {required_signal}",
+                    )
+
+        if '/assets/ai-referral-tracking.js' not in html:
+            add_issue(issues, "ERROR", relative, "Missing AI referral session tracking")
 
         title = "".join(parser.title_parts).strip()
         descriptions = [
@@ -262,6 +339,14 @@ def main() -> int:
             add_issue(issues, "ERROR", relative, f"Expected one meta description, found {len(descriptions)}")
         if parser.h1_count != 1:
             add_issue(issues, "ERROR", relative, f"Expected one H1, found {parser.h1_count}")
+        for previous, current in zip(parser.heading_levels, parser.heading_levels[1:]):
+            if current > previous + 1:
+                add_issue(
+                    issues,
+                    "ERROR",
+                    relative,
+                    f"Heading hierarchy skips from H{previous} to H{current}",
+                )
         if len(parser.canonicals) != 1:
             add_issue(issues, "ERROR", relative, f"Expected one canonical, found {len(parser.canonicals)}")
         elif not parser.canonicals[0].startswith(CANONICAL_ORIGIN):
@@ -314,6 +399,12 @@ def main() -> int:
                             relative,
                             "Product ItemList fields do not exactly match data/products.json",
                         )
+                    product_entities += sum(
+                        1 for element in elements
+                        if isinstance(element, dict)
+                        and isinstance(element.get("item"), dict)
+                        and element["item"].get("@type") == "Product"
+                    )
         if relative in PRODUCT_CATALOG_PAGES and not catalog_item_list_found:
             add_issue(issues, "ERROR", relative, "Missing product ItemList JSON-LD")
 
@@ -346,6 +437,15 @@ def main() -> int:
     existing = {path.relative_to(ROOT).as_posix() for path in pages}
     for priority in sorted(PRIORITY_PAGES - existing):
         add_issue(issues, "ERROR", priority, "Priority page is missing")
+
+    expected_product_entities = len(products) * len(PRODUCT_CATALOG_PAGES)
+    if product_entities != expected_product_entities:
+        add_issue(
+            issues,
+            "ERROR",
+            "product schema",
+            f"Expected {expected_product_entities} Product entities, found {product_entities}",
+        )
 
     counts = Counter(level for level, _, _ in issues)
     print(f"Audited HTML pages: {len(pages)}")

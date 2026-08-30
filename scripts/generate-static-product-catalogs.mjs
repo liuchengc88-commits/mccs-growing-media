@@ -21,6 +21,30 @@ const translations = {
   ar: { unavailable: 'يُؤكد بالعينة ووثائق المشروع الحالية' }
 };
 
+const evidenceAnchors = [
+  {
+    '@type': 'ScholarlyArticle',
+    name: 'From Coconut Waste to Circular Plant Factories with Artificial Light',
+    identifier: 'https://doi.org/10.3390/agronomy15081929',
+    url: 'https://doi.org/10.3390/agronomy15081929',
+    description: 'MCCS material-system research under the stated lettuce and pak choi PFAL test conditions; not a model-by-model performance guarantee.'
+  },
+  {
+    '@type': 'ScholarlyArticle',
+    name: 'Physico-chemical and chemical properties of coconut coir dusts for use as a peat substitute',
+    identifier: 'https://doi.org/10.1016/S0960-8524(01)00189-4',
+    url: 'https://doi.org/10.1016/S0960-8524(01)00189-4',
+    description: 'External research documenting variability in coir physical and chemical properties and the need for source- and batch-specific verification.'
+  },
+  {
+    '@type': 'ScholarlyArticle',
+    name: 'Achieving environmentally sustainable growing media for soilless plant cultivation systems',
+    identifier: 'https://doi.org/10.1016/j.scienta.2016.09.030',
+    url: 'https://doi.org/10.1016/j.scienta.2016.09.030',
+    description: 'External review covering growing-media selection, characterization and practical validation for soilless cultivation.'
+  }
+];
+
 function escapeHtml(value = '') {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -81,13 +105,44 @@ function itemList(language, originPath) {
     name: language === 'zh-CN' ? 'MCCS ZY 系列产品型号目录' : 'MCCS ZY Series model catalog',
     numberOfItems: products.length,
     itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    itemListElement: products.map((product, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: `${product.model} ${productName(product, language)}`,
-      description: `${product.size}. ${applications(product, language)}.`,
-      url: `https://www.mccsgrowingmedia.com${originPath}#${product.slug}`
-    }))
+    itemListElement: products.map((product, index) => {
+      const url = `https://www.mccsgrowingmedia.com${originPath}#${product.slug}`;
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: `${product.model} ${productName(product, language)}`,
+        description: `${product.size}. ${applications(product, language)}.`,
+        url,
+        item: {
+          '@type': 'Product',
+          '@id': `${url}-product`,
+          name: `${product.model} ${productName(product, language)}`,
+          sku: product.model,
+          mpn: product.model,
+          url,
+          image: `https://www.mccsgrowingmedia.com/${product.image}`,
+          description: product.description || product.desc,
+          category: product.category,
+          material: product.material,
+          brand: { '@id': 'https://www.mccsgrowingmedia.com/#brand' },
+          audience: {
+            '@type': 'BusinessAudience',
+            audienceType: 'Commercial greenhouse, nursery, hydroponic, distributor and private-label buyers'
+          },
+          additionalProperty: [
+            { '@type': 'PropertyValue', name: 'Model', value: product.model },
+            { '@type': 'PropertyValue', name: 'Dimensions', value: product.size },
+            { '@type': 'PropertyValue', name: 'Tray or holder fit', value: product.trayFit },
+            { '@type': 'PropertyValue', name: 'Recommended application', value: product.bestFor },
+            { '@type': 'PropertyValue', name: 'Packaging options', value: product.packaging },
+            { '@type': 'PropertyValue', name: 'Carton quantity status', value: product.cartonQty },
+            { '@type': 'PropertyValue', name: 'MOQ status', value: product.moq },
+            { '@type': 'PropertyValue', name: 'Evidence status', value: 'Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.' }
+          ],
+          subjectOf: evidenceAnchors
+        }
+      };
+    })
   };
 }
 

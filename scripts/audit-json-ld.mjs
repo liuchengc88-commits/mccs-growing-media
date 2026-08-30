@@ -75,14 +75,21 @@ for (const filePath of listHtmlFiles(root)) {
   }
 }
 
-const invalidProducts = productEntities.filter(
-  (product) => !product.offers && !product.review && !product.aggregateRating
+const invalidProducts = productEntities.filter((product) => {
+  const node = product.node;
+  return !node.name || !node.sku || !node.description || !node.brand
+    || !Array.isArray(node.additionalProperty) || node.additionalProperty.length < 3
+    || !Array.isArray(node.subjectOf) || node.subjectOf.length < 3;
+});
+const richResultEligibleProducts = productEntities.filter(
+  (product) => product.offers || product.review || product.aggregateRating
 );
 const productFiles = new Set(productEntities.map((product) => product.file));
 
 console.log(`Product entities: ${productEntities.length}`);
 console.log(`Files containing Product: ${productFiles.size}`);
 console.log(`Invalid Product entities: ${invalidProducts.length}`);
+console.log(`Google product rich-result eligible entities: ${richResultEligibleProducts.length}`);
 console.log(`JSON-LD parse errors: ${parseErrors.length}`);
 console.log(
   `Schema types: ${[...schemaTypeCounts.entries()]
@@ -91,7 +98,7 @@ console.log(
     .join(', ')}`
 );
 
-for (const product of productEntities) {
+for (const product of process.argv.includes('--products') ? productEntities : []) {
   const supportedProperties = ['offers', 'review', 'aggregateRating'].filter(
     (property) => product[property]
   );
@@ -100,7 +107,7 @@ for (const product of productEntities) {
     `block ${product.block}`,
     product.location,
     product.name,
-    supportedProperties.join(', ') || 'missing offers/review/rating'
+    supportedProperties.join(', ') || 'base Product entity; no public offer/review/rating'
   ].join(' | '));
   if (process.argv.includes('--pretty')) {
     console.log(JSON.stringify(product.node, null, 2));
