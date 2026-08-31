@@ -2,4 +2,6 @@
 /outputs/
 /tmp/
 *.inspect.ndjson
+__pycache__/
+*.pyc
 

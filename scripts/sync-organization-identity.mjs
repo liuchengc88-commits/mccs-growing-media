@@ -32,7 +32,7 @@ const organizationEnhancements = {
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     '@id': 'https://www.mccsgrowingmedia.com/products/#model-list',
-    name: 'MCCS ZY Series molded substrate model catalog',
+    name: 'MCCS CF Series molded substrate model catalog',
     url: 'https://www.mccsgrowingmedia.com/products/'
   }
 };

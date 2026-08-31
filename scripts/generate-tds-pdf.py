@@ -121,7 +121,7 @@ def build_pdf():
         P("A structured disclosure and validation framework for commercial greenhouse, hydroponic, nursery, orchid and tissue-culture sourcing teams.", "CoverLead"),
     ])
     cover_table = Table([
-        [P("Product family", "TableCellStrong"), P("MCCS ZY Series molded coir and peat substrate plugs", "TableCell")],
+        [P("Product family", "TableCellStrong"), P("MCCS CF Series molded coir and peat substrate plugs", "TableCell")],
         [P("Supply model", "TableCellStrong"), P("Factory-direct B2B supply with export coordination", "TableCell")],
         [P("Technical evidence", "TableCellStrong"), P("SGS report information available for eligible project review; confirm scope and applicability with sales", "TableCell")],
         [P("Capacity reference", "TableCellStrong"), P("Up to 100,000 individual molded substrate units per day under full-line operation; actual output depends on model, packaging and production schedule", "TableCell")],

@@ -152,5 +152,71 @@
         });
       }
     });
+
+    // Suggest an available translation from the visitor's browser preference.
+    // The site never redirects automatically, so shared URLs and crawler signals stay stable.
+    fetch('/assets/language-routes.json', {cache:'force-cache'}).then(function(response){
+      if(!response.ok) throw new Error('Language route manifest unavailable');
+      return response.json();
+    }).then(function(routes){
+      var currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+      var options = routes[currentPath];
+      if(!options || options.length < 2) return;
+      var currentLang = (document.documentElement.lang || 'en').toLowerCase();
+      var currentLocale = currentLang.indexOf('zh') === 0 ? 'cn' : currentLang.split('-')[0];
+      var switcher = document.querySelector('.language-switcher');
+      if(switcher){
+        options.forEach(function(option){
+          var link = switcher.querySelector('a[lang="'+(option.locale === 'cn' ? 'zh-CN' : option.locale)+'"]');
+          if(!link){
+            link = document.createElement('a');
+            link.href = option.href;
+            link.lang = option.locale === 'cn' ? 'zh-CN' : option.locale;
+            link.textContent = option.label;
+            switcher.appendChild(link);
+          }
+          if(option.locale === currentLocale) link.setAttribute('aria-current', 'page');
+          link.addEventListener('click', function(){
+            try{localStorage.setItem('mccs_language', option.locale);}catch(e){}
+          });
+        });
+      }
+
+      var preferred = '';
+      try{preferred = localStorage.getItem('mccs_language') || '';}catch(e){}
+      if(!preferred){
+        var browserLanguages = navigator.languages || [navigator.language || 'en'];
+        preferred = browserLanguages.map(function(value){
+          value = value.toLowerCase();
+          if(value.indexOf('zh') === 0) return 'cn';
+          if(value.indexOf('es') === 0) return 'es';
+          if(value.indexOf('ar') === 0) return 'ar';
+          return 'en';
+        }).find(function(locale){ return options.some(function(option){ return option.locale === locale; }); }) || '';
+      }
+      var target = options.find(function(option){ return option.locale === preferred; });
+      var dismissed = false;
+      try{dismissed = sessionStorage.getItem('mccs_language_prompt_dismissed') === '1';}catch(e){}
+      if(!target || preferred === currentLocale || dismissed) return;
+
+      var copy = {
+        en: ['This page is also available in', 'View', 'Dismiss'],
+        es: ['Esta página también está disponible en', 'Ver', 'Cerrar'],
+        ar: ['هذه الصفحة متاحة أيضاً باللغة', 'عرض', 'إغلاق'],
+        cn: ['此页面也提供', '查看', '关闭']
+      }[currentLocale] || ['This page is also available in', 'View', 'Dismiss'];
+      var prompt = document.createElement('aside');
+      prompt.className = 'language-suggestion';
+      prompt.setAttribute('aria-label', 'Language suggestion');
+      prompt.innerHTML = '<span>'+copy[0]+' <b>'+target.label+'</b></span><a href="'+target.href+'">'+copy[1]+' '+target.label+'</a><button type="button" aria-label="'+copy[2]+'">&times;</button>';
+      prompt.querySelector('a').addEventListener('click', function(){
+        try{localStorage.setItem('mccs_language', preferred);}catch(e){}
+      });
+      prompt.querySelector('button').addEventListener('click', function(){
+        try{sessionStorage.setItem('mccs_language_prompt_dismissed', '1');}catch(e){}
+        prompt.remove();
+      });
+      document.body.appendChild(prompt);
+    }).catch(function(){ /* Keep navigation usable if the optional manifest cannot load. */ });
   });
 })();

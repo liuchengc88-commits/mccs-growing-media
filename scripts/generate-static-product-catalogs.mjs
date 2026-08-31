@@ -50,7 +50,8 @@ function escapeHtml(value = '') {
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;');
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#x27;');
 }
 
 function productName(product, language) {
@@ -62,17 +63,17 @@ function applications(product, language) {
   const labels = {
     'zh-CN': {
       Seedling: '育苗', Orchid: '兰花', 'Tissue Culture': '组培', Hydroponic: '水培',
-      Succulent: '多肉', 'Staghorn Fern': '鹿角蕨', Epiphyte: '附生植物'
+      Succulent: '多肉', 'Staghorn Fern': '鹿角蕨', Epiphyte: '附生植物', Cuttings: '扦插'
     },
     es: {
       Seedling: 'Plántulas', Orchid: 'Orquídeas', 'Tissue Culture': 'Cultivo de tejidos',
       Hydroponic: 'Hidroponía', Succulent: 'Suculentas', 'Staghorn Fern': 'Helecho cuerno de alce',
-      Epiphyte: 'Epífitas'
+      Epiphyte: 'Epífitas', Cuttings: 'Esquejes'
     },
     ar: {
       Seedling: 'الشتلات', Orchid: 'الأوركيد', 'Tissue Culture': 'زراعة الأنسجة',
       Hydroponic: 'الزراعة المائية', Succulent: 'العصاريات', 'Staghorn Fern': 'سرخس قرن الأيل',
-      Epiphyte: 'النباتات الهوائية'
+      Epiphyte: 'النباتات الهوائية', Cuttings: 'العُقل'
     }
   };
   return (product.applicationTags || [])
@@ -102,7 +103,7 @@ function itemList(language, originPath) {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     '@id': `https://www.mccsgrowingmedia.com${originPath}#model-list`,
-    name: language === 'zh-CN' ? 'MCCS ZY 系列产品型号目录' : 'MCCS ZY Series model catalog',
+    name: language === 'zh-CN' ? 'MCCS CF 系列产品型号目录' : 'MCCS CF Series model catalog',
     numberOfItems: products.length,
     itemListOrder: 'https://schema.org/ItemListOrderAscending',
     itemListElement: products.map((product, index) => {
