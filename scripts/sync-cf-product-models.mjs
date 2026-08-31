@@ -5,7 +5,18 @@ const productFile = "data/products.json";
 const csvFile = "data/products-cf.csv";
 let products = JSON.parse(fs.readFileSync(productFile, "utf8"));
 
-const verifiedAt = "2026-08-31";
+const verifiedAt = "2026-09-01";
+const factoryModels = new Set([
+  "CF-005", "CF-006", "CF-060", "CF-060B", "CF-072", "CF-128", "CF-128B",
+  "CF-167", "CF-200", "CF-2735", "CF-3038", "CF-3038B", "CF-3240", "CF-3545",
+  "CF-5050"
+]);
+const duplicateModels = new Set([
+  // Same dimensions as CF-003 and not listed on the factory website.
+  "CF-004",
+  // Same dimensions as factory-listed CF-006.
+  "CF-010",
+]);
 const officialImages = new Set([
   "005", "006", "060", "060B", "072", "128", "128B", "167", "200",
   "2735", "3038", "3038B", "3545", "5050"
@@ -39,6 +50,15 @@ const confirmedFactoryModels = {
     description: "An orchid propagation plug sized for 60-cell trays and root-zone workflows that prioritize aeration, moisture balance and structural stability.",
     applicationTags: ["Orchid"],
   },
+  "CF-060B": {
+    name_en: "Orchid Propagation Plug 5.2 cm",
+    category: "Orchid Plug",
+    size: "Top Ø 5.2 cm / Bottom Ø 3.8 cm / Height 4.8 cm",
+    trayFit: "60-cell orchid propagation tray",
+    bestFor: "Professional Phalaenopsis propagation requiring a larger plug volume",
+    description: "A larger 60-cell orchid propagation plug for Phalaenopsis nursery programs that require additional plug volume.",
+    applicationTags: ["Orchid"],
+  },
   "CF-072": {
     name_en: "Tissue Culture Propagation Plug 4.0 cm",
     category: "Tissue Culture Plug",
@@ -56,6 +76,15 @@ const confirmedFactoryModels = {
     bestFor: "Tissue-culture acclimatization and compact nursery propagation",
     description: "A split tissue-culture plug for placing young plants around the root zone before setting the complete unit into a 128-cell tray.",
     applicationTags: ["Tissue Culture", "Seedling"],
+  },
+  "CF-128B": {
+    name_en: "128-Cell Cuttings Propagation Plug",
+    category: "Cuttings Propagation Plug",
+    size: "Top Ø 3.0 cm / Bottom Ø 1.4 cm / Height 3.8 cm",
+    trayFit: "128-cell cuttings propagation tray",
+    bestFor: "High-density cuttings propagation in 128-cell trays",
+    description: "A split 128-cell plug positioned for cuttings propagation; confirm root placement and tray handling in a buyer-side trial.",
+    applicationTags: ["Cuttings"],
   },
   "CF-167": {
     name_en: "Compact Cuttings Plug 3.0 cm",
@@ -102,6 +131,15 @@ const confirmedFactoryModels = {
     description: "A hydroponic propagation plug for water-based growing workflows; confirm the B variant against the buyer's tray before bulk production.",
     applicationTags: ["Hydroponic", "Seedling"],
   },
+  "CF-3240": {
+    name_en: "Cuttings Propagation Plug 4.0 cm",
+    category: "Cuttings Propagation Plug",
+    size: "Top Ø 3.2 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
+    trayFit: "Confirm against the buyer's tray drawing or physical sample",
+    bestFor: "Cuttings propagation and tray-fit projects requiring a 3.2 cm top diameter",
+    description: "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
+    applicationTags: ["Cuttings"],
+  },
   "CF-3545": {
     name_en: "Hydroponic Propagation Plug 4.5 cm",
     category: "Hydroponic Plug",
@@ -119,39 +157,6 @@ const confirmedFactoryModels = {
     bestFor: "Larger cuttings and commercial 50-cell nursery workflows",
     description: "A larger cuttings propagation plug documented for 50-cell tray workflows and stable transplant handling.",
     applicationTags: ["Cuttings"],
-  }
-};
-
-const videoByApplication = {
-  Cuttings: {
-    src: "assets/videos/cf-3038-cuttings.mp4",
-    title: "Cuttings propagation application reference",
-    scope: "Application reference; CF-3038 is the model shown."
-  },
-  Orchid: {
-    src: "assets/videos/cf-orchid-application.mp4",
-    title: "Phalaenopsis nursery application reference",
-    scope: "Application reference; confirm the selected CF model before trial."
-  },
-  "Tissue Culture": {
-    src: "assets/videos/cf-128-tissue-culture.mp4",
-    title: "Tissue-culture plug handling reference",
-    scope: "CF-128 handling is shown; other CF models require separate tray-fit confirmation."
-  },
-  Hydroponic: {
-    src: "assets/videos/cf-plant-factory-seedling.mp4",
-    title: "Plant-factory seedling application reference",
-    scope: "Application reference; confirm the selected CF model and holder dimensions."
-  },
-  Seedling: {
-    src: "assets/videos/cf-transplanter-application.mp4",
-    title: "Automated transplanting application reference",
-    scope: "Application reference; machine and tray compatibility must be validated by trial."
-  },
-  default: {
-    src: "assets/videos/cf-material-overview.mp4",
-    title: "Molded substrate material overview",
-    scope: "Material-family reference; not a model-specific performance test."
   }
 };
 
@@ -178,19 +183,11 @@ function applyMedia(product) {
   );
   product.gallery[0] = product.image;
 
-  const primaryTag = (product.applicationTags || []).find((tag) => videoByApplication[tag]);
-  product.video = videoByApplication[primaryTag] || videoByApplication.default;
+  delete product.video;
   if (product.model === "CF-3038") {
     product.video = {
       src: "assets/videos/cf-3038-cuttings.mp4",
       title: "CF-3038 cuttings propagation record",
-      scope: "Model-specific factory application video."
-    };
-  }
-  if (product.model === "CF-128") {
-    product.video = {
-      src: "assets/videos/cf-128-tissue-culture.mp4",
-      title: "CF-128 tissue-culture handling sequence",
       scope: "Model-specific factory application video."
     };
   }
@@ -260,7 +257,6 @@ if (!products.some((product) => product.model === "CF-128B")) {
     imageAlt: "CF-128B factory product image",
     gallery: ["assets/products/CF-128B-factory.webp", "assets/factory-packaging.webp", "assets/sample-shipping-hero.webp"],
     status: "New",
-    video: videoByApplication.Cuttings
   }));
 }
 
@@ -280,8 +276,35 @@ if (!products.some((product) => product.model === "CF-3240")) {
     imageType: "Confirmed dimension reference",
     gallery: ["assets/products/CF-3240-dimensions.webp", "assets/factory-packaging.webp", "assets/sample-shipping-hero.webp"],
     status: "New",
-    video: videoByApplication.Cuttings
   }));
+}
+
+products = products.filter((product) => !duplicateModels.has(product.model));
+for (const product of products) {
+  if (product.model === "CF-003") {
+    product.desc = "A compact home starter plug for seed-starting kits, refill packs and small nursery trays.";
+    product.description = product.desc;
+    product.variantNote = "Compact format for home seed-starting and refill-pack programs.";
+    product.positioningNote = "Positioned for home seed-starting and small nursery trays.";
+  }
+  const confirmed = confirmedFactoryModels[product.model];
+  if (confirmed) {
+    Object.assign(product, confirmed);
+    product.name = `${product.model} ${product.name_en}`;
+    product.desc = product.description;
+    product.factorySpecificationStatus = "Dimensions and application cross-checked against the factory website.";
+    product.sourceVerifiedAt = verifiedAt;
+  } else {
+    product.factorySpecificationStatus = "Listed in the approved product catalog; confirm the current production drawing during sampling.";
+    delete product.sourceVerifiedAt;
+  }
+  applyMedia(product);
+}
+
+for (const model of factoryModels) {
+  if (!products.some((product) => product.model === model)) {
+    throw new Error(`Factory-listed model is missing from the public catalog: ${model}`);
+  }
 }
 
 products.sort((a, b) => a.model.localeCompare(b.model, "en", { numeric: true }));
@@ -322,10 +345,10 @@ function migrateBuyerCopy(directory) {
       .replaceAll("ZY 系列", "CF 系列")
       .replaceAll("ZY models", "CF models")
       .replaceAll("ZY model", "CF model")
-      .replace(/\b29 (molded coconut coir and peat substrate )?models\b/gi, (match, middle = "") => `32 ${middle}models`)
-      .replace(/\b29 modelos\b/gi, "32 modelos")
-      .replace(/29 نموذجاً/g, "32 نموذجاً")
-      .replace(/29 个/g, "32 个")
+      .replace(/\b(?:15|29|32) (molded coconut coir and peat substrate )?models\b/gi, (match, middle = "") => `${products.length} ${middle}models`)
+      .replace(/\b(?:15|29|32) modelos\b/gi, `${products.length} modelos`)
+      .replace(/(?:15|29|32) نموذجاً/g, `${products.length} نموذجاً`)
+      .replace(/(?:15|29|32) 个/g, `${products.length} 个`)
       .replace(/Browse \d+ molded coconut coir and peat substrate models/, `Browse ${products.length} molded coconut coir and peat substrate models`);
     fs.writeFileSync(target, text, "utf8");
   }
