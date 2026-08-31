@@ -1,0 +1,1247 @@
+{
+  "/about/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/about/"
+    },
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/about/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/about/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/about/"
+    }
+  ],
+  "/ar/about/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/about/"
+    },
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/about/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/about/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/about/"
+    }
+  ],
+  "/cn/about/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/about/"
+    },
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/about/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/about/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/about/"
+    }
+  ],
+  "/es/about/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/about/"
+    },
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/about/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/about/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/about/"
+    }
+  ],
+  "/applications/automated-transplanter-grow-plugs/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/applications/automated-transplanter-grow-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/applications/automated-transplanter-grow-plugs/"
+    }
+  ],
+  "/cn/applications/automated-transplanter-grow-plugs/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/applications/automated-transplanter-grow-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/applications/automated-transplanter-grow-plugs/"
+    }
+  ],
+  "/applications/hydroponic-lettuce-grow-plugs/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/applications/hydroponic-lettuce-grow-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/applications/hydroponic-lettuce-grow-plugs/"
+    }
+  ],
+  "/cn/applications/hydroponic-lettuce-grow-plugs/": [
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/applications/hydroponic-lettuce-grow-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/applications/hydroponic-lettuce-grow-plugs/"
+    }
+  ],
+  "/ar/contact/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/contact/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/contact/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/contact/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/contact/"
+    }
+  ],
+  "/cn/contact/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/contact/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/contact/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/contact/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/contact/"
+    }
+  ],
+  "/contact/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/contact/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/contact/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/contact/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/contact/"
+    }
+  ],
+  "/es/contact/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/contact/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/contact/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/contact/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/contact/"
+    }
+  ],
+  "/ar/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/"
+    }
+  ],
+  "/cn/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/"
+    }
+  ],
+  "/es/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/"
+    }
+  ],
+  "/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/"
+    }
+  ],
+  "/ar/insights/how-to-choose-substrate-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-choose-substrate-plugs/"
+    }
+  ],
+  "/es/insights/how-to-choose-substrate-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-choose-substrate-plugs/"
+    }
+  ],
+  "/insights/how-to-choose-substrate-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-choose-substrate-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-choose-substrate-plugs/"
+    }
+  ],
+  "/ar/insights/how-to-evaluate-tray-fit/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-evaluate-tray-fit/"
+    }
+  ],
+  "/es/insights/how-to-evaluate-tray-fit/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-evaluate-tray-fit/"
+    }
+  ],
+  "/insights/how-to-evaluate-tray-fit/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/how-to-evaluate-tray-fit/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/how-to-evaluate-tray-fit/"
+    }
+  ],
+  "/ar/insights/hydroponic-grow-plug-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/hydroponic-grow-plug-guide/"
+    }
+  ],
+  "/cn/insights/hydroponic-grow-plug-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/hydroponic-grow-plug-guide/"
+    }
+  ],
+  "/es/insights/hydroponic-grow-plug-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/hydroponic-grow-plug-guide/"
+    }
+  ],
+  "/insights/hydroponic-grow-plug-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/hydroponic-grow-plug-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/hydroponic-grow-plug-guide/"
+    }
+  ],
+  "/ar/insights/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/"
+    }
+  ],
+  "/cn/insights/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/"
+    }
+  ],
+  "/es/insights/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/"
+    }
+  ],
+  "/insights/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/"
+    }
+  ],
+  "/ar/insights/mccs-vs-traditional-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/mccs-vs-traditional-substrate/"
+    }
+  ],
+  "/es/insights/mccs-vs-traditional-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/mccs-vs-traditional-substrate/"
+    }
+  ],
+  "/insights/mccs-vs-traditional-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/mccs-vs-traditional-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/mccs-vs-traditional-substrate/"
+    }
+  ],
+  "/ar/insights/middle-east-water-saving-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/middle-east-water-saving-substrate/"
+    }
+  ],
+  "/es/insights/middle-east-water-saving-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/middle-east-water-saving-substrate/"
+    }
+  ],
+  "/insights/middle-east-water-saving-substrate/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/middle-east-water-saving-substrate/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/middle-east-water-saving-substrate/"
+    }
+  ],
+  "/ar/insights/private-label-seed-starter-checklist/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/private-label-seed-starter-checklist/"
+    }
+  ],
+  "/es/insights/private-label-seed-starter-checklist/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/private-label-seed-starter-checklist/"
+    }
+  ],
+  "/insights/private-label-seed-starter-checklist/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/private-label-seed-starter-checklist/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/private-label-seed-starter-checklist/"
+    }
+  ],
+  "/ar/insights/rockwool-alternative-for-retail-kits/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/rockwool-alternative-for-retail-kits/"
+    }
+  ],
+  "/es/insights/rockwool-alternative-for-retail-kits/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/rockwool-alternative-for-retail-kits/"
+    }
+  ],
+  "/insights/rockwool-alternative-for-retail-kits/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/rockwool-alternative-for-retail-kits/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/rockwool-alternative-for-retail-kits/"
+    }
+  ],
+  "/ar/insights/sample-to-bulk-shipping-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/sample-to-bulk-shipping-guide/"
+    }
+  ],
+  "/es/insights/sample-to-bulk-shipping-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/sample-to-bulk-shipping-guide/"
+    }
+  ],
+  "/insights/sample-to-bulk-shipping-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/sample-to-bulk-shipping-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/sample-to-bulk-shipping-guide/"
+    }
+  ],
+  "/ar/private-label/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/private-label/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/private-label/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/private-label/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/private-label/"
+    }
+  ],
+  "/cn/private-label/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/private-label/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/private-label/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/private-label/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/private-label/"
+    }
+  ],
+  "/es/private-label/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/private-label/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/private-label/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/private-label/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/private-label/"
+    }
+  ],
+  "/private-label/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/private-label/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/private-label/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/private-label/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/private-label/"
+    }
+  ],
+  "/ar/products/conical-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/conical-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
+    }
+  ],
+  "/cn/products/conical-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/conical-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
+    }
+  ],
+  "/es/products/conical-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/conical-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
+    }
+  ],
+  "/products/conical-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/conical-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
+    }
+  ],
+  "/ar/products/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/"
+    }
+  ],
+  "/cn/products/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/"
+    }
+  ],
+  "/es/products/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/"
+    }
+  ],
+  "/products/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/products/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/products/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/"
+    }
+  ],
+  "/ar/sample-shipping/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/sample-shipping/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/sample-shipping/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/sample-shipping/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/sample-shipping/"
+    }
+  ],
+  "/cn/sample-shipping/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/sample-shipping/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/sample-shipping/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/sample-shipping/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/sample-shipping/"
+    }
+  ],
+  "/es/sample-shipping/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/sample-shipping/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/sample-shipping/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/sample-shipping/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/sample-shipping/"
+    }
+  ],
+  "/sample-shipping/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/sample-shipping/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/sample-shipping/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/sample-shipping/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/sample-shipping/"
+    }
+  ],
+  "/cn/insights/substrate-plug-ec-ph-testing-protocol/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/substrate-plug-ec-ph-testing-protocol/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/substrate-plug-ec-ph-testing-protocol/"
+    }
+  ],
+  "/insights/substrate-plug-ec-ph-testing-protocol/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/substrate-plug-ec-ph-testing-protocol/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/substrate-plug-ec-ph-testing-protocol/"
+    }
+  ],
+  "/cn/middle-east/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/middle-east/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/middle-east/"
+    }
+  ],
+  "/middle-east/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/middle-east/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/middle-east/"
+    }
+  ]
+}

@@ -26,6 +26,13 @@ jobs:
         run: node scripts/audit-json-ld.mjs --strict
       - name: Test form protection and lead tracking
         run: node scripts/test-form-protection.cjs
+      - name: Report broken external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --root-dir "$(pwd)" --cache --no-progress --exclude-mail './**/*.html' './**/*.md'
+          fail: false
+          jobSummary: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   production-lighthouse:
     name: Production Lighthouse baseline

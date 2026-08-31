@@ -1,14 +1,14 @@
 [
   {
-    "model": "ZY-001",
+    "model": "CF-001",
     "name_en": "Tapered Hydroponic Plug 6.5 cm",
     "category": "Hydroponic Plug",
     "size": "Top Ø 2.3 cm / Bottom Ø 1.1 cm / Height 6.5 cm",
     "trayFit": "Home hydroponic planter holes, 5 cm nursery cups or non-standard propagation holders",
     "bestFor": "Hydroponic seed starting, compact growing systems and small nursery programs",
     "desc": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important.",
-    "slug": "zy-001",
-    "name": "ZY-001 Tapered Hydroponic Plug 6.5 cm",
+    "slug": "cf-001",
+    "name": "CF-001 Tapered Hydroponic Plug 6.5 cm",
     "image": "assets/products/CF-001.jpg",
     "applicationTags": [
       "Hydroponic",
@@ -31,18 +31,70 @@
     "status": "Best Seller",
     "description": "A slim tapered plug designed for compact hydroponic planters and starter systems where a narrow base, top planting hole and easy handling are important.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-001 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-plant-factory-seedling.mp4",
+      "title": "Plant-factory seedling application reference",
+      "scope": "Application reference; confirm the selected CF model and holder dimensions."
+    }
   },
   {
-    "model": "ZY-004",
+    "model": "CF-003",
+    "name_en": "Home Starter Plug 3.7 cm",
+    "category": "Seedling Plug",
+    "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
+    "trayFit": "12-cell home nursery boxes and small seed-starting trays",
+    "bestFor": "Home seed starting, refill packs and beginner-friendly retail programs",
+    "desc": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
+    "slug": "cf-003",
+    "name": "CF-003 Home Starter Plug 3.7 cm",
+    "image": "assets/products/CF-003.jpg",
+    "applicationTags": [
+      "Seedling"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "1500–2000 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-003.jpg",
+      "assets/packaging/CF-003-package.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "",
+    "description": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
+    "variantNote": "Same external size class as CF-004, but positioned for seed-starting kits and refill packs.",
+    "positioningNote": "Same size as CF-004, but positioned for home seed-starting and standard seedling packs.",
+    "category_en": "Seedling Plug",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-003 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
+  },
+  {
+    "model": "CF-004",
     "name_en": "Succulent Starter Plug 3.7 cm",
     "category": "Succulent Plug",
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "Succulent trays, 12-cell or 24-cell nursery boxes with opening ≥ 3.3 cm",
     "bestFor": "Succulent propagation, small decorative planters and retail-ready planting sets",
-    "desc": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as ZY-003, but is positioned for succulent trays and visual retail applications.",
-    "slug": "zy-004",
-    "name": "ZY-004 Succulent Plug 3.7 cm",
+    "desc": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
+    "slug": "cf-004",
+    "name": "CF-004 Succulent Plug 3.7 cm",
     "image": "assets/products/CF-004.jpg",
     "applicationTags": [
       "Succulent"
@@ -62,22 +114,196 @@
       "assets/package-option-display.webp"
     ],
     "status": "",
-    "description": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as ZY-003, but is positioned for succulent trays and visual retail applications.",
-    "variantNote": "Same external size class as ZY-003, but positioned for succulent trays and decorative retail use.",
-    "positioningNote": "Same size as ZY-003, but positioned for succulent starter packs and decorative planting sets.",
+    "description": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
+    "variantNote": "Same external size class as CF-003, but positioned for succulent trays and decorative retail use.",
+    "positioningNote": "Same size as CF-003, but positioned for succulent starter packs and decorative planting sets.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-004 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-material-overview.mp4",
+      "title": "Molded substrate material overview",
+      "scope": "Material-family reference; not a model-specific performance test."
+    }
   },
   {
-    "model": "ZY-017",
+    "model": "CF-005",
+    "name_en": "Cuttings Propagation Plug 5.0 cm",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 2.6 cm / Bottom Ø 1.6 cm / Height 5.0 cm",
+    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
+    "bestFor": "Cuttings propagation and narrow, deep propagation cells",
+    "desc": "A narrow, deep molded plug for cuttings workflows that require stable support, air exchange and practical transplant handling.",
+    "slug": "cf-005",
+    "name": "CF-005 Cuttings Propagation Plug 5.0 cm",
+    "image": "assets/products/CF-005-factory.webp",
+    "applicationTags": [
+      "Cuttings"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "600–900 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-005-factory.webp",
+      "assets/packaging/CF-005-package.webp",
+      "assets/package-option-box.webp"
+    ],
+    "status": "",
+    "description": "A narrow, deep molded plug for cuttings workflows that require stable support, air exchange and practical transplant handling.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-005 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
+  },
+  {
+    "model": "CF-006",
+    "name_en": "Cuttings Propagation Plug 4.1 cm",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 3.2 cm / Bottom Ø 2.2 cm / Height 4.1 cm",
+    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
+    "bestFor": "Cuttings propagation and general nursery tray-fit trials",
+    "desc": "A medium cuttings plug for propagation workflows where consistent moisture, structural support and clean transplant handling are important.",
+    "slug": "cf-006",
+    "name": "CF-006 Cuttings Propagation Plug 4.1 cm",
+    "image": "assets/products/CF-006-factory.webp",
+    "applicationTags": [
+      "Cuttings"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "700–1000 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-006-factory.webp",
+      "assets/packaging/CF-006-package.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "",
+    "description": "A medium cuttings plug for propagation workflows where consistent moisture, structural support and clean transplant handling are important.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-006 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
+  },
+  {
+    "model": "CF-010",
+    "name_en": "Universal Seedling Plug 4.1 cm",
+    "category": "Seedling Plug",
+    "size": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
+    "trayFit": "50–72-cell general seedling trays with approximately 3.2 cm openings",
+    "bestFor": "General seed starting, cuttings and trial propagation programs",
+    "desc": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
+    "slug": "cf-010",
+    "name": "CF-010 Universal Seedling Plug 4.1 cm",
+    "image": "assets/products/CF-010.jpg",
+    "applicationTags": [
+      "Seedling"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "1000–1500 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-010.jpg",
+      "assets/packaging/CF-010-package.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "",
+    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-010 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
+  },
+  {
+    "model": "CF-015",
+    "name_en": "Orchid Plug 4.5 cm",
+    "category": "Orchid Plug",
+    "size": "Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
+    "trayFit": "60-cell orchid trays",
+    "bestFor": "Orchid seedling production and stage-based transplant planning",
+    "desc": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility.",
+    "slug": "cf-015",
+    "name": "CF-015 Orchid Plug 4.5 cm",
+    "image": "assets/products/CF-015.jpg",
+    "applicationTags": [
+      "Orchid"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "300–500 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-015.jpg",
+      "assets/packaging/CF-015-package.webp",
+      "assets/private-label-cases.webp"
+    ],
+    "status": "",
+    "description": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the CF-017 but still want orchid-stage compatibility.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-015 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
+  },
+  {
+    "model": "CF-017",
     "name_en": "Orchid Plug 5.3 cm",
     "category": "Orchid Plug",
     "size": "Top 5.3 cm / Bottom 3.4 cm / Height 4.8 cm",
     "trayFit": "50-cell orchid or tissue-culture transition tray",
     "bestFor": "Young orchid plants, tissue-culture transition and early transplanting",
     "desc": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling.",
-    "slug": "zy-017",
-    "name": "ZY-017 Orchid Plug 5.3 cm",
+    "slug": "cf-017",
+    "name": "CF-017 Orchid Plug 5.3 cm",
     "image": "assets/products/CF-017.jpg",
     "applicationTags": [
       "Orchid",
@@ -100,18 +326,26 @@
     "status": "Best Seller",
     "description": "A medium orchid plug for young plant transition where stable shape retention and a predictable tapered profile help reduce transplant handling.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-017 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
   },
   {
-    "model": "ZY-025",
+    "model": "CF-025",
     "name_en": "Orchid Planting Cup 6.5 cm",
     "category": "Orchid Planting Cup",
     "size": "Top 6.5 cm / Bottom 5.0 cm / Height 7.0 cm",
     "trayFit": "Orchid pots or 15–21-cell large planting trays",
     "bestFor": "Mid-stage orchid growth and transplanting into larger containers",
     "desc": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats.",
-    "slug": "zy-025",
-    "name": "ZY-025 Orchid Planting Cup 6.5 cm",
+    "slug": "cf-025",
+    "name": "CF-025 Orchid Planting Cup 6.5 cm",
     "image": "assets/products/CF-025.jpg",
     "applicationTags": [
       "Orchid"
@@ -133,18 +367,26 @@
     "status": "",
     "description": "A larger orchid cup that provides more substrate volume for mid-stage cultivation, making it suitable for transplanting programs and larger tray formats.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-025 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
   },
   {
-    "model": "ZY-028",
+    "model": "CF-028",
     "name_en": "Tall Orchid Cup 8.3 cm",
     "category": "Orchid Planting Cup",
     "size": "Top 8.3 cm / Bottom 5.0 cm / Height 8.3 cm",
     "trayFit": "Orchid pots or 12–15-cell planting trays",
     "bestFor": "Tall orchid cultivation, specialty transplanting and larger plant stages",
     "desc": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility.",
-    "slug": "zy-028",
-    "name": "ZY-028 Tall Orchid Cup 8.3 cm",
+    "slug": "cf-028",
+    "name": "CF-028 Tall Orchid Cup 8.3 cm",
     "image": "assets/products/CF-028.jpg",
     "applicationTags": [
       "Orchid"
@@ -166,18 +408,26 @@
     "status": "New",
     "description": "A tall orchid cup for buyers who need additional height and substrate volume while keeping a tapered base for container compatibility.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-028 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
   },
   {
-    "model": "ZY-035",
+    "model": "CF-035",
     "name_en": "Tall Orchid Cup 10.5 cm",
     "category": "Orchid Planting Cup",
     "size": "Top 10.5 cm / Bottom 7.0 cm / Height 10.5 cm",
     "trayFit": "Orchid pots or 6–12-cell planting trays",
     "bestFor": "Large orchid plants and premium transplanting formats",
     "desc": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing.",
-    "slug": "zy-035",
-    "name": "ZY-035 Tall Orchid Cup 10.5 cm",
+    "slug": "cf-035",
+    "name": "CF-035 Tall Orchid Cup 10.5 cm",
     "image": "assets/products/CF-035.jpg",
     "applicationTags": [
       "Orchid"
@@ -199,19 +449,239 @@
     "status": "New",
     "description": "The largest orchid cup in the current CF range, designed for more developed plants, premium transplant programs and lower-count carton packing.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-035 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
   },
   {
-    "model": "ZY-128",
-    "name_en": "Tissue Culture Plug 3.7 cm",
+    "model": "CF-060",
+    "name_en": "Orchid Propagation Plug 4.8 cm",
+    "category": "Orchid Plug",
+    "size": "Top Ø 4.8 cm / Bottom Ø 3.4 cm / Height 4.6 cm",
+    "trayFit": "60-cell orchid propagation tray",
+    "bestFor": "Professional Phalaenopsis propagation and tray-based nursery handling",
+    "desc": "An orchid propagation plug sized for 60-cell trays and root-zone workflows that prioritize aeration, moisture balance and structural stability.",
+    "slug": "cf-060",
+    "name": "CF-060 Orchid Propagation Plug 4.8 cm",
+    "image": "assets/products/CF-060-factory.webp",
+    "applicationTags": [
+      "Orchid"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton or custom private-label packaging after model, size option and sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "Confirm after size option, carton size and packaging format are approved.",
+    "moq": "MOQ is confirmed by size option, packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-060-factory.webp",
+      "assets/products/CF-060-b.webp",
+      "assets/factory-packaging.webp"
+    ],
+    "status": "New",
+    "description": "An orchid propagation plug sized for 60-cell trays and root-zone workflows that prioritize aeration, moisture balance and structural stability.",
+    "variantNote": "The source catalog lists two CF-060 size options; confirm the selected dimensions on the sample approval record.",
+    "features": [],
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed after the size option and packaging format are approved.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-060 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
+  },
+  {
+    "model": "CF-060B",
+    "name_en": "Orchid Propagation Plug 5.2 cm",
+    "category": "Orchid Plug",
+    "size": "Top Ø 5.2 cm / Bottom Ø 3.8 cm / Height 4.8 cm",
+    "trayFit": "60-cell orchid propagation tray",
+    "bestFor": "Professional Phalaenopsis propagation and tray-based nursery handling",
+    "desc": "A larger 60-cell orchid propagation plug for Phalaenopsis nursery programs that require additional plug volume.",
+    "slug": "cf-060b",
+    "name": "CF-060B Orchid Propagation Plug 5.2 cm",
+    "image": "assets/products/CF-060B-factory.webp",
+    "applicationTags": [
+      "Orchid"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton or custom private-label packaging after model, size option and sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "Confirm after size option, carton size and packaging format are approved.",
+    "moq": "MOQ is confirmed by size option, packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-060B-factory.webp",
+      "assets/factory-packaging.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "New",
+    "description": "A larger 60-cell orchid propagation plug for Phalaenopsis nursery programs that require additional plug volume.",
+    "variantNote": "The source catalog lists two CF-060 size options; confirm the selected dimensions on the sample approval record.",
+    "features": [],
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed after the size option and packaging format are approved.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-060B factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-orchid-application.mp4",
+      "title": "Phalaenopsis nursery application reference",
+      "scope": "Application reference; confirm the selected CF model before trial."
+    }
+  },
+  {
+    "model": "CF-067",
+    "name_en": "Succulent Growing Cup 6.7 cm",
+    "category": "Succulent Growing Cup",
+    "size": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
+    "trayFit": "6.7 cm pot holders, succulent cup display trays or decorative planters",
+    "bestFor": "Succulent planting, decorative cup planting and home-garden retail sets",
+    "desc": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
+    "slug": "cf-067",
+    "name": "CF-067 Succulent Growing Cup 6.7 cm",
+    "image": "assets/products/CF-067.jpg",
+    "applicationTags": [
+      "Succulent"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "120–200 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-067.jpg",
+      "assets/packaging/CF-067-package.webp",
+      "assets/package-option-display.webp"
+    ],
+    "status": "Best Seller",
+    "description": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
+    "category_en": "Succulent Growing Cup",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-067 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-material-overview.mp4",
+      "title": "Molded substrate material overview",
+      "scope": "Material-family reference; not a model-specific performance test."
+    }
+  },
+  {
+    "model": "CF-072",
+    "name_en": "Tissue Culture Propagation Plug 4.0 cm",
     "category": "Tissue Culture Plug",
-    "size": "Top 3.1 cm / Bottom 1.5 cm / Height 3.7 cm",
-    "trayFit": "105-cell or 128-cell propagation trays",
-    "bestFor": "Tissue-culture rooting, uniform young plants and compact nursery trays",
-    "desc": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays.",
-    "slug": "zy-128",
-    "name": "ZY-128 Tissue Culture Plug 3.7 cm",
-    "image": "assets/products/CF-128.png",
+    "size": "Top Ø 4.0 cm / Bottom Ø 2.0 cm / Height 4.0 cm",
+    "trayFit": "72-cell propagation tray",
+    "bestFor": "Tissue-culture acclimatization and nursery transition in 72-cell trays",
+    "desc": "A 72-cell tissue-culture propagation plug for young plants transitioning from controlled laboratory conditions into nursery or greenhouse production.",
+    "slug": "cf-072",
+    "name": "CF-072 Tissue Culture Propagation Plug 4.0 cm",
+    "image": "assets/products/CF-072-factory.webp",
+    "applicationTags": [
+      "Tissue Culture",
+      "Seedling"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "72 plugs / tray × 24 trays / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-072-factory.webp",
+      "assets/packaging/CF-072-package.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "",
+    "description": "A 72-cell tissue-culture propagation plug for young plants transitioning from controlled laboratory conditions into nursery or greenhouse production.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-072 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-128-tissue-culture.mp4",
+      "title": "Tissue-culture plug handling reference",
+      "scope": "CF-128 handling is shown; other CF models require separate tray-fit confirmation."
+    }
+  },
+  {
+    "model": "CF-104",
+    "name_en": "Nursery Plug 4.0 cm",
+    "category": "Seedling Plug",
+    "size": "Top Ø 3.1 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
+    "trayFit": "Nursery and propagation trays with approximately 3.1 cm openings",
+    "bestFor": "General nursery propagation, seed starting and transplant trials",
+    "desc": "A general nursery plug with a 3.1 cm top diameter and 4.0 cm height for tray-fit and handling evaluation.",
+    "slug": "cf-104",
+    "name": "CF-104 Nursery Plug 4.0 cm",
+    "image": "assets/products/CF-104.webp",
+    "applicationTags": [
+      "Seedling"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "Confirm after carton size and packaging format are approved.",
+    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-104.webp",
+      "assets/factory-packaging.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "New",
+    "description": "A 3.1 cm top-diameter nursery plug for general propagation and tray-fit trials.",
+    "features": [],
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-104 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
+  },
+  {
+    "model": "CF-128",
+    "name_en": "Tissue Culture Propagation Plug 3.8 cm",
+    "category": "Tissue Culture Plug",
+    "size": "Top Ø 3.0 cm / Bottom Ø 1.4 cm / Height 3.8 cm",
+    "trayFit": "128-cell propagation tray",
+    "bestFor": "Tissue-culture acclimatization and compact nursery propagation",
+    "desc": "A split tissue-culture plug for placing young plants around the root zone before setting the complete unit into a 128-cell tray.",
+    "slug": "cf-128",
+    "name": "CF-128 Tissue Culture Propagation Plug 3.8 cm",
+    "image": "assets/products/CF-128-factory.webp",
     "applicationTags": [
       "Tissue Culture",
       "Seedling"
@@ -226,29 +696,37 @@
     "cartonQty": "128 plugs / sheet × 20 sheets / carton (reference; final count varies by carton size and packaging format)",
     "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/CF-128.png",
+      "assets/products/CF-128-factory.webp",
       "assets/packaging/CF-128-package.webp",
       "assets/factory-packaging.webp"
     ],
     "status": "Best Seller",
-    "description": "A compact tapered plug for tissue-culture rooting and young plant production, with a narrow base that helps fit high-density propagation trays.",
+    "description": "A split tissue-culture plug for placing young plants around the root zone before setting the complete unit into a 128-cell tray.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-128 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-128-tissue-culture.mp4",
+      "title": "CF-128 tissue-culture handling sequence",
+      "scope": "Model-specific factory application video."
+    }
   },
   {
-    "model": "ZY-072",
-    "name_en": "Seedling Plug 4.0 cm",
-    "category": "Seedling Plug",
-    "size": "Top 3.7 cm / Bottom 2.0 cm / Height 4.0 cm",
-    "trayFit": "72-cell propagation trays",
-    "bestFor": "Vegetable seedlings, flower seedlings and commercial nursery propagation",
-    "desc": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency.",
-    "slug": "zy-072",
-    "name": "ZY-072 Seedling Plug 4.0 cm",
-    "image": "assets/products/CF-072.jpg",
+    "model": "CF-128B",
+    "name_en": "128-Cell Cuttings Propagation Plug",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 3.0 cm / Bottom Ø 1.4 cm / Height 3.8 cm",
+    "trayFit": "128-cell cuttings propagation tray",
+    "bestFor": "High-density cuttings propagation in 128-cell trays",
+    "desc": "A split 128-cell plug positioned for cuttings propagation; confirm root placement and tray handling in a buyer-side trial.",
+    "slug": "cf-128b",
+    "name": "CF-128B 128-Cell Cuttings Propagation Plug",
+    "image": "assets/products/CF-128B-factory.webp",
     "applicationTags": [
-      "Seedling",
-      "Tissue Culture"
+      "Cuttings"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
     "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
@@ -257,32 +735,125 @@
       "Batch testing by project",
       "Export document support"
     ],
-    "cartonQty": "72 plugs / tray × 24 trays / carton (reference; final count varies by carton size and packaging format)",
+    "cartonQty": "128 plugs / sheet × 20 sheets / carton (reference; final count varies by carton size and packaging format)",
     "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/CF-072.jpg",
-      "assets/packaging/CF-072-package.webp",
+      "assets/products/CF-128B-factory.webp",
+      "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
-    "status": "",
-    "description": "A general seedling plug designed around the 72-cell tray format, suitable for propagation programs that need a balance between plug size and handling efficiency.",
+    "status": "New",
+    "description": "A split 128-cell plug positioned for cuttings propagation; confirm root placement and tray handling in a buyer-side trial.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-128B factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
   },
   {
-    "model": "ZY-200",
-    "name_en": "High-Density Plug 2.8 cm",
-    "category": "High-Density Plug",
-    "size": "Top 2.0 cm / Bottom 1.9 cm / Height 2.8 cm",
-    "trayFit": "200-cell tray or 2.0 × 2.8 cm plant-factory opening",
-    "bestFor": "High-density seedling production, plant-factory systems and compact trays",
-    "desc": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility.",
-    "slug": "zy-200",
-    "name": "ZY-200 High-Density Plug 2.8 cm",
-    "image": "assets/products/CF-200.jpg",
+    "model": "CF-129",
+    "variantNote": "Variant developed from the CF-128 cylindrical plug family",
+    "name_en": "Cylindrical Plug 3.1 cm",
+    "category": "Cylindrical Plug",
+    "size": "Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
+    "trayFit": "105-cell or 128-cell propagation trays",
+    "bestFor": "Cuttings, seed starting and cylindrical cavity applications",
+    "desc": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug.",
+    "slug": "cf-129",
+    "name": "CF-129 Cylindrical Plug 3.1 cm",
+    "image": "assets/products/CF-129.png",
     "applicationTags": [
-      "Seedling",
-      "Hydroponic"
+      "Seedling"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "800–1200 pcs / carton (reference; final count varies by carton size and packaging format)",
+    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-129.png",
+      "assets/packaging/CF-129-package.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "New",
+    "description": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered CF-128 tissue-culture plug.",
+    "features": [],
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-129 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
+  },
+  {
+    "model": "CF-167",
+    "name_en": "Compact Cuttings Plug 3.0 cm",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 2.5 cm / Bottom Ø 2.1 cm / Height 3.0 cm",
+    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
+    "bestFor": "High-density cuttings propagation and compact nursery cells",
+    "desc": "A compact cuttings plug for high-density propagation programs and buyer-side tray-fit validation.",
+    "slug": "cf-167",
+    "name": "CF-167 Compact Cuttings Plug 3.0 cm",
+    "image": "assets/products/CF-167-factory.webp",
+    "applicationTags": [
+      "Cuttings"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "Confirm after carton size and packaging format are approved.",
+    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-167-factory.webp",
+      "assets/factory-packaging.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "New",
+    "description": "A compact cuttings plug for high-density propagation programs and buyer-side tray-fit validation.",
+    "features": [],
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-167 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
+  },
+  {
+    "model": "CF-200",
+    "name_en": "200-Cell Cuttings Propagation Plug",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 2.3 cm / Bottom Ø 2.0 cm / Height 2.8 cm",
+    "trayFit": "200-cell propagation tray",
+    "bestFor": "High-density cuttings propagation and automated 200-cell nursery workflows",
+    "desc": "A compact molded plug aligned with 200-cell cuttings propagation and high-density nursery handling.",
+    "slug": "cf-200",
+    "name": "CF-200 200-Cell Cuttings Propagation Plug",
+    "image": "assets/products/CF-200-factory.webp",
+    "applicationTags": [
+      "Cuttings",
+      "Seedling"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
     "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
@@ -294,128 +865,34 @@
     "cartonQty": "200 plugs / tray × 10 trays / carton (reference; final count varies by carton size and packaging format)",
     "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/CF-200.jpg",
+      "assets/products/CF-200-factory.webp",
       "assets/packaging/CF-200-package.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "",
-    "description": "A short high-density plug for buyers who need efficient tray counts, compact shipping volume and plant-factory compatibility.",
+    "description": "A compact molded plug aligned with 200-cell cuttings propagation and high-density nursery handling.",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-200 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
   },
   {
-    "model": "ZY-005",
-    "name_en": "Square Hydroponic Plug 5.0 cm",
-    "category": "Hydroponic Plug",
-    "size": "Top 2.6 cm / Bottom 1.6 cm / Height 5.0 cm",
-    "trayFit": "Home seedling boxes, compact hydroponic planters or approximately 26 mm square holders",
-    "bestFor": "Home hydroponic systems, retail starter kits and square-holder applications",
-    "desc": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile.",
-    "slug": "zy-005",
-    "name": "ZY-005 Square Hydroponic Plug 5.0 cm",
-    "image": "assets/products/CF-005.jpg",
-    "applicationTags": [
-      "Hydroponic",
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "600–900 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-005.jpg",
-      "assets/packaging/CF-005-package.webp",
-      "assets/package-option-box.webp"
-    ],
-    "status": "",
-    "description": "A square-section plug for compact hydroponic holders and retail starter kits where the buyer needs a non-round plug profile.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-003",
-    "name_en": "Home Starter Plug 3.7 cm",
-    "category": "Seedling Plug",
-    "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
-    "trayFit": "12-cell home nursery boxes and small seed-starting trays",
-    "bestFor": "Home seed starting, refill packs and beginner-friendly retail programs",
-    "desc": "A small home starter plug in the same external size class as ZY-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
-    "slug": "zy-003",
-    "name": "ZY-003 Home Starter Plug 3.7 cm",
-    "image": "assets/products/CF-003.jpg",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "1500–2000 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-003.jpg",
-      "assets/packaging/CF-003-package.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "",
-    "description": "A small home starter plug in the same external size class as ZY-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
-    "variantNote": "Same external size class as ZY-004, but positioned for seed-starting kits and refill packs.",
-    "positioningNote": "Same size as ZY-004, but positioned for home seed-starting and standard seedling packs.",
-    "category_en": "Seedling Plug",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-006",
-    "name_en": "Square Plug 3.2 × 3.2 cm",
-    "category": "Square Plug",
-    "size": "Top 3.2 cm / Bottom 2.5 cm / Height 4.0 cm",
-    "trayFit": "72-cell square trays and home seedling boxes",
-    "bestFor": "Square-tray propagation, cuttings and compact nursery programs",
-    "desc": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape.",
-    "slug": "zy-006",
-    "name": "ZY-006 Square Plug 3.2 × 3.2 cm",
-    "image": "assets/products/CF-006.jpg",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "700–1000 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-006.jpg",
-      "assets/packaging/CF-006-package.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "",
-    "description": "A square-format propagation plug for buyers using square cavities or retail kits that require a more block-like molded substrate shape.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-901",
+    "model": "CF-901",
     "name_en": "Staghorn Fern Mounting Ball 20 cm",
     "category": "Staghorn Fern Mounting Ball",
     "size": "Diameter 20 cm / Height 10 cm / Center hole 9.5 cm",
     "trayFit": "Staghorn fern mounting boards, hanging displays or epiphyte mounting systems",
     "bestFor": "Large staghorn fern board-mounting trials and decorative epiphyte displays",
     "desc": "A large molded-media mounting ball for staghorn fern board-mounting trials and decorative epiphyte display programs.",
-    "slug": "zy-901",
-    "name": "ZY-901 Staghorn Fern Mounting Ball 20 cm",
+    "slug": "cf-901",
+    "name": "CF-901 Staghorn Fern Mounting Ball 20 cm",
     "image": "assets/products/CF-901.png",
     "applicationTags": [
       "Staghorn Fern",
@@ -439,18 +916,26 @@
     "description": "A large molded-media mounting ball for staghorn fern board-mounting trials and decorative epiphyte display programs.",
     "category_en": "Staghorn Fern Mounting Ball",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-901 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-material-overview.mp4",
+      "title": "Molded substrate material overview",
+      "scope": "Material-family reference; not a model-specific performance test."
+    }
   },
   {
-    "model": "ZY-902",
+    "model": "CF-902",
     "name_en": "Staghorn Fern Mounting Ball 16 cm",
     "category": "Staghorn Fern Mounting Ball",
     "size": "Diameter 16 cm / Height 8 cm / Center hole 8.2 cm",
     "trayFit": "Staghorn fern mounting boards, hanging displays or epiphyte mounting systems",
     "bestFor": "Medium staghorn fern board-mounting trials and retail epiphyte displays",
     "desc": "A medium molded-media mounting ball for staghorn fern board-mounting trials and decorative epiphyte display programs.",
-    "slug": "zy-902",
-    "name": "ZY-902 Staghorn Fern Mounting Ball 16 cm",
+    "slug": "cf-902",
+    "name": "CF-902 Staghorn Fern Mounting Ball 16 cm",
     "image": "assets/products/CF-902.jpg",
     "applicationTags": [
       "Staghorn Fern",
@@ -474,18 +959,26 @@
     "description": "A medium molded-media mounting ball for staghorn fern board-mounting trials and decorative epiphyte display programs.",
     "category_en": "Staghorn Fern Mounting Ball",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-902 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-material-overview.mp4",
+      "title": "Molded substrate material overview",
+      "scope": "Material-family reference; not a model-specific performance test."
+    }
   },
   {
-    "model": "ZY-903",
+    "model": "CF-903",
     "name_en": "Staghorn Fern Mounting Ball 11 cm",
     "category": "Staghorn Fern Mounting Ball",
     "size": "Diameter 11 cm / Height 5.5 cm / Center hole 5.5 cm",
     "trayFit": "Staghorn fern mounting boards, hanging displays or epiphyte mounting systems",
     "bestFor": "Compact staghorn fern board-mounting trials and small epiphyte displays",
     "desc": "A compact molded-media mounting ball for staghorn fern board-mounting trials and small decorative epiphyte displays.",
-    "slug": "zy-903",
-    "name": "ZY-903 Staghorn Fern Mounting Ball 11 cm",
+    "slug": "cf-903",
+    "name": "CF-903 Staghorn Fern Mounting Ball 11 cm",
     "image": "assets/products/CF-903.jpg",
     "applicationTags": [
       "Staghorn Fern",
@@ -509,191 +1002,29 @@
     "description": "A compact molded-media mounting ball for staghorn fern board-mounting trials and small decorative epiphyte displays.",
     "category_en": "Staghorn Fern Mounting Ball",
     "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
+    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-903 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-material-overview.mp4",
+      "title": "Molded substrate material overview",
+      "scope": "Material-family reference; not a model-specific performance test."
+    }
   },
   {
-    "model": "ZY-129",
-    "variantNote": "Variant developed from the ZY-128 cylindrical plug family",
-    "name_en": "Cylindrical Plug 3.1 cm",
-    "category": "Cylindrical Plug",
-    "size": "Top 2.6 cm / Bottom 2.3 cm / Height 3.1 cm",
-    "trayFit": "105-cell or 128-cell propagation trays",
-    "bestFor": "Cuttings, seed starting and cylindrical cavity applications",
-    "desc": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered ZY-128 tissue-culture plug.",
-    "slug": "zy-129",
-    "name": "ZY-129 Cylindrical Plug 3.1 cm",
-    "image": "assets/products/CF-129.png",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "800–1200 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-129.png",
-      "assets/packaging/CF-129-package.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "New",
-    "description": "A cylindrical variant for buyers who prefer a round profile rather than the more tapered ZY-128 tissue-culture plug.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-067",
-    "name_en": "Succulent Growing Cup 6.7 cm",
-    "category": "Succulent Growing Cup",
-    "size": "Top 6.7 cm / Bottom 4.8 cm / Height 6.5 cm",
-    "trayFit": "6.7 cm pot holders, succulent cup display trays or decorative planters",
-    "bestFor": "Succulent planting, decorative cup planting and home-garden retail sets",
-    "desc": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
-    "slug": "zy-067",
-    "name": "ZY-067 Succulent Growing Cup 6.7 cm",
-    "image": "assets/products/CF-067.jpg",
-    "applicationTags": [
-      "Succulent"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "120–200 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-067.jpg",
-      "assets/packaging/CF-067-package.webp",
-      "assets/package-option-display.webp"
-    ],
-    "status": "Best Seller",
-    "description": "A molded growing cup for succulent planting and decorative retail sets, moved into the succulent range for clearer buyer navigation.",
-    "category_en": "Succulent Growing Cup",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-010",
-    "name_en": "Universal Seedling Plug 4.1 cm",
-    "category": "Seedling Plug",
-    "size": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
-    "trayFit": "50–72-cell general seedling trays with approximately 3.2 cm openings",
-    "bestFor": "General seed starting, cuttings and trial propagation programs",
-    "desc": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
-    "slug": "zy-010",
-    "name": "ZY-010 Universal Seedling Plug 4.1 cm",
-    "image": "assets/products/CF-010.jpg",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "1000–1500 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-010.jpg",
-      "assets/packaging/CF-010-package.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "",
-    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-015",
-    "name_en": "Orchid Plug 4.5 cm",
-    "category": "Orchid Plug",
-    "size": "Top 4.5 cm / Bottom 3.2 cm / Height 4.5 cm",
-    "trayFit": "60-cell orchid trays",
-    "bestFor": "Orchid seedling production and stage-based transplant planning",
-    "desc": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the ZY-017 but still want orchid-stage compatibility.",
-    "slug": "zy-015",
-    "name": "ZY-015 Orchid Plug 4.5 cm",
-    "image": "assets/products/CF-015.jpg",
-    "applicationTags": [
-      "Orchid"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "300–500 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-015.jpg",
-      "assets/packaging/CF-015-package.webp",
-      "assets/private-label-cases.webp"
-    ],
-    "status": "",
-    "description": "An orchid-focused plug for 60-cell tray programs where buyers need a smaller format than the ZY-017 but still want orchid-stage compatibility.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method."
-  },
-  {
-    "model": "ZY-060",
-    "name_en": "Phalaenopsis Nursery Plug - Two Size Options",
-    "category": "Orchid Plug",
-    "size": "Option A: Top Ø 4.5 cm / Bottom Ø 3.4 cm / Height 4.5 cm; Option B: Top Ø 5.1 cm / Bottom Ø 3.8 cm / Height 4.8 cm",
-    "trayFit": "Phalaenopsis nursery trays or pots matched to the selected 4.5 cm or 5.1 cm top diameter",
-    "bestFor": "Phalaenopsis nursery propagation and stage-based orchid transplanting",
-    "desc": "An orchid nursery plug offered in two documented size options. Buyers should confirm the required dimensions against their tray or pot before sampling.",
-    "slug": "zy-060",
-    "name": "ZY-060 Phalaenopsis Nursery Plug",
-    "image": "assets/products/ZY-060-a.webp",
-    "applicationTags": [
-      "Orchid",
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after model, size option and sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after size option, carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by size option, packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/ZY-060-a.webp",
-      "assets/products/ZY-060-b.webp",
-      "assets/factory-packaging.webp"
-    ],
-    "status": "New",
-    "description": "A Phalaenopsis nursery plug with 4.5 cm and 5.1 cm top-diameter options for tray-fit and transplant-stage evaluation.",
-    "variantNote": "The source catalog lists two ZY-060 size options; confirm the selected dimensions on the sample approval record.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed after the size option and packaging format are approved."
-  },
-  {
-    "model": "ZY-2735",
-    "name_en": "Compact Tissue Culture Plug 3.5 cm",
+    "model": "CF-2735",
+    "name_en": "Tissue Culture Propagation Plug 3.5 cm",
     "category": "Tissue Culture Plug",
     "size": "Top Ø 2.7 cm / Bottom Ø 2.3 cm / Height 3.5 cm",
-    "trayFit": "Compact tissue-culture transition and nursery trays with approximately 2.7 cm openings",
-    "bestFor": "Tissue-culture transition, young plants and compact propagation programs",
-    "desc": "A compact molded plug for buyers evaluating a short 2.7 cm top-diameter format for tissue-culture transition or nursery handling.",
-    "slug": "zy-2735",
-    "name": "ZY-2735 Compact Tissue Culture Plug 3.5 cm",
-    "image": "assets/products/ZY-2735.webp",
+    "trayFit": "180-cell propagation tray",
+    "bestFor": "Tissue-culture acclimatization and compact high-count trays",
+    "desc": "A compact tissue-culture propagation plug documented for 180-cell tray workflows.",
+    "slug": "cf-2735",
+    "name": "CF-2735 Tissue Culture Propagation Plug 3.5 cm",
+    "image": "assets/products/CF-2735-factory.webp",
     "applicationTags": [
-      "Tissue Culture",
-      "Seedling"
+      "Tissue Culture"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
     "packaging": "Bulk carton or custom private-label packaging after sample approval.",
@@ -705,95 +1036,37 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-2735.webp",
+      "assets/products/CF-2735-factory.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
-    "description": "A compact 2.7 cm top-diameter tissue-culture and nursery plug for tray-fit and handling trials.",
+    "description": "A compact tissue-culture propagation plug documented for 180-cell tray workflows.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-2735 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-128-tissue-culture.mp4",
+      "title": "Tissue-culture plug handling reference",
+      "scope": "CF-128 handling is shown; other CF models require separate tray-fit confirmation."
+    }
   },
   {
-    "model": "ZY-104",
-    "name_en": "Nursery Plug 4.0 cm",
-    "category": "Seedling Plug",
-    "size": "Top Ø 3.1 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
-    "trayFit": "Nursery and propagation trays with approximately 3.1 cm openings",
-    "bestFor": "General nursery propagation, seed starting and transplant trials",
-    "desc": "A general nursery plug with a 3.1 cm top diameter and 4.0 cm height for tray-fit and handling evaluation.",
-    "slug": "zy-104",
-    "name": "ZY-104 Nursery Plug 4.0 cm",
-    "image": "assets/products/ZY-104.webp",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/ZY-104.webp",
-      "assets/factory-packaging.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "New",
-    "description": "A 3.1 cm top-diameter nursery plug for general propagation and tray-fit trials.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
-  },
-  {
-    "model": "ZY-167",
-    "name_en": "Compact Nursery Plug 3.1 cm",
-    "category": "Seedling Plug",
-    "size": "Top Ø 2.6 cm / Bottom Ø 2.2 cm / Height 3.1 cm",
-    "trayFit": "Compact nursery trays with approximately 2.6 cm openings",
-    "bestFor": "High-density seed starting, cuttings and compact nursery programs",
-    "desc": "A short compact plug for propagation programs that require a 2.6 cm top diameter and 3.1 cm height.",
-    "slug": "zy-167",
-    "name": "ZY-167 Compact Nursery Plug 3.1 cm",
-    "image": "assets/products/ZY-167.webp",
-    "applicationTags": [
-      "Seedling",
-      "Hydroponic"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/ZY-167.webp",
-      "assets/factory-packaging.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "New",
-    "description": "A short 2.6 cm top-diameter plug for compact propagation and high-density tray trials.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
-  },
-  {
-    "model": "ZY-3038",
-    "name_en": "Nursery Plug 3.8 cm",
-    "category": "Seedling Plug",
+    "model": "CF-3038",
+    "name_en": "Cuttings Propagation Plug 3.8 cm",
+    "category": "Cuttings Propagation Plug",
     "size": "Top Ø 3.0 cm / Bottom Ø 2.2 cm / Height 3.8 cm",
-    "trayFit": "Propagation trays with approximately 3.0 cm openings",
-    "bestFor": "General seedling production, cuttings and nursery trials",
-    "desc": "A tapered nursery plug with a 3.0 cm top diameter and 3.8 cm height for general propagation trials.",
-    "slug": "zy-3038",
-    "name": "ZY-3038 Nursery Plug 3.8 cm",
-    "image": "assets/products/ZY-3038.webp",
+    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
+    "bestFor": "Commercial cuttings propagation and model-to-tray trials",
+    "desc": "A cuttings propagation plug supported by a factory application video and intended for buyer-side crop and tray trials.",
+    "slug": "cf-3038",
+    "name": "CF-3038 Cuttings Propagation Plug 3.8 cm",
+    "image": "assets/products/CF-3038-factory.webp",
     "applicationTags": [
-      "Seedling"
+      "Cuttings"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
     "packaging": "Bulk carton or custom private-label packaging after sample approval.",
@@ -805,27 +1078,37 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-3038.webp",
+      "assets/products/CF-3038-factory.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
-    "description": "A 3.0 cm top-diameter nursery plug for general propagation and tray-fit evaluation.",
+    "description": "A cuttings propagation plug supported by a factory application video and intended for buyer-side crop and tray trials.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-3038 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "CF-3038 cuttings propagation record",
+      "scope": "Model-specific factory application video."
+    }
   },
   {
-    "model": "ZY-3038B",
-    "name_en": "Nursery Plug 3.8 cm - B Variant",
-    "category": "Seedling Plug",
+    "model": "CF-3038B",
+    "name_en": "Hydroponic Propagation Plug 3.8 cm",
+    "category": "Hydroponic Plug",
     "size": "Top Ø 3.0 cm / Bottom Ø 2.2 cm / Height 3.8 cm",
-    "trayFit": "Propagation trays with approximately 3.0 cm openings",
-    "bestFor": "General seedling production and buyers comparing ZY-3038 molded variants",
-    "desc": "A separately documented B variant with the same listed external dimensions as ZY-3038. Buyers should compare the physical samples before approval.",
-    "slug": "zy-3038b",
-    "name": "ZY-3038B Nursery Plug 3.8 cm",
-    "image": "assets/products/ZY-3038B.webp",
+    "trayFit": "Confirm against the buyer's hydroponic tray or holder",
+    "bestFor": "Hydroponic sowing, nursery production and controlled-environment systems",
+    "desc": "A hydroponic propagation plug for water-based growing workflows; confirm the B variant against the buyer's tray before bulk production.",
+    "slug": "cf-3038b",
+    "name": "CF-3038B Hydroponic Propagation Plug 3.8 cm",
+    "image": "assets/products/CF-3038B-factory.webp",
     "applicationTags": [
+      "Hydroponic",
       "Seedling"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
@@ -838,28 +1121,80 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-3038B.webp",
-      "assets/products/ZY-3038.webp",
+      "assets/products/CF-3038B-factory.webp",
+      "assets/products/CF-3038.webp",
       "assets/factory-packaging.webp"
     ],
     "status": "New",
-    "description": "The B variant of the 3.0 cm by 3.8 cm nursery plug, listed separately for sample comparison.",
-    "variantNote": "The source catalog lists ZY-3038 and ZY-3038B separately with the same external dimensions; approve against physical samples.",
+    "description": "A hydroponic propagation plug for water-based growing workflows; confirm the B variant against the buyer's tray before bulk production.",
+    "variantNote": "The source catalog lists CF-3038 and CF-3038B separately with the same external dimensions; approve against physical samples.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-3038B factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-plant-factory-seedling.mp4",
+      "title": "Plant-factory seedling application reference",
+      "scope": "Application reference; confirm the selected CF model and holder dimensions."
+    }
   },
   {
-    "model": "ZY-3545",
-    "name_en": "Nursery Plug 4.5 cm",
-    "category": "Seedling Plug",
-    "size": "Top Ø 3.5 cm / Bottom Ø 2.2 cm / Height 4.5 cm",
-    "trayFit": "Nursery and propagation trays with approximately 3.5 cm openings",
-    "bestFor": "Vegetable, flower and general nursery propagation",
-    "desc": "A medium nursery plug with a 3.5 cm top diameter and 4.5 cm height for propagation and transplant evaluation.",
-    "slug": "zy-3545",
-    "name": "ZY-3545 Nursery Plug 4.5 cm",
-    "image": "assets/products/ZY-3545.webp",
+    "model": "CF-3240",
+    "name_en": "Cuttings Propagation Plug 4.0 cm",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 3.2 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
+    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
+    "bestFor": "Cuttings propagation and tray-fit projects requiring a 3.2 cm top diameter",
+    "desc": "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
+    "slug": "cf-3240",
+    "name": "CF-3240 Cuttings Propagation Plug 4.0 cm",
+    "image": "assets/products/CF-3240-dimensions.webp",
     "applicationTags": [
+      "Cuttings"
+    ],
+    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
+    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
+    "certifications": [
+      "SGS test report available",
+      "Batch testing by project",
+      "Export document support"
+    ],
+    "cartonQty": "Confirm after carton size and packaging format are approved.",
+    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
+    "gallery": [
+      "assets/products/CF-3240-dimensions.webp",
+      "assets/factory-packaging.webp",
+      "assets/sample-shipping-hero.webp"
+    ],
+    "status": "New",
+    "description": "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
+    "features": [],
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-3240 confirmed dimension reference diagram",
+    "imageType": "Confirmed dimension reference",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
+  },
+  {
+    "model": "CF-3545",
+    "name_en": "Hydroponic Propagation Plug 4.5 cm",
+    "category": "Hydroponic Plug",
+    "size": "Top Ø 3.5 cm / Bottom Ø 2.2 cm / Height 4.5 cm",
+    "trayFit": "Confirm against the buyer's hydroponic tray or holder",
+    "bestFor": "Hydroponic propagation and controlled-environment nursery production",
+    "desc": "A hydroponic propagation plug designed around moisture distribution, air-water balance and stable transplant handling.",
+    "slug": "cf-3545",
+    "name": "CF-3545 Hydroponic Propagation Plug 4.5 cm",
+    "image": "assets/products/CF-3545-factory.webp",
+    "applicationTags": [
+      "Hydroponic",
       "Seedling"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
@@ -872,26 +1207,35 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-3545.webp",
+      "assets/products/CF-3545-factory.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
-    "description": "A 3.5 cm top-diameter nursery plug for vegetable, flower and general propagation trials.",
+    "description": "A hydroponic propagation plug designed around moisture distribution, air-water balance and stable transplant handling.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-3545 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-plant-factory-seedling.mp4",
+      "title": "Plant-factory seedling application reference",
+      "scope": "Application reference; confirm the selected CF model and holder dimensions."
+    }
   },
   {
-    "model": "ZY-3550",
+    "model": "CF-3550",
     "name_en": "Tall Nursery Plug 5.3 cm",
     "category": "Seedling Plug",
     "size": "Top Ø 3.7 cm / Bottom Ø 2.2 cm / Height 5.3 cm",
     "trayFit": "Deeper nursery and propagation trays with approximately 3.7 cm openings",
     "bestFor": "Seedlings and cuttings requiring a taller propagation format",
     "desc": "A taller nursery plug with a 3.7 cm top diameter and 5.3 cm height for deeper propagation holders.",
-    "slug": "zy-3550",
-    "name": "ZY-3550 Tall Nursery Plug 5.3 cm",
-    "image": "assets/products/ZY-3550.webp",
+    "slug": "cf-3550",
+    "name": "CF-3550 Tall Nursery Plug 5.3 cm",
+    "image": "assets/products/CF-3550.webp",
     "applicationTags": [
       "Seedling"
     ],
@@ -905,28 +1249,36 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-3550.webp",
+      "assets/products/CF-3550.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
     "description": "A tall 3.7 cm top-diameter plug for deeper nursery trays and propagation trials.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-3550 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
   },
   {
-    "model": "ZY-5050",
-    "name_en": "Large Nursery Plug 5.0 cm",
-    "category": "Seedling Plug",
-    "size": "Top 5.0 cm / Bottom 3.8 cm / Height 5.0 cm",
-    "trayFit": "Large nursery trays, pots or holders with approximately 5.0 cm openings",
-    "bestFor": "Larger seedlings, transplant programs and specialty nursery crops",
-    "desc": "A larger nursery plug with a documented 5.0 cm top dimension and 5.0 cm height.",
-    "slug": "zy-5050",
-    "name": "ZY-5050 Large Nursery Plug 5.0 cm",
-    "image": "assets/products/ZY-5050.webp",
+    "model": "CF-5050",
+    "name_en": "50-Cell Cuttings Propagation Plug",
+    "category": "Cuttings Propagation Plug",
+    "size": "Top Ø 5.0 cm / Bottom Ø 3.8 cm / Height 5.0 cm",
+    "trayFit": "50-cell propagation tray",
+    "bestFor": "Larger cuttings and commercial 50-cell nursery workflows",
+    "desc": "A larger cuttings propagation plug documented for 50-cell tray workflows and stable transplant handling.",
+    "slug": "cf-5050",
+    "name": "CF-5050 50-Cell Cuttings Propagation Plug",
+    "image": "assets/products/CF-5050-factory.webp",
     "applicationTags": [
-      "Seedling"
+      "Cuttings"
     ],
     "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
     "packaging": "Bulk carton or custom private-label packaging after sample approval.",
@@ -938,26 +1290,35 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-5050.webp",
+      "assets/products/CF-5050-factory.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
-    "description": "A large 5.0 cm nursery plug for transplant programs and container-fit trials.",
+    "description": "A larger cuttings propagation plug documented for 50-cell tray workflows and stable transplant handling.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-08-31",
+    "imageAlt": "CF-5050 factory product image",
+    "imageType": "Factory product image",
+    "video": {
+      "src": "assets/videos/cf-3038-cuttings.mp4",
+      "title": "Cuttings propagation application reference",
+      "scope": "Application reference; CF-3038 is the model shown."
+    }
   },
   {
-    "model": "ZY-7050",
+    "model": "CF-7050",
     "name_en": "Tall Nursery Plug 6.8 cm",
     "category": "Seedling Plug",
     "size": "Top Ø 4.8 cm / Bottom Ø 3.5 cm / Height 6.8 cm",
     "trayFit": "Deep nursery trays, pots or holders with approximately 4.8 cm openings",
     "bestFor": "Larger seedlings, deeper rooting stages and transplant programs",
     "desc": "A tall nursery plug with a 4.8 cm top diameter and 6.8 cm height for deeper propagation and transplant workflows.",
-    "slug": "zy-7050",
-    "name": "ZY-7050 Tall Nursery Plug 6.8 cm",
-    "image": "assets/products/ZY-7050.webp",
+    "slug": "cf-7050",
+    "name": "CF-7050 Tall Nursery Plug 6.8 cm",
+    "image": "assets/products/CF-7050.webp",
     "applicationTags": [
       "Seedling"
     ],
@@ -971,13 +1332,21 @@
     "cartonQty": "Confirm after carton size and packaging format are approved.",
     "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
     "gallery": [
-      "assets/products/ZY-7050.webp",
+      "assets/products/CF-7050.webp",
       "assets/factory-packaging.webp",
       "assets/sample-shipping-hero.webp"
     ],
     "status": "New",
     "description": "A tall 4.8 cm top-diameter nursery plug for deeper trays and transplant-stage evaluation.",
     "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format."
+    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
+    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
+    "imageAlt": "CF-7050 molded substrate product image",
+    "imageType": "Product catalog image",
+    "video": {
+      "src": "assets/videos/cf-transplanter-application.mp4",
+      "title": "Automated transplanting application reference",
+      "scope": "Application reference; machine and tray compatibility must be validated by trial."
+    }
   }
 ]
