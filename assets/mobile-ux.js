@@ -153,6 +153,59 @@
       }
     });
 
+    // Keep general factory videos separate from model cards. Only a video whose
+    // factory title names a model may appear inside that product's quick view.
+    var productMatrix = document.getElementById('productMatrix');
+    if(productMatrix){
+      fetch('/assets/factory-videos.json', {cache:'force-cache'}).then(function(response){
+        if(!response.ok) throw new Error('Factory video manifest unavailable');
+        return response.json();
+      }).then(function(videos){
+        var htmlLang = (document.documentElement.lang || 'en').toLowerCase();
+        var locale = htmlLang.indexOf('zh') === 0 ? 'cn' : htmlLang.split('-')[0];
+        if(!['en','es','ar','cn'].includes(locale)) locale = 'en';
+        var copy = {
+          en: ['Factory application videos', 'These are application or material references, not model-specific performance tests. Confirm the CF model and tray fit separately.'],
+          es: ['Videos de aplicaciones de fábrica', 'Son referencias de aplicación o material, no pruebas de rendimiento de un modelo. Confirme por separado el modelo CF y la bandeja.'],
+          ar: ['فيديوهات تطبيقات المصنع', 'هذه مراجع للتطبيق أو المادة وليست اختبارات أداء خاصة بطراز محدد. يرجى تأكيد طراز CF وملاءمة الصينية بشكل منفصل.'],
+          cn: ['工厂应用视频', '以下为应用或材料参考，并非单一型号性能测试；CF 型号和穴盘匹配需单独确认。']
+        }[locale];
+        var section = document.createElement('section');
+        section.className = 'section section-soft factory-video-library';
+        var container = document.createElement('div');
+        container.className = 'container';
+        var heading = document.createElement('div');
+        heading.className = 'section-head';
+        var title = document.createElement('h2');
+        title.textContent = copy[0];
+        var note = document.createElement('p');
+        note.textContent = copy[1];
+        heading.append(title, note);
+        var grid = document.createElement('div');
+        grid.className = 'factory-video-grid';
+        videos.forEach(function(item){
+          var card = document.createElement('article');
+          var video = document.createElement('video');
+          video.controls = true;
+          video.playsInline = true;
+          video.preload = 'none';
+          video.poster = '/' + item.poster;
+          var source = document.createElement('source');
+          source.src = '/' + item.src;
+          source.type = 'video/mp4';
+          video.appendChild(source);
+          var label = document.createElement('h3');
+          label.textContent = item.title[locale] || item.title.en;
+          card.append(video, label);
+          grid.appendChild(card);
+        });
+        container.append(heading, grid);
+        section.appendChild(container);
+        var matrixSection = productMatrix.closest('section');
+        if(matrixSection) matrixSection.insertAdjacentElement('afterend', section);
+      }).catch(function(){ /* Product catalog remains usable without the optional video library. */ });
+    }
+
     // Suggest an available translation from the visitor's browser preference.
     // The site never redirects automatically, so shared URLs and crawler signals stay stable.
     fetch('/assets/language-routes.json', {cache:'force-cache'}).then(function(response){

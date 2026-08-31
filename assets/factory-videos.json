@@ -1,0 +1,72 @@
+[
+  {
+    "src": "assets/videos/factory-tissue-culture-tutorial.mp4",
+    "poster": "assets/products/CF-128-factory.webp",
+    "title": {
+      "en": "Tissue-culture application tutorial",
+      "es": "Tutorial de aplicación para cultivo de tejidos",
+      "ar": "دليل تطبيق زراعة الأنسجة",
+      "cn": "组培苗应用教程"
+    }
+  },
+  {
+    "src": "assets/videos/cf-wet-airflow.mp4",
+    "poster": "assets/products/CF-3038-factory.webp",
+    "title": {
+      "en": "Wet-substrate airflow demonstration",
+      "es": "Demostración de flujo de aire en sustrato húmedo",
+      "ar": "عرض تدفق الهواء في الركيزة الرطبة",
+      "cn": "湿态基质通气演示"
+    }
+  },
+  {
+    "src": "assets/videos/cf-plant-factory-seedling.mp4",
+    "poster": "assets/products/CF-3038B-factory.webp",
+    "title": {
+      "en": "Plant-factory seedling stage",
+      "es": "Etapa de plántula en fábrica de plantas",
+      "ar": "مرحلة الشتلات في مصنع النباتات",
+      "cn": "植物工厂苗期应用"
+    }
+  },
+  {
+    "src": "assets/videos/cf-plant-factory-transplant.mp4",
+    "poster": "assets/products/CF-3545-factory.webp",
+    "title": {
+      "en": "Plant-factory post-transplant stage",
+      "es": "Etapa posterior al trasplante en fábrica de plantas",
+      "ar": "مرحلة ما بعد الشتل في مصنع النباتات",
+      "cn": "植物工厂移栽后应用"
+    }
+  },
+  {
+    "src": "assets/videos/cf-orchid-application.mp4",
+    "poster": "assets/products/CF-060-factory.webp",
+    "title": {
+      "en": "Phalaenopsis nursery application",
+      "es": "Aplicación en vivero de Phalaenopsis",
+      "ar": "تطبيق مشتل فالاينوبسيس",
+      "cn": "蝴蝶兰苗场应用"
+    }
+  },
+  {
+    "src": "assets/videos/cf-material-overview.mp4",
+    "poster": "assets/factory-packaging.webp",
+    "title": {
+      "en": "Molded substrate material overview",
+      "es": "Descripción del material de sustrato moldeado",
+      "ar": "نظرة عامة على مادة الركيزة المشكلة",
+      "cn": "塑形基质材料说明"
+    }
+  },
+  {
+    "src": "assets/videos/cf-transplanter-application.mp4",
+    "poster": "assets/products/CF-200-factory.webp",
+    "title": {
+      "en": "Automated transplanter application",
+      "es": "Aplicación con trasplantadora automática",
+      "ar": "تطبيق آلة الشتل الآلية",
+      "cn": "自动移栽机应用"
+    }
+  }
+]

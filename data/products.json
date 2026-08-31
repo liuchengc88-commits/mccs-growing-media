@@ -34,12 +34,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-001 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-plant-factory-seedling.mp4",
-      "title": "Plant-factory seedling application reference",
-      "scope": "Application reference; confirm the selected CF model and holder dimensions."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-003",
@@ -48,7 +43,7 @@
     "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
     "trayFit": "12-cell home nursery boxes and small seed-starting trays",
     "bestFor": "Home seed starting, refill packs and beginner-friendly retail programs",
-    "desc": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
+    "desc": "A compact home starter plug for seed-starting kits, refill packs and small nursery trays.",
     "slug": "cf-003",
     "name": "CF-003 Home Starter Plug 3.7 cm",
     "image": "assets/products/CF-003.jpg",
@@ -70,63 +65,15 @@
       "assets/sample-shipping-hero.webp"
     ],
     "status": "",
-    "description": "A small home starter plug in the same external size class as CF-004. It is positioned for seed-starting kits and refill packs rather than succulent display trays.",
-    "variantNote": "Same external size class as CF-004, but positioned for seed-starting kits and refill packs.",
-    "positioningNote": "Same size as CF-004, but positioned for home seed-starting and standard seedling packs.",
+    "description": "A compact home starter plug for seed-starting kits, refill packs and small nursery trays.",
+    "variantNote": "Compact format for home seed-starting and refill-pack programs.",
+    "positioningNote": "Positioned for home seed-starting and small nursery trays.",
     "category_en": "Seedling Plug",
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-003 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
-  },
-  {
-    "model": "CF-004",
-    "name_en": "Succulent Starter Plug 3.7 cm",
-    "category": "Succulent Plug",
-    "size": "Top 3.3 cm / Bottom 2.8 cm / Height 3.7 cm",
-    "trayFit": "Succulent trays, 12-cell or 24-cell nursery boxes with opening ≥ 3.3 cm",
-    "bestFor": "Succulent propagation, small decorative planters and retail-ready planting sets",
-    "desc": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
-    "slug": "cf-004",
-    "name": "CF-004 Succulent Plug 3.7 cm",
-    "image": "assets/products/CF-004.jpg",
-    "applicationTags": [
-      "Succulent"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "300–500 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-004.jpg",
-      "assets/packaging/CF-004-package.webp",
-      "assets/package-option-display.webp"
-    ],
-    "status": "",
-    "description": "A compact plug for succulent propagation and decorative growing sets. It shares the same external size class as CF-003, but is positioned for succulent trays and visual retail applications.",
-    "variantNote": "Same external size class as CF-003, but positioned for succulent trays and decorative retail use.",
-    "positioningNote": "Same size as CF-003, but positioned for succulent starter packs and decorative planting sets.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
-    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
-    "imageAlt": "CF-004 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-material-overview.mp4",
-      "title": "Molded substrate material overview",
-      "scope": "Material-family reference; not a model-specific performance test."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-005",
@@ -161,14 +108,9 @@
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-005 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-006",
@@ -203,55 +145,9 @@
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-006 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
-  },
-  {
-    "model": "CF-010",
-    "name_en": "Universal Seedling Plug 4.1 cm",
-    "category": "Seedling Plug",
-    "size": "Top 3.2 cm / Bottom 2.2 cm / Height 4.1 cm",
-    "trayFit": "50–72-cell general seedling trays with approximately 3.2 cm openings",
-    "bestFor": "General seed starting, cuttings and trial propagation programs",
-    "desc": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
-    "slug": "cf-010",
-    "name": "CF-010 Universal Seedling Plug 4.1 cm",
-    "image": "assets/products/CF-010.jpg",
-    "applicationTags": [
-      "Seedling"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton, retail box, refill pouch or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "1000–1500 pcs / carton (reference; final count varies by carton size and packaging format)",
-    "moq": "MOQ varies by carton size, retail packaging and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-010.jpg",
-      "assets/packaging/CF-010-package.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "",
-    "description": "A flexible seedling plug for buyers testing different trays or propagation methods before choosing a more specialized model.",
-    "features": [],
-    "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
-    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
-    "imageAlt": "CF-010 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-015",
@@ -287,12 +183,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-015 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-017",
@@ -329,12 +220,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-017 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-025",
@@ -370,12 +256,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-025 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-028",
@@ -411,12 +292,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-028 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-035",
@@ -452,12 +328,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-035 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-060",
@@ -493,14 +364,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed after the size option and packaging format are approved.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-060 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-060B",
@@ -508,7 +374,7 @@
     "category": "Orchid Plug",
     "size": "Top Ø 5.2 cm / Bottom Ø 3.8 cm / Height 4.8 cm",
     "trayFit": "60-cell orchid propagation tray",
-    "bestFor": "Professional Phalaenopsis propagation and tray-based nursery handling",
+    "bestFor": "Professional Phalaenopsis propagation requiring a larger plug volume",
     "desc": "A larger 60-cell orchid propagation plug for Phalaenopsis nursery programs that require additional plug volume.",
     "slug": "cf-060b",
     "name": "CF-060B Orchid Propagation Plug 5.2 cm",
@@ -535,15 +401,10 @@
     "variantNote": "The source catalog lists two CF-060 size options; confirm the selected dimensions on the sample approval record.",
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed after the size option and packaging format are approved.",
-    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
-    "sourceVerifiedAt": "2026-08-31",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-060B factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-orchid-application.mp4",
-      "title": "Phalaenopsis nursery application reference",
-      "scope": "Application reference; confirm the selected CF model before trial."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-067",
@@ -580,12 +441,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-067 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-material-overview.mp4",
-      "title": "Molded substrate material overview",
-      "scope": "Material-family reference; not a model-specific performance test."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-072",
@@ -621,14 +477,9 @@
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-072 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-128-tissue-culture.mp4",
-      "title": "Tissue-culture plug handling reference",
-      "scope": "CF-128 handling is shown; other CF models require separate tray-fit confirmation."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-104",
@@ -664,12 +515,7 @@
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-104 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-128",
@@ -705,14 +551,9 @@
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-128 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-128-tissue-culture.mp4",
-      "title": "CF-128 tissue-culture handling sequence",
-      "scope": "Model-specific factory application video."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-128B",
@@ -746,15 +587,10 @@
     "description": "A split 128-cell plug positioned for cuttings propagation; confirm root placement and tray handling in a buyer-side trial.",
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
-    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
-    "sourceVerifiedAt": "2026-08-31",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-128B factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-129",
@@ -791,12 +627,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-129 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-167",
@@ -831,14 +662,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-167 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-200",
@@ -874,14 +700,9 @@
     "features": [],
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-200 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-901",
@@ -919,12 +740,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-901 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-material-overview.mp4",
-      "title": "Molded substrate material overview",
-      "scope": "Material-family reference; not a model-specific performance test."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-902",
@@ -962,12 +778,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-902 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-material-overview.mp4",
-      "title": "Molded substrate material overview",
-      "scope": "Material-family reference; not a model-specific performance test."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-903",
@@ -1005,12 +816,7 @@
     "cartonNote": "Reference only. Final carton quantity may change by outer-carton size, retail packaging, private-label inserts and shipping method.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-903 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-material-overview.mp4",
-      "title": "Molded substrate material overview",
-      "scope": "Material-family reference; not a model-specific performance test."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-2735",
@@ -1045,14 +851,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-2735 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-128-tissue-culture.mp4",
-      "title": "Tissue-culture plug handling reference",
-      "scope": "CF-128 handling is shown; other CF models require separate tray-fit confirmation."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-3038",
@@ -1087,7 +888,7 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3038 factory product image",
     "imageType": "Factory product image",
     "video": {
@@ -1131,14 +932,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3038B factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-plant-factory-seedling.mp4",
-      "title": "Plant-factory seedling application reference",
-      "scope": "Application reference; confirm the selected CF model and holder dimensions."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-3240",
@@ -1172,15 +968,10 @@
     "description": "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
-    "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
-    "sourceVerifiedAt": "2026-08-31",
+    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3240 confirmed dimension reference diagram",
-    "imageType": "Confirmed dimension reference",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Confirmed dimension reference"
   },
   {
     "model": "CF-3545",
@@ -1216,14 +1007,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3545 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-plant-factory-seedling.mp4",
-      "title": "Plant-factory seedling application reference",
-      "scope": "Application reference; confirm the selected CF model and holder dimensions."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-3550",
@@ -1259,12 +1045,7 @@
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-3550 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
+    "imageType": "Product catalog image"
   },
   {
     "model": "CF-5050",
@@ -1299,14 +1080,9 @@
     "features": [],
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-08-31",
+    "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-5050 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "Cuttings propagation application reference",
-      "scope": "Application reference; CF-3038 is the model shown."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-7050",
@@ -1342,11 +1118,6 @@
     "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
     "factorySpecificationStatus": "Listed in the approved product catalog; confirm the current production drawing during sampling.",
     "imageAlt": "CF-7050 molded substrate product image",
-    "imageType": "Product catalog image",
-    "video": {
-      "src": "assets/videos/cf-transplanter-application.mp4",
-      "title": "Automated transplanting application reference",
-      "scope": "Application reference; machine and tray compatibility must be validated by trial."
-    }
+    "imageType": "Product catalog image"
   }
 ]
