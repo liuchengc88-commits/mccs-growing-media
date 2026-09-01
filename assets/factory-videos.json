@@ -1,5 +1,15 @@
 [
   {
+    "src": "assets/videos/cf-3038-cuttings.mp4",
+    "poster": "assets/products/CF-3038-factory.webp",
+    "title": {
+      "en": "CF-3038 cuttings propagation application",
+      "es": "Aplicación de propagación de esquejes CF-3038",
+      "ar": "تطبيق إكثار العقل CF-3038",
+      "cn": "CF-3038 扦插育苗应用"
+    }
+  },
+  {
     "src": "assets/videos/factory-tissue-culture-tutorial.mp4",
     "poster": "assets/products/CF-128-factory.webp",
     "title": {

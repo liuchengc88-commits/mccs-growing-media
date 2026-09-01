@@ -890,12 +890,7 @@
     "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
     "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3038 factory product image",
-    "imageType": "Factory product image",
-    "video": {
-      "src": "assets/videos/cf-3038-cuttings.mp4",
-      "title": "CF-3038 cuttings propagation record",
-      "scope": "Model-specific factory application video."
-    }
+    "imageType": "Factory product image"
   },
   {
     "model": "CF-3038B",
@@ -935,43 +930,6 @@
     "sourceVerifiedAt": "2026-09-01",
     "imageAlt": "CF-3038B factory product image",
     "imageType": "Factory product image"
-  },
-  {
-    "model": "CF-3240",
-    "name_en": "Cuttings Propagation Plug 4.0 cm",
-    "category": "Cuttings Propagation Plug",
-    "size": "Top Ø 3.2 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
-    "trayFit": "Confirm against the buyer's tray drawing or physical sample",
-    "bestFor": "Cuttings propagation and tray-fit projects requiring a 3.2 cm top diameter",
-    "desc": "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
-    "slug": "cf-3240",
-    "name": "CF-3240 Cuttings Propagation Plug 4.0 cm",
-    "image": "assets/products/CF-3240-dimensions.webp",
-    "applicationTags": [
-      "Cuttings"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-3240-dimensions.webp",
-      "assets/factory-packaging.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "New",
-    "description": "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
-    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-09-01",
-    "imageAlt": "CF-3240 confirmed dimension reference diagram",
-    "imageType": "Confirmed dimension reference"
   },
   {
     "model": "CF-3545",
