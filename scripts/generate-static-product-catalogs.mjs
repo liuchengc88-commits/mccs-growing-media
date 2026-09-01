@@ -147,9 +147,20 @@ function itemList(language, originPath) {
   };
 }
 
+function syncCatalogCount(html, language) {
+  const replacements = {
+    'zh-CN': [/比较 \d+ 个 MCCS/g, `比较 ${products.length} 个 MCCS`],
+    es: [/Compare \d+ modelos de sustrato/g, `Compare ${products.length} modelos de sustrato`],
+    ar: [/قارن \d+ نموذجاً/g, `قارن ${products.length} نموذجاً`]
+  };
+  const replacement = replacements[language];
+  return replacement ? html.replace(replacement[0], replacement[1]) : html;
+}
+
 for (const page of pages) {
   const filePath = path.join(root, page.file);
   let html = fs.readFileSync(filePath, 'utf8');
+  html = syncCatalogCount(html, page.language);
   const schema = JSON.stringify(itemList(page.language, page.originPath));
   const schemaStart = '<!-- GENERATED PRODUCT ITEMLIST START -->';
   const schemaEnd = '<!-- GENERATED PRODUCT ITEMLIST END -->';

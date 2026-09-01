@@ -8,7 +8,7 @@ let products = JSON.parse(fs.readFileSync(productFile, "utf8"));
 const verifiedAt = "2026-09-01";
 const factoryModels = new Set([
   "CF-005", "CF-006", "CF-060", "CF-060B", "CF-072", "CF-128", "CF-128B",
-  "CF-167", "CF-200", "CF-2735", "CF-3038", "CF-3038B", "CF-3240", "CF-3545",
+  "CF-167", "CF-200", "CF-2735", "CF-3038", "CF-3038B", "CF-3545",
   "CF-5050"
 ]);
 const duplicateModels = new Set([
@@ -131,15 +131,6 @@ const confirmedFactoryModels = {
     description: "A hydroponic propagation plug for water-based growing workflows; confirm the B variant against the buyer's tray before bulk production.",
     applicationTags: ["Hydroponic", "Seedling"],
   },
-  "CF-3240": {
-    name_en: "Cuttings Propagation Plug 4.0 cm",
-    category: "Cuttings Propagation Plug",
-    size: "Top Ø 3.2 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
-    trayFit: "Confirm against the buyer's tray drawing or physical sample",
-    bestFor: "Cuttings propagation and tray-fit projects requiring a 3.2 cm top diameter",
-    description: "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
-    applicationTags: ["Cuttings"],
-  },
   "CF-3545": {
     name_en: "Hydroponic Propagation Plug 4.5 cm",
     category: "Hydroponic Plug",
@@ -184,13 +175,6 @@ function applyMedia(product) {
   product.gallery[0] = product.image;
 
   delete product.video;
-  if (product.model === "CF-3038") {
-    product.video = {
-      src: "assets/videos/cf-3038-cuttings.mp4",
-      title: "CF-3038 cuttings propagation record",
-      scope: "Model-specific factory application video."
-    };
-  }
 }
 
 products = products.filter((product) => !["X-090", "ZY-090", "CF-090"].includes(product.model));
@@ -260,26 +244,7 @@ if (!products.some((product) => product.model === "CF-128B")) {
   }));
 }
 
-if (!products.some((product) => product.model === "CF-3240")) {
-  products.push(cloneProduct("CF-3038", {
-    model: "CF-3240",
-    slug: "cf-3240",
-    name_en: "Cuttings Propagation Plug 4.0 cm",
-    name: "CF-3240 Cuttings Propagation Plug 4.0 cm",
-    size: "Top Ø 3.2 cm / Bottom Ø 2.5 cm / Height 4.0 cm",
-    trayFit: "Confirm against the buyer's tray drawing or physical sample",
-    bestFor: "Cuttings propagation and tray-fit projects requiring a 3.2 cm top diameter",
-    description: "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
-    desc: "A cuttings propagation model documented by factory dimensions. The factory product photograph is not yet published, so the catalog uses a dimension reference instead of a substituted product photo.",
-    image: "assets/products/CF-3240-dimensions.webp",
-    imageAlt: "CF-3240 confirmed dimension reference diagram",
-    imageType: "Confirmed dimension reference",
-    gallery: ["assets/products/CF-3240-dimensions.webp", "assets/factory-packaging.webp", "assets/sample-shipping-hero.webp"],
-    status: "New",
-  }));
-}
-
-products = products.filter((product) => !duplicateModels.has(product.model));
+products = products.filter((product) => !duplicateModels.has(product.model) && product.model !== "CF-3240");
 for (const product of products) {
   if (product.model === "CF-003") {
     product.desc = "A compact home starter plug for seed-starting kits, refill packs and small nursery trays.";

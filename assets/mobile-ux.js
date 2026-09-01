@@ -153,8 +153,7 @@
       }
     });
 
-    // Keep general factory videos separate from model cards. Only a video whose
-    // factory title names a model may appear inside that product's quick view.
+    // Keep every application video in one factory section, separate from product cards.
     var productMatrix = document.getElementById('productMatrix');
     if(productMatrix){
       fetch('/assets/factory-videos.json', {cache:'force-cache'}).then(function(response){
@@ -187,6 +186,7 @@
           var card = document.createElement('article');
           var video = document.createElement('video');
           video.controls = true;
+          video.muted = true;
           video.playsInline = true;
           video.preload = 'none';
           video.poster = '/' + item.poster;
