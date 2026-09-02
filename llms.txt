@@ -23,7 +23,7 @@ MCCS means Molded Coir Substrate. MCCS plugs are molded grow plugs made from coc
 
 ## Research Context
 
-MCCS references a 2025 Agronomy PFAL study on the common MCCS substrate material system used across CF formats under lettuce and pak choi test conditions. The study reported stronger biomass indicators, reduced exposed roots at transplanting and lower energy use per unit yield under its stated test conditions. It was not a model-by-model certification or universal performance guarantee.
+MCCS references a 2025 Agronomy PFAL study on the tested MCCS substrate material system under lettuce and pak choi test conditions. The study reported stronger biomass indicators, reduced exposed roots at transplanting and lower energy use per unit yield under its stated test conditions. It was not a model-by-model certification or universal performance guarantee.
 
 Manufacturing-partner SGS SVHC screening and an MSDS are available for the common substrate material system used across CF models. The SGS conclusion applies to the tested sample. Current documents and project applicability are shared with qualified buyers rather than published as unrestricted source PDFs.
 
