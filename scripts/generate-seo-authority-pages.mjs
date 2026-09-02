@@ -10,9 +10,26 @@ const organization = {
   '@id': 'https://www.mccsgrowingmedia.com/#organization',
   name: 'MCCS Growing Media',
   legalName: 'Guangzhou Chengfeng Trading Co., Ltd.',
+  description: 'MCCS Growing Media is an export-facing B2B brand operated by Guangzhou Chengfeng Trading Co., Ltd. for projects supplied through an authorized manufacturing partner in Guangzhou, China.',
   url: 'https://www.mccsgrowingmedia.com/',
   email: 'sales@mccsgrowingmedia.com',
-  telephone: '+86 189 2229 0417'
+  telephone: '+86 189 2229 0417',
+  logo: 'https://www.mccsgrowingmedia.com/assets/favicon.svg',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'B2B sales and sample coordination',
+    email: 'sales@mccsgrowingmedia.com',
+    telephone: '+86 189 2229 0417',
+    availableLanguage: ['English', 'Chinese']
+  },
+  areaServed: ['United States', 'Canada', 'Saudi Arabia', 'United Arab Emirates'].map(name => ({'@type': 'Country', name})),
+  knowsAbout: ['Molded coconut coir and peat substrate plugs', 'Commercial greenhouse propagation', 'Hydroponic grow plugs', 'Tray-fit and sample evaluation', 'Private-label growing media packaging', 'B2B export coordination'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    '@id': 'https://www.mccsgrowingmedia.com/products/#model-list',
+    name: 'MCCS CF Series molded substrate model catalog',
+    url: 'https://www.mccsgrowingmedia.com/products/'
+  }
 };
 
 const pages = [
@@ -109,6 +126,54 @@ const pages = [
     links: [['Review private-label capabilities', '/private-label/'], ['Browse CF Series products', '/products/'], ['Plan sample and shipping', '/sample-shipping/'], ['Use the private-label checklist', '/insights/private-label-seed-starter-checklist/'], ['Review packaging examples', '/private-label/#packaging'], ['Compare greenhouse applications', '/applications/commercial-greenhouse-propagation-plugs/'], ['Read the technical data sheet', '/output/pdf/mccs-molded-coir-substrate-technical-data-sheet.pdf'], ['Start a private-label inquiry', '/contact/']]
   },
   {
+    kind: 'landing',
+    path: 'applications/cannabis-clone-propagation-plugs',
+    published: '2026-09-02',
+    title: 'Cannabis Clone Propagation Plugs | Commercial Trial Guide',
+    description: 'Evaluate molded coir and peat plugs for licensed cannabis clone propagation by tray fit, hydration, handling, sanitation records and side-by-side trials.',
+    label: 'Licensed commercial propagation',
+    h1: 'Cannabis Clone Propagation Plugs',
+    lead: 'A practical qualification route for licensed cultivators comparing molded substrate plugs for clone trays, irrigation routines, rooted-plug handling and transplant workflows.',
+    image: '/assets/plug-seedling-crop.jpg',
+    imageAlt: 'Commercial cuttings in molded substrate plugs prepared for a controlled propagation trial',
+    takeaway: 'Choose a clone plug by controlled facility trials, not by appearance alone. Record tray geometry, cultivar, cutting stage, environmental setpoints, irrigation and handling observations together.',
+    sections: [
+      ['Match the plug to the clone tray', 'Send the tray brand, cell count, top opening, bottom opening, cell depth and cell shape before selecting samples. Confirm dry and hydrated fit without forcing a plug into the cell.', ['Photograph the empty tray beside a ruler or caliper.', 'Note whether plugs are loaded manually or by equipment.', 'Confirm drainage clearance and the intended removal method.']],
+      ['Define a comparable trial', 'Run the candidate and current propagation media with the same cultivar, cutting preparation, tray, environment and observation schedule. Label every treatment and retain the sample model and shipment reference.', ['Separate treatments clearly within the propagation area.', 'Record dates instead of relying on memory.', 'Keep environmental and irrigation changes in the trial log.']],
+      ['Record hydration and irrigation inputs', 'Document the initial wetting method, water or nutrient-solution information, application volume, frequency and drainage observations. A media comparison is difficult to interpret when irrigation inputs are missing.'],
+      ['Evaluate rooted-plug handling', 'At the facility-defined evaluation point, record removal from the cell, root-zone integrity, visible deformation and transplant handling. Use the same handling sequence for the control and candidate plug.'],
+      ['Confirm compliance and procurement scope', 'This page is intended for lawful, licensed commercial cultivation. The buyer remains responsible for crop, import and local regulatory requirements. Before ordering, confirm the selected model, packaging, documents, destination and approved sample reference with sales.']
+    ],
+    table: ['Trial factor', 'Record', 'Procurement use'],
+    rows: [['Tray fit', 'Cell geometry and dry/hydrated fit', 'Selects candidate format'], ['Crop setup', 'Cultivar, cutting stage and dates', 'Keeps groups comparable'], ['Environment', 'Facility setpoints and trial zone', 'Frames observations'], ['Irrigation', 'Method, timing and solution record', 'Explains media response'], ['Handling', 'Cell removal and transplant notes', 'Tests workflow compatibility']],
+    faqs: [['Does MCCS guarantee rooting results for cannabis clones?', 'No. Rooting depends on cultivar, cutting preparation, environment, irrigation and facility practices. Buyers should run a controlled comparison before commercial approval.'], ['What tray information is needed before sampling?', 'Send the tray brand, cell count, top and bottom opening dimensions, depth, cell shape and a clear tray photo or drawing.'], ['Can sample plugs be discussed for licensed cultivation?', 'Yes, subject to lawful use, destination requirements and project qualification. MCCS supplies growing media, not plant material.']],
+    links: [['Compare CF Series models', '/products/'], ['Review 72-cell cutting plug trials', '/applications/72-cell-cutting-propagation-plugs/'], ['Use the tray-fit protocol', '/insights/how-to-evaluate-tray-fit/'], ['Review greenhouse evaluation steps', '/applications/commercial-greenhouse-propagation-plugs/'], ['Plan sample shipping', '/sample-shipping/'], ['Read the EC and pH protocol', '/insights/substrate-plug-ec-ph-testing-protocol/'], ['Review technical data status', '/products/conical-plugs/'], ['Contact sales', '/contact/?application=clone-propagation']]
+  },
+  {
+    kind: 'landing',
+    path: 'applications/tissue-culture-acclimatization-plugs',
+    published: '2026-09-02',
+    title: 'Tissue Culture Acclimatization Plugs | Nursery Trial Guide',
+    description: 'Evaluate molded coir and peat plugs for tissue-culture plantlet acclimatization by tray fit, hydration, humidity transition and transplant handling.',
+    label: 'Plantlet acclimatization',
+    h1: 'Tissue Culture Acclimatization Plugs',
+    lead: 'A buyer-focused trial route for tissue-culture laboratories, liner producers and nurseries matching molded substrate plugs to plantlet trays and acclimatization workflows.',
+    image: '/assets/technology-root-growth.webp',
+    imageAlt: 'Root zone in a molded substrate plug for nursery acclimatization evaluation',
+    takeaway: 'Approve an acclimatization plug only after the buyer has tested tray fit, wetting, humidity transition, plantlet handling and transplant observations under its own protocol.',
+    sections: [
+      ['Map the transfer workflow', 'Document the plantlet type, vessel removal process, washing or preparation step, tray geometry, humidity-management approach and target transplant stage before selecting samples.', ['Identify the point where plantlets enter the plug.', 'Record whether loading is manual or automated.', 'Note the current media format and the reason for comparison.']],
+      ['Confirm tray and plug geometry', 'Share the cell count, top and bottom opening, depth, taper and drainage layout. Check both dry and hydrated fit because seating and removal can change after wetting.'],
+      ['Control the acclimatization comparison', 'Use plantlets from a defined batch and apply the same environment, irrigation and observation schedule to the current medium and candidate plug. Record any treatment differences rather than assuming they are equivalent.'],
+      ['Track transition and handling observations', 'At agreed dates, record visible plant condition, plug surface condition, root-zone handling, cell removal and transplant observations. These operational records help distinguish media fit from changes in humidity or irrigation.'],
+      ['Move to a line trial before recurring supply', 'After bench screening, repeat the selected format across the intended tray and normal nursery workflow. Confirm the model, approved sample reference, packaging, destination and documentation scope before bulk procurement.']
+    ],
+    table: ['Evaluation area', 'Controlled input', 'Record'],
+    rows: [['Plantlet source', 'Defined batch and preparation method', 'Batch and transfer date'], ['Tray fit', 'Measured cell geometry', 'Dry and hydrated fit photos'], ['Humidity transition', 'Buyer acclimatization schedule', 'Setpoints and changes'], ['Irrigation', 'Same method by treatment', 'Volume, timing and drainage'], ['Transplant handling', 'Normal nursery sequence', 'Removal and root-zone notes']],
+    faqs: [['Can one plug format suit every tissue-culture plantlet?', 'No. Plantlet size, tray geometry, acclimatization method and transplant stage vary, so buyers should qualify the format in their own workflow.'], ['What should a laboratory or nursery send first?', 'Send the crop, tray drawing or measurements, plantlet stage, current medium, acclimatization method, destination and expected trial volume.'], ['Are MCCS plugs supplied with plant material?', 'No. MCCS supplies molded growing media only. Plant material, sanitation procedures and crop protocols remain under the buyer\'s control.']],
+    links: [['Browse CF Series models', '/products/'], ['Review commercial greenhouse trials', '/applications/commercial-greenhouse-propagation-plugs/'], ['Use the tray-fit guide', '/insights/how-to-evaluate-tray-fit/'], ['Read the EC and pH protocol', '/insights/substrate-plug-ec-ph-testing-protocol/'], ['Review sample evaluation steps', '/insights/commercial-greenhouse-substrate-plug-evaluation-checklist/'], ['Plan sample shipping', '/sample-shipping/'], ['Review technical data status', '/products/conical-plugs/'], ['Contact sales', '/contact/?application=tissue-culture']]
+  },
+  {
     kind: 'article',
     path: 'insights/substrate-plug-ec-ph-testing-protocol',
     title: 'Substrate Plug EC and pH Testing Protocol for B2B Buyers',
@@ -192,10 +257,12 @@ function footer() {
 
 function render(page) {
   const url = `https://www.mccsgrowingmedia.com/${page.path}/`;
+  const pagePublished = page.published || published;
+  const publishedLabel = new Date(`${pagePublished}T00:00:00Z`).toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'});
   const entity = page.kind === 'article' ? {
     '@context': 'https://schema.org', '@type': 'Article', headline: page.h1,
     description: page.description, image: `https://www.mccsgrowingmedia.com${page.image}`,
-    datePublished: published, dateModified: published, author: organization,
+    datePublished: pagePublished, dateModified: pagePublished, author: organization,
     publisher: organization, mainEntityOfPage: url
   } : {
     '@context': 'https://schema.org', '@type': 'WebPage', name: page.h1,
@@ -213,7 +280,7 @@ function render(page) {
 <title>${esc(page.title)}</title><meta name="description" content="${esc(page.description)}"><link rel="canonical" href="${url}"><link rel="alternate" hreflang="en" href="${url}"><link rel="alternate" hreflang="x-default" href="${url}">
 <meta property="og:title" content="${esc(page.title)}"><meta property="og:description" content="${esc(page.description)}"><meta property="og:type" content="${page.kind === 'article' ? 'article' : 'website'}"><meta property="og:url" content="${url}"><meta property="og:image" content="https://www.mccsgrowingmedia.com${page.image}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(page.title)}"><meta name="twitter:description" content="${esc(page.description)}"><meta name="twitter:image" content="https://www.mccsgrowingmedia.com${page.image}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v=20260804a"><script async src="https://www.googletagmanager.com/gtag/js?id=G-JGR2SQBQHW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JGR2SQBQHW');</script><script type="application/ld+json">${json(organization)}</script><script type="application/ld+json">${json(entity)}</script><script type="application/ld+json">${json(faq)}</script></head>
-<body class="page-insights authority-page">${header()}<main><section class="page-hero article-hero"><div class="container breadcrumbs"><a href="/">Home</a><span>/</span>${crumb}<span>/</span><span>${esc(page.h1)}</span></div><div class="container authority-hero-grid"><div><span class="section-label">${esc(page.label)}</span><h1>${esc(page.h1)}</h1><p class="lead">${esc(page.lead)}</p><p class="article-meta"><time datetime="${published}">August 4, 2026</time> - Reviewed by MCCS Growing Media</p><div class="hero-actions"><a class="btn btn-primary" href="/contact/">Request Sample</a><a class="btn btn-outline" href="/products/">Compare Models</a></div></div><figure class="authority-hero-media"><img src="${page.image}" alt="${esc(page.imageAlt)}"><figcaption>Use project-specific samples and agreed test methods before bulk approval.</figcaption></figure></div></section>
+<body class="page-insights authority-page">${header()}<main><section class="page-hero article-hero"><div class="container breadcrumbs"><a href="/">Home</a><span>/</span>${crumb}<span>/</span><span>${esc(page.h1)}</span></div><div class="container authority-hero-grid"><div><span class="section-label">${esc(page.label)}</span><h1>${esc(page.h1)}</h1><p class="lead">${esc(page.lead)}</p><p class="article-meta"><time datetime="${pagePublished}">${publishedLabel}</time> - Reviewed by MCCS Growing Media</p><div class="hero-actions"><a class="btn btn-primary" href="/contact/">Request Sample</a><a class="btn btn-outline" href="/products/">Compare Models</a></div></div><figure class="authority-hero-media"><img src="${page.image}" alt="${esc(page.imageAlt)}"><figcaption>Use project-specific samples and agreed test methods before bulk approval.</figcaption></figure></div></section>
 <section class="section"><div class="container article-layout"><article class="article-body"><div class="article-cta"><b>Procurement takeaway</b><p>${esc(page.takeaway)}</p></div>${sectionHtml}<h2>Buyer evaluation matrix</h2>${tableHtml}<div class="article-cta"><b>Move from evidence to a sourcing decision</b><p>Send the crop or application, tray dimensions, current workflow, destination, expected volume range and required evidence with the inquiry. MCCS sales can then discuss a relevant sample route without changing protected product specifications.</p><div class="hero-actions"><a class="btn btn-primary" href="/contact/">Contact Sales</a><a class="btn btn-outline" href="/sample-shipping/">Plan Sample Shipping</a></div></div></article><aside class="article-side"><div class="instruction-card"><b>Method note</b><p>Record the model, sample reference, conditions and method beside every result. Batch- or project-specific values should not be generalized without supporting evidence.</p></div><div class="instruction-card"><b>Related sourcing resources</b>${related}</div></aside></div></section>
 <section class="section section-soft"><div class="container"><span class="section-label">Buyer FAQ</span><h2>Technical and procurement questions</h2><div class="technical-faq">${faqHtml}</div></div></section></main>${footer()}</body></html>`;
 }
