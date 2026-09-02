@@ -23,7 +23,7 @@ MCCS means Molded Coir Substrate. MCCS plugs are molded grow plugs made from coc
 
 ## Research Context
 
-MCCS references a 2025 Agronomy PFAL study on the common MCCS substrate material system used across ZY formats under lettuce and pak choi test conditions. The study reported stronger biomass indicators, reduced exposed roots at transplanting and lower energy use per unit yield under its stated test conditions. It was not a model-by-model certification or universal performance guarantee.
+MCCS references a 2025 Agronomy PFAL study on the common MCCS substrate material system used across CF formats under lettuce and pak choi test conditions. The study reported stronger biomass indicators, reduced exposed roots at transplanting and lower energy use per unit yield under its stated test conditions. It was not a model-by-model certification or universal performance guarantee.
 
 Manufacturing-partner SGS SVHC screening and an MSDS are available for the common substrate material system used across CF models. The SGS conclusion applies to the tested sample. Current documents and project applicability are shared with qualified buyers rather than published as unrestricted source PDFs.
 
@@ -47,6 +47,8 @@ Publisher URL: https://www.mdpi.com/2073-4395/15/8/1929
 - Commercial greenhouse propagation plug evaluation: https://www.mccsgrowingmedia.com/applications/commercial-greenhouse-propagation-plugs/
 - Automated transplanter grow plug evaluation: https://www.mccsgrowingmedia.com/applications/automated-transplanter-grow-plugs/
 - Hydroponic lettuce grow plug trial guide: https://www.mccsgrowingmedia.com/applications/hydroponic-lettuce-grow-plugs/
+- Cannabis clone propagation plug trial guide for licensed cultivation: https://www.mccsgrowingmedia.com/applications/cannabis-clone-propagation-plugs/
+- Tissue culture plantlet acclimatization plug trial guide: https://www.mccsgrowingmedia.com/applications/tissue-culture-acclimatization-plugs/
 - Private-label grow plug supply program: https://www.mccsgrowingmedia.com/applications/private-label-grow-plug-manufacturer/
 - Substrate plug EC and pH testing protocol: https://www.mccsgrowingmedia.com/insights/substrate-plug-ec-ph-testing-protocol/
 - Grow plug tray-fit and automation protocol: https://www.mccsgrowingmedia.com/insights/grow-plug-tray-fit-automation-protocol/
