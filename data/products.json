@@ -819,43 +819,6 @@
     "imageType": "Product catalog image"
   },
   {
-    "model": "CF-2735",
-    "name_en": "Tissue Culture Propagation Plug 3.5 cm",
-    "category": "Tissue Culture Plug",
-    "size": "Top Ø 2.7 cm / Bottom Ø 2.3 cm / Height 3.5 cm",
-    "trayFit": "180-cell propagation tray",
-    "bestFor": "Tissue-culture acclimatization and compact high-count trays",
-    "desc": "A compact tissue-culture propagation plug documented for 180-cell tray workflows.",
-    "slug": "cf-2735",
-    "name": "CF-2735 Tissue Culture Propagation Plug 3.5 cm",
-    "image": "assets/products/CF-2735-factory.webp",
-    "applicationTags": [
-      "Tissue Culture"
-    ],
-    "material": "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.",
-    "packaging": "Bulk carton or custom private-label packaging after sample approval.",
-    "certifications": [
-      "SGS test report available",
-      "Batch testing by project",
-      "Export document support"
-    ],
-    "cartonQty": "Confirm after carton size and packaging format are approved.",
-    "moq": "MOQ is confirmed by packaging format and shipping method. Trial orders are available for qualified B2B buyers.",
-    "gallery": [
-      "assets/products/CF-2735-factory.webp",
-      "assets/factory-packaging.webp",
-      "assets/sample-shipping-hero.webp"
-    ],
-    "status": "New",
-    "description": "A compact tissue-culture propagation plug documented for 180-cell tray workflows.",
-    "features": [],
-    "cartonNote": "No carton quantity is stated in the source catalog. Final quantity must be confirmed by packaging format.",
-    "factorySpecificationStatus": "Dimensions and application cross-checked against the factory website.",
-    "sourceVerifiedAt": "2026-09-01",
-    "imageAlt": "CF-2735 factory product image",
-    "imageType": "Factory product image"
-  },
-  {
     "model": "CF-3038",
     "name_en": "Cuttings Propagation Plug 3.8 cm",
     "category": "Cuttings Propagation Plug",

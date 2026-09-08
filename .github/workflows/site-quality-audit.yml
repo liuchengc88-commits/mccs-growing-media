@@ -20,6 +20,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install image audit dependency
+        run: python -m pip install Pillow
+      - name: Verify generated pages are synchronized
+        run: |
+          node scripts/sync-cf-product-models.mjs
+          node scripts/generate-static-product-catalogs.mjs
+          node scripts/normalize-site-content.mjs
+          node scripts/sync-consent-mode.mjs
+          python scripts/optimize-image-markup.py
+          git diff --exit-code
       - name: Audit public pages
         run: python scripts/audit-site.py
       - name: Audit JSON-LD inventory
@@ -29,8 +39,15 @@ jobs:
       - name: Report broken external links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --root-dir "$(pwd)" --cache --no-progress --exclude-mail './**/*.html' './**/*.md'
-          fail: false
+          args: >-
+            --root-dir "$(pwd)"
+            --cache
+            --no-progress
+            --include-mail=false
+            --accept "200..=399,403"
+            --exclude-path "(^|/)(privacy|terms)[.]html$"
+            './**/*.html'
+          fail: true
           jobSummary: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,6 +69,30 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-production-report
+          path: .lighthouseci/
+          if-no-files-found: warn
+
+  pull-request-lighthouse:
+    name: Pull request Lighthouse gate
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Lighthouse CI
+        run: npm install --global @lhci/cli@0.15.x
+      - name: Audit pull request pages
+        run: lhci autorun --config=lighthouserc.pr.json
+      - name: Upload Lighthouse reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-pull-request-report
           path: .lighthouseci/
           if-no-files-found: warn
 

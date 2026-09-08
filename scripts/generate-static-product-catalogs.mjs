@@ -106,6 +106,7 @@ function itemList(language, originPath) {
     name: language === 'zh-CN' ? 'MCCS CF 系列产品型号目录' : 'MCCS CF Series model catalog',
     numberOfItems: products.length,
     itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    subjectOf: evidenceAnchors,
     itemListElement: products.map((product, index) => {
       const url = `https://www.mccsgrowingmedia.com${originPath}#${product.slug}`;
       return {
@@ -139,8 +140,7 @@ function itemList(language, originPath) {
             { '@type': 'PropertyValue', name: 'Carton quantity status', value: product.cartonQty },
             { '@type': 'PropertyValue', name: 'MOQ status', value: product.moq },
             { '@type': 'PropertyValue', name: 'Evidence status', value: 'Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.' }
-          ],
-          subjectOf: evidenceAnchors
+          ]
         }
       };
     })
@@ -149,12 +149,17 @@ function itemList(language, originPath) {
 
 function syncCatalogCount(html, language) {
   const replacements = {
-    'zh-CN': [/比较 \d+ 个 MCCS/g, `比较 ${products.length} 个 MCCS`],
-    es: [/Compare \d+ modelos de sustrato/g, `Compare ${products.length} modelos de sustrato`],
-    ar: [/قارن \d+ نموذجاً/g, `قارن ${products.length} نموذجاً`]
+    'zh-CN': [
+      [/比较 \d+ 个型号/g, `比较 ${products.length} 个型号`],
+      [/比较 \d+ 个 MCCS/g, `比较 ${products.length} 个 MCCS`]
+    ],
+    es: [[/Compare \d+ modelos de sustrato/g, `Compare ${products.length} modelos de sustrato`]],
+    ar: [[/قارن \d+ نموذجاً/g, `قارن ${products.length} نموذجاً`]]
   };
-  const replacement = replacements[language];
-  return replacement ? html.replace(replacement[0], replacement[1]) : html;
+  return (replacements[language] || []).reduce(
+    (output, [pattern, replacement]) => output.replace(pattern, replacement),
+    html
+  );
 }
 
 for (const page of pages) {

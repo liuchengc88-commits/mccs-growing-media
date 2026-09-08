@@ -78,8 +78,7 @@ for (const filePath of listHtmlFiles(root)) {
 const invalidProducts = productEntities.filter((product) => {
   const node = product.node;
   return !node.name || !node.sku || !node.description || !node.brand
-    || !Array.isArray(node.additionalProperty) || node.additionalProperty.length < 3
-    || !Array.isArray(node.subjectOf) || node.subjectOf.length < 3;
+    || !Array.isArray(node.additionalProperty) || node.additionalProperty.length < 3;
 });
 const richResultEligibleProducts = productEntities.filter(
   (product) => product.offers || product.review || product.aggregateRating
