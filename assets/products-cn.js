@@ -18,7 +18,6 @@ const productCn = {
   "CF-015": ["兰花育苗块 4.5 cm", "适用于兰花育苗和分阶段换盆。"],
   "CF-060": ["60 穴蝴蝶兰育苗块 4.8 cm", "适用于蝴蝶兰育苗及 60 穴盘苗场操作。"],
   "CF-060B": ["60 穴蝴蝶兰育苗块 5.2 cm", "适用于需要更大基质体积的蝴蝶兰育苗项目。"],
-  "CF-2735": ["紧凑型组培基质块 3.5 cm", "适用于组培苗过渡和紧凑型育苗盘。"],
   "CF-104": ["通用育苗块 4.0 cm", "适用于常规育苗、播种和移栽测试。"],
   "CF-128B": ["128 穴扦插育苗块 3.8 cm", "适用于高密度扦插繁殖和 128 穴盘。"],
   "CF-167": ["紧凑型扦插育苗块 3.0 cm", "适用于高密度扦插和紧凑型穴盘。"],
@@ -75,11 +74,12 @@ async function loadChineseProducts() {
     category.appendChild(option);
   });
 
-  function card(product) {
+  function card(product, index) {
     const localized = productCn[product.model] || [product.name_en, product.description];
     const tags = (product.applicationTags || []).map((tag) => `<span>${applicationCn[tag] || tag}</span>`).join("");
     const status = product.status ? `<em class="product-status">${product.status === "New" ? "新增" : product.status}</em>` : "";
-    return `<article id="${product.slug}" class="matrix-card cf-product-card"><div class="product-image-panel">${status}<img src="/${product.image}" alt="${product.imageAlt || `${product.model} ${localized[0]}`}" loading="lazy"></div><div class="matrix-body"><span>${product.model}</span><h2>${localized[0]}</h2><p>${localized[1]}</p><div class="tag-row">${tags}</div><dl><dt>类别</dt><dd>${categoryCn[product.category] || product.category}</dd><dt>尺寸</dt><dd>${product.size}</dd><dt>穴盘 / 容器匹配</dt><dd>${product.trayFit}</dd><dt>适用场景</dt><dd>${product.bestFor}</dd><dt>装箱数量</dt><dd>${product.cartonQty}</dd><dt>起订量</dt><dd>${product.moq}</dd></dl><a class="btn btn-primary" href="/cn/contact/">申请样品</a></div></article>`;
+    const priority = index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+    return `<article id="${product.slug}" class="matrix-card cf-product-card"><div class="product-image-panel">${status}<img src="/${product.image}" alt="${product.imageAlt || `${product.model} ${localized[0]}`}" width="240" height="240" ${priority} decoding="async"></div><div class="matrix-body"><span>${product.model}</span><h2>${localized[0]}</h2><p>${localized[1]}</p><div class="tag-row">${tags}</div><dl><dt>类别</dt><dd>${categoryCn[product.category] || product.category}</dd><dt>尺寸</dt><dd>${product.size}</dd><dt>穴盘 / 容器匹配</dt><dd>${product.trayFit}</dd><dt>适用场景</dt><dd>${product.bestFor}</dd><dt>装箱数量</dt><dd>${product.cartonQty}</dd><dt>起订量</dt><dd>${product.moq}</dd></dl><a class="btn btn-primary" href="/cn/contact/">申请样品</a></div></article>`;
   }
 
   function render() {

@@ -245,7 +245,6 @@ def expected_item_list(products: list[dict], language: str, origin_path: str, ch
                         "value": "Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.",
                     },
                 ],
-                "subjectOf": EVIDENCE_ANCHORS,
             },
         })
     return elements
@@ -319,6 +318,21 @@ def main() -> int:
 
         if '/assets/ai-referral-tracking.js' not in html:
             add_issue(issues, "ERROR", relative, "Missing AI referral session tracking")
+        if "googletagmanager.com/gtag/js" in html and 'id="mccs-consent-default"' not in html:
+            add_issue(issues, "ERROR", relative, "Google Analytics loads without a default consent state")
+        if re.search(r'name=["\']whatsapp["\'][^>]*\brequired\b', html, re.IGNORECASE):
+            add_issue(issues, "ERROR", relative, "WhatsApp must remain optional on buyer inquiry forms")
+        for prohibited in (
+            "CF-2735",
+            "used across ZY formats",
+            "compare ZY dimensions",
+            "plugs cónicos ZY",
+            "سدادات ZY",
+            "30% ahorro de agua",
+            "30% مقارنة بالركائز السائبة",
+        ):
+            if prohibited.lower() in html.lower():
+                add_issue(issues, "ERROR", relative, f"Prohibited or retired buyer-facing claim: {prohibited}")
 
         title = "".join(parser.title_parts).strip()
         descriptions = [
@@ -363,6 +377,11 @@ def main() -> int:
             source = str(image.get("src") or "")
             if "alt" not in image:
                 add_issue(issues, "WARN", relative, f"Image missing alt: {source or '[inline]'}")
+            if source and not source.startswith(("http://", "https://", "data:")):
+                if not image.get("width") or not image.get("height"):
+                    add_issue(issues, "ERROR", relative, f"Local image missing intrinsic dimensions: {source}")
+                if image.get("loading") not in {"lazy", "eager"}:
+                    add_issue(issues, "ERROR", relative, f"Local image missing loading priority: {source}")
             target = local_target(path, source)
             if target is not None and not target.exists():
                 add_issue(issues, "ERROR", relative, f"Missing image: {source}")

@@ -8,7 +8,7 @@ let products = JSON.parse(fs.readFileSync(productFile, "utf8"));
 const verifiedAt = "2026-09-01";
 const factoryModels = new Set([
   "CF-005", "CF-006", "CF-060", "CF-060B", "CF-072", "CF-128", "CF-128B",
-  "CF-167", "CF-200", "CF-2735", "CF-3038", "CF-3038B", "CF-3545",
+  "CF-167", "CF-200", "CF-3038", "CF-3038B", "CF-3545",
   "CF-5050"
 ]);
 const duplicateModels = new Set([
@@ -103,15 +103,6 @@ const confirmedFactoryModels = {
     bestFor: "High-density cuttings propagation and automated 200-cell nursery workflows",
     description: "A compact molded plug aligned with 200-cell cuttings propagation and high-density nursery handling.",
     applicationTags: ["Cuttings", "Seedling"],
-  },
-  "CF-2735": {
-    name_en: "Tissue Culture Propagation Plug 3.5 cm",
-    category: "Tissue Culture Plug",
-    size: "Top Ø 2.7 cm / Bottom Ø 2.3 cm / Height 3.5 cm",
-    trayFit: "180-cell propagation tray",
-    bestFor: "Tissue-culture acclimatization and compact high-count trays",
-    description: "A compact tissue-culture propagation plug documented for 180-cell tray workflows.",
-    applicationTags: ["Tissue Culture"],
   },
   "CF-3038": {
     name_en: "Cuttings Propagation Plug 3.8 cm",

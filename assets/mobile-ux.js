@@ -24,19 +24,54 @@
 
     var cookie = document.getElementById('cookieBanner');
     var accept = document.getElementById('cookieAccept');
+    function consentState(){
+      try{
+        return localStorage.getItem('mccs_cookie_consent') ||
+          (localStorage.getItem('mccs_cookie_ok') === '1' ? 'granted' : '');
+      }catch(e){ return ''; }
+    }
+    function setConsent(value){
+      try{
+        localStorage.setItem('mccs_cookie_consent', value);
+        localStorage.removeItem('mccs_cookie_ok');
+      }catch(e){}
+      if(typeof window.gtag === 'function'){
+        window.gtag('consent', 'update', {
+          analytics_storage: value === 'granted' ? 'granted' : 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+      }
+    }
     function hideCookie(){
       if(!cookie) return;
       cookie.classList.add('is-hidden');
       document.body.classList.remove('cookie-visible');
-      try{localStorage.setItem('mccs_cookie_ok','1');}catch(e){}
       setTimeout(function(){ cookie.style.display='none'; }, 260);
     }
     if(cookie){
-      if(cookie.style.display === 'none' || (function(){try{return localStorage.getItem('mccs_cookie_ok')==='1'}catch(e){return false}})()){
+      var storedConsent = consentState();
+      if(storedConsent === 'granted') setConsent('granted');
+      if(cookie.style.display === 'none' || storedConsent === 'granted' || storedConsent === 'denied'){
         document.body.classList.remove('cookie-visible');
         cookie.style.display='none';
       }else{
         document.body.classList.add('cookie-visible');
+        if(!cookie.querySelector('.cookie-reject')){
+          var reject = document.createElement('button');
+          var lang = (document.documentElement.lang || 'en').toLowerCase();
+          reject.type = 'button';
+          reject.className = 'cookie-reject';
+          reject.textContent = lang.indexOf('zh') === 0 ? '拒绝' :
+            lang.indexOf('es') === 0 ? 'Rechazar' :
+            lang.indexOf('ar') === 0 ? 'رفض' : 'Reject';
+          reject.setAttribute('aria-label', lang.indexOf('zh') === 0 ? '拒绝网站分析 Cookie' :
+            lang.indexOf('es') === 0 ? 'Rechazar cookies de análisis' :
+            lang.indexOf('ar') === 0 ? 'رفض ملفات تعريف الارتباط التحليلية' : 'Reject analytics cookies');
+          cookie.insertBefore(reject, accept || null);
+          reject.addEventListener('click', function(){ setConsent('denied'); hideCookie(); });
+        }
         if(!cookie.querySelector('.cookie-close')){
           var close = document.createElement('button');
           close.type = 'button';
@@ -46,7 +81,7 @@
           cookie.appendChild(close);
           close.addEventListener('click', hideCookie);
         }
-        accept && accept.addEventListener('click', hideCookie);
+        accept && accept.addEventListener('click', function(){ setConsent('granted'); hideCookie(); });
         var collapsed = false;
         window.addEventListener('scroll', function(){
           if(!collapsed && window.scrollY > 120){
