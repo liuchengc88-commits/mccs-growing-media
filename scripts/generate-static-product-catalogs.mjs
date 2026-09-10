@@ -116,31 +116,13 @@ function itemList(language, originPath) {
         description: `${product.size}. ${applications(product, language)}.`,
         url,
         item: {
-          '@type': 'Product',
-          '@id': `${url}-product`,
+          '@type': 'Thing',
+          '@id': `${url}-model`,
           name: `${product.model} ${productName(product, language)}`,
-          sku: product.model,
-          mpn: product.model,
+          identifier: product.model,
           url,
           image: `https://www.mccsgrowingmedia.com/${product.image}`,
-          description: product.description || product.desc,
-          category: product.category,
-          material: product.material,
-          brand: { '@id': 'https://www.mccsgrowingmedia.com/#brand' },
-          audience: {
-            '@type': 'BusinessAudience',
-            audienceType: 'Commercial greenhouse, nursery, hydroponic, distributor and private-label buyers'
-          },
-          additionalProperty: [
-            { '@type': 'PropertyValue', name: 'Model', value: product.model },
-            { '@type': 'PropertyValue', name: 'Dimensions', value: product.size },
-            { '@type': 'PropertyValue', name: 'Tray or holder fit', value: product.trayFit },
-            { '@type': 'PropertyValue', name: 'Recommended application', value: product.bestFor },
-            { '@type': 'PropertyValue', name: 'Packaging options', value: product.packaging },
-            { '@type': 'PropertyValue', name: 'Carton quantity status', value: product.cartonQty },
-            { '@type': 'PropertyValue', name: 'MOQ status', value: product.moq },
-            { '@type': 'PropertyValue', name: 'Evidence status', value: 'Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.' }
-          ]
+          description: product.description || product.desc
         }
       };
     })

@@ -103,6 +103,7 @@ class PageParser(HTMLParser):
         self.heading_levels: list[int] = []
         self.meta: list[dict[str, str | None]] = []
         self.canonicals: list[str] = []
+        self.alternates: list[dict[str, str | None]] = []
         self.links: list[str] = []
         self.images: list[dict[str, str | None]] = []
         self.json_ld: list[str] = []
@@ -124,6 +125,8 @@ class PageParser(HTMLParser):
             self.meta.append(values)
         elif tag == "link" and values.get("rel") == "canonical":
             self.canonicals.append(values.get("href", "") or "")
+        elif tag == "link" and values.get("rel") == "alternate" and values.get("hreflang"):
+            self.alternates.append(values)
         elif tag == "a" and values.get("href"):
             self.links.append(values["href"])
         elif tag == "img":
@@ -216,35 +219,13 @@ def expected_item_list(products: list[dict], language: str, origin_path: str, ch
             "description": f"{product['size']}. {localized_applications(product, language)}.",
             "url": url,
             "item": {
-                "@type": "Product",
-                "@id": f"{url}-product",
+                "@type": "Thing",
+                "@id": f"{url}-model",
                 "name": name,
-                "sku": product["model"],
-                "mpn": product["model"],
+                "identifier": product["model"],
                 "url": url,
                 "image": f"{CANONICAL_ORIGIN}/{product['image']}",
                 "description": product.get("description") or product.get("desc"),
-                "category": product["category"],
-                "material": product["material"],
-                "brand": {"@id": f"{CANONICAL_ORIGIN}/#brand"},
-                "audience": {
-                    "@type": "BusinessAudience",
-                    "audienceType": "Commercial greenhouse, nursery, hydroponic, distributor and private-label buyers",
-                },
-                "additionalProperty": [
-                    {"@type": "PropertyValue", "name": "Model", "value": product["model"]},
-                    {"@type": "PropertyValue", "name": "Dimensions", "value": product["size"]},
-                    {"@type": "PropertyValue", "name": "Tray or holder fit", "value": product["trayFit"]},
-                    {"@type": "PropertyValue", "name": "Recommended application", "value": product["bestFor"]},
-                    {"@type": "PropertyValue", "name": "Packaging options", "value": product["packaging"]},
-                    {"@type": "PropertyValue", "name": "Carton quantity status", "value": product["cartonQty"]},
-                    {"@type": "PropertyValue", "name": "MOQ status", "value": product["moq"]},
-                    {
-                        "@type": "PropertyValue",
-                        "name": "Evidence status",
-                        "value": "Current SGS/MSDS scope and batch or project evidence must be confirmed during qualified buyer review.",
-                    },
-                ],
             },
         })
     return elements
@@ -255,11 +236,20 @@ def main() -> int:
     issues: list[tuple[str, str, str]] = []
     titles: dict[str, list[str]] = defaultdict(list)
     canonicals: dict[str, list[str]] = defaultdict(list)
-    product_entities = 0
+    catalog_model_entities = 0
     products = json.loads((ROOT / "data" / "products.json").read_text(encoding="utf-8"))
     chinese_source = (ROOT / "assets" / "products-cn.js").read_text(encoding="utf-8")
     chinese_match = re.search(r"const productCn = (\{[\s\S]*?\n\});", chinese_source)
     chinese_names = json.loads(chinese_match.group(1)) if chinese_match else {}
+    noindex_urls: set[str] = set()
+    for page in pages:
+        page_html = page.read_text(encoding="utf-8")
+        if re.search(r'<meta\b[^>]*\bcontent=["\'][^"\']*noindex', page_html, re.IGNORECASE):
+            relative_page = page.relative_to(ROOT).as_posix()
+            route = "/" if relative_page == "index.html" else f"/{relative_page}"
+            if route.endswith("/index.html"):
+                route = route.removesuffix("index.html")
+            noindex_urls.add(f"{CANONICAL_ORIGIN}{route}")
 
     key_path = ROOT / f"{INDEXNOW_KEY}.txt"
     if not key_path.exists() or key_path.read_text(encoding="utf-8").strip() != INDEXNOW_KEY:
@@ -347,6 +337,13 @@ def main() -> int:
         )
         noindex = "noindex" in robots
 
+        if noindex and parser.alternates:
+            add_issue(issues, "ERROR", relative, "Noindex page must not publish hreflang alternates")
+        for alternate in parser.alternates:
+            href = str(alternate.get("href") or "").split("#", 1)[0]
+            if href in noindex_urls:
+                add_issue(issues, "ERROR", relative, f"Hreflang points to noindex page: {href}")
+
         if not title:
             add_issue(issues, "ERROR", relative, "Missing title")
         if len(descriptions) != 1 or not descriptions[0]:
@@ -404,8 +401,6 @@ def main() -> int:
                     continue
                 if root.get("@type") and not root.get("@context"):
                     add_issue(issues, "ERROR", relative, f"JSON-LD {root.get('@type')} missing @context")
-                if root.get("@type") == "Product":
-                    product_entities += 1
                 if relative in PRODUCT_CATALOG_PAGES and root.get("@type") == "ItemList":
                     catalog_item_list_found = True
                     elements = root.get("itemListElement", [])
@@ -418,11 +413,11 @@ def main() -> int:
                             relative,
                             "Product ItemList fields do not exactly match data/products.json",
                         )
-                    product_entities += sum(
+                    catalog_model_entities += sum(
                         1 for element in elements
                         if isinstance(element, dict)
                         and isinstance(element.get("item"), dict)
-                        and element["item"].get("@type") == "Product"
+                        and element["item"].get("@type") == "Thing"
                     )
         if relative in PRODUCT_CATALOG_PAGES and not catalog_item_list_found:
             add_issue(issues, "ERROR", relative, "Missing product ItemList JSON-LD")
@@ -457,19 +452,19 @@ def main() -> int:
     for priority in sorted(PRIORITY_PAGES - existing):
         add_issue(issues, "ERROR", priority, "Priority page is missing")
 
-    expected_product_entities = len(products) * len(PRODUCT_CATALOG_PAGES)
-    if product_entities != expected_product_entities:
+    expected_catalog_model_entities = len(products) * len(PRODUCT_CATALOG_PAGES)
+    if catalog_model_entities != expected_catalog_model_entities:
         add_issue(
             issues,
             "ERROR",
             "product schema",
-            f"Expected {expected_product_entities} Product entities, found {product_entities}",
+            f"Expected {expected_catalog_model_entities} catalog model entities, found {catalog_model_entities}",
         )
 
     counts = Counter(level for level, _, _ in issues)
     print(f"Audited HTML pages: {len(pages)}")
     print(f"Sitemap URLs: {len(sitemap_urls)}")
-    print(f"Product JSON-LD entities: {product_entities}")
+    print(f"Catalog model JSON-LD entities: {catalog_model_entities}")
     print(f"Errors: {counts['ERROR']} | Warnings: {counts['WARN']}")
     for level, page, message in issues:
         print(f"{level}\t{page}\t{message}")

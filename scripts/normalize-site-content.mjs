@@ -20,6 +20,36 @@ function ensureHeadMarkup(file, markup) {
   fs.writeFileSync(filePath, html, 'utf8');
 }
 
+function ensureContentBefore(file, marker, content) {
+  const filePath = path.join(root, file);
+  let html = fs.readFileSync(filePath, 'utf8');
+  html = html.replaceAll(content, '');
+  html = html.replace(marker, `${content}${marker}`);
+  fs.writeFileSync(filePath, html, 'utf8');
+}
+
+function setMetadata(file, title, description) {
+  const filePath = path.join(root, file);
+  let html = fs.readFileSync(filePath, 'utf8');
+  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`);
+  html = html.replace(/<meta\b([^>]*\bname=["']description["'][^>]*)>/i, (tag) =>
+    tag.replace(/\bcontent=["'][^"']*["']/i, `content="${description}"`)
+  );
+  html = html.replace(/<meta\b([^>]*\bproperty=["']og:title["'][^>]*)>/i, (tag) =>
+    tag.replace(/\bcontent=["'][^"']*["']/i, `content="${title}"`)
+  );
+  html = html.replace(/<meta\b([^>]*\bproperty=["']og:description["'][^>]*)>/i, (tag) =>
+    tag.replace(/\bcontent=["'][^"']*["']/i, `content="${description}"`)
+  );
+  html = html.replace(/<meta\b([^>]*\bname=["']twitter:title["'][^>]*)>/i, (tag) =>
+    tag.replace(/\bcontent=["'][^"']*["']/i, `content="${title}"`)
+  );
+  html = html.replace(/<meta\b([^>]*\bname=["']twitter:description["'][^>]*)>/i, (tag) =>
+    tag.replace(/\bcontent=["'][^"']*["']/i, `content="${description}"`)
+  );
+  fs.writeFileSync(filePath, html, 'utf8');
+}
+
 const spanishCommon = [
   ['Factory-Direct Growing Media', 'Sustratos moldeados para compradores B2B'],
   ['Factory-direct supply', 'Suministro coordinado con fábrica'],
@@ -150,6 +180,36 @@ update('ar/insights/hydroponic-grow-plug-guide/index.html', [
   ['Products', 'المنتجات']
 ]);
 
+ensureContentBefore(
+  'insights/how-to-choose-substrate-plugs/index.html',
+  '<h2>Buyer checklist</h2>',
+  '<h2>Match the plug to the growing workflow</h2><p>Start with the dry and hydrated dimensions, cell profile and intended root-zone contact. A plug selected for a compact hydroponic holder may not suit a deep nursery tray, even when the top diameter appears similar. Ask how the sample will be hydrated, sown or planted, moved through the facility and transplanted. Record those conditions so different CF models can be compared on the same basis.</p>'
+);
+
+ensureContentBefore(
+  'insights/how-to-evaluate-tray-fit/index.html',
+  '<h2>Buyer checklist</h2>',
+  '<h2>Measurements to record before sampling</h2><p>Measure the top opening, lower opening, usable cell depth and any taper, ribs or drainage features that can contact the plug. A tray drawing is useful, but a clear photograph with a ruler or a physical tray sample can reveal details that drawings miss. During the wet test, note expansion, removal force, stability during movement and whether roots have an unobstructed path into the next growing stage.</p>'
+);
+
+ensureContentBefore(
+  'insights/private-label-seed-starter-checklist/index.html',
+  '<h2>Buyer checklist</h2>',
+  '<h2>Separate product approval from packaging approval</h2><p>Approve the growing-media sample under the intended tray, crop and irrigation conditions before locking retail artwork or carton quantities. Packaging review should then cover unit count, moisture protection, labeling language, barcode ownership, instruction content and transport handling. Keeping these approvals separate makes it easier to identify whether a revision concerns the plug, the pack or the buyer\'s market requirements.</p>'
+);
+
+ensureContentBefore(
+  'insights/rockwool-alternative-for-retail-kits/index.html',
+  '<h2>Buyer checklist</h2>',
+  '<h2>Compare systems under the same conditions</h2><p>Material names alone do not determine performance. Compare candidate plugs using the same seed lot, holder, nutrient program, irrigation schedule and growing period. Record hydration time, dimensional stability, particle shedding, root access and transplant handling. For a retail kit, also test storage, consumer instructions and pack cleanliness. The final choice should follow the buyer\'s own trial rather than a general material claim.</p>'
+);
+
+ensureContentBefore(
+  'insights/sample-to-bulk-shipping-guide/index.html',
+  '<h2>Buyer checklist</h2>',
+  '<h2>Build a traceable approval path</h2><p>Identify each sample by model and preparation date, then document the tray, crop and test method used by the buyer. Before a commercial shipment, reconfirm the approved model, packaging format, carton markings, destination requirements and shipping terms. Courier samples and bulk freight have different cost, document and handling constraints, so the preferred route should be checked for each destination instead of assumed from an earlier shipment.</p>'
+);
+
 for (const locale of ['', 'cn/', 'es/', 'ar/']) {
   const file = `${locale}contact/index.html`;
   const filePath = path.join(root, file);
@@ -197,6 +257,71 @@ for (const file of Object.keys(filterLabels)) {
     responsivePreload
   ]]);
   ensureHeadMarkup(file, responsivePreload);
+}
+
+const metadata = {
+  'index.html': ['Molded Coir Peat Grow Plugs for Greenhouses | MCCS', 'Factory-authorized molded coir and peat grow plugs for hydroponic greenhouses, PFALs, nurseries and private-label buyers. Compare CF models.'],
+  'applications/root-development-gallery/index.html': ['Grow Plug Root Development Gallery | MCCS', 'View 16 authorized high-resolution factory application records for molded coir and peat plugs in tissue culture, cuttings, orchid and hydroponic workflows.'],
+  'applications/commercial-greenhouse-propagation-plugs/index.html': ['Greenhouse Propagation Plug Trials | MCCS', 'Evaluate molded coir and peat propagation plugs for commercial greenhouses with tray-fit, hydration, handling and crop-specific sample tests.'],
+  'insights/commercial-greenhouse-substrate-plug-evaluation-checklist/index.html': ['Greenhouse Plug Evaluation Checklist | MCCS', 'A practical B2B checklist for comparing molded substrate plugs by tray fit, hydration, handling, crop response and documented test conditions.'],
+  'insights/how-to-choose-substrate-plugs/index.html': ['Choose Substrate Plugs by Application | MCCS', 'Compare molded substrate plug requirements for seedlings, hydroponics, orchids, tissue culture and succulent growing programs.'],
+  'insights/middle-east-water-saving-substrate/index.html': ['Middle East Greenhouse Substrate Planning | MCCS', 'Plan substrate plug trials for arid greenhouses using local water quality, irrigation timing, crop, tray and climate-control conditions.'],
+  'insights/north-america-hydroponic-grow-plugs/index.html': ['Hydroponic Grow Plugs for North America | MCCS', 'Source molded coir and peat grow plugs for North American greenhouses with tray-fit samples, project documentation and export coordination.'],
+  'insights/private-label-seed-starter-checklist/index.html': ['Private Label Seed Starter Checklist | MCCS', 'A B2B checklist for seed starter kit packaging, labeling, instructions, model selection and sample approval before a bulk order.'],
+  'insights/rockwool-alternative-for-retail-kits/index.html': ['Rockwool Alternatives for Grow Kits | MCCS', 'Compare molded coir and peat plugs with rockwool for retail grow kits, focusing on handling, packaging, tray fit and sample validation.'],
+  'insights/sample-to-bulk-shipping-guide/index.html': ['Grow Plug Sample-to-Bulk Shipping Guide | MCCS', 'Plan grow plug samples, tray-fit approval, packaging checks, export documents and the transition to regular bulk shipments.'],
+  'insights/saudi-greenhouse-substrate-trial-protocol/index.html': ['Saudi Greenhouse Substrate Trial Protocol | MCCS', 'Compare substrate plugs in Saudi greenhouses under recorded water, irrigation, climate-control, tray and crop conditions.'],
+  'middle-east/index.html': ['Middle East Hydroponic Greenhouse Substrate | MCCS', 'Molded coir and peat substrate plug samples for Saudi and Middle East greenhouses, evaluated with local water, trays and irrigation conditions.'],
+  'products/index.html': ['Hydroponic Grow Plugs Bulk Supplier | MCCS', 'Compare 28 MCCS CF molded coir and peat plug models by application, dimensions and tray fit, then request samples for project validation.'],
+  'sample-shipping/index.html': ['Grow Plug Samples and Export Shipping | MCCS', 'Plan molded grow plug samples, tray-fit checks, packaging, courier or freight options and export documents with MCCS sales.'],
+  'es/about/index.html': ['MCCS: sustratos moldeados directos de fábrica', 'Conozca a MCCS, proveedor B2B de plugs moldeados de coco y turba con coordinación de fábrica, muestras, embalaje y exportación.'],
+  'es/index.html': ['Plugs moldeados de coco y turba | MCCS', 'Plugs moldeados de coco y turba para hidroponía, viveros y marcas privadas. Compare modelos CF y solicite muestras para su bandeja.'],
+  'es/insights/how-to-evaluate-tray-fit/index.html': ['Ajuste de bandejas y tamaño del plug | MCCS', 'Guía para medir la abertura, profundidad y forma de la bandeja antes de seleccionar y probar un plug de sustrato moldeado.'],
+  'es/insights/index.html': ['Guías para compradores de sustratos | MCCS', 'Guías B2B sobre selección de plugs moldeados, ajuste de bandejas, pruebas de muestras, embalaje y compras para invernaderos.'],
+  'es/insights/private-label-seed-starter-checklist/index.html': ['Lista para kits de germinación privados | MCCS', 'Lista B2B para revisar el embalaje, las etiquetas, las instrucciones, el modelo y las muestras de un kit de germinación.'],
+  'es/private-label/index.html': ['Marca privada para plugs de sustrato | MCCS', 'Envases de marca privada, diseño de moldes y coordinación de muestras para proyectos B2B de plugs moldeados de coco y turba.'],
+  'es/sample-shipping/index.html': ['Muestras y envío de plugs de sustrato | MCCS', 'Planifique muestras, mensajería y exportación de plugs moldeados de coco y turba con confirmación previa del modelo y la bandeja.'],
+  'ar/about/index.html': ['حول MCCS وتوريد سدادات الركيزة من المصنع', 'تعرف على MCCS لتوريد سدادات جوز الهند والبيتموس المصبوبة وتنسيق العينات والتغليف والتصدير للمشترين التجاريين.'],
+  'ar/index.html': ['سدادات جوز الهند والبيتموس المصبوبة | MCCS', 'سدادات ركيزة مصبوبة للزراعة المائية والمشاتل والعلامات الخاصة مع مقارنة موديلات CF وطلب عينات للمشروع.'],
+  'ar/insights/index.html': ['أدلة شراء سدادات الركيزة المصبوبة | MCCS', 'أدلة تجارية لاختيار سدادات الركيزة وملاءمة الصواني واختبار العينات والتغليف والتوريد للمشاتل والبيوت المحمية.'],
+  'ar/private-label/index.html': ['تغليف بعلامة خاصة لسدادات الركيزة | MCCS', 'تغليف بعلامة خاصة وتصميم قوالب وتنسيق عينات لمشاريع سدادات جوز الهند والبيتموس المصبوبة للمشترين التجاريين.'],
+  'ar/sample-shipping/index.html': ['عينات وشحن سدادات الركيزة المصبوبة | MCCS', 'خطط للعينات والشحن السريع والتصدير بعد تأكيد الموديل والصينية لسدادات جوز الهند والبيتموس المصبوبة.']
+};
+for (const [file, [title, description]] of Object.entries(metadata)) {
+  setMetadata(file, title, description);
+}
+
+function publicUrlFor(file) {
+  const normalized = file.replaceAll('\\', '/');
+  if (normalized === 'index.html') return 'https://www.mccsgrowingmedia.com/';
+  return `https://www.mccsgrowingmedia.com/${normalized.replace(/index\.html$/, '')}`;
+}
+
+const htmlFiles = [];
+function collectHtml(directory) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (['.git', '.lighthouseci', 'node_modules', 'outputs', 'tmp'].includes(entry.name)) continue;
+    const entryPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) collectHtml(entryPath);
+    else if (entry.name.endsWith('.html') && !['admin.html', 'privacy.html', 'terms.html'].includes(entry.name)) htmlFiles.push(entryPath);
+  }
+}
+collectHtml(root);
+
+const noindexUrls = new Set(htmlFiles
+  .filter((filePath) => /<meta\b[^>]*\bcontent=["'][^"']*noindex/i.test(fs.readFileSync(filePath, 'utf8')))
+  .map((filePath) => publicUrlFor(path.relative(root, filePath))));
+
+for (const filePath of htmlFiles) {
+  let html = fs.readFileSync(filePath, 'utf8');
+  html = html.replace(/<link rel="preload" as="image" href="\/assets\/backgrounds\/(?:home|insights)-bg\.webp" fetchpriority="high">/g, '');
+  const pageIsNoindex = /<meta\b[^>]*\bcontent=["'][^"']*noindex/i.test(html);
+  html = html.replace(/<link\b[^>]*>/gi, (tag) => {
+    if (!/\brel=["']alternate["']/i.test(tag) || !/\bhreflang=/i.test(tag)) return tag;
+    const href = tag.match(/\bhref=["']([^"']+)["']/i)?.[1]?.split('#', 1)[0];
+    return pageIsNoindex || (href && noindexUrls.has(href)) ? '' : tag;
+  });
+  fs.writeFileSync(filePath, html, 'utf8');
 }
 
 console.log(`Normalized buyer-facing claims and localized priority content for ${productCount} products.`);
