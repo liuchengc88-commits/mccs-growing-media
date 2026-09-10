@@ -223,6 +223,94 @@
       "href": "/es/contact/"
     }
   ],
+  "/ar/global-partners/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/global-partners/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/global-partners/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/global-partners/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/global-partners/"
+    }
+  ],
+  "/cn/global-partners/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/global-partners/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/global-partners/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/global-partners/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/global-partners/"
+    }
+  ],
+  "/es/global-partners/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/global-partners/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/global-partners/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/global-partners/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/global-partners/"
+    }
+  ],
+  "/global-partners/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/global-partners/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/global-partners/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/global-partners/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/global-partners/"
+    }
+  ],
   "/ar/": [
     {
       "locale": "ar",
@@ -1194,6 +1282,94 @@
       "locale": "en",
       "label": "EN",
       "href": "/sample-shipping/"
+    }
+  ],
+  "/ar/technical-evidence/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/technical-evidence/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/technical-evidence/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/technical-evidence/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/technical-evidence/"
+    }
+  ],
+  "/cn/technical-evidence/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/technical-evidence/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/technical-evidence/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/technical-evidence/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/technical-evidence/"
+    }
+  ],
+  "/es/technical-evidence/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/technical-evidence/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/technical-evidence/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/technical-evidence/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/technical-evidence/"
+    }
+  ],
+  "/technical-evidence/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/technical-evidence/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/technical-evidence/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/technical-evidence/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/technical-evidence/"
     }
   ],
   "/cn/insights/substrate-plug-ec-ph-testing-protocol/": [

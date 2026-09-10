@@ -775,6 +775,23 @@
   .evidence-hero-grid,.partner-hero-grid,.evidence-workflow,.partner-support,.partner-application-grid,.partner-band{grid-template-columns:1fr}
   .evidence-hero-media,.partner-hero figure{max-width:700px}
 }
+/* Consistent image geometry across localized home, evidence and partner pages. */
+img{max-width:100%;height:auto}
+.localized-home-gallery{background:#eef4eb}
+.localized-home-gallery .root-preview-grid{margin-bottom:0}
+.localized-home-gallery .root-preview-grid a{aspect-ratio:4/3}
+.localized-home-gallery .root-preview-grid img{height:100%;object-position:center}
+.localized-home-gallery .root-preview-grid a:nth-child(3) img{object-position:center 58%}
+.product-hero-layout .media-frame{overflow:hidden}
+.product-hero-layout .media-frame>img[src*="root-penetration-hero"]{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 57%}
+.hero-card>img[src*="root-penetration-hero"]{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 57%}
+.evidence-hero-media img{object-position:center 57%}
+.partner-hero figure img{object-position:center}
+.localized-trust-page .page-hero{padding-top:46px}
+.localized-trust-page .document-register p{color:#526252;line-height:1.7}
+[dir="rtl"] .root-preview-grid span{right:12px;left:auto}
+[dir="rtl"] .source-note{border-right:4px solid #0e6c38;border-left:0}
+
 @media(max-width:680px){
   .research-metric-grid strong{font-size:46px}
   .partner-band h2,.evidence-workflow h2,.partner-support h2,.partner-application h2{font-size:30px}
@@ -785,4 +802,6 @@
   .document-register dt{padding-bottom:2px;border-bottom:0}
   .document-register dd{padding-top:2px}
   .partner-band{padding:24px}
+  .localized-home-gallery .root-preview-grid{grid-template-columns:1fr}
+  .localized-trust-page .page-hero{padding-top:24px}
 }
