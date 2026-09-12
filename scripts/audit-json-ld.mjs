@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const productEntities = [];
 const catalogModelEntities = [];
+const invalidListItems = [];
 const parseErrors = [];
 const schemaTypeCounts = new Map();
 
@@ -75,6 +76,9 @@ for (const filePath of listHtmlFiles(root)) {
     }
     if (data?.['@type'] === 'ItemList') {
       for (const element of data.itemListElement || []) {
+        if (element?.['@type'] === 'ListItem' && element.item && element.url) {
+          invalidListItems.push({ file: relativePath, name: element.name || '' });
+        }
         if (element?.['@type'] === 'ListItem' && element.item?.['@type'] === 'Thing') {
           catalogModelEntities.push({ file: relativePath, node: element.item });
         }
@@ -99,6 +103,7 @@ const productFiles = new Set(productEntities.map((product) => product.file));
 console.log(`Product entities: ${productEntities.length}`);
 console.log(`Catalog model entities: ${catalogModelEntities.length}`);
 console.log(`Invalid catalog model entities: ${invalidCatalogModels.length}`);
+console.log(`ListItems containing both item and url: ${invalidListItems.length}`);
 console.log(`Files containing Product: ${productFiles.size}`);
 console.log(`Invalid Product entities: ${invalidProducts.length}`);
 console.log(`Google product rich-result eligible entities: ${richResultEligibleProducts.length}`);
@@ -130,6 +135,6 @@ for (const error of parseErrors) {
   console.error(`${error.file} | block ${error.block} | ${error.message}`);
 }
 
-if (parseErrors.length || (process.argv.includes('--strict') && (invalidProducts.length || invalidCatalogModels.length))) {
+if (parseErrors.length || (process.argv.includes('--strict') && (invalidProducts.length || invalidCatalogModels.length || invalidListItems.length))) {
   process.exitCode = 1;
 }
