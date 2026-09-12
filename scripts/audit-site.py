@@ -217,7 +217,6 @@ def expected_item_list(products: list[dict], language: str, origin_path: str, ch
             "position": index,
             "name": name,
             "description": f"{product['size']}. {localized_applications(product, language)}.",
-            "url": url,
             "item": {
                 "@type": "Thing",
                 "@id": f"{url}-model",
@@ -384,6 +383,13 @@ def main() -> int:
                 add_issue(issues, "ERROR", relative, f"Missing image: {source}")
 
         for href in parser.links:
+            if href.startswith("/contact/?"):
+                add_issue(
+                    issues,
+                    "ERROR",
+                    relative,
+                    f"Contact CTA must use the canonical path without query parameters: {href}",
+                )
             target = local_target(path, href)
             if target is not None and not target.exists():
                 add_issue(issues, "ERROR", relative, f"Broken internal link: {href}")

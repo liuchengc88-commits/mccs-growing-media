@@ -114,7 +114,6 @@ function itemList(language, originPath) {
         position: index + 1,
         name: `${product.model} ${productName(product, language)}`,
         description: `${product.size}. ${applications(product, language)}.`,
-        url,
         item: {
           '@type': 'Thing',
           '@id': `${url}-model`,
