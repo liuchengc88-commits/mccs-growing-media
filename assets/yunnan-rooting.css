@@ -1,0 +1,38 @@
+.yunnan-article{background:#fff;color:#20302a}
+.yunnan-story{padding-block:24px 64px;max-width:1080px;letter-spacing:0}
+.yunnan-story section{margin-block:48px}
+.yunnan-heading{max-width:850px;margin-block:28px}
+.yunnan-heading h1{font-size:44px;line-height:1.16;letter-spacing:0;overflow-wrap:anywhere}
+.yunnan-story h2,.yunnan-feature h2{font-size:30px;line-height:1.25;letter-spacing:0;overflow-wrap:anywhere}
+.yunnan-story h3{font-size:21px;line-height:1.4}
+.yunnan-story p,.yunnan-story li,.yunnan-feature p{line-height:1.75;max-width:850px}
+.yunnan-story li{margin-block:14px}
+.yunnan-story figure{margin:0}
+.yunnan-story figcaption{font-size:15px;line-height:1.55;padding-block:12px;color:#506058}
+.yunnan-lead{max-width:850px}
+.yunnan-lead img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.yunnan-copy{max-width:850px}
+.yunnan-facts{border-collapse:collapse;width:100%;table-layout:fixed;text-align:start}
+.yunnan-facts th,.yunnan-facts td{padding:14px;border-bottom:1px solid #ccd8d1;line-height:1.6;vertical-align:top;overflow-wrap:anywhere}
+.yunnan-facts th:first-child{width:27%}
+.yunnan-facts thead{background:#eaf2ed}
+.yunnan-video{display:block;width:100%;max-width:405px;height:auto;aspect-ratio:9/16;object-fit:contain;background:#101713}
+.yunnan-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-block:24px}
+.yunnan-gallery figure{min-width:0;border-bottom:1px solid #d4dfd9}
+.yunnan-gallery a{display:block}
+.yunnan-gallery img{display:block;width:100%;height:420px;object-fit:contain;background:#f0f3f1}
+.yunnan-cta{border-top:2px solid #256448;padding-top:30px}
+.yunnan-feature{background:#fff;border-block:1px solid #d7e2dd}
+.yunnan-feature-image{display:block;max-width:720px;margin-top:24px}
+.yunnan-feature-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.yunnan-story a:not(.btn){text-decoration:underline;text-underline-offset:3px}
+.yunnan-story .btn,.yunnan-feature .btn{border-radius:6px;text-align:center;white-space:normal}
+@media(max-width:680px){
+ .yunnan-story{padding-top:12px}
+ .yunnan-heading h1{font-size:32px}
+ .yunnan-story h2,.yunnan-feature h2{font-size:26px}
+ .yunnan-gallery{grid-template-columns:1fr;gap:22px}
+ .yunnan-gallery img{height:auto;max-height:540px;object-fit:contain}
+ .yunnan-facts th,.yunnan-facts td{padding:10px 7px;font-size:14px}
+ .yunnan-feature{padding-block:40px}
+}
