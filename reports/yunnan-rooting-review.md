@@ -30,6 +30,8 @@ References reviewed:
 
 - scripts/validate-yunnan-media.py: 12 HTML pages, 71 sitemap URLs, no missing local resources, one H1 per page, all article language alternates and seven article images present.
 - scripts/audit-json-ld.mjs: zero JSON-LD parse errors; zero invalid catalog model entities.
+- scripts/audit-site.py: 91 HTML pages, zero errors and zero warnings after inheriting the site's approved full Organization identity in each new article.
+- Existing generation/normalization pipeline produced no additional content changes; image markup optimizer changed zero files. Form protection and verified lead conversion tests passed.
 - Browser checks at 390px and 1440px: four articles, four homepages and four Insights indexes show no horizontal overflow; localized links target the matching new article.
 - Screenshots inspected: English mobile article, Arabic mobile/desktop article, English desktop photo gallery and homepage entry. Upright photos preserve roots and full source frames.
 - Browser video test reached the end at 32.166667 seconds, 540 x 960, without a media error.
