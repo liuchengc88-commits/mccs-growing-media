@@ -38,8 +38,17 @@ product listing, sample/shipping, and Yunnan article: 16 pages.
 - Manual screenshots inspected: homepage desktop/mobile and Arabic sample page mobile.
 - JavaScript-disabled HTML retains a direct image link with a successful HTTP response;
   automatic navigation through that link was not conclusively verified.
-- Existing language suggestion and cookie notices remain visible over content until
-  dismissed; their behavior was not changed in this scope.
+- Follow-up overlap fix: homepage captions now follow the complete image in normal
+  flow on EN/ES/AR; CN already uses a separate media frame. Removed the inherited
+  fixed-height image crop. Language suggestions and existing cookie notices now sit
+  in document flow before page content, rather than covering imagery/navigation.
+- Re-audited all 71 sitemap buyer routes at 360/768/1440px: 213 checks, no horizontal
+  overflow, measured heading/button overflow or homepage caption/image intersection.
+  This is an automated layout scan, not a manual screenshot review of every section.
+- Inspected corrected EN/ES/AR mobile hero screenshots. Tested menu toggling and
+  language dismissal on all four homepages, plus accept/reject/close for the existing
+  EN/ES/AR cookie notices. CN homepage has no existing cookie banner and none was added.
+  Closing leaves consent unset; accept/reject storage semantics remain unchanged.
 - No new URLs, so sitemap membership/canonicals/hreflang remain unchanged.
 - Protected product data, dimensions, MOQ, carton quantities, Formspree endpoint,
   GA ID, Vercel configuration, admin and legal pages remain unchanged.

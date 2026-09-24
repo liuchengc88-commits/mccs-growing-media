@@ -690,12 +690,12 @@
 .factory-video-grid article{overflow:hidden;border:1px solid #dbe2d9;border-radius:8px;background:#fff}
 .factory-video-grid video{display:block;width:100%;aspect-ratio:16/9;background:#101510;object-fit:contain}
 .factory-video-grid h3{margin:0;padding:14px 16px;color:#173a25;font-size:16px;line-height:1.4}
-.language-suggestion{position:fixed;top:88px;left:50%;z-index:130;display:flex;align-items:center;gap:12px;max-width:calc(100% - 32px);padding:10px 12px 10px 16px;border:1px solid #cdd9ca;border-radius:8px;background:#fff;color:#173a25;box-shadow:0 12px 32px rgba(23,58,37,.18);transform:translateX(-50%)}
+.language-suggestion{position:static;display:flex;align-items:center;gap:12px;width:fit-content;max-width:calc(100% - 32px);margin:16px auto;padding:10px 12px 10px 16px;border:1px solid #cdd9ca;border-radius:8px;background:#fff;color:#173a25}
 .language-suggestion span{white-space:nowrap;font-size:14px}
 .language-suggestion a{padding:8px 12px;border-radius:6px;background:#0e6c38;color:#fff;font-size:14px;font-weight:850;white-space:nowrap}
 .language-suggestion button{display:grid;place-items:center;width:36px;height:36px;border:0;background:transparent;color:#435245;font-size:24px;cursor:pointer}
 @media(max-width:900px){.factory-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.factory-video-grid{grid-template-columns:1fr}.language-suggestion{top:76px;right:10px;left:10px;display:grid;grid-template-columns:1fr auto auto;max-width:none;transform:none}.language-suggestion span{white-space:normal;font-size:13px}.language-suggestion a{font-size:13px}}
+@media(max-width:600px){.factory-video-grid{grid-template-columns:1fr}.language-suggestion{display:grid;grid-template-columns:minmax(0,1fr) auto auto;width:calc(100% - 24px);max-width:none}.language-suggestion span{white-space:normal;font-size:13px}.language-suggestion a{font-size:13px}}
 
 /* Research evidence and global partner program */
 .evidence-preview{background:#f8faf6}
@@ -805,3 +805,12 @@ img{max-width:100%;height:auto}
   .localized-home-gallery .root-preview-grid{grid-template-columns:1fr}
   .localized-trust-page .page-hero{padding-top:24px}
 }
+
+/* Keep source photographs and their explanatory text in separate flow areas. */
+.page-home .hero-card{height:auto;padding:0;background:transparent;border-radius:0;box-shadow:none;backdrop-filter:none}
+.page-home .hero-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;border-radius:8px;opacity:1}
+.page-home .hero-card .floating{position:static;inset:auto;width:100%;margin:0;padding:16px 0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.page-home .hero-card .floating p{margin-bottom:0;line-height:1.6;overflow-wrap:anywhere}
+.cookie-banner{position:static;inset:auto;transform:none;width:min(760px,calc(100% - 24px));max-width:none;margin:16px auto;box-shadow:none}
+.cookie-banner.is-hidden{transform:none}
+.cookie-banner.is-compact p{white-space:normal;overflow:visible;text-overflow:clip;max-width:none}
