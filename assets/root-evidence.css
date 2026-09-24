@@ -1,0 +1,10 @@
+.root-evidence{background:#fff;border-block:1px solid #d7e2dd;padding-block:40px;color:#20302a}
+.root-evidence-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.root-evidence h2{font-size:28px;line-height:1.3;letter-spacing:0;overflow-wrap:anywhere}
+.root-evidence p{line-height:1.7;max-width:650px}
+.root-evidence-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.root-evidence-photos a{display:block;min-width:0}
+.root-evidence-photos img{display:block;width:100%;height:auto;aspect-ratio:1280/1707;object-fit:contain}
+.root-evidence-photos a:focus-visible{outline:3px solid #256448;outline-offset:4px}
+.yunnan-feature .root-evidence-photos{max-width:720px;margin-top:20px}
+@media(max-width:680px){.root-evidence-layout{grid-template-columns:1fr;gap:20px}.root-evidence h2{font-size:25px}}

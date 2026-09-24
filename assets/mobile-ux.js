@@ -51,6 +51,8 @@
       setTimeout(function(){ cookie.style.display='none'; }, 260);
     }
     if(cookie){
+      var content = document.querySelector('main');
+      if(content) content.insertBefore(cookie, content.firstChild);
       var storedConsent = consentState();
       if(storedConsent === 'granted') setConsent('granted');
       if(cookie.style.display === 'none' || storedConsent === 'granted' || storedConsent === 'denied'){
@@ -82,13 +84,6 @@
           close.addEventListener('click', hideCookie);
         }
         accept && accept.addEventListener('click', function(){ setConsent('granted'); hideCookie(); });
-        var collapsed = false;
-        window.addEventListener('scroll', function(){
-          if(!collapsed && window.scrollY > 120){
-            cookie.classList.add('is-compact');
-            collapsed = true;
-          }
-        }, {passive:true});
       }
     }
 
@@ -304,7 +299,9 @@
         try{sessionStorage.setItem('mccs_language_prompt_dismissed', '1');}catch(e){}
         prompt.remove();
       });
-      document.body.appendChild(prompt);
+      var main = document.querySelector('main');
+      if(main) main.insertBefore(prompt, main.firstChild);
+      else document.body.appendChild(prompt);
     }).catch(function(){ /* Keep navigation usable if the optional manifest cannot load. */ });
   });
 })();
