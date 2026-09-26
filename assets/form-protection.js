@@ -148,7 +148,7 @@
       return;
     }
 
-    if (!fields.whatsapp?.value || !validPhone(fields.whatsapp.value)) {
+    if (fields.whatsapp?.value.trim() && !validPhone(fields.whatsapp.value)) {
       event.preventDefault();
       showError(fields.whatsapp, copy.whatsapp);
       return;
