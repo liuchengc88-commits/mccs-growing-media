@@ -59,7 +59,7 @@ function createHarness({
     resetCount: 0,
     elements: {
       namedItem(name) {
-        return fields[name] || null;
+        return name === '_gotcha' ? fields.honeypot : fields[name] || null;
       }
     },
     querySelector(selector) {
@@ -179,6 +179,14 @@ function assert(condition, message) {
   const invalidPhone = createHarness({ whatsapp: 'Costa Rica' });
   await invalidPhone.submit();
   assert(invalidPhone.fetchCalls.length === 0, 'Invalid WhatsApp values should not submit.');
+
+  const optionalFields = createHarness({ whatsapp: '', company: '' });
+  await optionalFields.submit();
+  assert(optionalFields.fetchCalls.length === 1, 'Blank optional phone and company must submit.');
+  const spam = createHarness();
+  spam.fields.honeypot.value = 'spam';
+  await spam.submit();
+  assert(spam.fetchCalls.length === 0, 'Filled honeypot must not submit.');
 
   console.log('PASS: form protection and verified lead conversion tracking');
 })().catch((error) => {
