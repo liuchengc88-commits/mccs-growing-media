@@ -1,0 +1,6 @@
+.clone-buyer-guide .yunnan-lead img{aspect-ratio:3/2}
+.clone-buyer-guide .article-toc{display:flex;flex-wrap:wrap;gap:12px 24px;padding-block:18px;border-block:1px solid #ccd8d1;max-width:850px}
+.clone-buyer-guide .article-toc a{min-height:44px;display:flex;align-items:center}
+.clone-buyer-guide section[id]{scroll-margin-top:180px}
+.clone-buyer-guide .evidence-note{border-inline-start:3px solid #256448;padding-inline-start:16px}
+.clone-buyer-guide .download-link{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
