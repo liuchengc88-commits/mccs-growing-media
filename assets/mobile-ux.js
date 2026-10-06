@@ -51,8 +51,7 @@
       setTimeout(function(){ cookie.style.display='none'; }, 260);
     }
     if(cookie){
-      var content = document.querySelector('main');
-      if(content) content.insertBefore(cookie, content.firstChild);
+      // Keep the static footer notice in place so consent does not move page content.
       var storedConsent = consentState();
       if(storedConsent === 'granted') setConsent('granted');
       if(cookie.style.display === 'none' || storedConsent === 'granted' || storedConsent === 'denied'){
@@ -78,7 +77,10 @@
           var close = document.createElement('button');
           close.type = 'button';
           close.className = 'cookie-close';
-          close.setAttribute('aria-label', 'Close cookie notice');
+          var cookieLang = (document.documentElement.lang || 'en').toLowerCase();
+          close.setAttribute('aria-label', cookieLang.indexOf('zh') === 0 ? '关闭 Cookie 提示' :
+            cookieLang.indexOf('es') === 0 ? 'Cerrar aviso de cookies' :
+            cookieLang.indexOf('ar') === 0 ? 'إغلاق إشعار ملفات تعريف الارتباط' : 'Close cookie notice');
           close.textContent = '\u00d7';
           cookie.appendChild(close);
           close.addEventListener('click', hideCookie);
@@ -171,7 +173,7 @@
       var link = event.target.closest && event.target.closest('a[href]');
       if(!link) return;
       var href = link.getAttribute('href') || '';
-      if(!/\.(pdf|xlsx)(?:$|[?#])/i.test(href)) return;
+      if(!/\.(pdf|xlsx|csv)(?:$|[?#])/i.test(href)) return;
       if(typeof window.gtag === 'function'){
         var cleanHref = href.split(/[?#]/)[0];
         var fileName = cleanHref.split('/').pop() || cleanHref;
@@ -290,7 +292,9 @@
       }[currentLocale] || ['This page is also available in', 'View', 'Dismiss'];
       var prompt = document.createElement('aside');
       prompt.className = 'language-suggestion';
-      prompt.setAttribute('aria-label', 'Language suggestion');
+      prompt.setAttribute('aria-label', currentLocale === 'cn' ? '语言建议' :
+        currentLocale === 'es' ? 'Sugerencia de idioma' :
+        currentLocale === 'ar' ? 'اقتراح اللغة' : 'Language suggestion');
       prompt.innerHTML = '<span>'+copy[0]+' <b>'+target.label+'</b></span><a href="'+target.href+'">'+copy[1]+' '+target.label+'</a><button type="button" aria-label="'+copy[2]+'">&times;</button>';
       prompt.querySelector('a').addEventListener('click', function(){
         try{localStorage.setItem('mccs_language', preferred);}catch(e){}
@@ -299,8 +303,8 @@
         try{sessionStorage.setItem('mccs_language_prompt_dismissed', '1');}catch(e){}
         prompt.remove();
       });
-      var main = document.querySelector('main');
-      if(main) main.insertBefore(prompt, main.firstChild);
+      var footer = document.querySelector('.site-footer');
+      if(footer) footer.insertAdjacentElement('afterend', prompt);
       else document.body.appendChild(prompt);
     }).catch(function(){ /* Keep navigation usable if the optional manifest cannot load. */ });
   });

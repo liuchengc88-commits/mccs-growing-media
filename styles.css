@@ -814,3 +814,8 @@ img{max-width:100%;height:auto}
 .cookie-banner{position:static;inset:auto;transform:none;width:min(760px,calc(100% - 24px));max-width:none;margin:16px auto;box-shadow:none}
 .cookie-banner.is-hidden{transform:none}
 .cookie-banner.is-compact p{white-space:normal;overflow:visible;text-overflow:clip;max-width:none}
+.cookie-visible .whatsapp-float{display:block}
+.page-insights.root-gallery-page .page-hero::before,.page-insights.root-gallery-page .page-hero::after{display:none}
+.page-insights.root-gallery-page .page-hero .authority-hero-grid{background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.root-gallery-page .authority-hero-media img{aspect-ratio:3/4;object-fit:contain}
+.root-gallery-page .whatsapp-float{position:static;display:flex;width:max-content;max-width:92%;margin:16px auto;box-shadow:none}
