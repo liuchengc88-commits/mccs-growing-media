@@ -36,6 +36,8 @@ jobs:
         run: node scripts/audit-json-ld.mjs --strict
       - name: Test form protection and lead tracking
         run: node scripts/test-form-protection.cjs
+      - name: Test root evidence generator regression
+        run: node scripts/test-root-evidence-generators.cjs
       - name: Report broken external links
         uses: lycheeverse/lychee-action@v2
         with:

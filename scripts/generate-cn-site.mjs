@@ -39,9 +39,10 @@ function footer() {
   return `<footer class="site-footer"><div class="container footer-grid"><div><strong>MCCS Growing Media</strong><p>面向商业育苗、水培、兰花、组培和贴牌项目的塑形椰糠泥炭基质块。</p><img src="/assets/sgs-badge.svg" alt="MCCS 合格项目可申请 SGS 报告资料" class="footer-badge"></div><div><b>采购路径</b><a href="/cn/products/">产品目录</a><a href="/cn/sample-shipping/">样品与运输</a><a href="/cn/private-label/">贴牌定制</a></div><div><b>技术资料</b><a href="/cn/insights/">采购与测试指南</a><a href="/cn/products/conical-plugs/">锥形基质块技术资料</a><a href="/cn/use-guide/">消费者使用说明</a></div><div><b>联系</b><a href="mailto:sales@mccsgrowingmedia.com">sales@mccsgrowingmedia.com</a><a href="https://wa.me/8618922290417">+86 189 2229 0417</a><span>中国广东省广州市花都区</span></div></div><div class="container footer-bottom">© 2026 Guangzhou Chengfeng Trading Co., Ltd.</div></footer><a class="whatsapp-float" href="https://wa.me/8618922290417" target="_blank" rel="noopener">WhatsApp</a><script src="/assets/mobile-ux.js" defer></script>`;
 }
 
-function head(title, description, cnPath, enPath, schemaType = "WebPage") {
+function head(title, description, cnPath, enPath, schemaType = "WebPage", mainEntity) {
   const canonical = `${site}/cn/${cnPath ? `${cnPath}/` : ""}`;
   const schema = { "@context": "https://schema.org", "@type": schemaType, name: title, description, url: canonical, inLanguage: "zh-CN", isPartOf: { "@id": `${site}/#organization` } };
+  if (mainEntity) schema.mainEntity = mainEntity;
   return `<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><meta name="description" content="${description}"><link rel="canonical" href="${canonical}"><link rel="alternate" hreflang="zh-CN" href="${canonical}"><link rel="alternate" hreflang="en" href="${site}${enPath}"><link rel="alternate" hreflang="x-default" href="${site}${enPath}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:type" content="website"><meta property="og:url" content="${canonical}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/cn/cn.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-JGR2SQBQHW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JGR2SQBQHW');</script><script type="application/ld+json">${JSON.stringify(schema)}</script></head>`;
 }
 
@@ -74,7 +75,13 @@ const insightCards = [
 ];
 
 function insightsPage() {
-  return `${head("MCCS 基质块技术与采购资料", "面向水培温室、育苗、自动移栽、兰花和贴牌采购的 MCCS 中文技术资料。", "insights", "/insights/", "CollectionPage")}<body class="cn-site">${header("/insights/")}<main><section class="page-hero"><div class="container"><span class="section-label">技术资料</span><h1>把样品测试转化为采购证据</h1><p class="lead">围绕穴盘匹配、吸水、EC/pH、移栽操作、作物试验和包装运输建立可重复的记录。</p></div></section><section class="section"><div class="container"><div class="post-grid">${insightCards.map(([title, text, href]) => `<a class="post-card" href="${href}"><b>${title}</b><p>${text}</p><span>阅读指南 →</span></a>`).join("")}</div></div></section></main>${footer()}</body></html>`;
+  const rootArticle = "/cn/insights/cutting-propagation-root-observations/";
+  const rootTitle = "扦插生根实拍：从根系观察到苗圃测试";
+  const mainEntity = { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, url: `${site}${rootArticle}`, name: rootTitle }] };
+  const pageHead = head("MCCS 基质块技术与采购资料", "面向水培温室、育苗、自动移栽、兰花和贴牌采购的 MCCS 中文技术资料。", "insights", "/insights/", "CollectionPage", mainEntity)
+    .replace("</head>", '<link rel="stylesheet" href="/assets/yunnan-rooting.css"><link rel="stylesheet" href="/assets/root-evidence-entry.css"></head>');
+  const rootEntry = `<section class="section"><div class="container root-evidence-entry"><a href="${rootArticle}"><img src="/assets/yunnan-rooting/rooted-cuttings-4-1280.webp" srcset="/assets/yunnan-rooting/rooted-cuttings-4-640.webp 640w, /assets/yunnan-rooting/rooted-cuttings-4-1280.webp 1280w" sizes="(max-width: 680px) 92vw, 320px" width="1280" height="1707" alt="三株扦插苗并排展示，基质块外侧可见根系。" loading="lazy" decoding="async"></a><div><span class="section-label">原始生根实拍</span><h2><a href="${rootArticle}">${rootTitle}</a></h2><p>同时查看扦插苗根系和基质块。原始照片用于外观观察，并配套苗圃试样前需要记录的检查项。</p><div class="hero-actions"><a class="btn btn-primary" href="${rootArticle}">查看生根实拍</a><a class="btn btn-outline" href="/cn/contact/#quoteForm">申请样品</a></div></div></div></section>`;
+  return `${pageHead}<body class="cn-site root-evidence-page">${header("/insights/")}<main><section class="page-hero"><div class="container"><span class="section-label">技术资料</span><h1>把样品测试转化为采购证据</h1><p class="lead">围绕穴盘匹配、吸水、EC/pH、移栽操作、作物试验和包装运输建立可重复的记录。</p></div></section>${rootEntry}<section class="section"><div class="container"><div class="post-grid">${insightCards.map(([title, text, href]) => `<a class="post-card" href="${href}"><b>${title}</b><p>${text}</p><span>阅读指南 →</span></a>`).join("")}</div></div></section></main>${footer()}</body></html>`;
 }
 
 function contactPage() {
