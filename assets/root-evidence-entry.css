@@ -1,0 +1,39 @@
+.root-evidence-page .whatsapp-float {
+  position: static;
+  display: table;
+  margin: 16px auto 100px;
+}
+.root-evidence-entry {
+  display: grid;
+  grid-template-columns: minmax(210px, 320px) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+.root-evidence-entry img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 1707;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.root-evidence-entry h2 {
+  font-size: 30px;
+  line-height: 1.25;
+}
+.root-evidence-entry p {
+  line-height: 1.7;
+}
+@media (max-width: 680px) {
+  .root-evidence-entry {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .root-evidence-entry img {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+  .root-evidence-entry h2 {
+    font-size: 26px;
+  }
+}
