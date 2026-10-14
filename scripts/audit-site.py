@@ -15,6 +15,7 @@ from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CATALOG_LOCALES = json.loads((ROOT / "data/catalog-locales.json").read_text(encoding="utf-8"))
 CANONICAL_ORIGIN = "https://www.mccsgrowingmedia.com"
 INDEXNOW_KEY = "9876baf78823107e0a1099d058acb1d1"
 SKIP_DIRS = {".git", ".lighthouseci", "node_modules", "outputs", "tmp"}
@@ -105,6 +106,7 @@ class PageParser(HTMLParser):
         self.canonicals: list[str] = []
         self.alternates: list[dict[str, str | None]] = []
         self.links: list[str] = []
+        self.ids: set[str] = set()
         self.images: list[dict[str, str | None]] = []
         self.json_ld: list[str] = []
         self.in_json_ld = False
@@ -112,6 +114,8 @@ class PageParser(HTMLParser):
 
     def handle_starttag(self, tag: str, attrs) -> None:
         values = dict(attrs)
+        if values.get("id"):
+            self.ids.add(values["id"])
         if tag == "html":
             self.lang = values.get("lang", "") or ""
         elif tag == "title":
@@ -179,7 +183,8 @@ def add_issue(issues, level: str, page: str, message: str) -> None:
 def localized_product_name(product: dict, language: str, chinese_names: dict) -> str:
     if language == "zh-CN":
         return str(chinese_names.get(product["model"], [product["name_en"]])[0])
-    return str(product["name_en"])
+    translated = CATALOG_LOCALES.get(language, {}).get("models", {}).get(product["model"], {})
+    return str(translated.get("name") or product["name_en"])
 
 
 def localized_applications(product: dict, language: str) -> str:
@@ -193,8 +198,8 @@ def expected_catalog_rows(products: list[dict], language: str, chinese_names: di
         cells = [
             f"<strong>{escape(str(product['model']))}</strong>",
             escape(localized_product_name(product, language, chinese_names)),
-            escape(str(product.get("size") or "-")),
-            escape(str(product.get("trayFit") or UNAVAILABLE_LABELS[language])),
+            escape(str(CATALOG_LOCALES.get("cn" if language == "zh-CN" else language, {}).get("models", {}).get(product["model"], {}).get("size") or product.get("size") or "-")),
+            escape(str(CATALOG_LOCALES.get("cn" if language == "zh-CN" else language, {}).get("models", {}).get(product["model"], {}).get("tray") or product.get("trayFit") or UNAVAILABLE_LABELS[language])),
             escape(localized_applications(product, language) or "-"),
         ]
         if language == "en":
@@ -216,7 +221,7 @@ def expected_item_list(products: list[dict], language: str, origin_path: str, ch
             "@type": "ListItem",
             "position": index,
             "name": name,
-            "description": f"{product['size']}. {localized_applications(product, language)}.",
+            "description": f"{CATALOG_LOCALES.get('cn' if language == 'zh-CN' else language, {}).get('models', {}).get(product['model'], {}).get('size') or product['size']}. {localized_applications(product, language)}.",
             "item": {
                 "@type": "Thing",
                 "@id": f"{url}-model",
@@ -224,7 +229,7 @@ def expected_item_list(products: list[dict], language: str, origin_path: str, ch
                 "identifier": product["model"],
                 "url": url,
                 "image": f"{CANONICAL_ORIGIN}/{product['image']}",
-                "description": product.get("description") or product.get("desc"),
+                "description": CATALOG_LOCALES.get("cn" if language == "zh-CN" else language, {}).get("models", {}).get(product["model"], {}).get("description") or product.get("description") or product.get("desc"),
             },
         })
     return elements
@@ -236,6 +241,7 @@ def main() -> int:
     titles: dict[str, list[str]] = defaultdict(list)
     canonicals: dict[str, list[str]] = defaultdict(list)
     catalog_model_entities = 0
+    fragment_targets: dict[Path, set[str]] = {}
     products = json.loads((ROOT / "data" / "products.json").read_text(encoding="utf-8"))
     chinese_source = (ROOT / "assets" / "products-cn.js").read_text(encoding="utf-8")
     chinese_match = re.search(r"const productCn = (\{[\s\S]*?\n\});", chinese_source)
@@ -383,7 +389,9 @@ def main() -> int:
                 add_issue(issues, "ERROR", relative, f"Missing image: {source}")
 
         for href in parser.links:
-            if href.startswith("/contact/?"):
+            if href.startswith("/contact/?") and not re.fullmatch(
+                r"/contact/\?model=CF-[0-9]+B?#quoteForm", href
+            ):
                 add_issue(
                     issues,
                     "ERROR",
@@ -393,6 +401,21 @@ def main() -> int:
             target = local_target(path, href)
             if target is not None and not target.exists():
                 add_issue(issues, "ERROR", relative, f"Broken internal link: {href}")
+            parsed_href = urlsplit(href)
+            if parsed_href.fragment and not parsed_href.scheme and not parsed_href.netloc:
+                fragment_target = target if parsed_href.path else path
+                if fragment_target is not None and fragment_target.exists() and fragment_target.suffix == ".html":
+                    fragment = unquote(parsed_href.fragment)
+                    catalog_slug = (
+                        fragment_target.relative_to(ROOT).as_posix() in PRODUCT_CATALOG_PAGES
+                        and fragment in {product["slug"] for product in products}
+                    )
+                    if fragment_target not in fragment_targets:
+                        fragment_parser = PageParser()
+                        fragment_parser.feed(fragment_target.read_text(encoding="utf-8"))
+                        fragment_targets[fragment_target] = fragment_parser.ids
+                    if fragment not in fragment_targets[fragment_target] and not catalog_slug:
+                        add_issue(issues, "ERROR", relative, f"Broken internal fragment: {href}")
 
         catalog_item_list_found = False
         for raw_json in parser.json_ld:

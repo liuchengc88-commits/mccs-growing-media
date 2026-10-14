@@ -24,6 +24,7 @@
 
     var cookie = document.getElementById('cookieBanner');
     var accept = document.getElementById('cookieAccept');
+    var cookieHideTimer;
     function consentState(){
       try{
         return localStorage.getItem('mccs_cookie_consent') ||
@@ -48,17 +49,18 @@
       if(!cookie) return;
       cookie.classList.add('is-hidden');
       document.body.classList.remove('cookie-visible');
-      setTimeout(function(){ cookie.style.display='none'; }, 260);
+      cookieHideTimer = setTimeout(function(){ cookie.style.display='none'; }, 260);
     }
     if(cookie){
       // Keep the static footer notice in place so consent does not move page content.
       var storedConsent = consentState();
-      if(storedConsent === 'granted') setConsent('granted');
+      if(storedConsent === 'granted' || storedConsent === 'denied') setConsent(storedConsent);
       if(cookie.style.display === 'none' || storedConsent === 'granted' || storedConsent === 'denied'){
         document.body.classList.remove('cookie-visible');
         cookie.style.display='none';
       }else{
         document.body.classList.add('cookie-visible');
+      }
         if(!cookie.querySelector('.cookie-reject')){
           var reject = document.createElement('button');
           var lang = (document.documentElement.lang || 'en').toLowerCase();
@@ -86,7 +88,27 @@
           close.addEventListener('click', hideCookie);
         }
         accept && accept.addEventListener('click', function(){ setConsent('granted'); hideCookie(); });
-      }
+    }
+
+    if(cookie){
+      var preferences = document.createElement('button');
+      var preferencesLang = (document.documentElement.lang || 'en').toLowerCase();
+      preferences.type = 'button';
+      preferences.className = 'cookie-preferences';
+      preferences.textContent = preferencesLang.indexOf('zh') === 0 ? 'Cookie 设置' :
+        preferencesLang.indexOf('es') === 0 ? 'Preferencias de cookies' :
+        preferencesLang.indexOf('ar') === 0 ? 'تفضيلات ملفات الارتباط' : 'Cookie preferences';
+      preferences.setAttribute('aria-controls', 'cookieBanner');
+      preferences.addEventListener('click', function(){
+        clearTimeout(cookieHideTimer);
+        cookie.classList.remove('is-hidden');
+        cookie.style.display = '';
+        document.body.classList.add('cookie-visible');
+        cookie.scrollIntoView({behavior:'smooth', block:'center'});
+        accept && accept.focus({preventScroll:true});
+      });
+      var preferenceLocation = document.querySelector('.site-footer .footer-bottom') || document.querySelector('.site-footer');
+      preferenceLocation && preferenceLocation.appendChild(preferences);
     }
 
     // Make contact CTAs land on the form directly.
@@ -231,7 +253,12 @@
           card.append(video, label);
           grid.appendChild(card);
         });
-        container.append(heading, grid);
+        var videoDetails = document.createElement('details');
+        videoDetails.className = 'catalog-video-details';
+        var videoSummary = document.createElement('summary');
+        videoSummary.textContent = copy[0] + ' (' + videos.length + ')';
+        videoDetails.append(videoSummary, grid);
+        container.append(heading, videoDetails);
         section.appendChild(container);
         var matrixSection = productMatrix.closest('section');
         if(matrixSection) matrixSection.insertAdjacentElement('afterend', section);
@@ -260,6 +287,7 @@
             link.textContent = option.label;
             switcher.appendChild(link);
           }
+          link.href = option.href;
           if(option.locale === currentLocale) link.setAttribute('aria-current', 'page');
           link.addEventListener('click', function(){
             try{localStorage.setItem('mccs_language', option.locale);}catch(e){}

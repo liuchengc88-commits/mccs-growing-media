@@ -5,6 +5,8 @@
 
   // Public widget key only. Coordinate Formspree server enforcement as documented in docs/form-verification.md.
   const turnstileSiteKey = '';
+  // Default Formspree CAPTCHA runs on its hosted confirmation flow, not an AJAX success response.
+  const hostedVerification = true;
   const language = (document.documentElement.lang || 'en').toLowerCase().split('-')[0];
   const messages = {
     en: {
@@ -309,6 +311,9 @@
   };
 
   Object.values(fields).forEach((field) => field?.addEventListener('input', clearErrors));
+  window.addEventListener('pageshow', () => {
+    if (hostedVerification && !turnstileSiteKey) setSubmitting(false);
+  });
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -350,6 +355,18 @@
     }
 
     setSubmitting(true);
+    if (hostedVerification && !turnstileSiteKey) {
+      try {
+        if (typeof window.gtag === 'function') window.gtag('event', 'form_submit_attempt', {
+          form_id: 'quoteForm', form_language: language, submission_route: 'hosted_verification'
+        });
+        HTMLFormElement.prototype.submit.call(form);
+      } catch {
+        showError(null, copy.submitError);
+        setSubmitting(false);
+      }
+      return;
+    }
     try {
       const data = new FormData(form);
       if (turnstileSiteKey) data.set('cf-turnstile-response', verificationToken);

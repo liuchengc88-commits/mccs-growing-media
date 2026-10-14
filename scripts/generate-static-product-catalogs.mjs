@@ -1,11 +1,30 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import copy from './catalog-copy.cjs';
 
 const root = process.cwd();
 const products = JSON.parse(fs.readFileSync(path.join(root, 'data/products.json'), 'utf8'));
 const chineseSource = fs.readFileSync(path.join(root, 'assets/products-cn.js'), 'utf8');
 const chineseMatch = chineseSource.match(/const productCn = (\{[\s\S]*?\n\});/);
 const chineseNames = chineseMatch ? JSON.parse(chineseMatch[1]) : {};
+const localized = {};
+for (const [lang, index] of [['es',0],['ar',1],['cn',2]]) {
+  localized[lang] = { labels: copy.labels[lang], categories: {}, models: {} };
+  for (const [key, values] of Object.entries(copy.categories)) localized[lang].categories[key] = values[index];
+  for (const product of products) {
+    const text = copy.models[product.model];
+    if (!text || !copy.tray[product.trayFit]) throw new Error('Missing catalog translation: ' + product.model);
+    localized[lang].models[product.model] = {
+      name: lang === 'cn' ? chineseNames[product.model][0] : text[index * 2],
+      description: lang === 'cn' ? chineseNames[product.model][1] : text[index * 2 + 1],
+      tray: copy.tray[product.trayFit][index],
+      size: Object.entries(copy.dimensionWords[lang]).reduce((value, [from,to]) => value.replaceAll(from,to), product.size)
+    };
+  }
+}
+localized.en = { labels: copy.labels.en, categories: {}, models: {} };
+fs.writeFileSync(path.join(root, 'data/catalog-locales.json'), JSON.stringify(localized, null, 2) + '\n');
+const localeKey = language => language === 'zh-CN' ? 'cn' : language;
 
 const pages = [
   { file: 'products/index.html', language: 'en', originPath: '/products/' },
@@ -56,7 +75,7 @@ function escapeHtml(value = '') {
 
 function productName(product, language) {
   if (language === 'zh-CN') return chineseNames[product.model]?.[0] || product.name_en;
-  return product.name_en;
+  return localized[localeKey(language)]?.models[product.model]?.name || product.name_en;
 }
 
 function applications(product, language) {
@@ -86,8 +105,8 @@ function rows(language) {
     const cells = [
       `<strong>${escapeHtml(product.model)}</strong>`,
       escapeHtml(productName(product, language)),
-      escapeHtml(product.size || '-'),
-      escapeHtml(product.trayFit || translations[language].unavailable),
+      escapeHtml(localized[localeKey(language)]?.models[product.model]?.size || product.size || '-'),
+      escapeHtml(localized[localeKey(language)]?.models[product.model]?.tray || product.trayFit || translations[language].unavailable),
       escapeHtml(applications(product, language) || '-')
     ];
     if (language === 'en') {
@@ -113,7 +132,7 @@ function itemList(language, originPath) {
         '@type': 'ListItem',
         position: index + 1,
         name: `${product.model} ${productName(product, language)}`,
-        description: `${product.size}. ${applications(product, language)}.`,
+        description: `${localized[localeKey(language)]?.models[product.model]?.size || product.size}. ${applications(product, language)}.`,
         item: {
           '@type': 'Thing',
           '@id': `${url}-model`,
@@ -121,7 +140,7 @@ function itemList(language, originPath) {
           identifier: product.model,
           url,
           image: `https://www.mccsgrowingmedia.com/${product.image}`,
-          description: product.description || product.desc
+          description: localized[localeKey(language)]?.models[product.model]?.description || product.description || product.desc
         }
       };
     })
@@ -146,6 +165,7 @@ function syncCatalogCount(html, language) {
 for (const page of pages) {
   const filePath = path.join(root, page.file);
   let html = fs.readFileSync(filePath, 'utf8');
+  html = html.replace(/<script src="\/assets\/products(?:-cn)?\.js(?:\?[^"]*)?"[^>]*><\/script>/g, '<script src="/assets/products.js?v=20261014" defer></script>');
   html = syncCatalogCount(html, page.language);
   const schema = JSON.stringify(itemList(page.language, page.originPath));
   const schemaStart = '<!-- GENERATED PRODUCT ITEMLIST START -->';

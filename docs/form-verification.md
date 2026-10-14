@@ -2,76 +2,86 @@
 
 ## Current Rollout State
 
-The shared contact-form script supports Cloudflare Turnstile on `/contact/`,
-`/cn/contact/`, `/es/contact/` and `/ar/contact/`. The public site key is currently
-blank, so this change does **not** activate CAPTCHA yet. Keep the PR as a draft
-until a real key, Formspree configuration and end-to-end checks are ready.
+The four contact pages now use a native POST to the existing Formspree endpoint.
+This supports Formspree's default hosted reCAPTCHA flow without a Cloudflare
+account or a public widget key. The blank Turnstile key is intentional in this mode.
 
-Client validation and the honeypot remain supplemental. Only Formspree's
-server-side CAPTCHA enforcement protects the public endpoint from direct POSTs.
+On 14 October 2026 the authenticated Formspree settings were inspected:
+Formshield and submission archiving were enabled, but CAPTCHA was **Disabled**.
+The CAPTCHA settings dialog was inspected and closed without saving changes.
+This PR does not claim that server-side verification is already active.
 
-## Account Configuration
+Client validation and the honeypot are supplemental. Only server-side enforcement
+protects the public endpoint from direct automated requests.
 
-1. Sign in to Cloudflare and create a **Managed** Turnstile widget for
-   `mccsgrowingmedia.com` and `www.mccsgrowingmedia.com`. Do not move the site's DNS
-   or enable pre-clearance; neither is needed for this contact form.
-2. Put the **public site key only** into `turnstileSiteKey` in
-   `assets/form-protection.js`. The four languages share this one setting.
-3. Keep the secret key outside Git, chat, browser screenshots and frontend code.
-   The account owner enters it directly into the existing Formspree form's
-   Settings > CAPTCHA > Adjust settings > Cloudflare Turnstile.
-4. Do not save/enable a different server-side CAPTCHA until the matching frontend
-   is deployed. A mismatched provider/key can reject genuine buyer inquiries.
-   Coordinate the short cutover window, verify immediately, and keep email and
-   WhatsApp contact routes available.
-5. If Formspree offers a domain restriction on the current plan, review its scope
-   and allow the production domain without changing the form endpoint. Origin
-   restrictions alone are not a replacement for server token validation.
+## Deployment And Cutover
 
-The endpoint, notification address, GA identifier, products and Vercel settings
-must remain unchanged. No paid account upgrade is required by this code; do not
-purchase an upgrade without explicit approval.
+1. Review and manually merge the PR. Do not enable auto-merge.
+2. Confirm the production contact pages have the native hosted submission branch.
+   Keep email and WhatsApp contact routes available.
+3. In the existing Formspree form, choose Settings > CAPTCHA > Adjust settings.
+   Enable CAPTCHA, choose the default **reCAPTCHA**, and save.
+   Do not choose Custom reCAPTCHA, V3 or Turnstile unless matching keys and a
+   coordinated frontend configuration are deliberately supplied.
+4. Complete a clearly labeled human test inquiry, including the hosted challenge
+   when shown. Check the accepted record in Formspree and the Zoho notification
+   separately. A redirect is not proof of accepted delivery.
+5. Check that an unverified direct request is challenged or rejected by Formspree.
+   Do not report protection as active until both enforcement and delivery pass.
+6. If genuine inquiries fail, return CAPTCHA to its prior Disabled state while
+   investigating, with the account owner's approval. Do not change the endpoint.
 
-## Verification Before Merge And Activation
+Do not enable the backend before this frontend reaches production: the previous
+AJAX handler is not coordinated with a hosted challenge. No paid plan upgrade is
+authorized or required for the default hosted flow.
 
-Run from the repository root:
+## Local Verification
+
+Run:
 
 ```powershell
 node scripts/test-form-protection.cjs
-node scripts/test-form-protection.cjs --require-turnstile
+node scripts/test-full-site-fixes.cjs
+node scripts/test-root-evidence-generators.cjs
+node scripts/test-factory-demonstrations.cjs
 node scripts/audit-json-ld.mjs --strict
 python scripts/audit-site.py
 ```
 
-The `--require-turnstile` check deliberately fails with a blank or known Cloudflare
-testing key. Unit tests mock verification and Formspree; passing them is not proof
-of server-side enforcement or live delivery.
+Unit tests mock Formspree and do not prove live backend enforcement. They cover
+validation, native handoff without resetting buyer fields, optional Turnstile
+token lifecycle, and analytics boundaries.
 
-- Use Cloudflare's official testing keys only in a disposable local preview;
-  never ship one as the production site key and never send test tokens to the
-  production form.
-- Check mobile width at 320, 360 and 390 pixels, desktop layout, and Arabic RTL.
-  Narrow forms use the compact widget; wider forms use the flexible widget.
-  Resizing across that boundary recreates the widget without clearing buyer fields.
-- Check missing, expired, failed and blocked-script verification, retry without
-  losing buyer inputs, and a new token after every attempted POST.
-- Confirm no token or personal field is sent to analytics. `generate_lead` fires
-  only after a successful Formspree response.
-- After deployment, have the owner complete a clearly labeled real test inquiry
-  and verify it in Formspree/Zoho. Confirm a request without a valid token is
-  rejected by Formspree, not merely by the browser. Do not claim activation before
-  these two checks pass.
+The hosted route emits only `form_submit_attempt`, never `generate_lead`:
+a submitted challenge is not an accepted lead. Do not count attempts as
+conversions. The optional embedded Turnstile/AJAX route still counts a lead only
+after Formspree accepts the response. No contact fields or tokens go to analytics.
 
-## Remaining Marketing Spam
+A validated CF model query preselects an optional model field without overwriting
+the buyer's message. Unknown models are ignored. All 28 approved model IDs are
+available in the field.
 
-CAPTCHA reduces automated abuse; it does not prevent a real person from sending
-an advertisement. Keep marking unrelated marketing submissions as spam in
-Formspree and review its server-side filtering/rules if needed. Do not block all
-Gmail addresses, non-English text or links, which legitimate B2B buyers may use.
+## Optional Embedded Turnstile
+
+Use only after obtaining the real public site key and configuring the matching
+secret directly in Formspree. Keep the secret out of Git and frontend code.
+The strict optional check is:
+
+```powershell
+node scripts/test-form-protection.cjs --require-turnstile
+```
+
+This check intentionally fails for the default hosted mode. It must not be used
+as a required hosted-mode CI check.
+
+## Remaining Human Spam
+
+CAPTCHA can reduce automated abuse but cannot prevent a person from submitting
+an advertisement. Continue marking unrelated marketing as spam. Do not block
+all Gmail addresses, non-English messages or links used by genuine B2B buyers.
 
 ## Primary References
 
-- [Formspree Turnstile integration](https://help.formspree.io/articles/form-and-project-settings/protecting-your-forms-with-cloudflare-turnstile)
-- [Cloudflare client integration](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/)
-- [Cloudflare single-use token validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/)
-- [Cloudflare testing keys](https://developers.cloudflare.com/turnstile/troubleshooting/testing/)
+- [Formspree reCAPTCHA settings](https://help.formspree.io/articles/form-and-project-settings/recaptcha-settings/)
+- [Formspree AJAX guidance](https://help.formspree.io/articles/building-your-form/submit-forms-with-javascript-ajax)
+- [Optional Turnstile integration](https://help.formspree.io/articles/form-and-project-settings/protecting-your-forms-with-cloudflare-turnstile)

@@ -28,7 +28,7 @@ function createHarness({
   lang = 'en', responseStatus = 200, responseBody = {}, siteKey = '',
   company = 'Acme Greenhouse', whatsapp = '+1 555 123 4567',
   message = 'We need propagation plugs for a commercial greenhouse trial.',
-  fetchImpl, widgetWidth = 400, renderThrows = false, resetThrows = false
+  fetchImpl, widgetWidth = 400, renderThrows = false, resetThrows = false, hosted = false
 } = {}) {
   const fields = {
     honeypot: element('input', ''), whatsapp: element('input', whatsapp),
@@ -68,6 +68,7 @@ function createHarness({
     clearTimeout(id) { harness.timers.delete(id); }
   };
   const context = {
+    HTMLFormElement: { prototype: { submit() { harness.nativeSubmissions = (harness.nativeSubmissions || 0) + 1; } } },
     document: {
       documentElement: { lang },
       head: { appendChild(script) { harness.scripts.push(script); } },
@@ -95,7 +96,7 @@ function createHarness({
     },
     console
   };
-  vm.runInNewContext(source.replace(keyDeclaration, `const turnstileSiteKey = '${siteKey}';`), context);
+  vm.runInNewContext(source.replace(keyDeclaration, `const turnstileSiteKey = '${siteKey}';`).replace('const hostedVerification = true;', `const hostedVerification = ${hosted};`), context);
   harness.submit = () => harness.submitHandler({ preventDefault() {} });
   harness.finishLoading = () => {
     window.turnstile = {
@@ -121,6 +122,18 @@ function createHarness({
 const protectedForm = (options = {}) => createHarness({ siteKey: 'public-unit-test-key', ...options });
 
 (async () => {
+  const hosted = createHarness({ hosted: true });
+  await hosted.submit();
+  assert.equal(hosted.nativeSubmissions, 1);
+  assert.equal(hosted.fetchCalls.length, 0);
+  assert.equal(hosted.gtagCalls[0][1], 'form_submit_attempt');
+  assert.equal(hosted.gtagCalls.some(call=>call[1]==='generate_lead'), false, 'Hosted challenge handoff is not a confirmed lead.');
+  assert.equal(hosted.form.resetCount, 0, 'Keep buyer fields until the server accepts the request.');
+  assert.equal(hosted.button.disabled,true);
+  await hosted.submit();
+  assert.equal(hosted.nativeSubmissions,1,'Prevent duplicate POSTs while native navigation is pending.');
+  hosted.windowHandlers.pageshow();
+  assert.equal(hosted.button.disabled,false,'Restore the button on back/forward-cache navigation.');
   const success = createHarness();
   await success.submit();
   assert.equal(success.fetchCalls.length, 1);
@@ -281,5 +294,5 @@ const protectedForm = (options = {}) => createHarness({ siteKey: 'public-unit-te
   }
   console.log('PASS: form validation, four-language Turnstile lifecycle, token retry, lead tracking and protected endpoints');
   console.log(configuredKey ? 'Turnstile public key configured; verify Formspree server settings separately.' :
-    'Turnstile inactive: real public key and Formspree server configuration still required before rollout.');
+    'Hosted CAPTCHA handoff tested locally. Backend activation and real delivery still require the post-deployment Formspree check.');
 })().catch((error) => { console.error(error); process.exit(1); });
