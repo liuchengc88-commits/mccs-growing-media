@@ -1,0 +1,663 @@
+{
+  "es": {
+    "labels": {
+      "category": "Categoría",
+      "size": "Tamaño",
+      "tray": "Bandeja / soporte",
+      "best": "Aplicación",
+      "carton": "Cantidad por caja",
+      "moq": "Pedido mínimo",
+      "quick": "Detalles",
+      "close": "Detalles",
+      "quote": "Solicitar muestra",
+      "previous": "Página anterior",
+      "next": "Página siguiente",
+      "page": "Página",
+      "results": "modelos",
+      "empty": "No hay modelos coincidentes. Borre los filtros para ver todos.",
+      "error": "No se pudo cargar el catálogo. Consulte la tabla completa o contacte con ventas.",
+      "comparison": "Especificaciones de todos los modelos",
+      "material": "Material",
+      "materialText": "Coco y turba moldeados; confirme la formulación del aglutinante y los documentos aplicables al proyecto.",
+      "terms": "Confirme el recuento final y pedido mínimo según modelo, embalaje y transporte aprobados.",
+      "reference": "Referencia; el recuento final depende de la caja y el embalaje.",
+      "docs": "Solicitar documentos de este modelo",
+      "all": "Todas las categorías"
+    },
+    "categories": {
+      "Hydroponic Plug": "Plug hidropónico",
+      "Succulent Plug": "Plug para suculentas",
+      "Orchid Plug": "Plug para orquídeas",
+      "Orchid Planting Cup": "Copa para orquídeas",
+      "Tissue Culture Plug": "Plug para cultivo de tejidos",
+      "Seedling Plug": "Plug de vivero",
+      "High-Density Plug": "Plug de alta densidad",
+      "Square Plug": "Plug cuadrado",
+      "Staghorn Fern Mounting Ball": "Bola de montaje para helechos",
+      "Cylindrical Plug": "Plug cilíndrico",
+      "Succulent Growing Cup": "Copa para suculentas",
+      "Growing Cup": "Copa de cultivo",
+      "Cuttings Propagation Plug": "Plug para esquejes"
+    },
+    "models": {
+      "CF-001": {
+        "name": "Plug hidropónico cónico 6.5 cm",
+        "description": "Tapón estrecho y cónico para sistemas hidropónicos compactos; confirme el soporte y la abertura de plantación.",
+        "tray": "Orificios de hidroponía doméstica, vasos de vivero de 5 cm o soportes especiales",
+        "size": "Superior Ø 2.3 cm / Base Ø 1.1 cm / Altura 6.5 cm"
+      },
+      "CF-003": {
+        "name": "Plug de iniciación doméstica 3.7 cm",
+        "description": "Formato compacto para kits de siembra, recambios y pequeñas bandejas de vivero.",
+        "tray": "Cajas de 12 celdas y pequeñas bandejas de siembra",
+        "size": "Superior 3.3 cm / Base 2.8 cm / Altura 3.7 cm"
+      },
+      "CF-005": {
+        "name": "Plug para esquejes 5.0 cm",
+        "description": "Formato estrecho y profundo para evaluar el soporte de esquejes y la manipulación durante el trasplante.",
+        "tray": "Confirmar con plano o muestra de la bandeja del comprador",
+        "size": "Superior Ø 2.6 cm / Base Ø 1.6 cm / Altura 5.0 cm"
+      },
+      "CF-006": {
+        "name": "Plug para esquejes 4.1 cm",
+        "description": "Formato intermedio para ensayos de esquejes y compatibilidad con bandejas.",
+        "tray": "Confirmar con plano o muestra de la bandeja del comprador",
+        "size": "Superior Ø 3.2 cm / Base Ø 2.2 cm / Altura 4.1 cm"
+      },
+      "CF-015": {
+        "name": "Plug para orquídeas 4.5 cm",
+        "description": "Formato para bandejas de 60 celdas y planificación del trasplante por etapas.",
+        "tray": "Bandejas de 60 celdas para orquídeas",
+        "size": "Superior 4.5 cm / Base 3.2 cm / Altura 4.5 cm"
+      },
+      "CF-017": {
+        "name": "Plug para orquídeas 5.3 cm",
+        "description": "Para plantas jóvenes de orquídea, transición del cultivo de tejidos y primer trasplante.",
+        "tray": "Bandeja de 50 celdas para orquídeas o transición de cultivo de tejidos",
+        "size": "Superior 5.3 cm / Base 3.4 cm / Altura 4.8 cm"
+      },
+      "CF-025": {
+        "name": "Copa de cultivo para orquídeas 6.5 cm",
+        "description": "Mayor volumen de sustrato para etapas intermedias y trasplante a recipientes mayores.",
+        "tray": "Macetas de orquídea o bandejas grandes de 15–21 celdas",
+        "size": "Superior 6.5 cm / Base 5.0 cm / Altura 7.0 cm"
+      },
+      "CF-028": {
+        "name": "Copa alta para orquídeas 8.3 cm",
+        "description": "Formato alto para plantas de mayor desarrollo; compruebe la compatibilidad del recipiente.",
+        "tray": "Macetas de orquídea o bandejas de 12–15 celdas",
+        "size": "Superior 8.3 cm / Base 5.0 cm / Altura 8.3 cm"
+      },
+      "CF-035": {
+        "name": "Copa alta para orquídeas 10.5 cm",
+        "description": "Copa de mayor tamaño para plantas desarrolladas y proyectos de trasplante.",
+        "tray": "Macetas de orquídea o bandejas de 6–12 celdas",
+        "size": "Superior 10.5 cm / Base 7.0 cm / Altura 10.5 cm"
+      },
+      "CF-060": {
+        "name": "Plug de propagación de orquídeas 4.8 cm",
+        "description": "Para evaluar propagación de Phalaenopsis y manejo en bandejas de 60 celdas.",
+        "tray": "Bandeja de propagación de orquídeas de 60 celdas",
+        "size": "Superior Ø 4.8 cm / Base Ø 3.4 cm / Altura 4.6 cm"
+      },
+      "CF-060B": {
+        "name": "Plug de propagación de orquídeas 5.2 cm",
+        "description": "Formato de mayor volumen para Phalaenopsis en bandejas de 60 celdas.",
+        "tray": "Bandeja de propagación de orquídeas de 60 celdas",
+        "size": "Superior Ø 5.2 cm / Base Ø 3.8 cm / Altura 4.8 cm"
+      },
+      "CF-067": {
+        "name": "Copa para suculentas 6.7 cm",
+        "description": "Para plantación de suculentas, recipientes decorativos y kits de jardinería doméstica.",
+        "tray": "Soportes de 6.7 cm, bandejas de exposición de suculentas o macetas decorativas",
+        "size": "Superior 6.7 cm / Base 4.8 cm / Altura 6.5 cm"
+      },
+      "CF-072": {
+        "name": "Plug para cultivo de tejidos 4.0 cm",
+        "description": "Para aclimatación de plantas de laboratorio en bandejas de 72 celdas.",
+        "tray": "Bandeja de propagación de 72 celdas",
+        "size": "Superior Ø 4.0 cm / Base Ø 2.0 cm / Altura 4.0 cm"
+      },
+      "CF-104": {
+        "name": "Plug de vivero 4.0 cm",
+        "description": "Diámetro superior de 3.1 cm para ensayos de siembra, propagación y ajuste a bandejas.",
+        "tray": "Bandejas de vivero con aberturas de aproximadamente 3.1 cm",
+        "size": "Superior Ø 3.1 cm / Base Ø 2.5 cm / Altura 4.0 cm"
+      },
+      "CF-128": {
+        "name": "Plug para cultivo de tejidos 3.8 cm",
+        "description": "Formato partido para colocar la planta alrededor de las raíces antes de introducirla en una bandeja de 128 celdas.",
+        "tray": "Bandeja de propagación de 128 celdas",
+        "size": "Superior Ø 3.0 cm / Base Ø 1.4 cm / Altura 3.8 cm"
+      },
+      "CF-128B": {
+        "name": "Plug para esquejes de 128 celdas",
+        "description": "Formato partido para esquejes; valide la colocación de raíces y el manejo en bandeja.",
+        "tray": "Bandeja de esquejes de 128 celdas",
+        "size": "Superior Ø 3.0 cm / Base Ø 1.4 cm / Altura 3.8 cm"
+      },
+      "CF-129": {
+        "name": "Plug cilíndrico 3.1 cm",
+        "description": "Perfil redondo para siembra, esquejes y cavidades cilíndricas.",
+        "tray": "Bandejas de propagación de 105 o 128 celdas",
+        "size": "Superior 2.6 cm / Base 2.3 cm / Altura 3.1 cm"
+      },
+      "CF-167": {
+        "name": "Plug compacto para esquejes 3.0 cm",
+        "description": "Formato compacto para propagación de alta densidad y ensayos con la bandeja del comprador.",
+        "tray": "Confirmar con plano o muestra de la bandeja del comprador",
+        "size": "Superior Ø 2.5 cm / Base Ø 2.1 cm / Altura 3.0 cm"
+      },
+      "CF-200": {
+        "name": "Plug para esquejes de 200 celdas",
+        "description": "Para ensayos de propagación de alta densidad y manejo en bandejas de 200 celdas.",
+        "tray": "Bandeja de propagación de 200 celdas",
+        "size": "Superior Ø 2.3 cm / Base Ø 2.0 cm / Altura 2.8 cm"
+      },
+      "CF-901": {
+        "name": "Bola de montaje para helechos 20 cm",
+        "description": "Formato grande para ensayos de montaje de helechos cuerno de alce y exhibiciones de epífitas.",
+        "tray": "Tablas de montaje de helechos, expositores colgantes o soportes de epífitas",
+        "size": "Diámetro 20 cm / Altura 10 cm / Orificio central 9.5 cm"
+      },
+      "CF-902": {
+        "name": "Bola de montaje para helechos 16 cm",
+        "description": "Formato intermedio para montaje de helechos cuerno de alce y exhibiciones de epífitas.",
+        "tray": "Tablas de montaje de helechos, expositores colgantes o soportes de epífitas",
+        "size": "Diámetro 16 cm / Altura 8 cm / Orificio central 8.2 cm"
+      },
+      "CF-903": {
+        "name": "Bola de montaje para helechos 11 cm",
+        "description": "Formato compacto para montaje de helechos cuerno de alce y pequeñas exhibiciones de epífitas.",
+        "tray": "Tablas de montaje de helechos, expositores colgantes o soportes de epífitas",
+        "size": "Diámetro 11 cm / Altura 5.5 cm / Orificio central 5.5 cm"
+      },
+      "CF-3038": {
+        "name": "Plug para esquejes 3.8 cm",
+        "description": "Para propagación comercial por esquejes y ensayos de ajuste a bandejas.",
+        "tray": "Confirmar con plano o muestra de la bandeja del comprador",
+        "size": "Superior Ø 3.0 cm / Base Ø 2.2 cm / Altura 3.8 cm"
+      },
+      "CF-3038B": {
+        "name": "Plug hidropónico 3.8 cm B",
+        "description": "Para siembra y propagación hidropónica; confirme el soporte antes de comprar.",
+        "tray": "Confirmar con la bandeja o soporte hidropónico del comprador",
+        "size": "Superior Ø 3.0 cm / Base Ø 2.2 cm / Altura 3.8 cm"
+      },
+      "CF-3545": {
+        "name": "Plug hidropónico 4.5 cm",
+        "description": "Para ensayos de propagación hidropónica en producción de ambiente controlado.",
+        "tray": "Confirmar con la bandeja o soporte hidropónico del comprador",
+        "size": "Superior Ø 3.5 cm / Base Ø 2.2 cm / Altura 4.5 cm"
+      },
+      "CF-3550": {
+        "name": "Plug alto de vivero 5.3 cm",
+        "description": "Para plántulas y esquejes que requieren mayor profundidad de sustrato.",
+        "tray": "Bandejas profundas con aberturas de aproximadamente 3.7 cm",
+        "size": "Superior Ø 3.7 cm / Base Ø 2.2 cm / Altura 5.3 cm"
+      },
+      "CF-5050": {
+        "name": "Plug para esquejes de 50 celdas",
+        "description": "Para esquejes de mayor tamaño y ensayos comerciales con bandejas de 50 celdas.",
+        "tray": "Bandeja de propagación de 50 celdas",
+        "size": "Superior Ø 5.0 cm / Base Ø 3.8 cm / Altura 5.0 cm"
+      },
+      "CF-7050": {
+        "name": "Plug alto de vivero 6.8 cm",
+        "description": "Para bandejas profundas y evaluación de etapas de trasplante; abertura superior de 4.8 cm.",
+        "tray": "Bandejas profundas, macetas o soportes con aberturas de aproximadamente 4.8 cm",
+        "size": "Superior Ø 4.8 cm / Base Ø 3.5 cm / Altura 6.8 cm"
+      }
+    }
+  },
+  "ar": {
+    "labels": {
+      "category": "الفئة",
+      "size": "المقاس",
+      "tray": "الصينية / الحامل",
+      "best": "الاستخدام",
+      "carton": "كمية الكرتون",
+      "moq": "الحد الأدنى للطلب",
+      "quick": "التفاصيل",
+      "close": "التفاصيل",
+      "quote": "طلب عينة",
+      "previous": "الصفحة السابقة",
+      "next": "الصفحة التالية",
+      "page": "صفحة",
+      "results": "طرازات",
+      "empty": "لا توجد طرازات مطابقة. امسح المرشحات لعرض الجميع.",
+      "error": "تعذر تحميل الكتالوج. راجع جدول المواصفات الكامل أو تواصل مع المبيعات.",
+      "comparison": "مواصفات جميع الطرازات",
+      "material": "المادة",
+      "materialText": "ألياف جوز هند وخث مقولبان؛ تُؤكد تركيبة المادة الرابطة ووثائق المشروع المعنية.",
+      "terms": "تُؤكد الكمية النهائية والحد الأدنى حسب الطراز والتغليف ومسار الشحن المعتمد.",
+      "reference": "مرجع فقط؛ تعتمد الكمية النهائية على حجم الكرتون والتغليف.",
+      "docs": "طلب وثائق هذا الطراز",
+      "all": "جميع الفئات"
+    },
+    "categories": {
+      "Hydroponic Plug": "قالب مائي",
+      "Succulent Plug": "قالب للعصاريات",
+      "Orchid Plug": "قالب أوركيد",
+      "Orchid Planting Cup": "كوب أوركيد",
+      "Tissue Culture Plug": "قالب زراعة أنسجة",
+      "Seedling Plug": "قالب مشتل",
+      "High-Density Plug": "قالب عالي الكثافة",
+      "Square Plug": "قالب مربع",
+      "Staghorn Fern Mounting Ball": "كرة تثبيت سرخس",
+      "Cylindrical Plug": "قالب أسطواني",
+      "Succulent Growing Cup": "كوب عصاريات",
+      "Growing Cup": "كوب زراعة",
+      "Cuttings Propagation Plug": "قالب إكثار عقل"
+    },
+    "models": {
+      "CF-001": {
+        "name": "قالب مائي مخروطي 6.5 cm",
+        "description": "قالب ضيق مخروطي للأنظمة المائية المدمجة؛ تُراجع فتحة الزراعة والحامل بالعينة.",
+        "tray": "فتحات الزراعة المائية المنزلية أو أكواب مشتل 5 cm أو حوامل خاصة",
+        "size": "أعلى Ø 2.3 cm / قاعدة Ø 1.1 cm / ارتفاع 6.5 cm"
+      },
+      "CF-003": {
+        "name": "قالب للزراعة المنزلية 3.7 cm",
+        "description": "صيغة مدمجة لأطقم البذر وعبوات التعبئة وصواني المشاتل الصغيرة.",
+        "tray": "صناديق منزلية 12 خلية وصواني بذر صغيرة",
+        "size": "أعلى 3.3 cm / قاعدة 2.8 cm / ارتفاع 3.7 cm"
+      },
+      "CF-005": {
+        "name": "قالب لإكثار العقل 5.0 cm",
+        "description": "صيغة ضيقة وعميقة لتقييم دعم العقل والمناولة عند الشتل.",
+        "tray": "يُؤكد برسم صينية المشتري أو عينة فعلية",
+        "size": "أعلى Ø 2.6 cm / قاعدة Ø 1.6 cm / ارتفاع 5.0 cm"
+      },
+      "CF-006": {
+        "name": "قالب لإكثار العقل 4.1 cm",
+        "description": "صيغة متوسطة لتجارب العقل وملاءمة الصواني.",
+        "tray": "يُؤكد برسم صينية المشتري أو عينة فعلية",
+        "size": "أعلى Ø 3.2 cm / قاعدة Ø 2.2 cm / ارتفاع 4.1 cm"
+      },
+      "CF-015": {
+        "name": "قالب للأوركيد 4.5 cm",
+        "description": "صيغة لصواني 60 خلية وتخطيط الشتل على مراحل.",
+        "tray": "صواني أوركيد 60 خلية",
+        "size": "أعلى 4.5 cm / قاعدة 3.2 cm / ارتفاع 4.5 cm"
+      },
+      "CF-017": {
+        "name": "قالب للأوركيد 5.3 cm",
+        "description": "للأوركيد الصغير والانتقال من زراعة الأنسجة والشتل المبكر.",
+        "tray": "صينية 50 خلية للأوركيد أو انتقال زراعة الأنسجة",
+        "size": "أعلى 5.3 cm / قاعدة 3.4 cm / ارتفاع 4.8 cm"
+      },
+      "CF-025": {
+        "name": "كوب زراعة للأوركيد 6.5 cm",
+        "description": "حجم وسط أكبر للمراحل المتوسطة والشتل في أوعية أكبر.",
+        "tray": "أصص أوركيد أو صواني كبيرة 15–21 خلية",
+        "size": "أعلى 6.5 cm / قاعدة 5.0 cm / ارتفاع 7.0 cm"
+      },
+      "CF-028": {
+        "name": "كوب أوركيد طويل 8.3 cm",
+        "description": "صيغة طويلة للنباتات الأكثر تطوراً؛ تُراجع ملاءمة الوعاء.",
+        "tray": "أصص أوركيد أو صواني 12–15 خلية",
+        "size": "أعلى 8.3 cm / قاعدة 5.0 cm / ارتفاع 8.3 cm"
+      },
+      "CF-035": {
+        "name": "كوب أوركيد طويل 10.5 cm",
+        "description": "كوب أكبر للنباتات المتطورة ومشاريع الشتل.",
+        "tray": "أصص أوركيد أو صواني 6–12 خلية",
+        "size": "أعلى 10.5 cm / قاعدة 7.0 cm / ارتفاع 10.5 cm"
+      },
+      "CF-060": {
+        "name": "قالب إكثار أوركيد 4.8 cm",
+        "description": "لتقييم إكثار الفالينوبسيس والمناولة في صواني 60 خلية.",
+        "tray": "صينية إكثار أوركيد 60 خلية",
+        "size": "أعلى Ø 4.8 cm / قاعدة Ø 3.4 cm / ارتفاع 4.6 cm"
+      },
+      "CF-060B": {
+        "name": "قالب إكثار أوركيد 5.2 cm",
+        "description": "صيغة ذات حجم أكبر للفالينوبسيس في صواني 60 خلية.",
+        "tray": "صينية إكثار أوركيد 60 خلية",
+        "size": "أعلى Ø 5.2 cm / قاعدة Ø 3.8 cm / ارتفاع 4.8 cm"
+      },
+      "CF-067": {
+        "name": "كوب زراعة للعصاريات 6.7 cm",
+        "description": "لزراعة العصاريات والأوعية الزخرفية وأطقم الحدائق المنزلية.",
+        "tray": "حوامل 6.7 cm أو صواني عرض العصاريات أو أوعية زخرفية",
+        "size": "أعلى 6.7 cm / قاعدة 4.8 cm / ارتفاع 6.5 cm"
+      },
+      "CF-072": {
+        "name": "قالب لزراعة الأنسجة 4.0 cm",
+        "description": "لأقلمة نباتات المختبر في صواني 72 خلية.",
+        "tray": "صينية إكثار 72 خلية",
+        "size": "أعلى Ø 4.0 cm / قاعدة Ø 2.0 cm / ارتفاع 4.0 cm"
+      },
+      "CF-104": {
+        "name": "قالب للمشاتل 4.0 cm",
+        "description": "بقطر علوي 3.1 cm لتجارب البذر والإكثار وملاءمة الصواني.",
+        "tray": "صواني مشتل بفتحات نحو 3.1 cm",
+        "size": "أعلى Ø 3.1 cm / قاعدة Ø 2.5 cm / ارتفاع 4.0 cm"
+      },
+      "CF-128": {
+        "name": "قالب لزراعة الأنسجة 3.8 cm",
+        "description": "صيغة مشقوقة لوضع النبات حول الجذور قبل إدخاله في صينية 128 خلية.",
+        "tray": "صينية إكثار 128 خلية",
+        "size": "أعلى Ø 3.0 cm / قاعدة Ø 1.4 cm / ارتفاع 3.8 cm"
+      },
+      "CF-128B": {
+        "name": "قالب عقل لصواني 128 خلية",
+        "description": "صيغة مشقوقة للعقل؛ تُختبر وضعية الجذور والمناولة في الصينية.",
+        "tray": "صينية عقل 128 خلية",
+        "size": "أعلى Ø 3.0 cm / قاعدة Ø 1.4 cm / ارتفاع 3.8 cm"
+      },
+      "CF-129": {
+        "name": "قالب أسطواني 3.1 cm",
+        "description": "مقطع دائري للبذر والعقل والتجاويف الأسطوانية.",
+        "tray": "صواني إكثار 105 أو 128 خلية",
+        "size": "أعلى 2.6 cm / قاعدة 2.3 cm / ارتفاع 3.1 cm"
+      },
+      "CF-167": {
+        "name": "قالب عقل مدمج 3.0 cm",
+        "description": "صيغة مدمجة للإكثار عالي الكثافة وتجارب صينية المشتري.",
+        "tray": "يُؤكد برسم صينية المشتري أو عينة فعلية",
+        "size": "أعلى Ø 2.5 cm / قاعدة Ø 2.1 cm / ارتفاع 3.0 cm"
+      },
+      "CF-200": {
+        "name": "قالب عقل لصواني 200 خلية",
+        "description": "لتجارب الإكثار عالي الكثافة والمناولة في صواني 200 خلية.",
+        "tray": "صينية إكثار 200 خلية",
+        "size": "أعلى Ø 2.3 cm / قاعدة Ø 2.0 cm / ارتفاع 2.8 cm"
+      },
+      "CF-901": {
+        "name": "كرة تثبيت للسرخس 20 cm",
+        "description": "صيغة كبيرة لتجارب تثبيت سرخس قرن الأيل وعرض النباتات الهوائية.",
+        "tray": "ألواح تثبيت السرخس أو عروض معلقة أو حوامل نباتات هوائية",
+        "size": "قطر 20 cm / ارتفاع 10 cm / فتحة وسطية 9.5 cm"
+      },
+      "CF-902": {
+        "name": "كرة تثبيت للسرخس 16 cm",
+        "description": "صيغة متوسطة لتثبيت سرخس قرن الأيل وعرض النباتات الهوائية.",
+        "tray": "ألواح تثبيت السرخس أو عروض معلقة أو حوامل نباتات هوائية",
+        "size": "قطر 16 cm / ارتفاع 8 cm / فتحة وسطية 8.2 cm"
+      },
+      "CF-903": {
+        "name": "كرة تثبيت للسرخس 11 cm",
+        "description": "صيغة مدمجة لتثبيت سرخس قرن الأيل وعروض النباتات الهوائية الصغيرة.",
+        "tray": "ألواح تثبيت السرخس أو عروض معلقة أو حوامل نباتات هوائية",
+        "size": "قطر 11 cm / ارتفاع 5.5 cm / فتحة وسطية 5.5 cm"
+      },
+      "CF-3038": {
+        "name": "قالب لإكثار العقل 3.8 cm",
+        "description": "للإكثار التجاري بالعقل وتجارب ملاءمة الصواني.",
+        "tray": "يُؤكد برسم صينية المشتري أو عينة فعلية",
+        "size": "أعلى Ø 3.0 cm / قاعدة Ø 2.2 cm / ارتفاع 3.8 cm"
+      },
+      "CF-3038B": {
+        "name": "قالب مائي 3.8 cm B",
+        "description": "للبذر والإكثار المائي؛ يُراجع الحامل قبل الشراء.",
+        "tray": "يُؤكد بصينية أو حامل الزراعة المائية لدى المشتري",
+        "size": "أعلى Ø 3.0 cm / قاعدة Ø 2.2 cm / ارتفاع 3.8 cm"
+      },
+      "CF-3545": {
+        "name": "قالب مائي 4.5 cm",
+        "description": "لتجارب الإكثار المائي في الإنتاج ذي البيئة المتحكم بها.",
+        "tray": "يُؤكد بصينية أو حامل الزراعة المائية لدى المشتري",
+        "size": "أعلى Ø 3.5 cm / قاعدة Ø 2.2 cm / ارتفاع 4.5 cm"
+      },
+      "CF-3550": {
+        "name": "قالب مشتل طويل 5.3 cm",
+        "description": "للشتلات والعقل التي تحتاج عمقاً أكبر من الوسط.",
+        "tray": "صواني عميقة بفتحات نحو 3.7 cm",
+        "size": "أعلى Ø 3.7 cm / قاعدة Ø 2.2 cm / ارتفاع 5.3 cm"
+      },
+      "CF-5050": {
+        "name": "قالب عقل لصواني 50 خلية",
+        "description": "للعقل الأكبر وتجارب المشاتل التجارية بصواني 50 خلية.",
+        "tray": "صينية إكثار 50 خلية",
+        "size": "أعلى Ø 5.0 cm / قاعدة Ø 3.8 cm / ارتفاع 5.0 cm"
+      },
+      "CF-7050": {
+        "name": "قالب مشتل طويل 6.8 cm",
+        "description": "للصواني العميقة وتقييم مراحل الشتل؛ فتحة علوية 4.8 cm.",
+        "tray": "صواني عميقة أو أصص أو حوامل بفتحات نحو 4.8 cm",
+        "size": "أعلى Ø 4.8 cm / قاعدة Ø 3.5 cm / ارتفاع 6.8 cm"
+      }
+    }
+  },
+  "cn": {
+    "labels": {
+      "category": "类别",
+      "size": "尺寸",
+      "tray": "穴盘 / 支架",
+      "best": "应用",
+      "carton": "装箱数量",
+      "moq": "起订条件",
+      "quick": "详细信息",
+      "close": "详细信息",
+      "quote": "申请样品",
+      "previous": "上一页",
+      "next": "下一页",
+      "page": "页",
+      "results": "个型号",
+      "empty": "没有匹配的型号，请清除筛选条件。",
+      "error": "产品目录暂时无法加载，请查看下方完整规格表或联系销售。",
+      "comparison": "全部型号规格",
+      "material": "材料",
+      "materialText": "椰糠和泥炭成型基质；粘结剂配方及适用文件按具体项目确认。",
+      "terms": "最终装箱数量及起订条件按批准的型号、包装和运输方案确认。",
+      "reference": "仅供参考，最终数量受纸箱及包装形式影响。",
+      "docs": "索取此型号资料",
+      "all": "全部类别"
+    },
+    "categories": {
+      "Hydroponic Plug": "水培育苗块",
+      "Succulent Plug": "多肉育苗块",
+      "Orchid Plug": "兰花基质块",
+      "Orchid Planting Cup": "兰花种植杯",
+      "Tissue Culture Plug": "组培基质块",
+      "Seedling Plug": "育苗块",
+      "High-Density Plug": "高密度育苗块",
+      "Square Plug": "方形基质块",
+      "Staghorn Fern Mounting Ball": "鹿角蕨上板球",
+      "Cylindrical Plug": "圆柱形育苗块",
+      "Succulent Growing Cup": "多肉种植杯",
+      "Growing Cup": "种植杯",
+      "Cuttings Propagation Plug": "扦插育苗块"
+    },
+    "models": {
+      "CF-001": {
+        "name": "锥形水培育苗块 6.5 cm",
+        "description": "适用于紧凑型水培定植孔、家庭水培设备和小型育苗项目。",
+        "tray": "家庭水培定植孔、5 cm 育苗杯或非标准育苗支架",
+        "size": "顶部 Ø 2.3 cm / 底部 Ø 1.1 cm / 高度 6.5 cm"
+      },
+      "CF-003": {
+        "name": "家庭育苗块 3.7 cm",
+        "description": "适用于家庭播种、补充装和入门育苗套装。",
+        "tray": "12 穴家庭育苗盒及小型播种盘",
+        "size": "顶部 3.3 cm / 底部 2.8 cm / 高度 3.7 cm"
+      },
+      "CF-005": {
+        "name": "扦插育苗块 5.0 cm",
+        "description": "适用于窄深穴孔与扦插繁殖流程。",
+        "tray": "按买方穴盘图纸或实物样品确认",
+        "size": "顶部 Ø 2.6 cm / 底部 Ø 1.6 cm / 高度 5.0 cm"
+      },
+      "CF-006": {
+        "name": "扦插育苗块 4.1 cm",
+        "description": "适用于扦插繁殖和穴盘匹配测试。",
+        "tray": "按买方穴盘图纸或实物样品确认",
+        "size": "顶部 Ø 3.2 cm / 底部 Ø 2.2 cm / 高度 4.1 cm"
+      },
+      "CF-015": {
+        "name": "兰花育苗块 4.5 cm",
+        "description": "适用于兰花育苗和分阶段换盆。",
+        "tray": "60 穴兰花盘",
+        "size": "顶部 4.5 cm / 底部 3.2 cm / 高度 4.5 cm"
+      },
+      "CF-017": {
+        "name": "兰花基质块 5.3 cm",
+        "description": "适用于兰花幼苗、组培苗过渡和早期换盆。",
+        "tray": "50 穴兰花或组培过渡盘",
+        "size": "顶部 5.3 cm / 底部 3.4 cm / 高度 4.8 cm"
+      },
+      "CF-025": {
+        "name": "兰花种植杯 6.5 cm",
+        "description": "适用于兰花中期生长和较大容器换盆。",
+        "tray": "兰花盆或 15–21 穴大规格种植盘",
+        "size": "顶部 6.5 cm / 底部 5.0 cm / 高度 7.0 cm"
+      },
+      "CF-028": {
+        "name": "高型兰花种植杯 8.3 cm",
+        "description": "适用于较高兰花植株和专项换盆项目。",
+        "tray": "兰花盆或 12–15 穴种植盘",
+        "size": "顶部 8.3 cm / 底部 5.0 cm / 高度 8.3 cm"
+      },
+      "CF-035": {
+        "name": "大型兰花种植杯 10.5 cm",
+        "description": "适用于较成熟兰花和大规格容器。",
+        "tray": "兰花盆或 6–12 穴种植盘",
+        "size": "顶部 10.5 cm / 底部 7.0 cm / 高度 10.5 cm"
+      },
+      "CF-060": {
+        "name": "60 穴蝴蝶兰育苗块 4.8 cm",
+        "description": "适用于蝴蝶兰育苗及 60 穴盘苗场操作。",
+        "tray": "60 穴兰花育苗盘",
+        "size": "顶部 Ø 4.8 cm / 底部 Ø 3.4 cm / 高度 4.6 cm"
+      },
+      "CF-060B": {
+        "name": "60 穴蝴蝶兰育苗块 5.2 cm",
+        "description": "适用于需要更大基质体积的蝴蝶兰育苗项目。",
+        "tray": "60 穴兰花育苗盘",
+        "size": "顶部 Ø 5.2 cm / 底部 Ø 3.8 cm / 高度 4.8 cm"
+      },
+      "CF-067": {
+        "name": "多肉种植杯 6.7 cm",
+        "description": "适用于多肉种植、装饰花器和家庭园艺套装。",
+        "tray": "6.7 cm 盆架、多肉杯展示盘或装饰花器",
+        "size": "顶部 6.7 cm / 底部 4.8 cm / 高度 6.5 cm"
+      },
+      "CF-072": {
+        "name": "72 穴组培育苗块 4.0 cm",
+        "description": "适用于组培苗从实验室环境向苗场或温室过渡。",
+        "tray": "72 穴育苗盘",
+        "size": "顶部 Ø 4.0 cm / 底部 Ø 2.0 cm / 高度 4.0 cm"
+      },
+      "CF-104": {
+        "name": "通用育苗块 4.0 cm",
+        "description": "适用于常规育苗、播种和移栽测试。",
+        "tray": "开口约 3.1 cm 的育苗盘",
+        "size": "顶部 Ø 3.1 cm / 底部 Ø 2.5 cm / 高度 4.0 cm"
+      },
+      "CF-128": {
+        "name": "128 穴组培育苗块 3.8 cm",
+        "description": "适用于组培苗驯化、放苗包根和 128 穴盘育苗。",
+        "tray": "128 穴育苗盘",
+        "size": "顶部 Ø 3.0 cm / 底部 Ø 1.4 cm / 高度 3.8 cm"
+      },
+      "CF-128B": {
+        "name": "128 穴扦插育苗块 3.8 cm",
+        "description": "适用于高密度扦插繁殖和 128 穴盘。",
+        "tray": "128 穴扦插盘",
+        "size": "顶部 Ø 3.0 cm / 底部 Ø 1.4 cm / 高度 3.8 cm"
+      },
+      "CF-129": {
+        "name": "圆柱形育苗块 3.1 cm",
+        "description": "适用于扦插、播种和圆柱形穴孔。",
+        "tray": "105 穴或 128 穴育苗盘",
+        "size": "顶部 2.6 cm / 底部 2.3 cm / 高度 3.1 cm"
+      },
+      "CF-167": {
+        "name": "紧凑型扦插育苗块 3.0 cm",
+        "description": "适用于高密度扦插和紧凑型穴盘。",
+        "tray": "按买方穴盘图纸或实物样品确认",
+        "size": "顶部 Ø 2.5 cm / 底部 Ø 2.1 cm / 高度 3.0 cm"
+      },
+      "CF-200": {
+        "name": "200 穴扦插育苗块 2.8 cm",
+        "description": "适用于高密度扦插繁殖和 200 穴盘育苗。",
+        "tray": "200 穴育苗盘",
+        "size": "顶部 Ø 2.3 cm / 底部 Ø 2.0 cm / 高度 2.8 cm"
+      },
+      "CF-901": {
+        "name": "鹿角蕨上板球 20 cm",
+        "description": "适用于大型鹿角蕨上板测试和附生植物装饰展示。",
+        "tray": "鹿角蕨上板、悬挂展示或附生植物安装系统",
+        "size": "直径 20 cm / 高度 10 cm / 中心孔 9.5 cm"
+      },
+      "CF-902": {
+        "name": "鹿角蕨上板球 16 cm",
+        "description": "适用于中型鹿角蕨上板测试和附生植物展示。",
+        "tray": "鹿角蕨上板、悬挂展示或附生植物安装系统",
+        "size": "直径 16 cm / 高度 8 cm / 中心孔 8.2 cm"
+      },
+      "CF-903": {
+        "name": "鹿角蕨上板球 11 cm",
+        "description": "适用于小型鹿角蕨上板测试和紧凑型附生植物展示。",
+        "tray": "鹿角蕨上板、悬挂展示或附生植物安装系统",
+        "size": "直径 11 cm / 高度 5.5 cm / 中心孔 5.5 cm"
+      },
+      "CF-3038": {
+        "name": "扦插育苗块 3.8 cm",
+        "description": "适用于商业扦插育苗和穴盘匹配测试。",
+        "tray": "按买方穴盘图纸或实物样品确认",
+        "size": "顶部 Ø 3.0 cm / 底部 Ø 2.2 cm / 高度 3.8 cm"
+      },
+      "CF-3038B": {
+        "name": "水培育苗块 3.8 cm B 型",
+        "description": "适用于水培播种、育苗和植物工厂系统。",
+        "tray": "按买方水培穴盘或支架确认",
+        "size": "顶部 Ø 3.0 cm / 底部 Ø 2.2 cm / 高度 3.8 cm"
+      },
+      "CF-3545": {
+        "name": "水培育苗块 4.5 cm",
+        "description": "适用于水培育苗和可控环境生产。",
+        "tray": "按买方水培穴盘或支架确认",
+        "size": "顶部 Ø 3.5 cm / 底部 Ø 2.2 cm / 高度 4.5 cm"
+      },
+      "CF-3550": {
+        "name": "高型育苗块 5.3 cm",
+        "description": "适用于需要较深基质空间的幼苗和扦插。",
+        "tray": "开口约 3.7 cm 的深型育苗盘",
+        "size": "顶部 Ø 3.7 cm / 底部 Ø 2.2 cm / 高度 5.3 cm"
+      },
+      "CF-5050": {
+        "name": "50 穴扦插育苗块 5.0 cm",
+        "description": "适用于较大插穗和 50 穴商业育苗流程。",
+        "tray": "50 穴育苗盘",
+        "size": "顶部 Ø 5.0 cm / 底部 Ø 3.8 cm / 高度 5.0 cm"
+      },
+      "CF-7050": {
+        "name": "高型育苗块 6.8 cm",
+        "description": "适用于较深穴盘和移栽阶段测试。",
+        "tray": "开口约 4.8 cm 的深型盘、盆或支架",
+        "size": "顶部 Ø 4.8 cm / 底部 Ø 3.5 cm / 高度 6.8 cm"
+      }
+    }
+  },
+  "en": {
+    "labels": {
+      "category": "Category",
+      "size": "Size",
+      "tray": "Tray fit",
+      "best": "Application",
+      "carton": "Carton quantity",
+      "moq": "MOQ",
+      "quick": "Details",
+      "close": "Details",
+      "quote": "Request Sample",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page",
+      "results": "models",
+      "empty": "No matching models. Clear the filters to see all models.",
+      "error": "Catalog could not load. Use the complete specification table below or contact sales.",
+      "comparison": "All model specifications",
+      "material": "Material",
+      "materialText": "Molded coconut coir and peat; confirm the project-specific binder formulation and applicable documents.",
+      "terms": "Confirm final pack count and MOQ for the approved model, packaging and freight route.",
+      "reference": "Reference only; final count depends on the carton and packaging.",
+      "docs": "Request documentation for this model",
+      "all": "All categories"
+    },
+    "categories": {},
+    "models": {}
+  }
+}

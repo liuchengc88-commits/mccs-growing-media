@@ -4,6 +4,7 @@ Deployable static website package for GitHub + Vercel.
 
 ## Included languages
 - English: `/`
+- Chinese: `/cn/`
 - Spanish: `/es/`
 - Arabic: `/ar/`
 
@@ -20,7 +21,21 @@ Deployable static website package for GitHub + Vercel.
 - Sitemap regenerated with all multilingual pages.
 
 ## Deployment
-Upload all extracted files to the GitHub repository root and commit. Vercel will redeploy automatically.
+Start from the latest `main` in an isolated branch. All changes require a reviewed
+Pull Request and a manual merge. Do not push directly to `main` or enable
+auto-merge. Verify the production deployment separately after merge.
+
+## October 2026 audit repairs
+
+The current catalog uses six-model pagination and a complete collapsible
+specification table. See [repair and QA record](reports/full-site-fixes-2026-10-14.md)
+and [Formspree cutover requirements](docs/form-verification.md).
+
+Run the same regeneration order as `.github/workflows/site-quality-audit.yml`
+before opening a PR. Catalog translations are maintained in
+`scripts/catalog-copy.cjs`; `data/catalog-locales.json` is generated.
+Buyer-guide copy is maintained in `scripts/refresh-buyer-guides.mjs`.
+Do not restore unsupported binder or daily-capacity statements.
 
 ## SEO maintenance
 

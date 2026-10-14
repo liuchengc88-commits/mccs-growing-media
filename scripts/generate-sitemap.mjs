@@ -13,6 +13,9 @@ const SKIP_DIRS = new Set([
   'docs',
   'node_modules',
   'output',
+  'outputs',
+  'tmp',
+  '.lighthouseci',
   'reports',
   'scripts'
 ]);

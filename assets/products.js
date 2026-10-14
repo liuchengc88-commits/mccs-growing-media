@@ -1,21 +1,128 @@
+(() => {
+  const grid = document.getElementById('productMatrix');
+  if (!grid) return;
+  const lang = grid.dataset.lang || (document.documentElement.lang.startsWith('zh') ? 'cn' : document.documentElement.lang);
+  const prefix = lang === 'en' ? '/' : '/' + lang + '/';
+  const search = document.getElementById('productFilter');
+  const category = document.getElementById('categoryFilter');
+  const filters = [...document.querySelectorAll('.app-filter')];
+  const size = 6;
+  let page = 0;
+  let application = '';
+  let products = [];
+  let locale;
+  const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const nav = document.createElement('nav');
+  nav.className = 'catalog-pagination';
+  grid.insertAdjacentElement('afterend', nav);
 
-const ui = {
- en:{category:'Category',size:'Size',tray:'Tray Fit',best:'Best For',carton:'Carton Qty',moq:'MOQ',quick:'Quick View',close:'Close Quick View',quote:'Request Quote & Sample',material:'Material',packaging:'Packaging',docs:'Document support',more:'More details'},
- es:{category:'Categoría',size:'Tamaño',tray:'Bandeja / Contenedor',best:'Uso recomendado',carton:'Cantidad por caja',moq:'MOQ',quick:'Vista rápida',close:'Cerrar vista',quote:'Solicitar muestra',material:'Material',packaging:'Empaque',docs:'Documentos',more:'Más detalles'},
- ar:{category:'الفئة',size:'المقاس',tray:'الدرج / الحاوية',best:'الاستخدام المناسب',carton:'كمية الكرتون',moq:'الحد الأدنى',quick:'عرض سريع',close:'إغلاق العرض',quote:'طلب عرض وعينة',material:'المادة',packaging:'التغليف',docs:'المستندات',more:'تفاصيل إضافية'}
-};
-async function loadProducts(){
- const grid=document.getElementById('productMatrix'); const compareBody=document.getElementById('productCompareBody'); if(!grid)return;
- const lang=grid.dataset.lang||document.documentElement.lang||'en'; const t=ui[lang]||ui.en;
- const categoryFilter=document.getElementById('categoryFilter'); const productFilter=document.getElementById('productFilter'); const appButtons=[...document.querySelectorAll('.app-filter')]; let currentApp='';
- let products=[]; try{products=await (await fetch('/data/products.json',{cache:'no-store'})).json()}catch(e){grid.innerHTML='<p>Unable to load products.</p>';return;}
- [...new Set(products.map(p=>p.category).filter(Boolean))].forEach(cat=>{const opt=document.createElement('option');opt.value=cat;opt.textContent=cat;categoryFilter?.appendChild(opt);});
- function card(p,index){const tags=(p.applicationTags||[]).map(x=>`<span>${x}</span>`).join(''); const status=p.status?`<em class="product-status">${p.status}</em>`:''; const priority=index===0?'loading="eager" fetchpriority="high"':'loading="lazy"'; return `<article id="${p.slug}" class="matrix-card cf-product-card"><div class="product-image-panel">${status}<img src="/${p.image}" alt="${p.imageAlt||`${p.model} ${p.name_en} molded substrate reference`}" width="240" height="240" ${priority} decoding="async"></div><div class="matrix-body"><span>${p.model}</span><h2>${p.name_en}</h2><p>${p.description||''}</p><div class="tag-row">${tags}</div><dl><dt>${t.category}</dt><dd>${p.category||'-'}</dd><dt>${t.size}</dt><dd>${p.size||'-'}</dd><dt>${t.tray}</dt><dd>${p.trayFit||'-'}</dd><dt>${t.best}</dt><dd>${p.bestFor||'-'}</dd><dt>${t.carton}</dt><dd>${p.cartonQty||'-'}</dd><dt>${t.moq}</dt><dd>${p.moq||'-'}</dd></dl>${p.positioningNote?`<p class="position-note-small">${p.positioningNote}</p>`:''}<button class="quick-view" type="button" data-model="${p.model}" aria-expanded="false">${t.quick}</button><div class="quick-view-panel" hidden></div><a class="btn btn-primary" href="/${lang==='en'?'':lang+'/'}contact/">${t.quote}</a></div></article>`;}
- function filtered(){const q=(productFilter?.value||'').toLowerCase(); const cat=categoryFilter?.value||''; return products.filter(p=>{const text=JSON.stringify(p).toLowerCase(); return (!currentApp||(p.applicationTags||[]).includes(currentApp))&&(!cat||p.category===cat)&&(!q||text.includes(q));});}
- function renderCompare(items){if(!compareBody)return; const technicalCells=p=>lang==='en'?`<td>Batch/project specific; request current evidence.</td><td>${p.cartonQty||'-'}<br><small>${p.moq||'-'}</small></td>`:''; compareBody.innerHTML=items.map(p=>`<tr><td><strong>${p.model}</strong></td><td>${p.name_en}</td><td>${p.size||'-'}</td><td>${p.trayFit||'-'}</td><td>${(p.applicationTags||[]).join(' / ')}</td>${technicalCells(p)}</tr>`).join(''); if(!window.matchMedia('(max-width: 700px)').matches)return; let mobile=document.getElementById('mobileCompareCards'); if(!mobile){mobile=document.createElement('div'); mobile.id='mobileCompareCards'; mobile.className='mobile-compare-cards'; const wrap=compareBody.closest('.compare-table-wrap'); if(wrap) wrap.insertAdjacentElement('afterend', mobile);} const technicalDetails=p=>lang==='en'?`<dt>Technical data</dt><dd>Batch/project specific; request current evidence.</dd><dt>${t.carton}</dt><dd>${p.cartonQty||'-'}</dd><dt>${t.moq}</dt><dd>${p.moq||'-'}</dd>`:''; mobile.innerHTML=items.map(p=>`<article class="mobile-compare-card"><div><strong>${p.model}</strong><span>${p.name_en}</span></div><dl><dt>${t.size}</dt><dd>${p.size||'-'}</dd><dt>${t.tray}</dt><dd>${p.trayFit||'-'}</dd><dt>Application</dt><dd>${(p.applicationTags||[]).join(' / ')||'-'}</dd>${technicalDetails(p)}</dl></article>`).join('');}
- function quickPanel(p){return `<b>${t.more}</b><ul class="quick-list"><li><strong>${t.material}:</strong> ${p.material||''}</li><li><strong>${t.packaging}:</strong> ${p.packaging||''}</li><li><strong>Carton note:</strong> ${p.cartonNote||'Final carton quantity may vary by carton size and packaging format.'}</li><li><strong>Technical data:</strong> Batch/project specific; request the current report and agree the sample protocol.</li><li><strong>${t.docs}:</strong> ${(p.certifications||[]).join(' / ')}</li></ul><div class="mini-gallery">${(p.gallery||[p.image]).slice(0,3).map((img,i)=>`<img src="/${img}" alt="${p.model} ${p.name_en} ${i===0?(p.imageType||'product reference'):i===1?'packaging reference':'application reference'}" width="240" height="240" loading="lazy" decoding="async">`).join('')}</div>`;}
- function bind(){grid.querySelectorAll('.quick-view').forEach(btn=>btn.addEventListener('click',()=>{const panel=btn.nextElementSibling; const open=btn.getAttribute('aria-expanded')==='true'; if(!open&&!panel.hasChildNodes()){const product=products.find(p=>p.model===btn.dataset.model); if(product)panel.innerHTML=quickPanel(product);} btn.setAttribute('aria-expanded',String(!open)); btn.textContent=open?t.quick:t.close; panel.hidden=open;}));}
- function render(){const items=filtered(); grid.innerHTML=items.map(card).join('')||'<p>No matching products found.</p>'; renderCompare(items); bind();}
- appButtons.forEach(btn=>btn.addEventListener('click',()=>{currentApp=btn.dataset.app||''; appButtons.forEach(b=>b.classList.remove('active')); btn.classList.add('active'); render();})); productFilter?.addEventListener('input',render); categoryFilter?.addEventListener('change',render); render();
-}
-loadProducts();
+  function card(product) {
+    const t = locale.labels;
+    const text = locale.models[product.model] || {};
+    const name = text.name || product.name_en;
+    const tray = text.tray || product.trayFit;
+    const dimensions = text.size || product.size;
+    const carton = lang === 'en' ? product.cartonQty :
+      (/^\d/.test(product.cartonQty) ? product.cartonQty.split(' (')[0]
+        .replaceAll('pcs / carton', lang === 'es' ? 'uds. / caja' : lang === 'ar' ? 'قطعة / كرتون' : '个 / 箱')
+        .replaceAll('plugs / tray', lang === 'es' ? 'plugs / bandeja' : lang === 'ar' ? 'قالب / صينية' : '块 / 盘')
+        .replaceAll('trays / carton', lang === 'es' ? 'bandejas / caja' : lang === 'ar' ? 'صينية / كرتون' : '盘 / 箱')
+        .replaceAll('plugs / sheet', lang === 'es' ? 'plugs / placa' : lang === 'ar' ? 'قالب / لوح' : '块 / 片')
+        .replaceAll('sheets / carton', lang === 'es' ? 'placas / caja' : lang === 'ar' ? 'لوح / كرتون' : '片 / 箱') : t.terms);
+    const href = prefix + 'contact/?model=' + encodeURIComponent(product.model) + '#quoteForm';
+    return '<article class="matrix-card cf-product-card" id="' + escape(product.slug) + '">' +
+      '<div class="product-image-panel"><img src="/' + escape(product.image) + '" alt="' + escape(product.model + ' ' + name) + '" width="240" height="240" loading="lazy" decoding="async"></div>' +
+      '<div class="matrix-body"><span>' + escape(product.model) + '</span><h2>' + escape(name) + '</h2>' +
+      '<dl><dt>' + escape(t.size) + '</dt><dd>' + escape(dimensions) + '</dd><dt>' + escape(t.tray) + '</dt><dd>' + escape(tray) + '</dd></dl>' +
+      '<details class="catalog-details"><summary>' + escape(t.quick) + '</summary><p>' + escape(text.description || product.description) + '</p>' +
+      '<dl><dt>' + escape(t.category) + '</dt><dd>' + escape(locale.categories[product.category] || product.category) + '</dd><dt>' + escape(t.carton) + '</dt><dd>' + escape(carton) + '</dd><dt>' + escape(t.moq) + '</dt><dd>' + escape(lang === 'en' ? product.moq : t.terms) + '</dd></dl>' +
+      '<p>' + escape(t.reference) + '</p><p><strong>' + escape(t.material) + ':</strong> ' + escape(t.materialText) + '</p>' +
+      '<a href="' + href + '">' + escape(t.docs) + '</a><div class="mini-gallery">' +
+      (product.gallery || [product.image]).slice(0,3).map(image => '<img src="/' + escape(image) + '" alt="' + escape(product.model + ' ' + name) + '" width="240" height="240" loading="lazy" decoding="async">').join('') +
+      '</div></details><a class="btn btn-primary" href="' + href + '">' + escape(t.quote) + '</a></div></article>';
+  }
+  function matching() {
+    const query = (search?.value || '').trim().toLowerCase();
+    return products.filter(product => (!application || product.applicationTags.includes(application)) &&
+      (!category?.value || product.category === category.value) &&
+      (!query || (JSON.stringify(product) + JSON.stringify(locale.models[product.model])).toLowerCase().includes(query)));
+  }
+  function render(scroll = false) {
+    const t = locale.labels;
+    const items = matching();
+    page = Math.max(0, Math.min(page, Math.ceil(items.length / size) - 1));
+    grid.innerHTML = items.slice(page * size, (page + 1) * size).map(card).join('') || '<p role="status">' + escape(t.empty) + '</p>';
+    nav.setAttribute('aria-label', t.page);
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.textContent = lang === 'ar' ? '\u2192' : '\u2190';
+    previous.title = t.previous;
+    previous.setAttribute('aria-label', t.previous);
+    previous.disabled = page === 0;
+    previous.addEventListener('click', () => { page--; render(true); });
+    const count = document.createElement('span');
+    count.setAttribute('role', 'status');
+    count.textContent = t.page + ' ' + (page + 1) + ' / ' + Math.max(1, Math.ceil(items.length / size)) + ' · ' + items.length + ' ' + t.results;
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.textContent = lang === 'ar' ? '\u2190' : '\u2192';
+    next.title = t.next;
+    next.setAttribute('aria-label', t.next);
+    next.disabled = (page + 1) * size >= items.length;
+    next.addEventListener('click', () => { page++; render(true); });
+    nav.replaceChildren(previous, count, next);
+    if (scroll) grid.scrollIntoView({block:'start'});
+  }
+  async function start() {
+    const response = await fetch('/data/products.json');
+    if (!response.ok) throw new Error('Catalog unavailable');
+    products = await response.json();
+    const copyResponse = await fetch('/data/catalog-locales.json');
+    if (!copyResponse.ok) throw new Error('Translations unavailable');
+    const allCopy = await copyResponse.json();
+    locale = allCopy[lang] || allCopy.en;
+    if (category) {
+      category.replaceChildren(new Option(locale.labels.all, ''));
+      [...new Set(products.map(product => product.category))].forEach(value => category.add(new Option(locale.categories[value] || value, value)));
+    }
+    const compare = document.querySelector('.compare-table-wrap');
+    if (compare) {
+      const details = document.createElement('details');
+      details.className = 'catalog-comparison';
+      const summary = document.createElement('summary');
+      summary.textContent = locale.labels.comparison + ' (' + products.length + ')';
+      compare.before(details);
+      details.append(summary, compare);
+      if (location.hash === '#comparison-table') details.open = true;
+      document.addEventListener('click', event => {
+        if (event.target.closest('a[href$="#comparison-table"]')) details.open = true;
+      });
+    }
+    filters.forEach(button => button.addEventListener('click', () => {
+      application = button.dataset.app || '';
+      filters.forEach(other => other.classList.toggle('active', other === button));
+      page = 0; render();
+    }));
+    search?.addEventListener('input', () => { page = 0; render(); });
+    category?.addEventListener('change', () => { page = 0; render(); });
+    function revealHash() {
+      const index = products.findIndex(product => '#' + product.slug === location.hash);
+      if (index < 0) return;
+      application = '';
+      filters.forEach(button => button.classList.toggle('active', !button.dataset.app));
+      if (search) search.value = '';
+      if (category) category.value = '';
+      page = Math.floor(index / size);
+      render();
+      document.getElementById(products[index].slug)?.scrollIntoView({block:'start'});
+    }
+    render();
+    revealHash();
+    if (location.hash === '#comparison-table') document.getElementById('comparison-table')?.scrollIntoView({block:'start'});
+    window.addEventListener('hashchange', revealHash);
+  }
+  start().catch(() => {
+    nav.hidden = true;
+    grid.textContent = ({en:'Catalog could not load. Use the complete specification table below or contact sales.',es:'No se pudo cargar el catálogo. Consulte la tabla completa o contacte con ventas.',ar:'تعذر تحميل الكتالوج. راجع جدول المواصفات أدناه أو تواصل مع المبيعات.',cn:'目录暂时无法加载，请查看下方规格表或联系销售。'})[lang] || 'Catalog unavailable.';
+  });
+})();

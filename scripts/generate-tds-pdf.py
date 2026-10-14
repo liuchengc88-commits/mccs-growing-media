@@ -91,7 +91,7 @@ def disclosure_box(label, description, color):
 
 def technical_rows():
     return [
-        ("Material composition", "PUBLISHED", "Molded coconut coir and peat substrate with adjustable plant-fiber binder ratio.", "Final formulation is project-specific.", "Share crop, tray, irrigation and handling requirements."),
+        ("Material composition", "PUBLISHED", "Molded coconut coir and peat substrate with project-specific binder formulation. Confirm the applicable material documentation before ordering.", "Final formulation is project-specific.", "Share crop, tray, irrigation and handling requirements."),
         ("Dry density", "BATCH REPORT", "No universal density is published.", "State dry basis, specimen volume and conditioning method.", "Agree the method before requesting a value."),
         ("Wet density", "BATCH REPORT", "Moisture condition must accompany the result.", "Record saturation, drainage time and sample geometry.", "Provide target handling moisture and tray format."),
         ("Air-filled porosity (AFP)", "SAMPLE TRIAL", "Model and protocol dependent.", "Use an agreed saturation, drainage and calculation method.", "Define target AFP and root-zone operating range."),
@@ -124,9 +124,9 @@ def build_pdf():
         [P("Product family", "TableCellStrong"), P("MCCS CF Series molded coir and peat substrate plugs", "TableCell")],
         [P("Supply model", "TableCellStrong"), P("Factory-direct B2B supply with export coordination", "TableCell")],
         [P("Technical evidence", "TableCellStrong"), P("SGS report information available for eligible project review; confirm scope and applicability with sales", "TableCell")],
-        [P("Capacity reference", "TableCellStrong"), P("Up to 100,000 individual molded substrate units per day under full-line operation; actual output depends on model, packaging and production schedule", "TableCell")],
+        [P("Production planning", "TableCellStrong"), P("Production allocation and lead time are confirmed by model, order volume, packaging and production schedule", "TableCell")],
         [P("Document status", "TableCellStrong"), P("Property values labeled as published, batch/project report or sample-trial dependent", "TableCell")],
-        [P("Issue date", "TableCellStrong"), P("August 2026", "TableCell")],
+        [P("Revision date", "TableCellStrong"), P("14 October 2026", "TableCell")],
     ], colWidths=[38 * mm, 112 * mm])
     cover_table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (0, -1), PALE_GREEN),
@@ -225,7 +225,7 @@ def build_pdf():
     ])
     workflow = Table([
         [P("1", "TableCellStrong"), P("Application intake", "TableCellStrong"), P("Buyer provides crop, country, tray, monthly volume, irrigation and automation requirements.", "TableCell")],
-        [P("2", "TableCellStrong"), P("Model and document review", "TableCellStrong"), P("MCCS identifies suitable ZY models and clarifies available SGS report information and project-specific technical fields.", "TableCell")],
+        [P("2", "TableCellStrong"), P("Model and document review", "TableCellStrong"), P("MCCS identifies suitable CF models and clarifies available SGS report information and project-specific technical fields.", "TableCell")],
         [P("3", "TableCellStrong"), P("Sample protocol", "TableCellStrong"), P("Both parties agree methods, environmental conditions and acceptance criteria before testing.", "TableCell")],
         [P("4", "TableCellStrong"), P("Commercial approval", "TableCellStrong"), P("Approved model, formulation, packaging, evidence scope and shipping plan are recorded in the quotation or specification.", "TableCell")],
     ], colWidths=[12 * mm, 40 * mm, 98 * mm])
@@ -245,7 +245,7 @@ def build_pdf():
         P("Available buyer-facing evidence", "SectionTitle"),
         P("<b>SGS report support:</b> Available SGS report information can be shared during eligible buyer and project review. Confirm report scope and applicability with sales."),
         P("<b>Factory-direct supply:</b> Guangzhou-based production and export coordination for qualified B2B projects."),
-        P("<b>Capacity planning:</b> Up to 100,000 individual molded substrate units per day under full-line operation. Actual output depends on model, formulation, packaging and production schedule."),
+        P("<b>Capacity planning:</b> Production allocation and lead time are confirmed by model, formulation, order volume, packaging and production schedule."),
         P("<b>Research context:</b> A 2025 Agronomy PFAL study on molded coconut coir substrate under stated lettuce and pak choi test conditions: https://www.mdpi.com/2073-4395/15/8/1929"),
         Spacer(1, 7 * mm),
     ])

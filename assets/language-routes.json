@@ -399,6 +399,94 @@
       "href": "/"
     }
   ],
+  "/ar/insights/cutting-propagation-root-observations/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/cutting-propagation-root-observations/"
+    }
+  ],
+  "/cn/insights/cutting-propagation-root-observations/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/cutting-propagation-root-observations/"
+    }
+  ],
+  "/es/insights/cutting-propagation-root-observations/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/cutting-propagation-root-observations/"
+    }
+  ],
+  "/insights/cutting-propagation-root-observations/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/cutting-propagation-root-observations/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/cutting-propagation-root-observations/"
+    }
+  ],
   "/ar/insights/how-to-choose-substrate-plugs/": [
     {
       "locale": "ar",
@@ -830,6 +918,94 @@
       "href": "/insights/private-label-seed-starter-checklist/"
     }
   ],
+  "/ar/insights/propagation-plug-wetting-transplant-root-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/propagation-plug-wetting-transplant-root-guide/"
+    }
+  ],
+  "/cn/insights/propagation-plug-wetting-transplant-root-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/propagation-plug-wetting-transplant-root-guide/"
+    }
+  ],
+  "/es/insights/propagation-plug-wetting-transplant-root-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/propagation-plug-wetting-transplant-root-guide/"
+    }
+  ],
+  "/insights/propagation-plug-wetting-transplant-root-guide/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/propagation-plug-wetting-transplant-root-guide/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/propagation-plug-wetting-transplant-root-guide/"
+    }
+  ],
   "/ar/insights/rockwool-alternative-for-retail-kits/": [
     {
       "locale": "ar",
@@ -932,6 +1108,94 @@
       "href": "/insights/sample-to-bulk-shipping-guide/"
     }
   ],
+  "/ar/insights/yunnan-rooted-cuttings-molded-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/yunnan-rooted-cuttings-molded-plugs/"
+    }
+  ],
+  "/cn/insights/yunnan-rooted-cuttings-molded-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/yunnan-rooted-cuttings-molded-plugs/"
+    }
+  ],
+  "/es/insights/yunnan-rooted-cuttings-molded-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/yunnan-rooted-cuttings-molded-plugs/"
+    }
+  ],
+  "/insights/yunnan-rooted-cuttings-molded-plugs/": [
+    {
+      "locale": "ar",
+      "label": "AR",
+      "href": "/ar/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "es",
+      "label": "ES",
+      "href": "/es/insights/yunnan-rooted-cuttings-molded-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/insights/yunnan-rooted-cuttings-molded-plugs/"
+    }
+  ],
   "/ar/private-label/": [
     {
       "locale": "ar",
@@ -1018,94 +1282,6 @@
       "locale": "en",
       "label": "EN",
       "href": "/private-label/"
-    }
-  ],
-  "/ar/products/conical-plugs/": [
-    {
-      "locale": "ar",
-      "label": "AR",
-      "href": "/ar/products/conical-plugs/"
-    },
-    {
-      "locale": "cn",
-      "label": "中文",
-      "href": "/cn/products/conical-plugs/"
-    },
-    {
-      "locale": "es",
-      "label": "ES",
-      "href": "/es/products/conical-plugs/"
-    },
-    {
-      "locale": "en",
-      "label": "EN",
-      "href": "/products/conical-plugs/"
-    }
-  ],
-  "/cn/products/conical-plugs/": [
-    {
-      "locale": "ar",
-      "label": "AR",
-      "href": "/ar/products/conical-plugs/"
-    },
-    {
-      "locale": "cn",
-      "label": "中文",
-      "href": "/cn/products/conical-plugs/"
-    },
-    {
-      "locale": "es",
-      "label": "ES",
-      "href": "/es/products/conical-plugs/"
-    },
-    {
-      "locale": "en",
-      "label": "EN",
-      "href": "/products/conical-plugs/"
-    }
-  ],
-  "/es/products/conical-plugs/": [
-    {
-      "locale": "ar",
-      "label": "AR",
-      "href": "/ar/products/conical-plugs/"
-    },
-    {
-      "locale": "cn",
-      "label": "中文",
-      "href": "/cn/products/conical-plugs/"
-    },
-    {
-      "locale": "es",
-      "label": "ES",
-      "href": "/es/products/conical-plugs/"
-    },
-    {
-      "locale": "en",
-      "label": "EN",
-      "href": "/products/conical-plugs/"
-    }
-  ],
-  "/products/conical-plugs/": [
-    {
-      "locale": "ar",
-      "label": "AR",
-      "href": "/ar/products/conical-plugs/"
-    },
-    {
-      "locale": "cn",
-      "label": "中文",
-      "href": "/cn/products/conical-plugs/"
-    },
-    {
-      "locale": "es",
-      "label": "ES",
-      "href": "/es/products/conical-plugs/"
-    },
-    {
-      "locale": "en",
-      "label": "EN",
-      "href": "/products/conical-plugs/"
     }
   ],
   "/ar/products/": [
@@ -1418,6 +1594,30 @@
       "locale": "en",
       "label": "EN",
       "href": "/middle-east/"
+    }
+  ],
+  "/cn/products/conical-plugs/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
+    }
+  ],
+  "/products/conical-plugs/": [
+    {
+      "locale": "cn",
+      "label": "中文",
+      "href": "/cn/products/conical-plugs/"
+    },
+    {
+      "locale": "en",
+      "label": "EN",
+      "href": "/products/conical-plugs/"
     }
   ]
 }

@@ -30,6 +30,8 @@ function publicRoute(file) {
 for (const file of walk(root)) {
   const route = publicRoute(file);
   if (protectedFiles.has(route)) continue;
+  const source = fs.readFileSync(file, 'utf8');
+  if (/<meta\b(?=[^>]*name=["']robots["'])(?=[^>]*content=["'][^"']*noindex)[^>]*>/i.test(source)) continue;
   routeFiles.set(route, file);
   const parts = route.split('/').filter(Boolean);
   const locale = localePrefixes.has(parts[0]) ? parts.shift() : 'en';
@@ -52,6 +54,15 @@ for (const [route, options] of Object.entries(manifest)) {
   const file = routeFiles.get(route);
   if (!file) continue;
   let html = fs.readFileSync(file, 'utf8');
+  const existing = [...html.matchAll(/<link\b(?=[^>]*\brel=["']alternate["'])[^>]*>/gi)]
+    .map(match => {
+      const lang = match[0].match(/hreflang=["']([^"']+)/)?.[1];
+      const href = match[0].match(/href=["']([^"']+)/)?.[1];
+      return lang + ' ' + href;
+    }).sort();
+  const expected = options.map(({locale,href}) => (locale === 'cn' ? 'zh-CN' : locale) + ' https://www.mccsgrowingmedia.com' + href);
+  expected.push('x-default https://www.mccsgrowingmedia.com' + (options.find(option => option.locale === 'en') || options[0]).href);
+  if (JSON.stringify(existing) === JSON.stringify(expected.sort())) continue;
   html = html.replace(/<link\b(?=[^>]*\brel=["']alternate["'])[^>]*>\s*/gi, '');
   const tags = options.map(({ locale, href }) => {
     const hreflang = locale === 'cn' ? 'zh-CN' : locale;

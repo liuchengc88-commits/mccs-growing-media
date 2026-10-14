@@ -12,7 +12,7 @@ const markers = source => (source.match(/<!-- factory-demonstrations:start -->/g
 const run = script => execFileSync(process.execPath, [path.join(temp, 'scripts', script)], {cwd:temp, stdio:'pipe'});
 
 try {
-  for (const relative of ['data/factory-demonstrations.json', 'data/products.json', 'scripts/sync-factory-demonstrations.mjs', 'scripts/generate-cn-site.mjs', 'scripts/sync-localized-trust-pages.mjs']) {
+  for (const relative of ['data/factory-demonstrations.json', 'data/products.json', 'scripts/sync-factory-demonstrations.mjs', 'scripts/generate-cn-site.mjs', 'scripts/sync-localized-trust-pages.mjs', 'scripts/public-sgs-source.mjs']) {
     fs.mkdirSync(path.dirname(path.join(temp, relative)), {recursive:true});
     fs.copyFileSync(path.join(root, relative), path.join(temp, relative));
   }

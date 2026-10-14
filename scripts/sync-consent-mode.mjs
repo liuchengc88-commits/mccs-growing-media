@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const skipDirs = new Set(['.git', '.lighthouseci', 'node_modules', 'output', 'outputs', 'tmp']);
-const skipPages = new Set(['admin.html', 'privacy.html', 'terms.html']);
+const skipPages = new Set(['admin.html']);
 const marker = 'id="mccs-consent-default"';
 const consentInit = `<script id="mccs-consent-default">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};try{var mccsConsent=localStorage.getItem('mccs_cookie_consent')||(localStorage.getItem('mccs_cookie_ok')==='1'?'granted':'denied')}catch(e){var mccsConsent='denied'}gtag('consent','default',{analytics_storage:mccsConsent==='granted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});</script>`;
 
