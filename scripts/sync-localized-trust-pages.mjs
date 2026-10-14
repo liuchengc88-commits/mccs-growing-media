@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { syncFactoryEntries } from './sync-factory-demonstrations.mjs';
 
 const root = process.cwd();
 const locales = {
@@ -115,4 +116,5 @@ for (const [code, l] of Object.entries(locales)) {
   fs.writeFileSync(homeFile, home, 'utf8');
 }
 
+syncFactoryEntries();
 console.log('Synchronized localized evidence, partner and homepage media sections.');

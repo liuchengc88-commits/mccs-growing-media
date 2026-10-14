@@ -38,6 +38,8 @@ jobs:
         run: node scripts/test-form-protection.cjs
       - name: Test root evidence generator regression
         run: node scripts/test-root-evidence-generators.cjs
+      - name: Test factory demonstrations and localized regeneration
+        run: node scripts/test-factory-demonstrations.cjs
       - name: Report broken external links
         uses: lycheeverse/lychee-action@v2
         with:

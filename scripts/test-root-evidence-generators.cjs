@@ -18,6 +18,8 @@ try {
   fs.mkdirSync(path.join(tempRoot, 'scripts'));
   fs.mkdirSync(path.join(tempRoot, 'data'));
   fs.copyFileSync(path.join(root, 'data/products.json'), path.join(tempRoot, 'data/products.json'));
+  fs.copyFileSync(path.join(root, 'data/factory-demonstrations.json'), path.join(tempRoot, 'data/factory-demonstrations.json'));
+  fs.copyFileSync(path.join(root, 'scripts/sync-factory-demonstrations.mjs'), path.join(tempRoot, 'scripts/sync-factory-demonstrations.mjs'));
   for (const script of ['generate-cn-site.mjs', 'generate-seo-authority-pages.mjs']) {
     fs.copyFileSync(path.join(root, 'scripts', script), path.join(tempRoot, 'scripts', script));
     generate(script);
@@ -31,6 +33,7 @@ try {
   assert.ok(cn.includes('src="/assets/yunnan-rooting/rooted-cuttings-4-1280.webp"'));
   assert.ok(cn.includes('width="1280" height="1707"'));
   assert.ok(cn.includes('href="/cn/contact/#quoteForm"'));
+  assert.ok(cn.includes('href="/cn/insights/propagation-plug-wetting-transplant-root-guide/"'));
   const schemas = [...cn.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
     .map(match => JSON.parse(match[1]));
   const collection = schemas.find(schema => schema['@type'] === 'CollectionPage');
