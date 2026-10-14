@@ -60,3 +60,9 @@ Homepage and evidence entries use one small photo, not autoplay or embedded vide
 ## Protected Scope
 
 No changes to `data/products.json`, CF dimensions, MOQ, carton quantities, Formspree endpoint or script, GA ID `G-JGR2SQBQHW`, Vercel configuration, admin, privacy or terms pages. Production was not modified. All changes go through a separately reviewed PR; no automatic merge.
+
+## Pre-Merge Review Follow-Up
+
+The automated review of PR #47 identified a third-party trademark used as the subject of a comparison caption. All four captions now use neutral "factory molded-plug sample" wording. Source attribution and original media branding remain intact, without turning the supplier trademark into a named buyer case. A regression assertion prevents that trademark from returning to comparison captions.
+
+GitHub Site Quality Audit and its PR Lighthouse gate passed for the initial commit. A new head revision must pass the same checks after the caption correction. The Vercel preview is reported Ready by GitHub, but rendered preview verification is unavailable in this session because Vercel requires reauthentication. Local browser verification and a local review server remain available; this does not weaken or disable deployment protection.

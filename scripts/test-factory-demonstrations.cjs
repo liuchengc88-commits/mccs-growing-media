@@ -17,6 +17,7 @@ try {
     fs.copyFileSync(path.join(root, relative), path.join(temp, relative));
   }
   for (const l of locales) {
+    assert.equal(l.photoCaptions.some(caption => /eco\s*plug/i.test(caption)), false, 'Third-party brand in comparison caption');
     for (const url of [`${l.prefix}/`, `${l.prefix}/insights/`, `${l.prefix}/technical-evidence/`, `${l.prefix}/insights/cutting-propagation-root-observations/`, `${l.prefix}/insights/substrate-plug-ec-ph-testing-protocol/`, '/insights/substrate-plug-ec-ph-testing-protocol/']) {
       const relative = path.join(url.replace(/^\//, ''), 'index.html');
       if (!fs.existsSync(path.join(root, relative))) continue;
