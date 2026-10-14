@@ -34,7 +34,8 @@ Scope: the user's instruction to repair the strict full-site audit.
 - Formspree endpoint `https://formspree.io/f/mredrnea` is unchanged.
 - GA ID `G-JGR2SQBQHW` is unchanged.
 - No Vercel settings, admin page or auto-merge workflow changed.
-- Privacy/terms: consent script initialization only; legal wording unchanged.
+- Privacy/terms: consent initialization and removal of the redundant legacy
+  acceptance-state writer only; all non-script markup and legal wording unchanged.
 - ES, AR and CN buyer pages were intentionally touched.
 - No new library or runtime dependency was added.
 

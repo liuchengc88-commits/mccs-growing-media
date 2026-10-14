@@ -5,6 +5,13 @@ const crypto = require('node:crypto');
 const vm = require('node:vm');
 const root = path.resolve(__dirname,'..');
 const read = file => fs.readFileSync(path.join(root,file),'utf8');
+for(const [file,expected] of Object.entries({
+ 'privacy.html':'c64bd8c001af58af7090532c8dc45d401fc96cd02268242b91e796ff0935ae24',
+ 'terms.html':'1a2a18fa9ca38952509fedd0dde935aa720c2f9db9745e0f4ef3b6503c4b3f15'
+})) {
+ const markup=read(file).replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'').replace(/\r\n/g,'\n');
+ assert.equal(crypto.createHash('sha256').update(markup).digest('hex'),expected,'Legal-page markup must remain unchanged outside consent scripts.');
+}
 const products = JSON.parse(read('data/products.json'));
 const originalFields = products.map(({material,...product}) => product);
 assert.equal(crypto.createHash('sha256').update(JSON.stringify(originalFields)).digest('hex'),
@@ -51,6 +58,7 @@ function pages(dir) {
 for(const file of pages(root)) {
  const html=fs.readFileSync(file,'utf8');
  if(!html.includes('googletagmanager.com/gtag/js')) continue;
+ assert.deepEqual([...new Set(html.match(/G-[A-Z0-9]{8,}/g))],['G-JGR2SQBQHW']);
  const consent=html.match(/<script id="mccs-consent-default">([\s\S]*?)<\/script>/);
  assert.ok(consent,file+' must set consent before loading analytics.');
  assert.ok(html.indexOf('id="mccs-consent-default"')<html.indexOf('googletagmanager.com/gtag/js'),file);
