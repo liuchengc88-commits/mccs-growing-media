@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { syncFactoryEntries } from './sync-factory-demonstrations.mjs';
 
 const root = process.cwd();
 const site = "https://www.mccsgrowingmedia.com";
@@ -122,4 +123,5 @@ for (const [route, enPath, title, description, h1, intro, sections] of articlePa
   writePage(target, articlePage(route, enPath, title, description, h1, intro, sections));
 }
 
+syncFactoryEntries();
 console.log(`Generated ${routes.length + directPages.length + articlePages.length} Chinese pages.`);

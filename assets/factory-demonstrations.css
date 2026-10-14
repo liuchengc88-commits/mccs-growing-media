@@ -1,0 +1,37 @@
+.factory-preview{background:#fff;border-block:1px solid #d8e1dc;scroll-margin-top:100px}
+.factory-preview-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,280px);gap:40px;align-items:center}
+.factory-preview h2{font-size:30px;line-height:1.25;letter-spacing:0;overflow-wrap:anywhere}
+.factory-preview p{max-width:760px;line-height:1.7}
+.factory-preview .btn,.factory-article .btn{white-space:normal;text-align:center;min-height:44px}
+.factory-preview-photo{display:block;max-width:260px;justify-self:center}
+.factory-preview-photo img{display:block;width:100%;height:auto;max-height:380px;object-fit:contain}
+.factory-photo-grid,.factory-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.factory-photo-grid figure,.factory-video-grid figure{min-width:0;border-bottom:1px solid #d8e1dc}
+.factory-photo-grid a{display:block}
+.factory-photo-grid img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain}
+.factory-video-grid h3{min-height:3em;margin-block:0 16px}
+.factory-video{display:block;width:100%;height:auto;max-width:324px;aspect-ratio:9/16;object-fit:contain;background:#101713}
+.factory-video-grid figcaption{min-height:7em}
+.factory-video-grid figure>a{display:inline-block;padding-block:8px 16px;overflow-wrap:anywhere}
+.factory-source{border-top:1px solid #d8e1dc;padding-top:18px;color:#526057}
+.factory-table-wrap{overflow-x:auto;max-width:100%}
+.factory-table-wrap table{min-width:620px}
+.factory-table-wrap th{font-weight:600;text-align:start}
+.factory-article .factory-table-wrap tbody th{background:#f6f8f7}
+.factory-article .technical-faq summary{padding:16px;line-height:1.6;cursor:pointer}
+.factory-article .technical-faq p{padding-inline:16px}
+.factory-article .yunnan-story p,.factory-article .yunnan-story li{max-width:none}
+.factory-article :focus-visible,.factory-preview :focus-visible{outline:3px solid #2467a0;outline-offset:3px}
+@media(max-width:680px){
+ .factory-preview-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .factory-preview{scroll-margin-top:180px}
+ .factory-preview-photo{grid-row:1}
+ .factory-preview h2{font-size:26px}
+ .factory-preview .hero-actions,.factory-article .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+ .factory-preview .hero-actions .btn,.factory-article .hero-actions .btn{max-width:100%}
+ .factory-photo-grid,.factory-video-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+ .factory-photo-grid img{max-height:540px}
+ .factory-video-grid h3,.factory-video-grid figcaption{min-height:0}
+ .factory-video{max-width:360px;margin-inline:auto}
+ .factory-article .yunnan-story{padding-inline:20px}
+}

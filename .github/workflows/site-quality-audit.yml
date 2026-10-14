@@ -27,8 +27,14 @@ jobs:
           node scripts/sync-cf-product-models.mjs
           node scripts/generate-static-product-catalogs.mjs
           node scripts/normalize-site-content.mjs
+          node scripts/sync-factory-demonstrations.mjs
           node scripts/sync-consent-mode.mjs
           python scripts/optimize-image-markup.py
+          untracked="$(git ls-files --others --exclude-standard)"
+          if [ -n "$untracked" ]; then
+            printf '%s\n' "Generated files missing from the commit:" "$untracked"
+            exit 1
+          fi
           git diff --exit-code
       - name: Audit public pages
         run: python scripts/audit-site.py
@@ -38,6 +44,8 @@ jobs:
         run: node scripts/test-form-protection.cjs
       - name: Test root evidence generator regression
         run: node scripts/test-root-evidence-generators.cjs
+      - name: Test factory demonstrations and localized regeneration
+        run: node scripts/test-factory-demonstrations.cjs
       - name: Report broken external links
         uses: lycheeverse/lychee-action@v2
         with:
