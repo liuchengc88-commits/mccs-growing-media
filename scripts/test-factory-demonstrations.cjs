@@ -60,6 +60,11 @@ try {
       files.push(file);
     }
   }
+  for (const file of files) {
+    const checkedIn = path.join(root, path.relative(temp, file));
+    const normalize = source => source.replace(/\r\n/g, '\n');
+    assert.equal(normalize(fs.readFileSync(file, 'utf8')), normalize(fs.readFileSync(checkedIn, 'utf8')), `Stale buyer page: ${checkedIn}. Run node scripts/sync-factory-demonstrations.mjs.`);
+  }
   const first = files.map(file=>fs.readFileSync(file,'utf8'));
   run('sync-factory-demonstrations.mjs');
   files.forEach((file,i)=>assert.equal(fs.readFileSync(file,'utf8'), first[i], `Non-idempotent: ${file}`));

@@ -27,6 +27,7 @@ jobs:
           node scripts/sync-cf-product-models.mjs
           node scripts/generate-static-product-catalogs.mjs
           node scripts/normalize-site-content.mjs
+          node scripts/sync-factory-demonstrations.mjs
           node scripts/sync-consent-mode.mjs
           python scripts/optimize-image-markup.py
           git diff --exit-code

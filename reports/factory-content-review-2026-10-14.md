@@ -65,4 +65,6 @@ No changes to `data/products.json`, CF dimensions, MOQ, carton quantities, Forms
 
 The automated review of PR #47 identified a third-party trademark used as the subject of a comparison caption. All four captions now use neutral "factory molded-plug sample" wording. Source attribution and original media branding remain intact, without turning the supplier trademark into a named buyer case. A regression assertion prevents that trademark from returning to comparison captions.
 
+A second review identified that temporary generation alone would not detect stale checked-in HTML. The factory regression test now compares all 16 generated article/entry files against their repository counterparts, normalizing line endings only. The CI synchronization step also runs the factory synchronizer before `git diff --exit-code`, so changing source copy without regenerating buyer pages cannot pass the gate.
+
 GitHub Site Quality Audit and its PR Lighthouse gate passed for the initial commit. A new head revision must pass the same checks after the caption correction. The Vercel preview is reported Ready by GitHub, but rendered preview verification is unavailable in this session because Vercel requires reauthentication. Local browser verification and a local review server remain available; this does not weaken or disable deployment protection.
