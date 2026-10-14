@@ -61,7 +61,13 @@ try {
     }
   }
   for (const file of files) {
-    const checkedIn = path.join(root, path.relative(temp, file));
+    const relative = path.relative(temp, file).split(path.sep).join('/');
+    const checkedIn = path.join(root, relative);
+    try {
+      execFileSync('git', ['ls-files', '--error-unmatch', '--', relative], {cwd:root, stdio:'pipe'});
+    } catch {
+      throw new Error(`Untracked buyer page: ${relative}. Include every generated language page in the commit.`);
+    }
     const normalize = source => source.replace(/\r\n/g, '\n');
     assert.equal(normalize(fs.readFileSync(file, 'utf8')), normalize(fs.readFileSync(checkedIn, 'utf8')), `Stale buyer page: ${checkedIn}. Run node scripts/sync-factory-demonstrations.mjs.`);
   }

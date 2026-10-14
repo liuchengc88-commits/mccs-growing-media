@@ -30,6 +30,11 @@ jobs:
           node scripts/sync-factory-demonstrations.mjs
           node scripts/sync-consent-mode.mjs
           python scripts/optimize-image-markup.py
+          untracked="$(git ls-files --others --exclude-standard)"
+          if [ -n "$untracked" ]; then
+            printf '%s\n' "Generated files missing from the commit:" "$untracked"
+            exit 1
+          fi
           git diff --exit-code
       - name: Audit public pages
         run: python scripts/audit-site.py

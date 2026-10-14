@@ -67,4 +67,6 @@ The automated review of PR #47 identified a third-party trademark used as the su
 
 A second review identified that temporary generation alone would not detect stale checked-in HTML. The factory regression test now compares all 16 generated article/entry files against their repository counterparts, normalizing line endings only. The CI synchronization step also runs the factory synchronizer before `git diff --exit-code`, so changing source copy without regenerating buyer pages cannot pass the gate.
 
+The final follow-up also rejects untracked generated files: CI explicitly checks `git ls-files --others --exclude-standard`, and the factory test requires all 16 buyer pages to be tracked. Regeneration cannot conceal an article accidentally omitted or deleted from the commit by recreating it as an untracked file.
+
 GitHub Site Quality Audit and its PR Lighthouse gate passed for the initial commit. A new head revision must pass the same checks after the caption correction. The Vercel preview is reported Ready by GitHub, but rendered preview verification is unavailable in this session because Vercel requires reauthentication. Local browser verification and a local review server remain available; this does not weaken or disable deployment protection.
